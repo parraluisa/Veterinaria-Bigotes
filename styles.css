@@ -311,3 +311,161 @@ nav {
     border-top-color: #27265B;
     color: #27265B;
 }
+
+
+#vet-section {
+    margin-top: 20%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #5EB3DB;
+    border-radius: 0 15rem 15rem 0; /* Adjusted border radius */
+    width: 80%;
+    height: 70%;
+}
+
+#vet-section > .left{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-left: 2rem;
+    height: 100%;
+}
+
+#vet-section .title{
+    margin-top: -11rem;
+    height: 100%;
+}
+
+#vet-section h1 {
+    color: #27265B;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+
+.vet-cont {
+    width: 120%;
+    height: 100%;
+    margin-top: -10rem;
+}
+
+.vet-info.hidden {
+    opacity: 0;
+}
+
+.vet-info {
+    position: relative;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    width:100%;
+}
+
+.vet-name {
+    margin-left: 5%;
+    color: #FFF;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.vet-description {
+    margin-top: 0;
+    margin-left: 5%;
+    width: 70%;
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.vet-interests-title {
+    margin-top: 0;
+    margin-left: 5%;
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.vet-interests-list {
+    
+    margin: 10px 0;
+    padding-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none; /* Agregado para eliminar las viñetas */
+}
+
+.vet-interests-list li {
+    margin-bottom: 10px;
+    margin-right: 5%;
+    padding: 8px 15px;
+    color: #FFF;
+    border: #FFF solid 0.2rem;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.right{
+    height: 100%;
+    width: 100%;
+}
+
+.vet-image {
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    margin-left: -8rem; /* Adjusted to overlap with the left side */
+    height: 800px;
+    bottom: 0;
+}
+
+.vet-image img {
+    transform: translateY(-29.3%);
+    bottom: 0;
+    width: auto;
+    height: 60%; /* Changed to auto for maintaining aspect ratio */
+}
+
+.navigation-buttons {
+    transform: translateX(300%);
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 15px;
+    height: 40%;
+}
+
+button {
+    font-size: 2rem;
+    padding: 5px 12px;
+    background-color: #27265B;
+    color: #FFF;
+    margin: 3%;
+    border-radius: 10rem;
+    border: none; /* Remove the border */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+
+    /* Add a box shadow for depth */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style on hover */
+button:hover {
+    background-color: #47468f;
+    /* You can add additional hover effects here */
+}
