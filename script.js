@@ -1,22 +1,22 @@
 const vetInfo = [
     {
-        name: "Dra Laura Fernández",
+        name: "Dra. Laura Fernández",
         description: "Especialista en medicina equina y cuidado de caballos",
         interests: ["Medicina Equina", "Terapias alternativas"],
-        imageSrc: "imagenes/people/vet1.png"
+        imageSrc: "imagenes/people/doctorA.png"
 
     },
     {
-        name: "Dr. Juan Carlos",
+        name: "Dr. Juan Pedraza",
         description: "Especialista en medicina de animales de granja",
         interests: ["Medicina de animales de granja", "Cirugía"],
-        imageSrc: "imagenes/people/vet2.png"
+        imageSrc: "imagenes/people/doctorB.png"
     },
     {
-        name: "Dra. María José",
+        name: "Dr. José Pérez",
         description: "Especialista en medicina de animales de compañía",
         interests: ["Medicina de animales de compañía", "Cirugía"],
-        imageSrc: "imagenes/people/vet3.png"
+        imageSrc: "imagenes/people/doctorC.png"
     },
     // Add more veterinarian data objects as needed
 ];
