@@ -183,7 +183,7 @@ nav {
 }
 
 #reviewsCat{
-    width: 30%;
+    width: 20%;
     margin-right: 0%;
     padding: 0%;
 }
@@ -235,12 +235,30 @@ nav {
 .reviewsHeader{
     width: 100%;
     display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 0%;
+    padding: 0%;
+}
+
+.reviewsCatOwned{
+    width: 15%;
+    margin: 5%;
+    margin-left: 0%;
+    padding: 0%;
+    border-radius: 5rem;
+    aspect-ratio: 1/1;
+}
+
+.reviewsData{
+    width: 60%;
+    display: flex;
     justify-content: center;
     align-items: left;
     flex-direction: column;
 }
 
-.reviewsHeader h2{
+.reviewsData h2{
     color: #27265B;
     font-size: 2rem;
     font-weight: bolder;
@@ -248,17 +266,10 @@ nav {
     padding: 0;
 }
 
-.reviewsHeader p{
+.reviewsData p{
     color: #27265B;
     font-size: 1rem;
     font-weight: thiner;
-}
-
-.reviewsData{
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    flex-direction: column;
 }
 
 .reviewsContent{
