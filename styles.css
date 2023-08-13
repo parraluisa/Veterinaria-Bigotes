@@ -171,8 +171,99 @@ nav {
 #reviews{
     width: 100%;
     height: 100%;
+    padding: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
     display: flex;
+    flex: flex-start;
     justify-content: center;
     align-items: center;
     background-color: rgba(177, 212, 224, 0.2);
+    box-sizing: border-box;
+}
+
+#reviewsCat{
+    width: 30%;
+    margin-right: 0%;
+    padding: 0%;
+}
+
+.reviewsOuterContainer{
+    width: 100%;
+    height: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    margin-left: 0%;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0rem 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.reviewsTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bolder;
+    color: #27265B;
+    margin: 0%;
+    padding: 0%;
+}
+
+.reviewsTitle h1{
+    margin: 10%;
+    padding: 0%;
+}
+
+.reviewsInnerContainer{
+    width: 80%;
+    height: 100%;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1rem;
+    box-shadow: 0rem 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.reviewsHeader{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
+
+.reviewsHeader h2{
+    color: #27265B;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin: 0;
+    padding: 0;
+}
+
+.reviewsHeader p{
+    color: #27265B;
+    font-size: 1rem;
+    font-weight: thiner;
+}
+
+.reviewsData{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
+
+.reviewsContent{
+    border-top-style: solid;
+    border-top-width: 0.1rem;
+    border-top-color: #27265B;
+    color: #27265B;
 }
