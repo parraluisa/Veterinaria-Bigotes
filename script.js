@@ -66,5 +66,63 @@ nextButton.addEventListener("click", () => {
 
 // ... (Resto del código)
 
-
 displayCurrentVet();
+
+
+const reviews = [
+    {
+        name: "Fabio Buitrago",
+        catName: "Maw",
+        race: "Gato persa",
+        imageSrc: "imagenes/reviewCats/catA.jpeg",
+        review: "Desde el primer instante, quedó claro que el personal de la clínica tiene un profundo amor y respeto por los animales. Fui recibido con una sonrisa amable y mi mascota fue saludada con caricias y mimos.Este enfoque empático realmente marcó la diferencia para mí, ya que mi mascota a menudo se siente nerviosa en entornos médicos."
+    },
+    {
+        name: "Luisa Parra",
+        catName: "Ronny",
+        race: "Gato himalayo",
+        imageSrc: "imagenes/reviewCats/catB.jpeg",
+        review: "Desde el primer instante, quedó claro que el personal de la clínica tiene un profundo amor y respeto por los animales. Fui recibido con una sonrisa amable y mi mascota fue saludada con caricias y mimos.Este enfoque empático realmente marcó la diferencia para mí, ya que mi mascota a menudo se siente nerviosa en entornos médicos."
+    },
+    {
+        name: "Andrés García",
+        catName: "Peter",
+        race: "Gato azul ruso",
+        imageSrc: "imagenes/reviewCats/catC.jpeg",
+        review: "Desde el primer instante, quedó claro que el personal de la clínica tiene un profundo amor y respeto por los animales. Fui recibido con una sonrisa amable y mi mascota fue saludada con caricias y mimos.Este enfoque empático realmente marcó la diferencia para mí, ya que mi mascota a menudo se siente nerviosa en entornos médicos."
+
+    }
+];
+
+let currentReviewIndex = 0;
+
+const reviewsCatImg = document.querySelector(".reviewsCatOwned");
+const reviewsDataName = document.querySelector(".reviewsData h2");
+const reviewsData = document.querySelector(".reviewsData p");
+const reviewsContent = document.querySelector(".reviewsContent p");
+const reviewsInnerContainer = document.querySelector(".reviewsInnerContainer");
+
+function displayCurrentReview() {
+    const currentReview = reviews[currentReviewIndex];
+
+    reviewsInnerContainer.classList.add("hidden");
+
+    setTimeout(() => {
+        reviewsCatImg.src = currentReview.imageSrc;
+        reviewsDataName.textContent = currentReview.name;
+        reviewsData.textContent = "Dueño de " + currentReview.catName + ": " + currentReview.race;
+        reviewsContent.textContent = currentReview.review;
+
+        reviewsInnerContainer.classList.remove("hidden");
+    }, 500);
+
+    // Move to the next review index
+    currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
+}
+
+// Display the first review immediately
+displayCurrentReview();
+
+// Set up an interval to display reviews every 20 seconds
+const interval = setInterval(displayCurrentReview, 5);
+
