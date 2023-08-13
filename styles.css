@@ -1,5 +1,5 @@
-
-html, body{
+html,
+body {
     height: 100%;
     font-size: 1rem;
     display: flex;
@@ -10,7 +10,7 @@ html, body{
     font-family: 'Montserrat', sans-serif;
 }
 
-nav{
+nav {
     position: fixed;
     height: 15%;
     width: 70%;
@@ -21,14 +21,14 @@ nav{
     align-items: center;
     background-color: #FFFFFF;
     z-index: 2;
-    
+
 }
 
-.icon{
+.icon {
     height: 100%;
 }
 
-.menu{
+.menu {
     height: 60%;
     width: 80%;
     padding-left: 2.5%;
@@ -42,30 +42,30 @@ nav{
     align-items: center;
 }
 
-.button1{
+.button1 {
     padding: 1rem;
     border-radius: 3rem;
 }
 
-.button1 a{
+.button1 a {
     text-decoration: none;
     color: #000000;
     font-size: 1rem;
 }
 
-.button1:hover{
+.button1:hover {
     cursor: pointer;
     transition: 0.5s;
     background-color: #5DB3DB;
     box-shadow: 0rem 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
 }
 
-.button:hover a{
+.button:hover a {
     transition: 0.5s;
     color: #FFFFFF;
 }
 
-.page{
+.page {
     margin-top: 10%;
     display: flex;
     justify-content: center;
@@ -75,13 +75,13 @@ nav{
     width: 100vw;
 }
 
-.content{
+.content {
     height: 80%;
     width: 70%;
     box-sizing: border-box;
 }
 
-.information{
+.information {
     height: 100%;
     width: 35%;
     display: flex;
@@ -90,16 +90,16 @@ nav{
     flex-direction: column;
 }
 
-.information h1{
+.information h1 {
     font-size: 4rem;
     font-weight: bold;
 }
 
-.information p{
+.information p {
     font-size: 1.5rem;
 }
 
-.button2{
+.button2 {
     padding: 1.5rem;
     border-radius: 3rem;
     display: flex;
@@ -120,52 +120,50 @@ nav{
     cursor: pointer;
     transition: 0.5s ease-in-out;
     background: #054b6c;
-    
+
 }
 
-#cat1{
-    width:65%;
+#cat1 {
+    width: 65%;
     aspect-ratio: 1/1;
 }
 
-.info{
+.info {
     width: 100%;
     display: flex;
 }
 
 
-#sobreNosotros{
-    height: 100%;
-    width: 100%;
-}
-
-#sobreNosotros img {
-    float: left;
-    height: 110%;
-    width: 30%;
-    margin-right: 2%;
-    margin-top: 5%;
-}
-
-#sobreNosotros h1{
-    margin-bottom: 3%;
-    font-size: 4rem;
-    font-weight: bold;
+#sobreNosotros {
+    width: auto;
+    height: 497px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10%;
 
 }
 
-#sobreNosotros h2 {
-    margin-left: 15%;
-    margin-right: 15%;
-    font-size: 2rem;
-    margin-top: 5%;
-    margin-bottom: 5%;
+.sobreNosotros .descripcion {
+    width: 275px;
+    height: 199px;
+    text-align: center;
+    border-radius: 30px;
+    background-color: rgba(179, 179, 179, 0.6);
+    display: flex;
+    /* Añadido para que se comporte como flexbox */
+    flex-direction: column;
+    /* Cambio para centrar el contenido verticalmente */
+    justify-content: center;
+    align-items: center;
 }
 
-#sobreNosotros p {
-    text-align: justify;
-}
-
-#sobreNosotros{
-    margin-top: 20%;
+.sobreNosotros p {
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
 }
