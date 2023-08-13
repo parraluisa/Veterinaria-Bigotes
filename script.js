@@ -96,11 +96,11 @@ const reviews = [
 
 let currentReviewIndex = 0;
 
-const reviewsCatImg = document.querySelector(".reviewsCatOwned");
-const reviewsDataName = document.querySelector(".reviewsData h2");
-const reviewsData = document.querySelector(".reviewsData p");
-const reviewsContent = document.querySelector(".reviewsContent p");
-const reviewsInnerContainer = document.querySelector(".reviewsInnerContainer");
+const reviewsCatImg = document.getElementById("reviewsCatImg");
+const reviewsDataName = document.getElementById("reviewsDataName");
+const reviewsDataCat = document.getElementById("reviewsDataCat");
+const reviewsText = document.getElementById("reviewsText");
+const reviewsInnerContainer = document.getElementById("reviewsInnerContainer");
 
 function displayCurrentReview() {
     const currentReview = reviews[currentReviewIndex];
@@ -110,8 +110,8 @@ function displayCurrentReview() {
     setTimeout(() => {
         reviewsCatImg.src = currentReview.imageSrc;
         reviewsDataName.textContent = currentReview.name;
-        reviewsData.textContent = "Dueño de " + currentReview.catName + ": " + currentReview.race;
-        reviewsContent.textContent = currentReview.review;
+        reviewsDataCat.textContent = "Dueño de " + currentReview.catName + ": " + currentReview.race;
+        reviewsText.textContent = currentReview.review;
 
         reviewsInnerContainer.classList.remove("hidden");
     }, 500);
@@ -124,5 +124,5 @@ function displayCurrentReview() {
 displayCurrentReview();
 
 // Set up an interval to display reviews every 20 seconds
-const interval = setInterval(displayCurrentReview, 5);
+const interval = setInterval(displayCurrentReview, 20000);
 
