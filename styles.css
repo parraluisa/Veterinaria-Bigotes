@@ -21,7 +21,6 @@ nav {
     align-items: center;
     background-color: #FFFFFF;
     z-index: 2;
-
 }
 
 .icon {
@@ -76,6 +75,7 @@ nav {
 }
 
 .content {
+    margin-top: 10%;
     height: 80%;
     width: 70%;
     box-sizing: border-box;
@@ -119,8 +119,7 @@ nav {
 .button2:hover {
     cursor: pointer;
     transition: 0.5s ease-in-out;
-    background: #054b6c;
-
+    background: #B1D4E0;
 }
 
 #cat1 {
@@ -133,7 +132,6 @@ nav {
     display: flex;
 }
 
-
 #sobreNosotros {
     width: auto;
     height: 497px;
@@ -141,7 +139,6 @@ nav {
     align-items: center;
     justify-content: space-between;
     margin-top: 10%;
-
 }
 
 .sobreNosotros .descripcion {
