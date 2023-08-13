@@ -1,6 +1,6 @@
 const vetInfo = [
     {
-        name: "Dra. Laura Fernández",
+        name: "Dra Laura Fernández",
         description: "Especialista en medicina equina y cuidado de caballos",
         interests: ["Medicina Equina", "Terapias alternativas"],
         imageSrc: "imagenes/people/doctorA.png"
@@ -9,13 +9,13 @@ const vetInfo = [
     {
         name: "Dr. Juan Pedraza",
         description: "Especialista en medicina de animales de granja",
-        interests: ["Medicina de animales de granja", "Cirugía"],
+        interests: ["Animales de granja", "Cirugía"],
         imageSrc: "imagenes/people/doctorB.png"
     },
     {
         name: "Dr. José Pérez",
         description: "Especialista en medicina de animales de compañía",
-        interests: ["Medicina de animales de compañía", "Cirugía"],
+        interests: ["Animales de compañía", "Cirugía"],
         imageSrc: "imagenes/people/doctorC.png"
     },
     // Add more veterinarian data objects as needed
