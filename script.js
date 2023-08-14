@@ -82,14 +82,14 @@ const reviews = [
         catName: "Ronny",
         race: "Gato himalayo",
         imageSrc: "imagenes/reviewCats/catB.jpeg",
-        review: "No puedo estar más satisfecho con la atención que recibimos en esta clínica veterinaria. Desde el momento en que entramos, quedó claro que los animales son verdaderamente valorados aquí. La amabilidad del personal y el afecto que mostraron hacia mi mascota me llenaron de confianza de inmediato. Mi compañero peludo, a menudo nervioso en entornos médicos, se sintió completamente a gusto gracias a las caricias y atenciones que le brindaron. Encontrar un lugar donde la profesionalidad y el cariño van de la mano es realmente un tesoro. Recomiendo encarecidamente esta veterinaria a todos los amantes de los animales que buscan un cuidado excepcional."
+        review: "No puedo estar más satisfecho con la atención que recibimos en esta clínica veterinaria. Desde el momento en que entramos, quedó claro que los animales son verdaderamente valorados aquí. La amabilidad del personal y el afecto que mostraron hacia mi mascota me llenaron de confianza de inmediato."
     },
     {
         name: "Andrés García",
         catName: "Peter",
         race: "Gato azul ruso",
         imageSrc: "imagenes/reviewCats/catC.jpeg",
-        review: "No puedo expresar lo agradecido que estoy por haber encontrado esta increíble clínica veterinaria. Desde el primer instante que crucé la puerta, quedó claro que este lugar es un refugio para nuestras adoradas mascotas. El equipo muestra un nivel de amor y respeto que va más allá de lo profesional. Mi mascota fue recibida con una sonrisa cálida y abrazos cariñosos, lo que realmente hizo que se sintiera relajada, incluso en un entorno médico. La empatía y cuidado que demuestran es inigualable, y eso es algo que realmente valoro, especialmente porque mi peludo amigo suele ponerse nervioso. En esta veterinaria, no solo encontré expertos en salud animal, sino también almas amables que entienden y aman a nuestros fieles compañeros. No dudaría en recomendar este lugar a cualquier dueño de mascotas que busque lo mejor para sus amigos peludos."
+        review: "No puedo expresar lo agradecido que estoy por haber encontrado esta increíble clínica veterinaria. Desde el primer instante que crucé la puerta, quedó claro que este lugar es un refugio para nuestras adoradas mascotas. El equipo muestra un nivel de amor y respeto que va más allá de lo profesional."
 
     }
 ];
