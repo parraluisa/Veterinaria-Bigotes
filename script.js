@@ -66,5 +66,63 @@ nextButton.addEventListener("click", () => {
 
 // ... (Resto del código)
 
-
 displayCurrentVet();
+
+
+const reviews = [
+    {
+        name: "Fabio Buitrago",
+        catName: "Maw",
+        race: "Gato persa",
+        imageSrc: "imagenes/reviewCats/catA.jpeg",
+        review: "Desde el primer instante, quedó claro que el personal de la clínica tiene un profundo amor y respeto por los animales. Fui recibido con una sonrisa amable y mi mascota fue saludada con caricias y mimos.Este enfoque empático realmente marcó la diferencia para mí, ya que mi mascota a menudo se siente nerviosa en entornos médicos."
+    },
+    {
+        name: "Luisa Parra",
+        catName: "Ronny",
+        race: "Gato himalayo",
+        imageSrc: "imagenes/reviewCats/catB.jpeg",
+        review: "No puedo estar más satisfecho con la atención que recibimos en esta clínica veterinaria. Desde el momento en que entramos, quedó claro que los animales son verdaderamente valorados aquí. La amabilidad del personal y el afecto que mostraron hacia mi mascota me llenaron de confianza de inmediato."
+    },
+    {
+        name: "Andrés García",
+        catName: "Peter",
+        race: "Gato azul ruso",
+        imageSrc: "imagenes/reviewCats/catC.jpeg",
+        review: "No puedo expresar lo agradecido que estoy por haber encontrado esta increíble clínica veterinaria. Desde el primer instante que crucé la puerta, quedó claro que este lugar es un refugio para nuestras adoradas mascotas. El equipo muestra un nivel de amor y respeto que va más allá de lo profesional."
+
+    }
+];
+
+let currentReviewIndex = 0;
+
+const reviewsCatImg = document.getElementById("reviewsCatImg");
+const reviewsDataName = document.getElementById("reviewsDataName");
+const reviewsDataCat = document.getElementById("reviewsDataCat");
+const reviewsText = document.getElementById("reviewsText");
+const reviewsInnerContainer = document.getElementById("reviewsInnerContainer");
+
+function displayCurrentReview() {
+    const currentReview = reviews[currentReviewIndex];
+
+    reviewsInnerContainer.classList.add("hidden");
+
+    setTimeout(() => {
+        reviewsCatImg.src = currentReview.imageSrc;
+        reviewsDataName.textContent = currentReview.name;
+        reviewsDataCat.textContent = "Dueño de " + currentReview.catName + ": " + currentReview.race;
+        reviewsText.textContent = currentReview.review;
+
+        reviewsInnerContainer.classList.remove("hidden");
+    }, 500);
+
+    // Move to the next review index
+    currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
+}
+
+// Display the first review immediately
+displayCurrentReview();
+
+// Set up an interval to display reviews every 20 seconds
+const interval = setInterval(displayCurrentReview, 20000);
+
