@@ -13,11 +13,11 @@ body {
 nav {
     position: fixed;
     height: 15%;
-    width: 70%;
+    width: 100%;
     padding-top: 1%;
     padding-bottom: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     align-items: center;
     background-color: #FFFFFF;
     z-index: 2;
@@ -25,14 +25,15 @@ nav {
 
 .icon {
     height: 100%;
+    margin-left: 1rem;
+    margin-right: 2rem;
 }
 
 .menu {
     height: 60%;
-    width: 80%;
+    width: 50%;
     padding-left: 2.5%;
     padding-right: 2.5%;
-    float: right;
     background-color: #F2F1F1;
     border-radius: 3rem;
     box-shadow: 0rem 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
@@ -136,7 +137,7 @@ nav {
 }
 
 #aboutUs {
-    scroll-margin-top: 10rem;
+    scroll-margin-top: 8rem;
     width: auto;
     height: 35rem;
     display: flex;
