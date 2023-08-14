@@ -1,8 +1,8 @@
 const vetInfo = [
     {
         name: "Dra Laura Fernández",
-        description: "Especialista en medicina equina y cuidado de caballos",
-        interests: ["Medicina Equina", "Terapias alternativas"],
+        description: "Especialista en medicina gatuna y cuidado de gatos",
+        interests: ["Medicina Gatuna", "Terapias alternativas"],
         imageSrc: "imagenes/people/doctorA.png"
 
     },
