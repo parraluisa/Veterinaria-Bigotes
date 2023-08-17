@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student data</title>
+</head>
+<body>
+    <h1>User info</h1>
+    <p th:text="'Nombre: ' + ${usuario.name}"></p>
+    <p th:text="'Usuario: ' + ${usuario.userName}"></p>
+    <p th:text="'Correo: ' + ${usuario.correo}"></p>
+    <p th:text="'Edad: ' + ${usuario.edad}"></p>
+</body>
+</html>
