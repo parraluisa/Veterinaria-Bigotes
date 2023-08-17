@@ -3,39 +3,48 @@
 <head>
     <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles1.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Document</title>
+
 </head>
 <body>
-    <h1>Mascotas veterinaria</h1>
-    <ul>
-        <li th:each=" pet: ${pets}" th:text="${pet.name}"></li>
-    </ul>
-    
-    <div style="width: 80%;">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Raza</th>
-                    <th scope="col">Edad</th>
-                    <th scope="col">Enfermedad</th>
-                    <th scope ="col">Ingreso</th>
-                    <th scope ="col">Alta</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each=" pet: ${pets}">
-                    <td th:text="${pet.name}"></td>
-                    <td th:text="${pet.breed}"></td>
-                    <td th:text="${pet.age}"></td>
-                    <td th:text="${pet.disease}"></td>
-                    <td th:text="${pet.entry}"></td>
-                    <td th:text="${pet.departure}"></td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="d-flex">
+        <div class="sidebar">
+            <!-- Sidebar content -->
+            <img class="icon" src="/imagenes/Bigotes.svg">
+            <ul>
+                <li><a href="#">Opción 1</a></li>
+                <li><a href="#">Opción 2</a></li>
+                <li><a href="#">Cerrar sesión</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Mascotas veterinaria</h1>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Raza</th>
+                        <th scope="col">Edad</th>
+                        <th scope="col">Enfermedad</th>
+                        <th scope="col">Ingreso</th>
+                        <th scope="col">Alta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="pet: ${pets}">
+                        <td th:text="${pet.name}"></td>
+                        <td th:text="${pet.breed}"></td>
+                        <td th:text="${pet.age}"></td>
+                        <td th:text="${pet.disease}"></td>
+                        <td th:text="${pet.entry}"></td>
+                        <td th:text="${pet.departure}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 </html>

@@ -1,0 +1,20 @@
+
+/* styles.css */
+.sidebar {
+    height: 100vh;
+    background-color: #D9D9D9;
+    padding: 3rem;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Additional styles can be added here */
+.icon {
+    height: 15%;
+
+}
+.content{
+    margin-left: 5%;
+}
