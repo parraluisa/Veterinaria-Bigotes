@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 @Data
 @AllArgsConstructor
 public class Pet {
+    private String imgUrl;
     private String name;
     private String breed;
     private int age;

@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Información mascota</title>
 </head>
 <body>
     <h1>Información mascota</h1>
+    <img th:src="${pet.imgUrl}">
     <p th:text="${pet.name}"></p>
     <p th:text="${pet.breed}"></p>
     <p th:text="${pet.age}"></p>
