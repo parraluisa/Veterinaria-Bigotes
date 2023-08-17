@@ -19,7 +19,6 @@ public class PetController {
     @GetMapping("/all")
     public String showAllPets(Model model){
         model.addAttribute("pets", service.SearchAll());
-        System.out.println(service.SearchAll().size());
         return "show_all_pets";
     }
 
