@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/show_pet_style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
     <title>Información mascota</title>
 </head>
+
 <body>
+    <nav>
+        <div id="logo-container">
+            <a href="http://localhost:8090/landing_page/show">
+                <img id="logo" src="/imagenes/showPet/logo.svg">
+            </a>
+        </div>
+        <div id="user">
+            <h2>Nombre de usuario</h2>
+            <img id="user-img" src="/imagenes/showPet/user.png">
+        </div>
+    </nav>
+
+    <main>
+
+
+        <section id="pet">
+            <div>
+                <img id="pet-img" th:src="${pet.imgUrl}">
+            </div>
+            <div id ="pet-info">
+            <h1>
+                <span th:text="${pet.name}"></span>
+            </h1>
+            <p><b>Dueño: </b> Fabio Buitrago</p>
+            <p><b>Raza: </b><span th:text="${pet.breed}"></span></p>
+            <p><b>Edad: </b><span th:text="${pet.age}"></span></p>
+            <p><b>Peso: </b><span th:text="${pet.weight}"></span></p>
+
+            </div>
+            
+        </section>
+
+        <section id="medical-history">
+
+        </section>
+
+    </main>
+
+    </section>
+
+
+
+
+
     <h1>Información mascota</h1>
     <img th:src="${pet.imgUrl}">
     <p th:text="${pet.name}"></p>
@@ -15,4 +63,5 @@
     <p th:text="${pet.entry}"></p>
     <p th:text="${pet.departure}"></p>
 </body>
+
 </html>
