@@ -1,50 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles1.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;900&display=swap" rel="stylesheet">
+
+    <title>Todas las mascotas</title>
 
 </head>
+
 <body>
     <div class="d-flex">
         <div class="sidebar">
             <!-- Sidebar content -->
-            <img class="icon" src="/imagenes/Bigotes.svg">
-            <ul>
-                <li><a href="#">Opción 1</a></li>
-                <li><a href="#">Opción 2</a></li>
-                <li><a href="#">Cerrar sesión</a></li>
-            </ul>
+            <img class="icon" src="/imagenes/Bigotes-2.png">
+            <!-- Dentro de tu barra lateral en el archivo HTML -->
+            <h4>Filtros</h4>
+            <div class="filters">
+
+                <div>
+                    <input type="checkbox" id="filterNamePet">
+                    <label for="filterNamePet">Nombre mascota</label>
+                </div>
+                <!-- Dentro de tu barra lateral en el archivo HTML -->
+                <div class="search-input">
+                    <input type="text" id="searchPet" placeholder="Inserte el nombre de la mascota">
+                    <span class="search-icon"><i class="fas fa-search"></i></span>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="filterNameOwner">
+                    <label for="filterNameOwner">Nombre dueño</label>
+                </div>
+                <!-- Dentro de tu barra lateral en el archivo HTML -->
+                <div class="search-input">
+                    <input type="text" id="searchPet" placeholder="Inserte el nombre del dueño">
+                    <span class="search-icon"><i class="fas fa-search"></i></span>
+                </div>
+
+
+            </div>
+            <h4>Adicionales</h4>
+            <div class="addSection">
+                <a href="">Agregar mascota</a>
+                <a href="">Agregar dueño</a>
+            </div>
+            <p>Cerrar Sesión</p>
+
         </div>
         <div class="content">
-            <h1>Mascotas veterinaria</h1>
+            <div class="head">
+                <h1>Nuestras Mascotas</h1>
+                <h2>Nombre usuario</h2>
+                <img class="icon" src="/imagenes/FotoUser.png">
+            </div>
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th scope="col">Nombre</th>
+                        <th scope="col">Nombre Mascota</th>
                         <th scope="col">Raza</th>
                         <th scope="col">Edad</th>
+                        <th scope="col">Peso</th>
                         <th scope="col">Enfermedad</th>
                         <th scope="col">Ingreso</th>
                         <th scope="col">Alta</th>
+                        <th scope="col">Más info</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr th:each="pet: ${pets}">
-                        <td th:text="${pet.name}"></td>
+                    <tr th:each="pet, _target : ${pets}">
+                        <td>
+                            <img th:src="${pet.imgUrl}" alt="Imagen de la mascota" width="50" height="50">
+                            <span th:text="${pet.name}"></span>
+                        </td>
                         <td th:text="${pet.breed}"></td>
                         <td th:text="${pet.age}"></td>
+                        <td th:text="${pet.weight}"></td>
                         <td th:text="${pet.disease}"></td>
                         <td th:text="${pet.entry}"></td>
                         <td th:text="${pet.departure}"></td>
+                        <td id="more">
+                            <a th:href="@{/pet/find/{index}(index=${_target.index}+1)}"> ... </a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </body>
+
 </html>
