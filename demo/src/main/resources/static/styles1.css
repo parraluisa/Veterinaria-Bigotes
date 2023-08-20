@@ -31,13 +31,11 @@
 /* Estilos para los campos de búsqueda */
 .search-input {
     position: relative;
-    margin-bottom: 1rem;
+    margin-bottom: 10%;
 }
 
 .search-input input[type="text"] {
     width: 100%;
-    padding: 0.2rem 0.5rem; /* Ajustar el padding */
-    padding-left: 5rem; /* Ajustar el padding izquierdo */
     box-sizing: border-box;
     border-radius: 0.5rem;
     border: 1px solid rgba(0, 0, 0, 0.30);
@@ -47,7 +45,7 @@
 /* Estilos para el ícono de búsqueda */
 .search-icon {
     position: absolute;
-    left: 10px; /* Ajustar la posición a la izquierda */
+    left: 5%; /* Ajustar la posición a la izquierda */
     top: 17%;
     height: 10%;
     transform: translateY(-50%);
@@ -64,7 +62,7 @@
 .sidebar label[for="filterNamePet"],
 .sidebar label[for="filterNameOwner"] {
     position: relative;
-    padding-left: 25px;
+    padding-left: 15%;
     cursor: pointer;
     color: #FFFFFF;
     font-family: 'Raleway', sans-serif;
@@ -83,7 +81,7 @@
     height: 65%;
     background-color: #FFFFFF;
     transition: background-color 0.3s, border-color 0.3s;
-    border-radius: 2px;
+    border-radius: 0.2rem;
     border: 3px solid transparent;
 }
 
@@ -155,7 +153,7 @@
     margin-bottom: 3%;
     color: #1C697D;
     font-family: 'Raleway', sans-serif;
-    font-size: 35px;
+    font-size: 2.23rem;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
@@ -164,9 +162,9 @@
 
 #searchPet {
     font-size: 0.53rem;
-    padding-left: 1.8rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-left: 17%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 #filterName {
@@ -185,7 +183,7 @@
 /* Estilo para los encabezados de columna */
 .content th {
     /* Color de fondo de los encabezados */
-    padding: 0.5rem;
+    padding: 1%;
     /* Espaciado interno */
     font-weight: 400;
     /* Peso de la fuente */
@@ -212,8 +210,8 @@
 
 /* Estilos para las celdas de la tabla */
 .content table tbody tr td {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 2%;
+    padding-bottom: 2%;
     text-align: center;
     vertical-align: middle;
 }
@@ -234,7 +232,7 @@
     font-size: 0.9rem;
     cursor: pointer;
     text-align: center;
-    padding: 0.5rem;
+    padding: 5%;
 }
 
 .addSection a:hover {
