@@ -31,9 +31,10 @@
             </div>
             <div id="pet-info">
                 <div id="pet-data-container">
-                    <h1>
-                        <span th:text="${pet.name}"></span>
-                    </h1>
+                    <div id="pet-name">
+                        <h1><span th:text="${pet.name}"></span></h1>
+                        <img src="/imagenes/showPet/edit1.svg">
+                    </div>
                     <div id="pet-data">
                         <div>
                             <p><strong>Dueño: </strong> Fabio Buitrago</p>
@@ -50,17 +51,13 @@
             </div>
 
         </section>
-
-        <section id="medical-history">
-
-        </section>
-
     </main>
 
     <section id="history">
-        <h1>
-            Historial médico
-        </h1>
+        <div id="history-title">
+            <h1>Historial médico</h1>
+            <img src="/imagenes/showPet/add.svg">
+        </div>
 
         <table>
             <thead>
@@ -76,7 +73,7 @@
                 </tr>
             </thead>
             <tbody>
-                <td>0001</td>
+                <td>0001 <img src="/imagenes/showPet/edit2.svg"></td>
                 <td th:text="${pet.disease}"></td>
                 <td th:text="${pet.entry}"></td>
                 <td th:text="${pet.departure}"></td>
