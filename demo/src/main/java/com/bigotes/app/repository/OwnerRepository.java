@@ -1,0 +1,50 @@
+package com.bigotes.app.repository;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.stereotype.Repository;
+
+import com.bigotes.app.model.Owner;
+
+@Repository
+public class OwnerRepository implements CrudRepository<Owner>{
+    private Map<Integer, Owner> data = new HashMap<>();
+
+    public OwnerRepository() {
+        insertSampleData();
+    }
+
+    public void insertSampleData() {
+        data.put(0, new Owner(0, 1342, "qwerty1243", "Juan", "Perez", "Montoya", "12345678", "juan@gmail.com", null));
+        data.put(1, new Owner(1, 8543, "abcd", "Camilo", "García", "Parra", "23456789", "camilo@gmail.com", null));
+    }
+
+    @Override
+    public Owner findById(Integer id) {
+        return data.get(id);
+    }
+
+    @Override
+    public Collection<Owner> findAll() {
+        return data.values();
+    }
+
+    @Override
+    public void deleteById(Integer id) {
+        data.remove(id);
+    }
+
+    @Override
+    public void save(Owner Owner) {
+        if (Owner.getId() != null && data.containsKey(Owner.getId())) {
+            data.put(Owner.getId(), Owner);
+        } else {
+            int tam = data.size();
+            int lastId = data.get(tam).getId();
+            Owner.setId(lastId + 1);
+            data.put(Owner.getId(), Owner);
+        }
+    }
+}

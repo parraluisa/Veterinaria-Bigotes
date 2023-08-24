@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.bigotes.app.exception.NotFoundException;
 import com.bigotes.app.model.Pet;
 import com.bigotes.app.service.CrudService;
 
@@ -25,7 +26,7 @@ public class PetController {
     @GetMapping("/all")
     public String showAllPets(Model model){
         model.addAttribute("pets", service.findAll());
-        return "show_all_pets";
+        return "pet_pages/show_all_pets";
     }
 
     // http://localhost:8090/pet/find/1
@@ -35,9 +36,9 @@ public class PetController {
         if (pet != null) {
             model.addAttribute("pet", pet);
         } else {
-            throw new RuntimeException("Pet id not found - " + id);
+            throw new NotFoundException();
         }
-        return "show_pet";
+        return "pet_pages/show_pet";
     }
 
     @PostMapping("/save")
@@ -51,7 +52,7 @@ public class PetController {
     public String insertPet(Model model) {
         Pet pet = new Pet(0, "", "", "", 0, 0.0, "", LocalDate.now(), LocalDate.now());
         model.addAttribute("pet", pet);
-        return "save_pet";
+        return "pet_pages/save_pet";
     }
 
     @GetMapping("/upd/{id}")
@@ -61,9 +62,9 @@ public class PetController {
             model.addAttribute("pet", pet);
             System.out.println("Pet: " + pet);
         } else {
-            throw new RuntimeException("Pet id not found - " + id);
+            throw new NotFoundException();
         }
-        return "save_pet";
+        return "pet_pages/save_pet";
     }
 
     @GetMapping("/del/{id}")
@@ -71,5 +72,4 @@ public class PetController {
         service.deleteById(id);
         return "redirect:/pet/all";
     }    
-    
 }

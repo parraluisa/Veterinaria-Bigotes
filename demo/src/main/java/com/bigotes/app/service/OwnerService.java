@@ -5,23 +5,22 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.bigotes.app.model.Pet;
+import com.bigotes.app.model.Owner;
 import com.bigotes.app.repository.CrudRepository;
 
 @Service
-public class PetService implements CrudService<Pet> {
-
+public class OwnerService implements CrudService<Owner> {
+    
     @Autowired
-    private CrudRepository<Pet> repository;
-
+    private CrudRepository<Owner> repository;
 
     @Override
-    public Pet findById(Integer id) {
-       return repository.findById(id);
+    public Owner findById(Integer id) {
+        return repository.findById(id);
     }
 
     @Override
-    public Collection<Pet> findAll() {
+    public Collection<Owner> findAll() {
         return repository.findAll();
     }
 
@@ -31,7 +30,7 @@ public class PetService implements CrudService<Pet> {
     }
 
     @Override
-    public void save(Pet pet) {
-        repository.save(pet);
+    public void save(Owner Owner) {
+        repository.save(Owner);
     }
 }
