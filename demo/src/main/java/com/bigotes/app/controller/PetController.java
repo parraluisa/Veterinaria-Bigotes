@@ -44,7 +44,7 @@ public class PetController {
 
     @GetMapping("/add")
     public String insertPet(Model model) {
-        Pet pet = new Pet(0, "", "", "", 0, 0.0, "", LocalDate.now(), LocalDate.now());
+        Pet pet = new Pet(0, 0,"", "", "", 0, 0.0, "", LocalDate.now(), LocalDate.now());
         model.addAttribute("pet", pet);
         return "pet_pages/save_pet";
     }
