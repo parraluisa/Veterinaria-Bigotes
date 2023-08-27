@@ -9,7 +9,7 @@ import lombok.Data;
 @AllArgsConstructor
 public class Owner {
     private Integer id;
-    private int idCard;
+    private Integer idCard;
     private String password;
     private String name;
     private String firstLastName;

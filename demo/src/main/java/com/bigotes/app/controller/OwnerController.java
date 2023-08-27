@@ -40,7 +40,6 @@ public class OwnerController {
     @PostMapping("/save")
     public String saveOwner(@ModelAttribute("owner") Owner owner) {
         service.save(owner);
-        System.out.println("owner: " + owner);
         return "redirect:/owner/all";
     }
 
@@ -56,7 +55,6 @@ public class OwnerController {
         Owner owner = service.findById(id);
         if (owner != null) {
             model.addAttribute("owner", owner);
-            System.out.println("owner: " + owner);
         } else {
             throw new NotFoundException();
         }
@@ -65,7 +63,12 @@ public class OwnerController {
 
     @GetMapping("/del/{id}")
     public String deleteOwner(Model model, @PathVariable("id") int id) {
-        service.deleteById(id);
+        Owner owner = service.findById(id);
+        if (owner != null) {
+            service.deleteById(id);
+        } else {
+            throw new NotFoundException();
+        }
         return "redirect:/owner/all";
     }
 }
