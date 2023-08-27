@@ -1,7 +1,7 @@
 package com.bigotes.app.service;
 
 import com.bigotes.app.model.Pet;
-import com.bigotes.app.repository.CrudRepository;
+import com.bigotes.app.repository.PetRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +11,7 @@ import java.util.Collection;
 public class PetService implements CrudService<Pet> {
 
     @Autowired
-    private CrudRepository<Pet> repository;
+    private PetRepository repository;
 
     @Override
     public Pet findById(Integer id) {
@@ -31,5 +31,9 @@ public class PetService implements CrudService<Pet> {
     @Override
     public void save(Pet pet) {
         repository.save(pet);
+    }
+
+    public Collection<Pet> findByOwnerId(Integer ownerId) {
+        return repository.findByOwnerId(ownerId);
     }
 }

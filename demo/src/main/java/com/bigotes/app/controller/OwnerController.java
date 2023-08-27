@@ -1,24 +1,19 @@
 package com.bigotes.app.controller;
 
+import com.bigotes.app.exception.NotFoundException;
+import com.bigotes.app.model.Owner;
+import com.bigotes.app.service.OwnerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import com.bigotes.app.exception.NotFoundException;
-import com.bigotes.app.model.Owner;
-import com.bigotes.app.service.CrudService;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/owner")
 public class OwnerController {
 
     @Autowired
-    CrudService<Owner> service;
+    OwnerService service;
 
     @GetMapping("/all")
     public String showAllOwners(Model model) {
@@ -46,7 +41,7 @@ public class OwnerController {
 
     @GetMapping("/add")
     public String insertOwner(Model model) {
-        Owner owner = new Owner(0, 0, "", "", ", ", ", ", ", ", null);
+        Owner owner = new Owner(0, 0, "", "", ", ", ", ", ", ");
         model.addAttribute("owner", owner);
         return "owner_pages/save_owner";
     }
@@ -62,7 +57,7 @@ public class OwnerController {
         return "owner_pages/save_owner";
     }
 
-    @GetMapping("/del/{id}")
+    @DeleteMapping("/del/{id}")
     public String deleteOwner(@PathVariable("id") int id) {
         Owner owner = service.findById(id);
         if (owner != null) {
@@ -71,5 +66,22 @@ public class OwnerController {
             throw new NotFoundException();
         }
         return "redirect:/owner/all";
+    }
+
+    @GetMapping("/login")
+    public String showLogin(Model model) {
+        Integer idCard = 0;
+        model.addAttribute("idCard", idCard);
+        return "login_page";
+    }
+
+    @PostMapping("/login")
+    public String login(@RequestParam("idCard") Integer idCard) {
+        Owner owner = service.findByIdCard(idCard);
+        if (owner != null) {
+            return "redirect:/pet/owner/" + owner.getIdCard();
+        } else {
+            return "redirect:/owner/login?error=idNotFound";
+        }
     }
 }

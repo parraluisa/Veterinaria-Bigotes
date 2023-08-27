@@ -1,18 +1,17 @@
 package com.bigotes.app.service;
 
-import java.util.Collection;
-
+import com.bigotes.app.model.Owner;
+import com.bigotes.app.repository.OwnerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.bigotes.app.model.Owner;
-import com.bigotes.app.repository.CrudRepository;
+import java.util.Collection;
 
 @Service
 public class OwnerService implements CrudService<Owner> {
     
     @Autowired
-    private CrudRepository<Owner> repository;
+    private OwnerRepository repository;
 
     @Override
     public Owner findById(Integer id) {
@@ -32,5 +31,9 @@ public class OwnerService implements CrudService<Owner> {
     @Override
     public void save(Owner Owner) {
         repository.save(Owner);
+    }
+
+    public Owner findByIdCard(Integer idCard) {
+        return repository.findByIdCard(idCard);
     }
 }
