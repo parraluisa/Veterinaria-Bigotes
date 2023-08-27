@@ -10,7 +10,11 @@
     <form th:object="${pet}" th:action="@{/pet/save}" th:method="post">
         <!-- Hidden input field for ID -->
         <input type="hidden" th:field="*{id}" />
-        
+
+        <div class="form-group">
+            <label for="idOwner">Cédula del dueño</label>
+            <input th:field="*{idOwner}" type="text" class="form-control" id="idOwner" placeholder="Cédula">
+        </div>
         <div class="form-group">
             <label for="name">Nombre</label>
             <input th:field="*{name}" type="text" class="form-control" id="name" placeholder="Nombre">

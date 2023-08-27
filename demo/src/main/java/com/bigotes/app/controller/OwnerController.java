@@ -16,6 +16,7 @@ import com.bigotes.app.service.CrudService;
 @Controller
 @RequestMapping("/owner")
 public class OwnerController {
+
     @Autowired
     CrudService<Owner> service;
 
@@ -40,13 +41,12 @@ public class OwnerController {
     @PostMapping("/save")
     public String saveOwner(@ModelAttribute("owner") Owner owner) {
         service.save(owner);
-        System.out.println("owner: " + owner);
         return "redirect:/owner/all";
     }
 
     @GetMapping("/add")
     public String insertOwner(Model model) {
-        Owner owner = new Owner(0, 0, "", "", "", ", ", ", ", ", ", null);
+        Owner owner = new Owner(0, 0, "", "", ", ", ", ", ", ", null);
         model.addAttribute("owner", owner);
         return "owner_pages/save_owner";
     }
@@ -56,7 +56,6 @@ public class OwnerController {
         Owner owner = service.findById(id);
         if (owner != null) {
             model.addAttribute("owner", owner);
-            System.out.println("owner: " + owner);
         } else {
             throw new NotFoundException();
         }
@@ -64,8 +63,13 @@ public class OwnerController {
     }
 
     @GetMapping("/del/{id}")
-    public String deleteOwner(Model model, @PathVariable("id") int id) {
-        service.deleteById(id);
+    public String deleteOwner(@PathVariable("id") int id) {
+        Owner owner = service.findById(id);
+        if (owner != null) {
+            service.deleteById(id);
+        } else {
+            throw new NotFoundException();
+        }
         return "redirect:/owner/all";
     }
 }

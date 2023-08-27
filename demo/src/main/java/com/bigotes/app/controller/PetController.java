@@ -1,25 +1,20 @@
 package com.bigotes.app.controller;
 
-import java.time.LocalDate;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-
 import com.bigotes.app.exception.NotFoundException;
 import com.bigotes.app.model.Pet;
 import com.bigotes.app.service.CrudService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
-import org.springframework.web.bind.annotation.PostMapping;
+import java.time.LocalDate;
 
 
 @Controller
 @RequestMapping("/pet")
 public class PetController {
+
     @Autowired
     CrudService<Pet> service;
 
@@ -44,13 +39,12 @@ public class PetController {
     @PostMapping("/save")
     public String savePet(@ModelAttribute("pet") Pet pet) {
         service.save(pet);
-        System.out.println("Pet: " + pet);
         return "redirect:/pet/all";
     }
 
     @GetMapping("/add")
     public String insertPet(Model model) {
-        Pet pet = new Pet(0, "", "", "", 0, 0.0, "", LocalDate.now(), LocalDate.now());
+        Pet pet = new Pet(0, 0,"", "", "", 0, 0.0, "", LocalDate.now(), LocalDate.now());
         model.addAttribute("pet", pet);
         return "pet_pages/save_pet";
     }
@@ -60,7 +54,6 @@ public class PetController {
         Pet pet = service.findById(id);
         if (pet != null) {
             model.addAttribute("pet", pet);
-            System.out.println("Pet: " + pet);
         } else {
             throw new NotFoundException();
         }
@@ -68,8 +61,13 @@ public class PetController {
     }
 
     @GetMapping("/del/{id}")
-    public String deletePet(Model model, @PathVariable("id") int id) {
-        service.deleteById(id);
+    public String deletePet(@PathVariable("id") int id) {
+        Pet pet = service.findById(id);
+        if (pet != null) {
+            service.deleteById(id);
+        } else {
+            throw new NotFoundException();
+        }
         return "redirect:/pet/all";
     }    
 }
