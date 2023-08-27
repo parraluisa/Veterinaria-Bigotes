@@ -72,7 +72,7 @@ public class OwnerController {
     public String showLogin(Model model) {
         Integer idCard = 0;
         model.addAttribute("idCard", idCard);
-        return "login_owner";
+        return "login_page";
     }
 
     @PostMapping("/login")
