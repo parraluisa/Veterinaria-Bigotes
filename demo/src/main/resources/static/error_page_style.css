@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Raleway:wght@400;600;900&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #5DB3DB;
+    overflow: hidden;
+    
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items:center; 
+    background: #5DB3DB;
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+img{
+    position:fixed;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#text-container{
+    z-index: 1;
+    margin-top: 40%;
+    color: #ffffff;
+    text-align: center;
+}
+
+#text-container h1{
+    font-weight: 900;
+    font-size:300%;
+    margin-bottom: -0.5%;
+}
+
+#text-container h2{
+    font-weight: 600;
+    font-size:100%;
+    margin-bottom: 5%;
+}
+
+#text-container a {
+    position: relative;
+    font-weight: 600;
+    font-size: 80%;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 2.5% 2.5%;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+#text-container a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #5DB3DB;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out, background 0.3s ease-in-out;
+    z-index: -1;
+}
+
+#text-container a:hover::before {
+    width: 100%;
+    background: #5DB3DB;
+}
+
+#text-container a:hover {
+    color: #ffffff;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="/login_page_style.css">
+    <script src="/loginPageScript.js" defer></script>
+</head>
+<body>
+    <video muted autoplay loop>
+        <source src="/imagenes/login/backgroundCat.mp4" type="video/mp4">
+    </video>
+    <div class="outer-container">
+
+        <div class="switch">
+            <div class="loginOwner " onclick="tab1();"><img src="/imagenes/login/ownerSymbol.png" alt="Owner symbol"></div>
+            <div class="loginVet" onclick="tab2();"><img src="/imagenes/login/vetSymbol.png" alt="Vet symbol"></div>
+        </div>
+
+        <div class="container">
+            <div class="outer">
+                <img src="/imagenes/login/catSymbol.svg" alt="Cat symbol">
+                <div class="container-forms">
+
+                    <form id="formOwner" class="form-active ">
+        
+                        <div id="page">
+                            <label>Sign in</label>
+                            <p>Por favor ingresa la cédula para acceder a la plataforma</p>
+                            <div class="element">
+                                <input type="text" placeholder="Cédula">
+                            </div>
+                            <button id="button">Sign in</button>
+                        </div>
+                    </form>
+
+                    <form id="formVet" class="form-active">
+                        <div id="page">
+                            <label>Sign in</label>
+                            <p>Por favor ingresa la cédula y contraseña para acceder a la plataforma</p>
+                            <div class="element">
+                                <input type="text" placeholder="Cédula">
+                            </div>
+                            <div class="element">
+                                <input type="text" placeholder="Contraseña">
+                            </div>
+                            <button id="button">Sign in</button>
+                        </div>
+                    </form> 
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
