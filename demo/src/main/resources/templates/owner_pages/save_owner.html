@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/save_pet.css">
+    <script src="/submitFormOwner.js"></script>
+    <link rel="stylesheet" href="/save_owner.css">
     <title>Guardar dueño</title>
 </head>
 
@@ -13,7 +14,8 @@
     <div class="content">
         <div class="form-container">
             <div class="title-container">
-                <h2>Datos<br>DUEÑO</h2>
+                <h2>Datos</h2>
+                <h2>DUEÑO</h2>
             </div>
             <div class="form-content">
                 <form th:object="${owner}" th:action="@{/owner/save}" th:method="post">
@@ -22,7 +24,7 @@
 
                     <div class="form-group">
                         <div class="container">
-                            <input th:field="*{idCard}" type="number" id="idCard" placeholder="0">
+                            <input th:field="*{idCard}" type="number" id="idCard" placeholder="Cedula" value="Cédula">
                         </div>
                     </div>
                     <div class="form-group">
@@ -62,9 +64,9 @@
             </div>
         </div>
         <div class="buttons-container">
-            <a href="/show_all_owners.html" class="btn btn-secondary">Cancelar</a> 
-            <button type="submit">Guardar</button>
-            <a href="/show_all_owners.html" class="btn btn-primary">Agregar</a>
+            <a th:href="@{/owner/all}">Cancelar</a> 
+            <button id="save-button" class="btn-primary  ">Guardar</button>
+            <a th:href="@{/pet/add}">Agregar</a>
         </div>
     </div>
 </body>
