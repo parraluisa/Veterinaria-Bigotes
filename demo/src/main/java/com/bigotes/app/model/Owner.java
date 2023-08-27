@@ -3,8 +3,6 @@ package com.bigotes.app.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import java.util.ArrayList;
-
 @Data
 @AllArgsConstructor
 public class Owner {
@@ -15,5 +13,4 @@ public class Owner {
     private String secondLastName;
     private String phone;
     private String email;
-    private ArrayList<Pet> pets;
 }

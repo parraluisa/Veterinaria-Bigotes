@@ -7,7 +7,7 @@
     <title>Guardar dueño</title>
 </head>
 <body>
-    <form th:object="${owner}" th:action="@{/owner/save}" th:method="post">
+    <form id = "formOwner" th:object="${owner}" th:action="@{/owner/save}" th:method="post">
         <!-- Hidden input field for ID -->
         <input type="hidden" th:field="*{id}" />
 

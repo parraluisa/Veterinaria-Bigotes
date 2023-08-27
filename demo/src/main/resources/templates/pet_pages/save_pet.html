@@ -7,7 +7,7 @@
     <title>Guardar mascota</title>
 </head>
 <body>
-    <form th:object="${pet}" th:action="@{/pet/save}" th:method="post">
+    <form id = "formPet" th:object="${pet}" th:action="@{/pet/save}" th:method="post">
         <!-- Hidden input field for ID -->
         <input type="hidden" th:field="*{id}" />
 

@@ -16,8 +16,8 @@ public class OwnerRepository implements CrudRepository<Owner>{
     }
 
     public void insertSampleData() {
-        data.put(0, new Owner(0, 1342, "Juan", "Perez", "Montoya", "12345678", "juan@gmail.com", null));
-        data.put(1, new Owner(1, 8543, "Camilo", "García", "Parra", "23456789", "camilo@gmail.com", null));
+        data.put(0, new Owner(0, 1342, "Juan", "Perez", "Montoya", "12345678", "juan@gmail.com"));
+        data.put(1, new Owner(1, 8543, "Camilo", "García", "Parra", "23456789", "camilo@gmail.com"));
     }
 
     @Override
@@ -45,5 +45,14 @@ public class OwnerRepository implements CrudRepository<Owner>{
             Owner.setId(lastId + 1);
             data.put(Owner.getId(), Owner);
         }
+    }
+
+    public Owner findByIdCard(Integer idCard) {
+        for (Owner owner : data.values()) {
+            if (owner.getIdCard().equals(idCard)) {
+                return owner;
+            }
+        }
+        return null;
     }
 }

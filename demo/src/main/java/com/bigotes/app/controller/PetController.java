@@ -2,7 +2,7 @@ package com.bigotes.app.controller;
 
 import com.bigotes.app.exception.NotFoundException;
 import com.bigotes.app.model.Pet;
-import com.bigotes.app.service.CrudService;
+import com.bigotes.app.service.PetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,7 +16,7 @@ import java.time.LocalDate;
 public class PetController {
 
     @Autowired
-    CrudService<Pet> service;
+    private PetService service;
 
     @GetMapping("/all")
     public String showAllPets(Model model){
@@ -38,6 +38,7 @@ public class PetController {
 
     @PostMapping("/save")
     public String savePet(@ModelAttribute("pet") Pet pet) {
+
         service.save(pet);
         return "redirect:/pet/all";
     }
@@ -50,7 +51,7 @@ public class PetController {
     }
 
     @GetMapping("/upd/{id}")
-    public String updatePet(Model model, @PathVariable("id") int id) {
+    public String updatePet(Model model, @PathVariable("id") Integer id) {
         Pet pet = service.findById(id);
         if (pet != null) {
             model.addAttribute("pet", pet);
@@ -60,8 +61,8 @@ public class PetController {
         return "pet_pages/save_pet";
     }
 
-    @GetMapping("/del/{id}")
-    public String deletePet(@PathVariable("id") int id) {
+    @DeleteMapping("/del/{id}")
+    public String deletePet(@PathVariable("id") Integer id) {
         Pet pet = service.findById(id);
         if (pet != null) {
             service.deleteById(id);
@@ -69,5 +70,11 @@ public class PetController {
             throw new NotFoundException();
         }
         return "redirect:/pet/all";
-    }    
+    }
+
+    @GetMapping("/owner/{idCard}")
+    public String showOwnerPets(Model model, @PathVariable("idCard") Integer idCard){
+        model.addAttribute("pets", service.findByOwnerId(idCard));
+        return "pet_pages/show_all_pets";
+    }
 }
