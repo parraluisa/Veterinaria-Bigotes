@@ -1,12 +1,11 @@
 package com.bigotes.app.repository;
 
+import com.bigotes.app.model.Owner;
+import org.springframework.stereotype.Repository;
+
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-
-import org.springframework.stereotype.Repository;
-
-import com.bigotes.app.model.Owner;
 
 @Repository
 public class OwnerRepository implements CrudRepository<Owner>{
@@ -17,8 +16,8 @@ public class OwnerRepository implements CrudRepository<Owner>{
     }
 
     public void insertSampleData() {
-        data.put(0, new Owner(0, 1342, "qwerty1243", "Juan", "Perez", "Montoya", "12345678", "juan@gmail.com", null));
-        data.put(1, new Owner(1, 8543, "abcd", "Camilo", "García", "Parra", "23456789", "camilo@gmail.com", null));
+        data.put(0, new Owner(0, 1342, "Juan", "Perez", "Montoya", "12345678", "juan@gmail.com", null));
+        data.put(1, new Owner(1, 8543, "Camilo", "García", "Parra", "23456789", "camilo@gmail.com", null));
     }
 
     @Override

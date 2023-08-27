@@ -1,16 +1,14 @@
 package com.bigotes.app.controller;
 
-import org.springframework.ui.Model;
+import com.bigotes.app.exception.NotFoundException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-
-import com.bigotes.app.exception.NotFoundException;
 
 @ControllerAdvice
 public class ErrorController {
 
     @ExceptionHandler(NotFoundException.class)
-    public String ItemNotFoundExceptionHandler(Model model, NotFoundException exception){
+    public String ItemNotFoundExceptionHandler(){
         return "error_404";
     }
     

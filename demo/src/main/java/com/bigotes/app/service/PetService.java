@@ -1,19 +1,17 @@
 package com.bigotes.app.service;
 
-import java.util.Collection;
-
+import com.bigotes.app.model.Pet;
+import com.bigotes.app.repository.CrudRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.bigotes.app.model.Pet;
-import com.bigotes.app.repository.CrudRepository;
+import java.util.Collection;
 
 @Service
 public class PetService implements CrudService<Pet> {
 
     @Autowired
     private CrudRepository<Pet> repository;
-
 
     @Override
     public Pet findById(Integer id) {
