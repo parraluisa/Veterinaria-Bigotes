@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;900&display=swap');
+
 body {
     margin: 0;
     padding: 0;
@@ -34,7 +36,7 @@ body {
     width: 70%;
     height: 40%;
     background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
+    border-radius: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
@@ -45,78 +47,87 @@ body {
 .form-content {
     flex: 1;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.591); /* Utiliza rgba con transparencia */
+    background-color: rgba(255, 255, 255, 0.591);
+    /* Utiliza rgba con transparencia */
 }
-.form-content >form{
+
+.form-content>form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     width: 100%;
     height: 100%;
     background-color: transparent;
-    border-radius: 10px;
+    border-radius: 1rem;
 }
 
-.form-content > form > .form-group {
+.form-content>form>.form-group {
 
-display: flex;
-align-items: center;
-justify-content: center;
-background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
 
 }
 
-.form-content >form> .form-group > .container {
+.form-content>form>.form-group>.container {
     width: 80%;
     height: 2rem;
-    border: 1px solid black;
-    border-radius: 5px;
+    border: 0.1rem solid #D9D9D9;
+    border-radius: 0.5rem;
     background-color: #FFFFFF;
-    
+
 }
 
-.form-content >form> .form-group > .container > input{
-    width:calc(100% - 2.4rem);
+.form-content>form>.form-group>.container>input {
+    width: calc(100% - 2.4rem);
     height: 100%;
     border: none;
-    border-left: 1px solid black;
-    border-radius: 0 5px 5px 0;
-    font-size: 0.5rem;
-    margin-left: 2rem;
-    padding-left: 5px;
+    border-left: 0.1rem solid #D9D9D9;
+    border-radius: 0 0.5rem 0.5rem 0;
+    font-size: 0.8rem;
+    color: #949393;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    margin-left: 15%;
+    padding-left: 5%;
 }
 
-::placeholder{
+::placeholder {
     opacity: 1;
     color: black;
 }
-.form-content > form > .form-group:nth-child(1) {
+
+.form-content>form>.form-group:nth-child(1) {
     grid-column: 2/3;
     grid-row: 3/4;
 
 }
 
-.form-content >form > .form-group:nth-child(2) {
+.form-content>form>.form-group:nth-child(2) {
     grid-column: 1/2;
     grid-row: 1/2;
 
 }
-.form-content >form > .form-group:nth-child(3) {
+
+.form-content>form>.form-group:nth-child(3) {
     grid-column: 1/2;
     grid-row: 2/3;
 
 }
 
-.form-content >form > .form-group:nth-child(6) {
+.form-content>form>.form-group:nth-child(6) {
     grid-column: 2/3;
     grid-row: 2/3;
 
 }
-.form-content >form > .form-group:nth-child(5) {
+
+.form-content>form>.form-group:nth-child(5) {
     grid-column: 2/3;
     grid-row: 1/2;
 }
-.form-content >form > .form-group:nth-child(4) {
+
+.form-content>form>.form-group:nth-child(4) {
     grid-column: 2/3;
     grid-row: 3/4;
 }
@@ -125,39 +136,36 @@ background-color: transparent;
     width: 30%;
     height: 100%;
     background-color: #34344C;
-    border-radius: 10px;
+    border-radius: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .title-container h2 {
     color: #FFFFFF;
     font-size: 2rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
 }
 
-.form-container input[type="text"],
-.form-container input[type="email"],
-.form-container input[type="number"] {
-    width: 30%;
-    height: 15%;
-    font-size: 16px;
-    font-family: 'Roboto', sans-serif;
-    border-radius: 0.5rem;
-    
-}
-
-.form-container input{
+.form-container input {
     padding: 0;
+    color: #949393;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
 }
 
 .buttons-container {
     position: absolute;
-    bottom: 100px; /* Mover los botones hacia abajo fuera del formulario */
+    bottom: 100px;
+    /* Mover los botones hacia abajo fuera del formulario */
     display: flex;
 }
-.buttons-container a{
+
+.buttons-container a {
     text-decoration: none;
     color: #FFFFFF;
     background-color: #34344C;
@@ -167,19 +175,22 @@ background-color: transparent;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
+
 .buttons-container a,
 button {
-    margin-left: 10px;
+    margin-left: 5%;
     text-decoration: none;
     color: #FFFFFF;
     background-color: #34344C;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
     border-radius: 0.7rem;
-    padding: 10px 20px;
+    padding: 5% 15%;
     border: none;
 }
 
 button {
-    margin: 0 10px;
+    margin: 0 5%;
     color: #FFFFFF;
     background-color: #1C697D;
     border-radius: 0.7rem;
