@@ -16,8 +16,8 @@ public class OwnerRepository implements CrudRepository<Owner>{
     }
 
     public void insertSampleData() {
-        data.put(0, new Owner(0, 1342, "Juan", "Perez", "Montoya", "12345678", "juan@gmail.com"));
-        data.put(1, new Owner(1, 8543, "Camilo", "García", "Parra", "23456789", "camilo@gmail.com"));
+        data.put(1, new Owner(1, 1342, "Juan", "Perez", "Montoya", "12345678", "juan@gmail.com"));
+        data.put(2, new Owner(2, 8543, "Camilo", "García", "Parra", "23456789", "camilo@gmail.com"));
     }
 
     @Override
@@ -41,7 +41,7 @@ public class OwnerRepository implements CrudRepository<Owner>{
             data.put(Owner.getId(), Owner);
         } else {
             int tam = data.size();
-            int lastId = data.get(tam-1).getId();
+            int lastId = data.get(tam).getId();
             Owner.setId(lastId + 1);
             data.put(Owner.getId(), Owner);
         }
