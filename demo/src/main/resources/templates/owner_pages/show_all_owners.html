@@ -85,7 +85,8 @@
                     <td th:text="${owner.email}"></td>
                     <td id="more">
                         <!--add pet to owner we need the path-->
-                        <a th:href="@{/owner/find/{id}(id=${owner.id})}"> <img src="/imagenes/addPet.png"> </a>
+                        <a th:href="@{/owner/find/{id}(id=${owner.id})}">
+                             <img src="/imagenes/addIcon.png"> </a>
                         <a th:href="@{/owner/del/{id}(id=${owner.id})}">
                             <img src="/imagenes/deleteIcon.png"> </a>
                         </a>
