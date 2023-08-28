@@ -1,91 +1,59 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/show_pet_style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
-    <title>Información mascota</title>
+    <script src="/scripts/savePetScript.js" defer></script>
+    <title>Guardar mascota</title>
 </head>
-
 <body>
-    <nav>
-        <div id="logo-container">
-            <a href="http://localhost:8090/pag/show">
-                <img id="logo" src="/imagenes/showPet/logo.png">
-            </a>
+    <form id = "formPet" th:object="${pet}" th:action="@{/pet/save}" th:method="post">
+        <!-- Hidden input field for ID -->
+        <input type="hidden" th:field="*{id}" />
+
+        <div class="form-group">
+            <label for="ownerId">Cédula del dueño</label>
+            <input th:field="*{ownerId}" type="text" class="form-control" id="ownerId" placeholder="Cédula">
         </div>
-        <div id="user">
-            <h2>Nombre de usuario</h2>
-            <img id="user-img" src="/imagenes/showPet/user.png">
+        <div class="form-group">
+            <label for="name">Nombre</label>
+            <input th:field="*{name}" type="text" class="form-control" id="name" placeholder="Nombre">
         </div>
-    </nav>
-
-    <main>
-
-
-        <section id="pet">
-            <div>
-                <img id="pet-img" th:src="${pet.imgUrl}">
-            </div>
-            <div id="pet-info">
-                <div id="pet-data-container">
-                    <div id="pet-name">
-                        <h1><span th:text="${pet.name}"></span></h1>
-                        <img src="/imagenes/showPet/edit1.svg">
-                    </div>
-                    <div id="pet-data">
-                        <div>
-                            <p><strong>Dueño: </strong> Fabio Buitrago</p>
-                            <p><strong>Raza: </strong><span th:text="${pet.breed}"></span></p>
-                        </div>
-                        <div class>
-                            <p><strong>Edad: </strong><span th:text="${pet.age}"></span></p>
-                            <p><strong>Peso: </strong><span th:text="${pet.weight}"></span></p>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-        </section>
-    </main>
-
-    <section id="history">
-        <div id="history-title">
-            <h1>Historial médico</h1>
-            <img src="/imagenes/showPet/add.svg">
+        <div class="form-group">
+            <label for="breed">Raza</label>
+            <input th:field="*{breed}" type="text" class="form-control" id="breed" placeholder="Raza">
+        </div>
+        <div class="form-group">
+            <label for="age">Edad</label>
+            <input th:field="*{age}" type="number" class="form-control" id="age" placeholder="Edad">
+        </div>
+        <div class="form-group">
+            <label for="weight">Peso</label>
+            <input th:field="*{weight}" type="number" class="form-control" id="weight" placeholder="Peso">
+        </div>
+        <div class="form-group">
+            <label for="disease">Enfermedad</label>
+            <input th:field="*{disease}" type="text" class="form-control" id="disease" placeholder="Enfermedad">
+        </div>
+        
+        <div class="form-group">
+            <label for="imgUrl">Imagen</label>
+            <input th:field="*{imgUrl}" type="text" class="form-control" id="imgUrl" placeholder="Imagen">
         </div>
 
-        <table>
-            <thead>
-                <tr>
-                    <th scope="col">idHistoria</th>
-                    <th scope="col">Enfermedad</th>
-                    <th scope="col">Ingreso</th>
-                    <th scope="col">Alta</th>
-                    <th scope="col">Tratamientos médicos</th>
-                    <th scope="col">Fecha</th>
-                    <th scope="col">Droga Sumnistrada</th>
-                    <th scope="col">Precio asociado</th>
-                </tr>
-            </thead>
-            <tbody>
-                <td>0001 <img src="/imagenes/showPet/edit2.svg"></td>
-                <td th:text="${pet.disease}"></td>
-                <td th:text="${pet.entry}"></td>
-                <td th:text="${pet.departure}"></td>
+        <div class="form-group">
+            <label for="entry">Entrada</label>
+            <input th:field="*{entry}" type="date" class="form-control" id="entry" placeholder="Entrada">
+        </div>
 
+        <div class="form-group">
+            <label for="entry">Salida</label>
+            <input th:field="*{departure}" type="date" class="form-control" id="departure" placeholder="Salida">
+        </div>
 
-            </tbody>
-        </table>
-
-    </section>
-
-
-
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+    
 </body>
-
 </html>

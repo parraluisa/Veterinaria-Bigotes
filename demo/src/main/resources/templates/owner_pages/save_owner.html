@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/save_pet.css">
+    <link rel="stylesheet" href="/styles/save_owner.css">
     <script src="/scripts/saveOwnerScript.js" defer></script>
     <title>Guardar dueño</title>
 </head>
@@ -14,17 +14,16 @@
     <div class="content">
         <div class="form-container">
             <div class="title-container">
-                <h2>Datos</h2>
-                <h2>DUEÑO</h2>
+                <h2>Datos<br>DUEÑO</h2>
             </div>
             <div class="form-content">
-                <form th:object="${owner}" th:action="@{/owner/save}" th:method="post">
+                <form id = "formOwner" th:object="${owner}" th:action="@{/owner/save}" th:method="post">
                     <!-- Hidden input field for ID -->
                     <input type="hidden" th:field="*{id}" />
 
                     <div class="form-group">
                         <div class="container">
-                            <input th:field="*{idCard}" type="number" id="idCard" placeholder="Cedula" value="Cédula">
+                            <input th:field="*{idCard}" type="number" id="idCard" placeholder="0">
                         </div>
                     </div>
                     <div class="form-group">
@@ -67,6 +66,7 @@
                 </form>
             </div>
         </div>
+
     </div>
 </body>
 
