@@ -5,14 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dueño</title>
+    <link rel="stylesheet" href="/show_owner_style.css">
 </head>
 <body>
-    <h1>Información dueño</h1>
-    <p th:text="'Cédula: ' + ${owner.idCard}"></p>
-    <p th:text="'Nombre: ' + ${owner.name}"></p>
-    <p th:text="'Apellido 1: ' + ${owner.firstLastName}"></p>
-    <p th:text="'Apellido 2: ' + ${owner.secondLastName}"></p>
-    <p th:text="'Celular: ' + ${owner.phone}"></p>
-    <p th:text="'Correo: ' + ${owner.email}"></p>
+    <img src="/imagenes/showOwner/blackCat.png" alt="Black cat">
+    <div class="content">
+        <h1>Información dueño</h1>
+    
+        <div class="element">
+            <p th:text="'Cédula: ' + ${owner.idCard}"></p>
+        </div>
+        
+        <div class="element">
+            <p th:text="'Nombre: ' + ${owner.name}"></p>
+        </div>
+    
+        <div class="element">
+            <p th:text="'Apellido 1: ' + ${owner.firstLastName}"></p>
+        </div>
+        
+        <div class="element">
+            <p th:text="'Apellido 2: ' + ${owner.secondLastName}"></p>
+        </div>
+    
+        <div class="element">
+            <p th:text="'Celular: ' + ${owner.phone}"></p>
+        </div>
+    
+        <div class="element">
+            <p th:text="'Correo: ' + ${owner.email}"></p>
+        </div>
+
+        <a href="http://localhost:8090/pet/all">Mis mascotas</a>
+
+    </div>
+    
+    
 </body>
 </html>
