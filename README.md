@@ -26,6 +26,7 @@ A continuación, te presentamos algunas capturas de pantalla de nuestra página 
 
 
 <img width="474" alt="image" src="https://github.com/parraluisa/Veterinaria-Bigotes/assets/79608753/1ea08cbf-3bbd-490e-bbab-6f2fb83227b9">
+
 *Tando clientes como veterinarios tienen el registro de nuestros bigotudos*
 
 
