@@ -10,6 +10,6 @@ public class LandingPageController {
 
     @GetMapping("/show")
     public String show(){
-        return "login_page";
+        return "landing_page";
     }
 }
