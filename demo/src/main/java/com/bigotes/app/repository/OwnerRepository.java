@@ -41,7 +41,7 @@ public class OwnerRepository implements CrudRepository<Owner>{
             data.put(Owner.getId(), Owner);
         } else {
             int tam = data.size();
-            int lastId = data.get(tam).getId();
+            int lastId = data.get(tam-1).getId();
             Owner.setId(lastId + 1);
             data.put(Owner.getId(), Owner);
         }

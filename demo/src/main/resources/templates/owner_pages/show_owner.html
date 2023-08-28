@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dueño</title>
-    <link rel="stylesheet" href="/show_owner_style.css">
+    <link rel="stylesheet" href="/styles/show_owner_style.css">
 </head>
 <body>
     <img src="/imagenes/showOwner/blackCat.png" alt="Black cat">
@@ -36,7 +36,7 @@
             <p th:text="'Correo: ' + ${owner.email}"></p>
         </div>
 
-        <a href="http://localhost:8090/pet/all">Mis mascotas</a>
+        <a th:href="@{/pet/owner/{id}(id=${owner.idCard})}">Mis mascotas</a>
 
     </div>
     

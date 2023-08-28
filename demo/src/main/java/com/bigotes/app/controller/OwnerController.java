@@ -41,7 +41,7 @@ public class OwnerController {
 
     @GetMapping("/add")
     public String insertOwner(Model model) {
-        Owner owner = new Owner(0, 0, "", "", ", ", ", ", ", ");
+        Owner owner = new Owner(null, null, "", "", ", ", ", ", ", ");
         model.addAttribute("owner", owner);
         return "owner_pages/save_owner";
     }
@@ -57,7 +57,7 @@ public class OwnerController {
         return "owner_pages/save_owner";
     }
 
-    @DeleteMapping("/del/{id}")
+    @GetMapping("/del/{id}")
     public String deleteOwner(@PathVariable("id") int id) {
         Owner owner = service.findById(id);
         if (owner != null) {

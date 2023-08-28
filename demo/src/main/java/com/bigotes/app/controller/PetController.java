@@ -45,7 +45,7 @@ public class PetController {
 
     @GetMapping("/add")
     public String insertPet(Model model) {
-        Pet pet = new Pet(0, 0,"", "", "", 0, 0.0, "", LocalDate.now(), LocalDate.now());
+        Pet pet = new Pet(null, null,"", "", "", null, null, "", LocalDate.now(), LocalDate.now());
         model.addAttribute("pet", pet);
         return "pet_pages/save_pet";
     }
@@ -61,7 +61,7 @@ public class PetController {
         return "pet_pages/save_pet";
     }
 
-    @DeleteMapping("/del/{id}")
+    @GetMapping("/del/{id}")
     public String deletePet(@PathVariable("id") Integer id) {
         Pet pet = service.findById(id);
         if (pet != null) {
