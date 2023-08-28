@@ -9,7 +9,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class Pet {
     private Integer id;
-    private Integer idOwner;
+    private Integer ownerId;
     private String imgUrl;
     private String name;
     private String breed;
