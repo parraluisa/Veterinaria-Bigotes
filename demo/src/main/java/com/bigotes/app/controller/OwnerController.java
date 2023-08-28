@@ -41,7 +41,7 @@ public class OwnerController {
 
     @GetMapping("/add")
     public String insertOwner(Model model) {
-        Owner owner = new Owner(null, null, "", "", ", ", ", ", ", ");
+        Owner owner = new Owner(null, null, "", "", "", "", "");
         model.addAttribute("owner", owner);
         return "owner_pages/save_owner";
     }
