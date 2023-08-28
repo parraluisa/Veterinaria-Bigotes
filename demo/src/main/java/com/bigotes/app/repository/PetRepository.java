@@ -43,11 +43,11 @@ public class PetRepository implements CrudRepository<Pet> {
 
     @Override
     public void save(Pet pet) {
-        if (pet.getId() != null) {
+        if (pet.getId() != null && data.containsKey(pet.getId())) {
             data.put(pet.getId(), pet);
         } else {
             int tam = data.size();
-            Integer lastId = data.get(tam-1).getId();
+            int lastId = data.get(tam-1).getId();
             pet.setId(lastId + 1);
             data.put(pet.getId(), pet);
         }
