@@ -23,7 +23,7 @@ public class OwnerController {
 
     // http://localhost:8090/owner/find/1
     @GetMapping("/find/{id}")
-    public String showOwner(Model model, @PathVariable("id") int id) {
+    public String showOwner(Model model, @PathVariable("id") Long id) {
         Owner owner = service.findById(id);
         if (owner != null) {
             model.addAttribute("owner", owner);
@@ -41,13 +41,13 @@ public class OwnerController {
 
     @GetMapping("/add")
     public String insertOwner(Model model) {
-        Owner owner = new Owner(null, null, "", "", "", "", "");
+        Owner owner = new Owner();
         model.addAttribute("owner", owner);
         return "owner_pages/save_owner";
     }
 
     @GetMapping("/upd/{id}")
-    public String updateOwner(Model model, @PathVariable("id") int id) {
+    public String updateOwner(Model model, @PathVariable("id") Long id) {
         Owner owner = service.findById(id);
         if (owner != null) {
             model.addAttribute("owner", owner);
@@ -58,7 +58,7 @@ public class OwnerController {
     }
 
     @GetMapping("/del/{id}")
-    public String deleteOwner(@PathVariable("id") int id) {
+    public String deleteOwner(@PathVariable("id") Long id) {
         Owner owner = service.findById(id);
         if (owner != null) {
             service.deleteById(id);
@@ -76,10 +76,10 @@ public class OwnerController {
     }
 
     @PostMapping("/login")
-    public String login(@RequestParam("idCard") Integer idCard) {
+    public String login(@RequestParam("idCard") Long idCard) {
         Owner owner = service.findByIdCard(idCard);
         if (owner != null) {
-            return "redirect:/pet/owner/" + owner.getIdCard();
+            return "redirect:/pet/owner-pets/" + owner.getId();
         } else {
             return "redirect:/owner/login?error=idNotFound";
         }

@@ -17,7 +17,7 @@
         </div>
         
         <div class="element">
-            <p th:text="'Nombre: ' + ${owner.name}"></p>
+            <p th:text="'Nombre: ' + ${owner.firstName}"></p>
         </div>
     
         <div class="element">
@@ -36,7 +36,7 @@
             <p th:text="'Correo: ' + ${owner.email}"></p>
         </div>
 
-        <a th:href="@{/pet/owner/{id}(id=${owner.idCard})}">Mis mascotas</a>
+        <a th:href="@{/pet/owner-pets/{id}(id=${owner.id})}">Mis mascotas</a>
 
     </div>
     

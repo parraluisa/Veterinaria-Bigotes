@@ -8,8 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
-
 
 @Controller
 @RequestMapping("/pet")
@@ -26,7 +24,7 @@ public class PetController {
 
     // http://localhost:8090/pet/find/1
     @GetMapping("/find/{id}")
-    public String showPet(Model model, @PathVariable("id") int id) {
+    public String showPet(Model model, @PathVariable("id") Long id) {
         Pet pet = service.findById(id);
         if (pet != null) {
             model.addAttribute("pet", pet);
@@ -45,13 +43,13 @@ public class PetController {
 
     @GetMapping("/add")
     public String insertPet(Model model) {
-        Pet pet = new Pet(null, null,"", "", "", null, null, "", LocalDate.now(), LocalDate.now());
+        Pet pet = new Pet();
         model.addAttribute("pet", pet);
         return "pet_pages/save_pet";
     }
 
     @GetMapping("/upd/{id}")
-    public String updatePet(Model model, @PathVariable("id") Integer id) {
+    public String updatePet(Model model, @PathVariable("id") Long id) {
         Pet pet = service.findById(id);
         if (pet != null) {
             model.addAttribute("pet", pet);
@@ -62,7 +60,7 @@ public class PetController {
     }
 
     @GetMapping("/del/{id}")
-    public String deletePet(@PathVariable("id") Integer id) {
+    public String deletePet(@PathVariable("id") Long id) {
         Pet pet = service.findById(id);
         if (pet != null) {
             service.deleteById(id);
@@ -72,13 +70,15 @@ public class PetController {
         return "redirect:/pet/all";
     }
 
-    @GetMapping("/owner/{idCard}")
-    public String showOwnerPets(Model model, @PathVariable("idCard") Integer idCard){
-        model.addAttribute("pets", service.findByOwnerId(idCard));
+    @GetMapping("/owner-pets/{id}")
+    public String showOwnerPets(Model model, @PathVariable("id") Long id){
+        model.addAttribute("pets", service.findByOwnerId(id));
         return "owner_pages/owner_pets";
     }
-    @GetMapping("/owner/{idCard}/pet/find/{id}")
-    public String showOwnerPet(Model model, @PathVariable("idCard") Integer idCard, @PathVariable("id") Integer id){
+
+
+    @GetMapping("/owner-pet/find/{id}")
+    public String showOwnerPet(Model model, @PathVariable("id") Long id){
         Pet pet = service.findById(id);
         if (pet != null) {
             model.addAttribute("pet", pet);

@@ -60,11 +60,11 @@
                             <span th:text="${pet.name}"></span>
                         </td>
                         <td th:text="${pet.breed}"></td>
-                        <td th:text="${pet.age}"></td>
+                        <td th:text="${pet.calculateAge()}"></td>
                         <td th:text="${pet.weight}"></td>
                         <td th:text="${pet.disease}"></td>
                         <td id="more">
-                            <a th:href="@{/owner/{ownerId}/pet/find/{index}(ownerId=${pet.ownerId}, index=${_target.index}+1)}"> ... </a>
+                            <a th:href="@{/pet/owner-pet/find/{index}(id=${pet.id})}"> ... </a>
                         </td>                        
                     </tr>
                 </tbody>

@@ -8,14 +8,14 @@ import org.springframework.stereotype.Service;
 import java.util.Collection;
 
 @Service
-public class PetService implements CrudService<Pet> {
+public class PetService implements CrudService<Pet, Long> {
 
     @Autowired
     private PetRepository repository;
 
     @Override
-    public Pet findById(Integer id) {
-       return repository.findById(id);
+    public Pet findById(Long id) {
+       return repository.findById(id).orElse(null);
     }
 
     @Override
@@ -24,7 +24,7 @@ public class PetService implements CrudService<Pet> {
     }
 
     @Override
-    public void deleteById(Integer id) {
+    public void deleteById(Long id) {
         repository.deleteById(id);
     }
 
@@ -33,7 +33,7 @@ public class PetService implements CrudService<Pet> {
         repository.save(pet);
     }
 
-    public Collection<Pet> findByOwnerId(Integer ownerId) {
+    public Collection<Pet> findByOwnerId(Long ownerId) {
         return repository.findByOwnerId(ownerId);
     }
 }

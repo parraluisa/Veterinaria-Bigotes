@@ -275,10 +275,11 @@ td#more a {
 td img {
     border-radius: 50%;
     margin-right: 10%;
+    width: 10%;
 }
 
 #more a img {
-    width: 10%;
+    width: 2.5rem;
     margin: 0;
     border-radius: 0%;
 }

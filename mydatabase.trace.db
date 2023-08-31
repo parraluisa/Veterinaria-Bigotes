@@ -1,0 +1,1553 @@
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5347966696', 'Kirby', 'McMennum', 'Couser', '(750) 6419074', 'kcouser0@comsenz.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5328006534', 'Rosanna', 'Paddle', 'Fattorini', '(462) 4475741', 'rfattorini1@time.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1186529547', 'Adey', 'Shanks', 'Murby', '(168) 6035972', 'amurby2@vimeo.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0550019790', 'Del', 'Byk', 'Hightown', '(939) 1152357', 'dhightown3@aboutads.info') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('9426706364', 'Michael', 'Atley', 'Pietrusiak', '(933) 2728746', 'mpietrusiak4@imageshack.us') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0772738289', 'Arv', 'Leason', 'Deards', '(264) 4517139', 'adeards5@cbslocal.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('3338950136', 'Adelaide', 'Hiner', 'Pelchat', '(958) 4903204', 'apelchat6@naver.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5623550894', 'Lew', 'Toulch', 'Dallman', '(702) 7488923', 'ldallman7@unesco.org') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4754355113', 'Puff', 'Bradlaugh', 'Saiens', '(121) 6334539', 'psaiens8@pen.io') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('3372664345', 'Phip', 'Hutchin', 'Jedrzejewski', '(227) 2767646', 'pjedrzejewski9@npr.org') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('9675996900', 'Tonye', 'Pfaff', 'Aggett', '(313) 1023828', 'taggetta@miitbeian.gov.cn') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8199730706', 'Cleavland', 'Hubeaux', 'Gorrick', '(496) 2705526', 'cgorrickb@indiegogo.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('6872667877', 'Reta', 'Wilfing', 'Easlea', '(460) 8691207', 'reasleac@reddit.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4380200612', 'Freedman', 'Streeten', 'Guyan', '(442) 2962667', 'fguyand@edublogs.org') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('6155881812', 'Brigitta', 'Harrismith', 'Ramiro', '(645) 8681296', 'bramiroe@bluehost.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0351421319', 'Deidre', 'Rogeon', 'Hymus', '(760) 9507696', 'dhymusf@google.de') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8352367528', 'Thia', 'Harrell', 'Chaloner', '(755) 6468359', 'tchalonerg@canalblog.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0149530870', 'Dorelle', 'MacClancey', 'Kerwood', '(816) 8049671', 'dkerwoodh@hp.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5248202280', 'Helli', 'Mawford', 'Golsby', '(502) 8655023', 'hgolsbyi@addthis.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8183280005', 'Maxy', 'Boodle', 'Hingeley', '(393) 4555499', 'mhingeleyj@xrea.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('7902113654', 'Tess', 'Nelsen', 'Scurman', '(318) 6003649', 'tscurmank@xrea.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1232821551', 'Ginny', 'Brattan', 'Szymanek', '(626) 8871573', 'gszymanekl@yandex.ru') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5981039779', 'Amaleta', 'Corneck', 'Matushevitz', '(608) 1136284', 'amatushevitzm@artisteer.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0223080640', 'Guillermo', 'Kitchingman', 'Cristofaro', '(644) 3804022', 'gcristofaron@si.edu') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5675177523', 'Krishna', 'Botten', 'Iredale', '(618) 6114199', 'kiredaleo@reuters.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4187228411', 'Clive', 'Crewes', 'Ivimy', '(243) 5803433', 'civimyp@newsvine.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4905688361', 'Ram', 'Sudlow', 'Bradock', '(841) 9278797', 'rbradockq@dailymotion.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5725108287', 'Nessie', 'Tomasini', 'Ridsdell', '(245) 7126035', 'nridsdellr@addthis.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('7673916959', 'Berny', 'Attride', 'Warbrick', '(738) 4691837', 'bwarbricks@discovery.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5488043691', 'Viviana', 'Corson', 'Deniske', '(619) 4199949', 'vdenisket@free.fr') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('6404839628', 'Lavinie', 'Dufton', 'Kelloway', '(887) 6993391', 'lkellowayu@wordpress.org') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8372380104', 'Roderich', 'Chafney', 'Idwal Evans', '(140) 8125711', 'ridwalevansv@delicious.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8727736296', 'Cheryl', 'Rummery', 'Ovendon', '(915) 5800142', 'covendonw@webeden.co.uk') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2928376224', 'Niels', 'Brendeke', 'Blethyn', '(743) 1100449', 'nblethynx@multiply.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8217231214', 'Lari', 'Trevithick', 'Roughsedge', '(643) 6654027', 'lroughsedgey@arizona.edu') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1517842441', 'Abbey', 'Costell', 'Epsley', '(749) 3673292', 'aepsleyz@studiopress.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0776367943', 'Etty', 'Fiddian', 'Buttery', '(525) 7704322', 'ebuttery10@fastcompany.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8431302763', 'Ruthann', 'Martinuzzi', 'Dinse', '(143) 4708225', 'rdinse11@telegraph.co.uk') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8830898899', 'Erek', 'Martel', 'Boolsen', '(105) 7985059', 'eboolsen12@etsy.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8598626368', 'Butch', 'Gillard', 'Spitaro', '(692) 1937106', 'bspitaro13@wunderground.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5760246143', 'Marylynne', 'Kembry', 'Sollis', '(416) 1234970', 'msollis14@uol.com.br') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4281166602', 'Lukas', 'Beven', 'Skaid', '(530) 8029936', 'lskaid15@youtu.be') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4592122801', 'Roda', 'Abramsky', 'Fishburn', '(744) 7540474', 'rfishburn16@wp.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5437515065', 'Alyosha', 'Ellaman', 'Phlippi', '(182) 3208999', 'aphlippi17@creativecommons.org') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('3796855105', 'Constantin', 'Nobriga', 'Cadreman', '(345) 3218532', 'ccadreman18@skype.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1571861688', 'Ag', 'Darwen', 'Beadell', '(164) 4030972', 'abeadell19@cyberchimps.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1708797742', 'Filippo', 'Found', 'Sendall', '(177) 7540526', 'fsendall1a@princeton.edu') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4040369548', 'Isacco', 'Caser', 'Gogie', '(137) 3383501', 'igogie1b@blinklist.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('7353096802', 'Mozes', 'Halbard', 'Kenworthy', '(793) 5014583', 'mkenworthy1c@pinterest.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5971902423', 'Gibbie', 'Sottell', 'Channon', '(994) 6098276', 'gchannon1d@globo.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5323282509', 'Elfie', 'Michell', 'Segeswoeth', '(309) 2978608', 'esegeswoeth1e@springer.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('7310510771', 'Flin', 'Summerskill', 'Gisburn', '(268) 2804368', 'fgisburn1f@weebly.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1955578540', 'Bobbette', 'Biddles', 'Stapels', '(798) 3263355', 'bstapels1g@slideshare.net') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5108779631', 'Saxon', 'Lissandrini', 'Kinton', '(841) 4035706', 'skinton1h@msn.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('7230970253', 'Gwennie', 'Switsur', 'Keely', '(450) 4917314', 'gkeely1i@rambler.ru') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4220845127', 'Rozalie', 'Keeney', 'Moine', '(923) 6892603', 'rmoine1j@360.cn') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0801769264', 'Felipa', 'Greenan', 'Wipper', '(303) 8301188', 'fwipper1k@facebook.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2652972499', 'Emalia', 'Manuelli', 'Garbutt', '(826) 2392932', 'egarbutt1l@sourceforge.net') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1700262521', 'Kelley', 'Slorach', 'Noury', '(413) 7052330', 'knoury1m@bbc.co.uk') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2173774433', 'Randy', 'Filippov', 'Alebrooke', '(735) 8513981', 'ralebrooke1n@mapy.cz') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2708766090', 'Roseanna', 'Bree', 'Gerrietz', '(823) 5986877', 'rgerrietz1o@ovh.net') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('9110252029', 'Erin', 'Tadlow', 'Persitt', '(838) 7628257', 'epersitt1p@arizona.edu') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('3960967659', 'Heda', 'Goldis', 'Allmann', '(357) 4743995', 'hallmann1q@irs.gov') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8705877156', 'Sybila', 'Foyle', 'Meese', '(961) 9128666', 'smeese1r@blogspot.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('7082957513', 'Mitzi', 'Markova', 'O''Cannan', '(323) 1771207', 'mocannan1s@spiegel.de') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('9077948244', 'Ceil', 'Dunn', 'Inde', '(358) 8272861', 'cinde1t@hp.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2372054112', 'Cilka', 'Leaming', 'Lennie', '(409) 3519277', 'clennie1u@soundcloud.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8570747934', 'Celestia', 'Mynott', 'Bourhill', '(130) 8442846', 'cbourhill1v@army.mil') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2612124233', 'Dore', 'Moppett', 'Soper', '(668) 2202718', 'dsoper1w@squarespace.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('3165828539', 'Dixie', 'Bangle', 'Andress', '(629) 5047631', 'dandress1x@usa.gov') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1617354287', 'Trenton', 'Phipps', 'Batter', '(922) 1795991', 'tbatter1y@constantcontact.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5422707117', 'Mab', 'Haygreen', 'Cruz', '(329) 3826870', 'mcruz1z@odnoklassniki.ru') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('7373487610', 'Dore', 'Francescone', 'Rimington', '(299) 4372061', 'drimington20@technorati.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5677374466', 'Patsy', 'McLeary', 'Gardner', '(398) 7058532', 'pgardner21@behance.net') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('9877510006', 'Isabelita', 'Dymott', 'Jeannesson', '(119) 8427630', 'ijeannesson22@house.gov') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('9483557518', 'Sonnie', 'Snazle', 'Spinella', '(483) 4681387', 'sspinella23@arizona.edu') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2281844412', 'Carina', 'Wigg', 'Gaisford', '(993) 8281797', 'cgaisford24@blinklist.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5706606706', 'Shirley', 'Elloy', 'Steers', '(690) 1755190', 'ssteers25@merriam-webster.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4838183631', 'Pepe', 'Merrifield', 'Boswell', '(912) 8548814', 'pboswell26@people.com.cn') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4945351163', 'Cesya', 'Sigsworth', 'Lavers', '(968) 8463617', 'clavers27@mozilla.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2777972079', 'Thekla', 'McManamon', 'Exell', '(558) 5136617', 'texell28@cmu.edu') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5269359790', 'Olly', 'Wrench', 'Remer', '(572) 2215523', 'oremer29@usatoday.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1120233844', 'Ashly', 'Melonby', 'Olechnowicz', '(720) 8103190', 'aolechnowicz2a@live.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('6161755912', 'Brittani', 'Fairs', 'McCadden', '(545) 5088756', 'bmccadden2b@histats.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('6731375268', 'Marylin', 'Poulsom', 'Scimoni', '(598) 3956288', 'mscimoni2c@reddit.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8380585380', 'Junia', 'Kerrane', 'Siuda', '(980) 4201960', 'jsiuda2d@google.de') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4709801193', 'Herb', 'Gabitis', 'Gretton', '(907) 2942836', 'hgretton2e@un.org') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1679072811', 'Jacquette', 'Huckett', 'Jamison', '(174) 8964951', 'jjamison2f@spotify.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0469501057', 'Marve', 'Boggers', 'Fleischer', '(506) 4987490', 'mfleischer2g@youku.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1877383104', 'Bogey', 'Carbry', 'Eskrigg', '(829) 8196879', 'beskrigg2h@tripod.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0337120331', 'Jaynell', 'Lilly', 'Clogg', '(488) 6093152', 'jclogg2i@bluehost.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0603194869', 'Timmy', 'Carlick', 'Steet', '(134) 5568278', 'tsteet2j@ezinearticles.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('6912419186', 'Ethelbert', 'Spelsbury', 'Bullock', '(518) 9620704', 'ebullock2k@home.pl') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4022047852', 'Granthem', 'Stone Fewings', 'Cumbes', '(370) 8073582', 'gcumbes2l@chron.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('9433080963', 'Roxane', 'Adel', 'Jozsika', '(723) 3708733', 'rjozsika2m@umn.edu') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4688525494', 'Shayla', 'Maciaszek', 'Courvert', '(293) 7646145', 'scourvert2n@privacy.gov.au') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2717938966', 'Kata', 'Madine', 'Hrus', '(177) 1636823', 'khrus2o@scribd.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('3969733022', 'Chloette', 'Rocks', 'Elmhurst', '(799) 2949745', 'celmhurst2p@gizmodo.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('6953843225', 'Emelen', 'Houdmont', 'Heilds', '(253) 7108977', 'eheilds2q@newyorker.com') [42102-214]
+2023-08-31 00:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1715647637', 'Sumner', 'Issacov', 'Bouda', '(216) 7128504', 'sbouda2r@ted.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5347966696', 'Kirby', 'McMennum', 'Couser', '(750) 6419074', 'kcouser0@comsenz.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5328006534', 'Rosanna', 'Paddle', 'Fattorini', '(462) 4475741', 'rfattorini1@time.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1186529547', 'Adey', 'Shanks', 'Murby', '(168) 6035972', 'amurby2@vimeo.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0550019790', 'Del', 'Byk', 'Hightown', '(939) 1152357', 'dhightown3@aboutads.info') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('9426706364', 'Michael', 'Atley', 'Pietrusiak', '(933) 2728746', 'mpietrusiak4@imageshack.us') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0772738289', 'Arv', 'Leason', 'Deards', '(264) 4517139', 'adeards5@cbslocal.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('3338950136', 'Adelaide', 'Hiner', 'Pelchat', '(958) 4903204', 'apelchat6@naver.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5623550894', 'Lew', 'Toulch', 'Dallman', '(702) 7488923', 'ldallman7@unesco.org') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4754355113', 'Puff', 'Bradlaugh', 'Saiens', '(121) 6334539', 'psaiens8@pen.io') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('3372664345', 'Phip', 'Hutchin', 'Jedrzejewski', '(227) 2767646', 'pjedrzejewski9@npr.org') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('9675996900', 'Tonye', 'Pfaff', 'Aggett', '(313) 1023828', 'taggetta@miitbeian.gov.cn') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8199730706', 'Cleavland', 'Hubeaux', 'Gorrick', '(496) 2705526', 'cgorrickb@indiegogo.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('6872667877', 'Reta', 'Wilfing', 'Easlea', '(460) 8691207', 'reasleac@reddit.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4380200612', 'Freedman', 'Streeten', 'Guyan', '(442) 2962667', 'fguyand@edublogs.org') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('6155881812', 'Brigitta', 'Harrismith', 'Ramiro', '(645) 8681296', 'bramiroe@bluehost.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0351421319', 'Deidre', 'Rogeon', 'Hymus', '(760) 9507696', 'dhymusf@google.de') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8352367528', 'Thia', 'Harrell', 'Chaloner', '(755) 6468359', 'tchalonerg@canalblog.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0149530870', 'Dorelle', 'MacClancey', 'Kerwood', '(816) 8049671', 'dkerwoodh@hp.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5248202280', 'Helli', 'Mawford', 'Golsby', '(502) 8655023', 'hgolsbyi@addthis.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8183280005', 'Maxy', 'Boodle', 'Hingeley', '(393) 4555499', 'mhingeleyj@xrea.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('7902113654', 'Tess', 'Nelsen', 'Scurman', '(318) 6003649', 'tscurmank@xrea.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1232821551', 'Ginny', 'Brattan', 'Szymanek', '(626) 8871573', 'gszymanekl@yandex.ru') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5981039779', 'Amaleta', 'Corneck', 'Matushevitz', '(608) 1136284', 'amatushevitzm@artisteer.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0223080640', 'Guillermo', 'Kitchingman', 'Cristofaro', '(644) 3804022', 'gcristofaron@si.edu') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5675177523', 'Krishna', 'Botten', 'Iredale', '(618) 6114199', 'kiredaleo@reuters.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4187228411', 'Clive', 'Crewes', 'Ivimy', '(243) 5803433', 'civimyp@newsvine.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4905688361', 'Ram', 'Sudlow', 'Bradock', '(841) 9278797', 'rbradockq@dailymotion.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5725108287', 'Nessie', 'Tomasini', 'Ridsdell', '(245) 7126035', 'nridsdellr@addthis.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('7673916959', 'Berny', 'Attride', 'Warbrick', '(738) 4691837', 'bwarbricks@discovery.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5488043691', 'Viviana', 'Corson', 'Deniske', '(619) 4199949', 'vdenisket@free.fr') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('6404839628', 'Lavinie', 'Dufton', 'Kelloway', '(887) 6993391', 'lkellowayu@wordpress.org') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8372380104', 'Roderich', 'Chafney', 'Idwal Evans', '(140) 8125711', 'ridwalevansv@delicious.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8727736296', 'Cheryl', 'Rummery', 'Ovendon', '(915) 5800142', 'covendonw@webeden.co.uk') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2928376224', 'Niels', 'Brendeke', 'Blethyn', '(743) 1100449', 'nblethynx@multiply.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8217231214', 'Lari', 'Trevithick', 'Roughsedge', '(643) 6654027', 'lroughsedgey@arizona.edu') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1517842441', 'Abbey', 'Costell', 'Epsley', '(749) 3673292', 'aepsleyz@studiopress.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0776367943', 'Etty', 'Fiddian', 'Buttery', '(525) 7704322', 'ebuttery10@fastcompany.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8431302763', 'Ruthann', 'Martinuzzi', 'Dinse', '(143) 4708225', 'rdinse11@telegraph.co.uk') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8830898899', 'Erek', 'Martel', 'Boolsen', '(105) 7985059', 'eboolsen12@etsy.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8598626368', 'Butch', 'Gillard', 'Spitaro', '(692) 1937106', 'bspitaro13@wunderground.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5760246143', 'Marylynne', 'Kembry', 'Sollis', '(416) 1234970', 'msollis14@uol.com.br') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4281166602', 'Lukas', 'Beven', 'Skaid', '(530) 8029936', 'lskaid15@youtu.be') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4592122801', 'Roda', 'Abramsky', 'Fishburn', '(744) 7540474', 'rfishburn16@wp.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5437515065', 'Alyosha', 'Ellaman', 'Phlippi', '(182) 3208999', 'aphlippi17@creativecommons.org') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('3796855105', 'Constantin', 'Nobriga', 'Cadreman', '(345) 3218532', 'ccadreman18@skype.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1571861688', 'Ag', 'Darwen', 'Beadell', '(164) 4030972', 'abeadell19@cyberchimps.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1708797742', 'Filippo', 'Found', 'Sendall', '(177) 7540526', 'fsendall1a@princeton.edu') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4040369548', 'Isacco', 'Caser', 'Gogie', '(137) 3383501', 'igogie1b@blinklist.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('7353096802', 'Mozes', 'Halbard', 'Kenworthy', '(793) 5014583', 'mkenworthy1c@pinterest.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5971902423', 'Gibbie', 'Sottell', 'Channon', '(994) 6098276', 'gchannon1d@globo.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5323282509', 'Elfie', 'Michell', 'Segeswoeth', '(309) 2978608', 'esegeswoeth1e@springer.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('7310510771', 'Flin', 'Summerskill', 'Gisburn', '(268) 2804368', 'fgisburn1f@weebly.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1955578540', 'Bobbette', 'Biddles', 'Stapels', '(798) 3263355', 'bstapels1g@slideshare.net') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5108779631', 'Saxon', 'Lissandrini', 'Kinton', '(841) 4035706', 'skinton1h@msn.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('7230970253', 'Gwennie', 'Switsur', 'Keely', '(450) 4917314', 'gkeely1i@rambler.ru') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4220845127', 'Rozalie', 'Keeney', 'Moine', '(923) 6892603', 'rmoine1j@360.cn') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0801769264', 'Felipa', 'Greenan', 'Wipper', '(303) 8301188', 'fwipper1k@facebook.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2652972499', 'Emalia', 'Manuelli', 'Garbutt', '(826) 2392932', 'egarbutt1l@sourceforge.net') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1700262521', 'Kelley', 'Slorach', 'Noury', '(413) 7052330', 'knoury1m@bbc.co.uk') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2173774433', 'Randy', 'Filippov', 'Alebrooke', '(735) 8513981', 'ralebrooke1n@mapy.cz') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2708766090', 'Roseanna', 'Bree', 'Gerrietz', '(823) 5986877', 'rgerrietz1o@ovh.net') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('9110252029', 'Erin', 'Tadlow', 'Persitt', '(838) 7628257', 'epersitt1p@arizona.edu') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('3960967659', 'Heda', 'Goldis', 'Allmann', '(357) 4743995', 'hallmann1q@irs.gov') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8705877156', 'Sybila', 'Foyle', 'Meese', '(961) 9128666', 'smeese1r@blogspot.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('7082957513', 'Mitzi', 'Markova', 'O''Cannan', '(323) 1771207', 'mocannan1s@spiegel.de') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('9077948244', 'Ceil', 'Dunn', 'Inde', '(358) 8272861', 'cinde1t@hp.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2372054112', 'Cilka', 'Leaming', 'Lennie', '(409) 3519277', 'clennie1u@soundcloud.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8570747934', 'Celestia', 'Mynott', 'Bourhill', '(130) 8442846', 'cbourhill1v@army.mil') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2612124233', 'Dore', 'Moppett', 'Soper', '(668) 2202718', 'dsoper1w@squarespace.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('3165828539', 'Dixie', 'Bangle', 'Andress', '(629) 5047631', 'dandress1x@usa.gov') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1617354287', 'Trenton', 'Phipps', 'Batter', '(922) 1795991', 'tbatter1y@constantcontact.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5422707117', 'Mab', 'Haygreen', 'Cruz', '(329) 3826870', 'mcruz1z@odnoklassniki.ru') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('7373487610', 'Dore', 'Francescone', 'Rimington', '(299) 4372061', 'drimington20@technorati.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5677374466', 'Patsy', 'McLeary', 'Gardner', '(398) 7058532', 'pgardner21@behance.net') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('9877510006', 'Isabelita', 'Dymott', 'Jeannesson', '(119) 8427630', 'ijeannesson22@house.gov') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('9483557518', 'Sonnie', 'Snazle', 'Spinella', '(483) 4681387', 'sspinella23@arizona.edu') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2281844412', 'Carina', 'Wigg', 'Gaisford', '(993) 8281797', 'cgaisford24@blinklist.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5706606706', 'Shirley', 'Elloy', 'Steers', '(690) 1755190', 'ssteers25@merriam-webster.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4838183631', 'Pepe', 'Merrifield', 'Boswell', '(912) 8548814', 'pboswell26@people.com.cn') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4945351163', 'Cesya', 'Sigsworth', 'Lavers', '(968) 8463617', 'clavers27@mozilla.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2777972079', 'Thekla', 'McManamon', 'Exell', '(558) 5136617', 'texell28@cmu.edu') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5269359790', 'Olly', 'Wrench', 'Remer', '(572) 2215523', 'oremer29@usatoday.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1120233844', 'Ashly', 'Melonby', 'Olechnowicz', '(720) 8103190', 'aolechnowicz2a@live.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('6161755912', 'Brittani', 'Fairs', 'McCadden', '(545) 5088756', 'bmccadden2b@histats.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('6731375268', 'Marylin', 'Poulsom', 'Scimoni', '(598) 3956288', 'mscimoni2c@reddit.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8380585380', 'Junia', 'Kerrane', 'Siuda', '(980) 4201960', 'jsiuda2d@google.de') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4709801193', 'Herb', 'Gabitis', 'Gretton', '(907) 2942836', 'hgretton2e@un.org') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1679072811', 'Jacquette', 'Huckett', 'Jamison', '(174) 8964951', 'jjamison2f@spotify.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0469501057', 'Marve', 'Boggers', 'Fleischer', '(506) 4987490', 'mfleischer2g@youku.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1877383104', 'Bogey', 'Carbry', 'Eskrigg', '(829) 8196879', 'beskrigg2h@tripod.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0337120331', 'Jaynell', 'Lilly', 'Clogg', '(488) 6093152', 'jclogg2i@bluehost.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0603194869', 'Timmy', 'Carlick', 'Steet', '(134) 5568278', 'tsteet2j@ezinearticles.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('6912419186', 'Ethelbert', 'Spelsbury', 'Bullock', '(518) 9620704', 'ebullock2k@home.pl') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4022047852', 'Granthem', 'Stone Fewings', 'Cumbes', '(370) 8073582', 'gcumbes2l@chron.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('9433080963', 'Roxane', 'Adel', 'Jozsika', '(723) 3708733', 'rjozsika2m@umn.edu') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4688525494', 'Shayla', 'Maciaszek', 'Courvert', '(293) 7646145', 'scourvert2n@privacy.gov.au') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2717938966', 'Kata', 'Madine', 'Hrus', '(177) 1636823', 'khrus2o@scribd.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('3969733022', 'Chloette', 'Rocks', 'Elmhurst', '(799) 2949745', 'celmhurst2p@gizmodo.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('6953843225', 'Emelen', 'Houdmont', 'Heilds', '(253) 7108977', 'eheilds2q@newyorker.com') [42102-214]
+2023-08-31 00:16:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1715647637', 'Sumner', 'Issacov', 'Bouda', '(216) 7128504', 'sbouda2r@ted.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5347966696', 'Kirby', 'McMennum', 'Couser', '(750) 6419074', 'kcouser0@comsenz.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5328006534', 'Rosanna', 'Paddle', 'Fattorini', '(462) 4475741', 'rfattorini1@time.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1186529547', 'Adey', 'Shanks', 'Murby', '(168) 6035972', 'amurby2@vimeo.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0550019790', 'Del', 'Byk', 'Hightown', '(939) 1152357', 'dhightown3@aboutads.info') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('9426706364', 'Michael', 'Atley', 'Pietrusiak', '(933) 2728746', 'mpietrusiak4@imageshack.us') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0772738289', 'Arv', 'Leason', 'Deards', '(264) 4517139', 'adeards5@cbslocal.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('3338950136', 'Adelaide', 'Hiner', 'Pelchat', '(958) 4903204', 'apelchat6@naver.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5623550894', 'Lew', 'Toulch', 'Dallman', '(702) 7488923', 'ldallman7@unesco.org') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4754355113', 'Puff', 'Bradlaugh', 'Saiens', '(121) 6334539', 'psaiens8@pen.io') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('3372664345', 'Phip', 'Hutchin', 'Jedrzejewski', '(227) 2767646', 'pjedrzejewski9@npr.org') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('9675996900', 'Tonye', 'Pfaff', 'Aggett', '(313) 1023828', 'taggetta@miitbeian.gov.cn') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8199730706', 'Cleavland', 'Hubeaux', 'Gorrick', '(496) 2705526', 'cgorrickb@indiegogo.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('6872667877', 'Reta', 'Wilfing', 'Easlea', '(460) 8691207', 'reasleac@reddit.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4380200612', 'Freedman', 'Streeten', 'Guyan', '(442) 2962667', 'fguyand@edublogs.org') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('6155881812', 'Brigitta', 'Harrismith', 'Ramiro', '(645) 8681296', 'bramiroe@bluehost.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0351421319', 'Deidre', 'Rogeon', 'Hymus', '(760) 9507696', 'dhymusf@google.de') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8352367528', 'Thia', 'Harrell', 'Chaloner', '(755) 6468359', 'tchalonerg@canalblog.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0149530870', 'Dorelle', 'MacClancey', 'Kerwood', '(816) 8049671', 'dkerwoodh@hp.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5248202280', 'Helli', 'Mawford', 'Golsby', '(502) 8655023', 'hgolsbyi@addthis.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8183280005', 'Maxy', 'Boodle', 'Hingeley', '(393) 4555499', 'mhingeleyj@xrea.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('7902113654', 'Tess', 'Nelsen', 'Scurman', '(318) 6003649', 'tscurmank@xrea.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1232821551', 'Ginny', 'Brattan', 'Szymanek', '(626) 8871573', 'gszymanekl@yandex.ru') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5981039779', 'Amaleta', 'Corneck', 'Matushevitz', '(608) 1136284', 'amatushevitzm@artisteer.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0223080640', 'Guillermo', 'Kitchingman', 'Cristofaro', '(644) 3804022', 'gcristofaron@si.edu') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5675177523', 'Krishna', 'Botten', 'Iredale', '(618) 6114199', 'kiredaleo@reuters.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4187228411', 'Clive', 'Crewes', 'Ivimy', '(243) 5803433', 'civimyp@newsvine.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4905688361', 'Ram', 'Sudlow', 'Bradock', '(841) 9278797', 'rbradockq@dailymotion.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5725108287', 'Nessie', 'Tomasini', 'Ridsdell', '(245) 7126035', 'nridsdellr@addthis.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('7673916959', 'Berny', 'Attride', 'Warbrick', '(738) 4691837', 'bwarbricks@discovery.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5488043691', 'Viviana', 'Corson', 'Deniske', '(619) 4199949', 'vdenisket@free.fr') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('6404839628', 'Lavinie', 'Dufton', 'Kelloway', '(887) 6993391', 'lkellowayu@wordpress.org') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8372380104', 'Roderich', 'Chafney', 'Idwal Evans', '(140) 8125711', 'ridwalevansv@delicious.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8727736296', 'Cheryl', 'Rummery', 'Ovendon', '(915) 5800142', 'covendonw@webeden.co.uk') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2928376224', 'Niels', 'Brendeke', 'Blethyn', '(743) 1100449', 'nblethynx@multiply.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8217231214', 'Lari', 'Trevithick', 'Roughsedge', '(643) 6654027', 'lroughsedgey@arizona.edu') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1517842441', 'Abbey', 'Costell', 'Epsley', '(749) 3673292', 'aepsleyz@studiopress.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0776367943', 'Etty', 'Fiddian', 'Buttery', '(525) 7704322', 'ebuttery10@fastcompany.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8431302763', 'Ruthann', 'Martinuzzi', 'Dinse', '(143) 4708225', 'rdinse11@telegraph.co.uk') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8830898899', 'Erek', 'Martel', 'Boolsen', '(105) 7985059', 'eboolsen12@etsy.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8598626368', 'Butch', 'Gillard', 'Spitaro', '(692) 1937106', 'bspitaro13@wunderground.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5760246143', 'Marylynne', 'Kembry', 'Sollis', '(416) 1234970', 'msollis14@uol.com.br') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4281166602', 'Lukas', 'Beven', 'Skaid', '(530) 8029936', 'lskaid15@youtu.be') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4592122801', 'Roda', 'Abramsky', 'Fishburn', '(744) 7540474', 'rfishburn16@wp.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5437515065', 'Alyosha', 'Ellaman', 'Phlippi', '(182) 3208999', 'aphlippi17@creativecommons.org') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('3796855105', 'Constantin', 'Nobriga', 'Cadreman', '(345) 3218532', 'ccadreman18@skype.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1571861688', 'Ag', 'Darwen', 'Beadell', '(164) 4030972', 'abeadell19@cyberchimps.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1708797742', 'Filippo', 'Found', 'Sendall', '(177) 7540526', 'fsendall1a@princeton.edu') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4040369548', 'Isacco', 'Caser', 'Gogie', '(137) 3383501', 'igogie1b@blinklist.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('7353096802', 'Mozes', 'Halbard', 'Kenworthy', '(793) 5014583', 'mkenworthy1c@pinterest.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5971902423', 'Gibbie', 'Sottell', 'Channon', '(994) 6098276', 'gchannon1d@globo.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5323282509', 'Elfie', 'Michell', 'Segeswoeth', '(309) 2978608', 'esegeswoeth1e@springer.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('7310510771', 'Flin', 'Summerskill', 'Gisburn', '(268) 2804368', 'fgisburn1f@weebly.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1955578540', 'Bobbette', 'Biddles', 'Stapels', '(798) 3263355', 'bstapels1g@slideshare.net') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5108779631', 'Saxon', 'Lissandrini', 'Kinton', '(841) 4035706', 'skinton1h@msn.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('7230970253', 'Gwennie', 'Switsur', 'Keely', '(450) 4917314', 'gkeely1i@rambler.ru') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4220845127', 'Rozalie', 'Keeney', 'Moine', '(923) 6892603', 'rmoine1j@360.cn') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0801769264', 'Felipa', 'Greenan', 'Wipper', '(303) 8301188', 'fwipper1k@facebook.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2652972499', 'Emalia', 'Manuelli', 'Garbutt', '(826) 2392932', 'egarbutt1l@sourceforge.net') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1700262521', 'Kelley', 'Slorach', 'Noury', '(413) 7052330', 'knoury1m@bbc.co.uk') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2173774433', 'Randy', 'Filippov', 'Alebrooke', '(735) 8513981', 'ralebrooke1n@mapy.cz') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2708766090', 'Roseanna', 'Bree', 'Gerrietz', '(823) 5986877', 'rgerrietz1o@ovh.net') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('9110252029', 'Erin', 'Tadlow', 'Persitt', '(838) 7628257', 'epersitt1p@arizona.edu') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('3960967659', 'Heda', 'Goldis', 'Allmann', '(357) 4743995', 'hallmann1q@irs.gov') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8705877156', 'Sybila', 'Foyle', 'Meese', '(961) 9128666', 'smeese1r@blogspot.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('7082957513', 'Mitzi', 'Markova', 'O''Cannan', '(323) 1771207', 'mocannan1s@spiegel.de') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('9077948244', 'Ceil', 'Dunn', 'Inde', '(358) 8272861', 'cinde1t@hp.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2372054112', 'Cilka', 'Leaming', 'Lennie', '(409) 3519277', 'clennie1u@soundcloud.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8570747934', 'Celestia', 'Mynott', 'Bourhill', '(130) 8442846', 'cbourhill1v@army.mil') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2612124233', 'Dore', 'Moppett', 'Soper', '(668) 2202718', 'dsoper1w@squarespace.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('3165828539', 'Dixie', 'Bangle', 'Andress', '(629) 5047631', 'dandress1x@usa.gov') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1617354287', 'Trenton', 'Phipps', 'Batter', '(922) 1795991', 'tbatter1y@constantcontact.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5422707117', 'Mab', 'Haygreen', 'Cruz', '(329) 3826870', 'mcruz1z@odnoklassniki.ru') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('7373487610', 'Dore', 'Francescone', 'Rimington', '(299) 4372061', 'drimington20@technorati.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5677374466', 'Patsy', 'McLeary', 'Gardner', '(398) 7058532', 'pgardner21@behance.net') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('9877510006', 'Isabelita', 'Dymott', 'Jeannesson', '(119) 8427630', 'ijeannesson22@house.gov') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('9483557518', 'Sonnie', 'Snazle', 'Spinella', '(483) 4681387', 'sspinella23@arizona.edu') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2281844412', 'Carina', 'Wigg', 'Gaisford', '(993) 8281797', 'cgaisford24@blinklist.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5706606706', 'Shirley', 'Elloy', 'Steers', '(690) 1755190', 'ssteers25@merriam-webster.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4838183631', 'Pepe', 'Merrifield', 'Boswell', '(912) 8548814', 'pboswell26@people.com.cn') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4945351163', 'Cesya', 'Sigsworth', 'Lavers', '(968) 8463617', 'clavers27@mozilla.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2777972079', 'Thekla', 'McManamon', 'Exell', '(558) 5136617', 'texell28@cmu.edu') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('5269359790', 'Olly', 'Wrench', 'Remer', '(572) 2215523', 'oremer29@usatoday.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1120233844', 'Ashly', 'Melonby', 'Olechnowicz', '(720) 8103190', 'aolechnowicz2a@live.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('6161755912', 'Brittani', 'Fairs', 'McCadden', '(545) 5088756', 'bmccadden2b@histats.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('6731375268', 'Marylin', 'Poulsom', 'Scimoni', '(598) 3956288', 'mscimoni2c@reddit.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('8380585380', 'Junia', 'Kerrane', 'Siuda', '(980) 4201960', 'jsiuda2d@google.de') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4709801193', 'Herb', 'Gabitis', 'Gretton', '(907) 2942836', 'hgretton2e@un.org') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1679072811', 'Jacquette', 'Huckett', 'Jamison', '(174) 8964951', 'jjamison2f@spotify.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0469501057', 'Marve', 'Boggers', 'Fleischer', '(506) 4987490', 'mfleischer2g@youku.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1877383104', 'Bogey', 'Carbry', 'Eskrigg', '(829) 8196879', 'beskrigg2h@tripod.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0337120331', 'Jaynell', 'Lilly', 'Clogg', '(488) 6093152', 'jclogg2i@bluehost.com') [42102-214]
+2023-08-31 00:34:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('0603194869', 'Timmy', 'Carlick', 'Steet', '(134) 5568278', 'tsteet2j@ezinearticles.com') [42102-214]
+2023-08-31 00:34:22 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('6912419186', 'Ethelbert', 'Spelsbury', 'Bullock', '(518) 9620704', 'ebullock2k@home.pl') [42102-214]
+2023-08-31 00:34:22 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4022047852', 'Granthem', 'Stone Fewings', 'Cumbes', '(370) 8073582', 'gcumbes2l@chron.com') [42102-214]
+2023-08-31 00:34:22 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('9433080963', 'Roxane', 'Adel', 'Jozsika', '(723) 3708733', 'rjozsika2m@umn.edu') [42102-214]
+2023-08-31 00:34:22 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('4688525494', 'Shayla', 'Maciaszek', 'Courvert', '(293) 7646145', 'scourvert2n@privacy.gov.au') [42102-214]
+2023-08-31 00:34:22 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('2717938966', 'Kata', 'Madine', 'Hrus', '(177) 1636823', 'khrus2o@scribd.com') [42102-214]
+2023-08-31 00:34:22 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('3969733022', 'Chloette', 'Rocks', 'Elmhurst', '(799) 2949745', 'celmhurst2p@gizmodo.com') [42102-214]
+2023-08-31 00:34:22 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('6953843225', 'Emelen', 'Houdmont', 'Heilds', '(253) 7108977', 'eheilds2q@newyorker.com') [42102-214]
+2023-08-31 00:34:22 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values ('1715647637', 'Sumner', 'Issacov', 'Bouda', '(216) 7128504', 'sbouda2r@ted.com') [42102-214]
+2023-08-31 00:36:27 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER_DATA" not found; SQL statement:
+insert into owner_data (idCard, firstName, firstLastName, SecondLastName, phone, email) values (5347966696, 'Kirby', 'McMennum', 'Couser', '(750) 6419074', 'kcouser0@comsenz.com') [42102-214]
+2023-08-31 00:37:15 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "IDCARD" not found; SQL statement:
+insert into owner (idCard, firstName, firstLastName, SecondLastName, phone, email) values (5347966696, 'Kirby', 'McMennum', 'Couser', '(750) 6419074', 'kcouser0@comsenz.com') [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:749)
+	at org.h2.command.Parser.parseColumn(Parser.java:1256)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1241)
+	at org.h2.command.Parser.parseInsert(Parser.java:1641)
+	at org.h2.command.Parser.parsePrepared(Parser.java:814)
+	at org.h2.command.Parser.parse(Parser.java:689)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:569)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp.query(WebApp.java:1113)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+2023-08-31 00:39:32 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "IDCARD" not found; SQL statement:
+INSERT INTO Owner (idCard, firstName, firstLastName, secondLastName, phone, email)
+VALUES (123456789, 'John', 'Doe', 'Smith', '1234567890', 'john.doe@example.com') [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:749)
+	at org.h2.command.Parser.parseColumn(Parser.java:1256)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1241)
+	at org.h2.command.Parser.parseInsert(Parser.java:1641)
+	at org.h2.command.Parser.parsePrepared(Parser.java:814)
+	at org.h2.command.Parser.parse(Parser.java:689)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:569)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp.query(WebApp.java:1113)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+2023-08-31 00:44:51 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "IDCARD" not found; SQL statement:
+INSERT INTO Owner (id, idCard, firstName, firstLastName, secondLastName, phone, email)
+VALUES (1, 123456789, 'John', 'Doe', 'Smith', '1234567890', 'john.doe@example.com') [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:749)
+	at org.h2.command.Parser.parseColumn(Parser.java:1256)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1241)
+	at org.h2.command.Parser.parseInsert(Parser.java:1641)
+	at org.h2.command.Parser.parsePrepared(Parser.java:814)
+	at org.h2.command.Parser.parse(Parser.java:689)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:569)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp.query(WebApp.java:1113)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+2023-08-31 00:51:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1375)
+	at org.h2.jdbc.JdbcConnection.getAutoCommit(JdbcConnection.java:423)
+	at com.zaxxer.hikari.pool.HikariProxyConnection.getAutoCommit(HikariProxyConnection.java)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:49)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.getIsolatedConnection(GenerationTargetToDatabase.java:60)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.jdbcStatement(GenerationTargetToDatabase.java:110)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:77)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl.perform(SchemaDropperImpl.java:609)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryClosing(SessionFactoryObserverForSchemaExport.java:48)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryClosing(SessionFactoryObserverChain.java:48)
+	at org.hibernate.internal.SessionFactoryImpl.close(SessionFactoryImpl.java:869)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:519)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:733)
+	at jdk.proxy7/jdk.proxy7.$Proxy132.close(Unknown Source)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:652)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1182)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1107)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1076)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:173)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1027)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:139)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+2023-08-31 00:51:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1375)
+	at org.h2.jdbc.JdbcConnection.clearWarnings(JdbcConnection.java:610)
+	at com.zaxxer.hikari.pool.ProxyConnection.close(ProxyConnection.java:257)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.closeConnection(DatasourceConnectionProviderImpl.java:127)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.releaseConnection(JdbcEnvironmentInitiator.java:321)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.release(DdlTransactionIsolatorNonJtaImpl.java:106)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.release(GenerationTargetToDatabase.java:132)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl.perform(SchemaDropperImpl.java:620)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryClosing(SessionFactoryObserverForSchemaExport.java:48)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryClosing(SessionFactoryObserverChain.java:48)
+	at org.hibernate.internal.SessionFactoryImpl.close(SessionFactoryImpl.java:869)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:519)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:733)
+	at jdk.proxy7/jdk.proxy7.$Proxy132.close(Unknown Source)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:652)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1182)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1107)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1076)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:173)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1027)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:139)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+2023-08-31 01:27:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "IMGURL" not found; SQL statement:
+insert into Pet(name, breed, birthday, weight, disease, imgUrl) values ('Bonifacio', 'Persa', ) [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:749)
+	at org.h2.command.Parser.parseColumn(Parser.java:1256)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1241)
+	at org.h2.command.Parser.parseInsert(Parser.java:1641)
+	at org.h2.command.Parser.parsePrepared(Parser.java:814)
+	at org.h2.command.Parser.parse(Parser.java:689)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:569)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.bigotes.app.Application.main(Application.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2023-08-31 01:27:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "IMGURL" not found; SQL statement:
+insert into Pet(name, breed, birthday, weight, disease, imgUrl) values ('Bonifacio', 'Persa', '2022-01-15', 6, 'Lupus', ) [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:749)
+	at org.h2.command.Parser.parseColumn(Parser.java:1256)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1241)
+	at org.h2.command.Parser.parseInsert(Parser.java:1641)
+	at org.h2.command.Parser.parsePrepared(Parser.java:814)
+	at org.h2.command.Parser.parse(Parser.java:689)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:569)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.bigotes.app.Application.main(Application.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2023-08-31 01:28:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "IMGURL" not found; SQL statement:
+insert into Pet(name, breed, birthday, weight, disease, imgUrl) values ('Bonifacio', 'Persa', '2022-01-15', 6, 'Lupus', 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.infobae.com%2Fperros-y-gatos%2F2023%2F05%2F11%2Fcomo-hacer-para-que-los-gatos-sean-mas-sociables%2F&psig=AOvVaw1IYz3IaxFfYS8RRFLQhUSg&ust=1693549666011000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCKio_6OihoEDFQAAAAAdAAAAABAK') [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:749)
+	at org.h2.command.Parser.parseColumn(Parser.java:1256)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1241)
+	at org.h2.command.Parser.parseInsert(Parser.java:1641)
+	at org.h2.command.Parser.parsePrepared(Parser.java:814)
+	at org.h2.command.Parser.parse(Parser.java:689)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:569)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.bigotes.app.Application.main(Application.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2023-08-31 01:28:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "IMG_URL CHARACTER VARYING(255)": "'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.infobae.com%2Fperros-y-ga... (288)"; SQL statement:
+insert into Pet(name, breed, birthday, weight, disease, img_Url) values ('Bonifacio', 'Persa', '2022-01-15', 6, 'Lupus', 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.infobae.com%2Fperros-y-gatos%2F2023%2F05%2F11%2Fcomo-hacer-para-que-los-gatos-sean-mas-sociables%2F&psig=AOvVaw1IYz3IaxFfYS8RRFLQhUSg&ust=1693549666011000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCKio_6OihoEDFQAAAAAdAAAAABAK') [22001-214]
+2023-08-31 10:13:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER" not found (this database is empty); SQL statement:
+insert into Owner (id_Card, first_Name, first_Last_Name, Second_Last_Name, phone, email) values ('3272157018', 'Vito', 'Cannell', 'Bergstram', '5621187931', 'vbergstram0@multiply.com') [42104-214]
+2023-08-31 10:14:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER" not found (this database is empty); SQL statement:
+insert into Owner (id_Card, first_Name, first_Last_Name, Second_Last_Name, phone, email) values ('3272157018', 'Vito', 'Cannell', 'Bergstram', '5621187931', 'vbergstram0@multiply.com') [42104-214]
+2023-08-31 10:15:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER" not found (this database is empty); SQL statement:
+insert into Owner (id_Card, first_Name, first_Last_Name, Second_Last_Name, phone, email) values ('3272157018', 'Vito', 'Cannell', 'Bergstram', '5621187931', 'vbergstram0@multiply.com') [42104-214]
+2023-08-31 10:16:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER" not found (this database is empty); SQL statement:
+select o1_0.id,o1_0.email,o1_0.first_last_name,o1_0.first_name,o1_0.id_card,o1_0.phone,o1_0.second_last_name from owner o1_0 [42104-214]
+2023-08-31 10:18:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER" not found (this database is empty); SQL statement:
+insert into Owner (id_Card, first_Name, first_Last_Name, Second_Last_Name, phone, email) values ('3272157018', 'Vito', 'Cannell', 'Bergstram', '5621187931', 'vbergstram0@multiply.com') [42104-214]
+2023-08-31 10:18:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER" not found (this database is empty); SQL statement:
+insert into Owner (id_Card, first_Name, first_Last_Name, Second_Last_Name, phone, email) values ('3272157018', 'Vito', 'Cannell', 'Bergstram', '5621187931', 'vbergstram0@multiply.com') [42104-214]
+2023-08-31 10:30:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER" not found (this database is empty); SQL statement:
+insert into Owner (id_Card, first_Name, first_Last_Name, Second_Last_Name, phone, email) values ('3272157018', 'Vito', 'Cannell', 'Bergstram', '5621187931', 'vbergstram0@multiply.com') [42104-214]
+2023-08-31 10:36:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER" not found (this database is empty); SQL statement:
+insert into Owner (id_Card, first_Name, first_Last_Name, Second_Last_Name, phone, email) values ('3272157018', 'Vito', 'Cannell', 'Bergstram', '5621187931', 'vbergstram0@multiply.com') [42104-214]
+2023-08-31 10:37:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OWNER" not found (this database is empty); SQL statement:
+insert into Owner (id_Card, first_Name, first_Last_Name, Second_Last_Name, phone, email) values ('3272157018', 'Vito', 'Cannell', 'Bergstram', '5621187931', 'vbergstram0@multiply.com') [42104-214]
+2023-08-31 10:48:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 10:48:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 10:48:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 10:48:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 10:48:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 10:48:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 10:53:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 10:53:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 10:53:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 10:53:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 10:53:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 10:53:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 10:54:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 10:54:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 10:54:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 10:55:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 10:55:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 10:55:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 10:55:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 10:55:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 10:55:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:01:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:01:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:01:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:01:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:01:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:01:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:02:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:02:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:02:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:03:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:03:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:03:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:23:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:23:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:23:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:24:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:24:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:24:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:26:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:26:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:26:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:26:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:26:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:26:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:26:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:26:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:26:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:27:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:27:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:27:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:30:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:30:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:30:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:30:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:30:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:30:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:30:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:30:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:30:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:33:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:33:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 11:33:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:10:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:10:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:10:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:10:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:10:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:10:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:11:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:11:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:11:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:13:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:13:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:13:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "IMG_URL CHARACTER VARYING(255)": "'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.theguardian.com%2Flifeand... (320)"; SQL statement:
+insert into pet (birthday,breed,disease,img_url,name,owner_id,weight,id) values (?,?,?,?,?,?,?,default) [22001-214]
+2023-08-31 12:17:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:17:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:17:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "IMG_URL CHARACTER VARYING(255)": "'https://www.google.com/url?sa=i&url=https%3A%2F%2Fnatusan.co.uk%2Fblogs%2Finsid... (263)"; SQL statement:
+insert into pet (birthday,breed,disease,img_url,name,owner_id,weight,id) values (?,?,?,?,?,?,?,default) [22001-214]
+2023-08-31 12:18:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:18:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:18:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:18:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:18:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:18:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:19:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:19:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:19:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:21:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:21:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:21:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:22:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:22:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:22:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:23:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:23:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-31 12:23:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]

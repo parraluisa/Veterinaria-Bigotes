@@ -41,7 +41,7 @@
                             <p><strong>Raza: </strong><span th:text="${pet.breed}"></span></p>
                         </div>
                         <div class>
-                            <p><strong>Edad: </strong><span th:text="${pet.age}"></span></p>
+                            <p><strong>Edad: </strong><span th:text="${pet.calculateAge()}"></span></p>
                             <p><strong>Peso: </strong><span th:text="${pet.weight}"></span></p>
                         </div>
                     </div>
@@ -64,8 +64,6 @@
                 <tr>
                     <th scope="col">idHistoria</th>
                     <th scope="col">Enfermedad</th>
-                    <th scope="col">Ingreso</th>
-                    <th scope="col">Alta</th>
                     <th scope="col">Tratamientos médicos</th>
                     <th scope="col">Fecha</th>
                     <th scope="col">Droga Sumnistrada</th>
@@ -75,8 +73,6 @@
             <tbody>
                 <td>0001 <img src="/imagenes/showPet/edit2.svg"></td>
                 <td th:text="${pet.disease}"></td>
-                <td th:text="${pet.entry}"></td>
-                <td th:text="${pet.departure}"></td>
 
 
             </tbody>

@@ -6,25 +6,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.Optional;
 
 @Service
-public class OwnerService implements CrudService<Owner> {
+public class OwnerService implements CrudService<Owner, Long> {
     
     @Autowired
     private OwnerRepository repository;
 
     @Override
-    public Owner findById(Integer id) {
-        return repository.findById(id);
+    public Owner findById(Long id) {
+        return repository.findById(id).orElse(null);
     }
 
     @Override
     public Collection<Owner> findAll() {
-        return repository.findAll();
+        return Optional.of(repository.findAll()).get();
     }
 
     @Override
-    public void deleteById(Integer id) {
+    public void deleteById(Long id) {
         repository.deleteById(id);
     }
 
@@ -33,7 +34,7 @@ public class OwnerService implements CrudService<Owner> {
         repository.save(Owner);
     }
 
-    public Owner findByIdCard(Integer idCard) {
+    public Owner findByIdCard(Long idCard) {
         return repository.findByIdCard(idCard);
     }
 }
