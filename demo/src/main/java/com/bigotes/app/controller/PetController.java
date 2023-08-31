@@ -75,6 +75,16 @@ public class PetController {
     @GetMapping("/owner/{idCard}")
     public String showOwnerPets(Model model, @PathVariable("idCard") Integer idCard){
         model.addAttribute("pets", service.findByOwnerId(idCard));
-        return "pet_pages/show_all_pets";
+        return "owner_pages/owner_pets";
+    }
+    @GetMapping("/owner/{idCard}/pet/find/{id}")
+    public String showOwnerPet(Model model, @PathVariable("idCard") Integer idCard, @PathVariable("id") Integer id){
+        Pet pet = service.findById(id);
+        if (pet != null) {
+            model.addAttribute("pet", pet);
+        } else {
+            throw new NotFoundException();
+        }
+        return "owner_pages/owner_pet";
     }
 }
