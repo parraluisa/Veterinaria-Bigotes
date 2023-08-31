@@ -10,6 +10,80 @@
 </head>
 
 <body>
+    <nav>
+        <div id="logo-container">
+            <a href="http://localhost:8090/pag/show">
+                <img id="logo" src="/imagenes/showPet/logo.png">
+            </a>
+        </div>
+        <div id="user">
+            <h2>Nombre de usuario</h2>
+            <img id="user-img" src="/imagenes/showPet/user.png">
+        </div>
+    </nav>
+
+    <main>
+
+
+        <section id="pet">
+            <div>
+                <img id="pet-img" th:src="${pet.imgUrl}">
+            </div>
+            <div id="pet-info">
+                <div id="pet-data-container">
+                    <div id="pet-name">
+                        <h1><span th:text="${pet.name}"></span></h1>
+                        <img src="/imagenes/showPet/edit1.svg">
+                    </div>
+                    <div id="pet-data">
+                        <div>
+                            <p><strong>Dueño: </strong> Fabio Buitrago</p>
+                            <p><strong>Raza: </strong><span th:text="${pet.breed}"></span></p>
+                        </div>
+                        <div class>
+                            <p><strong>Edad: </strong><span th:text="${pet.age}"></span></p>
+                            <p><strong>Peso: </strong><span th:text="${pet.weight}"></span></p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section>
+    </main>
+
+    <section id="history">
+        <div id="history-title">
+            <h1>Historial médico</h1>
+            <img src="/imagenes/showPet/add.svg">
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">idHistoria</th>
+                    <th scope="col">Enfermedad</th>
+                    <th scope="col">Ingreso</th>
+                    <th scope="col">Alta</th>
+                    <th scope="col">Tratamientos médicos</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Droga Sumnistrada</th>
+                    <th scope="col">Precio asociado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <td>0001 <img src="/imagenes/showPet/edit2.svg"></td>
+                <td th:text="${pet.disease}"></td>
+                <td th:text="${pet.entry}"></td>
+                <td th:text="${pet.departure}"></td>
+
+
+            </tbody>
+        </table>
+
+    </section>
+
 
 </body>
 
