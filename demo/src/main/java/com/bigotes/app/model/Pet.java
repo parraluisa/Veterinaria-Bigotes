@@ -3,6 +3,7 @@ package com.bigotes.app.model;
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.*;
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -22,6 +23,7 @@ public class Pet {
     @Nonnull
     private String breed;
     @Nonnull
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date birthday;
     @Nonnull
     private Double weight;

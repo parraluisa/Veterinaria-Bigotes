@@ -61,7 +61,7 @@ public class OwnerController {
         return "owner_pages/save_owner";
     }
 
-    @DeleteMapping("/del/{id}")
+    @GetMapping("/del/{id}")
     public String deleteOwner(@PathVariable("id") Long id) {
         Owner owner = ownerService.findById(id);
         if (owner != null) {
