@@ -13,18 +13,16 @@
     <nav>
         <div id="logo-container">
             <a href="http://localhost:8090/pag/show">
-                <img id="logo" src="/imagenes/showPet/logo.png">
+                <img id="logo" src="/imagenes/showPet/logoOwner.svg">
             </a>
         </div>
         <div id="user">
             <h2>Nombre de usuario</h2>
-            <img id="user-img" src="/imagenes/showPet/user.png">
+            <img id="user-img" src="/imagenes/FotoOwner.png">
         </div>
     </nav>
 
     <main>
-
-
         <section id="pet">
             <div>
                 <img id="pet-img" th:src="${pet.imgUrl}">
@@ -33,7 +31,6 @@
                 <div id="pet-data-container">
                     <div id="pet-name">
                         <h1><span th:text="${pet.name}"></span></h1>
-                        <img src="/imagenes/showPet/edit1.svg">
                     </div>
                     <div id="pet-data">
                         <div>
@@ -56,7 +53,6 @@
     <section id="history">
         <div id="history-title">
             <h1>Historial médico</h1>
-            <img src="/imagenes/showPet/add.svg">
         </div>
 
         <table>
@@ -73,7 +69,7 @@
                 </tr>
             </thead>
             <tbody>
-                <td>0001 <img src="/imagenes/showPet/edit2.svg"></td>
+                <td>0001</td>
                 <td th:text="${pet.disease}"></td>
 
 

@@ -1,18 +1,21 @@
-html, body{
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
+
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     display: flex;
-        flex-direction: column;
-        justify-content: top;
+    flex-direction: column;
+    justify-content: top;
 }
 
 nav {
     margin-top: 2.5%;
     width: 100%;
     height: 5%;
-    
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,7 +49,7 @@ nav {
 
 #user h2 {
     font-size: 1em;
-    color: #1C697D;
+    color: #5DB3DB;
     margin: 0;
     padding: 0;
 }
@@ -80,8 +83,8 @@ main {
     top: 50%;
     /* Vertically center the image */
     transform: translateY(-50%);
-    left: 0;
-    width: 25%;
+    left: 10%;
+    width: 23%;
     aspect-ratio: 1/1;
     border-radius: 50%;
     display: flex;
@@ -110,19 +113,19 @@ main {
 }
 
 #pet-info {
-    width: 70%;
-    height: 100%;
+    width: 55%;
+    height: 125%;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: right;
     align-items: flex-end;
-    background-color: #1C697D;
+    background-color: #5DB3DB;
     border-radius: 2rem;
 }
 
 
-#pet-name{
+#pet-name {
     padding-top: 10%;
     width: 100%;
     height: 20%;
@@ -134,19 +137,23 @@ main {
     gap: 2rem;
 }
 
-#pet-name h1{
-    font-size: 5rem;
-    color: white;
+#pet-name h1 {
+    font-size: 3rem;
     text-align: left;
+    color: #FFF;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
 }
 
-#pet-name img{
+#pet-name img {
     width: 2rem;
 }
 
 
 
-#pet-data{
+#pet-data {
     width: 100%;
     height: 70%;
     display: flex;
@@ -159,14 +166,11 @@ main {
 
 #history {
     width: 100%;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-bottom: 5%;
-    height: 50%;
+    padding-left: 3%;
+    padding-right: 3%;
+    height: 35%;
     box-sizing: border-box;
 }
-
-
 
 #history-title {
     width: 100%;
@@ -180,9 +184,12 @@ main {
 }
 
 #history-title h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #1C697D;
+    font-size: 2.5rem;
+    color: #5DB3DB;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
 }
 
 #history-title img {
@@ -237,6 +244,6 @@ table tbody tr td {
     vertical-align: middle;
 }
 
-td img{
+td img {
     width: 1rem;
 }

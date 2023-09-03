@@ -16,6 +16,8 @@ public class PetController {
     @Autowired
     private PetService service;
 
+    
+
     @GetMapping("/all")
     public String showAllPets(Model model){
         model.addAttribute("pets", service.findAll());
