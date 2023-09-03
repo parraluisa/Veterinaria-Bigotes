@@ -61,7 +61,7 @@ public class PetController {
         return "pet_pages/save_pet";
     }
 
-    @GetMapping("/del/{id}")
+    @DeleteMapping("/del/{id}")
     public String deletePet(@PathVariable("id") Long id) {
         Pet pet = service.findById(id);
         if (pet != null) {
@@ -70,23 +70,5 @@ public class PetController {
             throw new NotFoundException();
         }
         return "redirect:/pet/all";
-    }
-
-    @GetMapping("/owner-pets/{id}")
-    public String showOwnerPets(Model model, @PathVariable("id") Long id){
-        model.addAttribute("pets", service.findByOwnerId(id));
-        return "owner_pages/owner_pets";
-    }
-
-
-    @GetMapping("/owner-pet/find/{id}")
-    public String showOwnerPet(Model model, @PathVariable("id") Long id){
-        Pet pet = service.findById(id);
-        if (pet != null) {
-            model.addAttribute("pet", pet);
-        } else {
-            throw new NotFoundException();
-        }
-        return "owner_pages/owner_pet";
     }
 }
