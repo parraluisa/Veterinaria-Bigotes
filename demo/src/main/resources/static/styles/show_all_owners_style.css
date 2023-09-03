@@ -1,5 +1,6 @@
 /* styles.css */
 .sidebar {
+    position: fixed;
     height: 100vh;
     background-color: #1C697D;
     align-content: center;
@@ -101,8 +102,9 @@
 }
 
 .content {
-    margin-left: 2%;
+    margin-left: 17%;
     width: 80%;
+
 }
 
 .head {
