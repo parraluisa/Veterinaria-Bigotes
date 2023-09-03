@@ -23,7 +23,7 @@
     <div class="d-flex">
         <div class="sidebar">
             <!-- Sidebar content -->
-            <img class="icon" src="/imagenes/Bigotes-2.png">
+            <img class="icon" src="/imagenes/vet/Bigotes-2.png">
             <!-- Dentro de tu barra lateral en el archivo HTML -->
             <h4>Filtros</h4>
             <div class="filters">
@@ -63,7 +63,7 @@
             <div class="head">
                 <h1>Nuestros Dueños</h1>
                 <h2>Nombre usuario</h2>
-                <img class="icon" src="/imagenes/FotoUser.png">
+                <img class="icon" src="/imagenes/users/FotoUser.png">
             </div>
         <table class="table table-striped">
             <thead>
@@ -86,12 +86,12 @@
                     <td id="more">
                         <!--add pet to owner we need the path-->
                         <a th:href="@{/owner/find/{id}(id=${owner.id})}">
-                             <img src="/imagenes/addIcon.png"> </a>
+                             <img src="/imagenes/vet/addIcon.png"> </a>
                         <a th:href="@{/owner/del/{id}(id=${owner.id})}">
-                            <img src="/imagenes/deleteIcon.png"> </a>
+                            <img src="/imagenes/vet/deleteIcon.png"> </a>
                         </a>
                         <a th:href="@{/owner/upd/{id}(id=${owner.id})}">
-                            <img src="/imagenes/editIcon.png">
+                            <img src="/imagenes/vet/editIcon.png">
                         </a>
                         <a th:href="@{/owner/find/{id}(id=${owner.id})}"> ... </a>
                     </td>
