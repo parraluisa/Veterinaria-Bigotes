@@ -52,7 +52,6 @@
             </div>
             <h4>Adicionales</h4>
             <div class="addSection">
-                <a th:href="@{/pet/add}">Agregar mascota</a>
                 <a th:href="@{/owner/add}">Agregar dueño</a>
              </div>
             <p>Cerrar Sesión</p>
@@ -85,7 +84,7 @@
                     <td th:text="${owner.email}"></td>
                     <td id="more">
                         <!--add pet to owner we need the path-->
-                        <a th:href="@{/owner/find/{id}(id=${owner.id})}">
+                        <a th:href="@{/pet/add}">
                              <img src="/imagenes/vet/addIcon.png"> </a>
                         <a th:href="@{/owner/del/{id}(id=${owner.id})}">
                             <img src="/imagenes/vet/deleteIcon.png"> </a>

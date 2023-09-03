@@ -22,7 +22,7 @@
     margin-left: 10%;
     margin-right: 7%;
     margin-top: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 15%;
     font-size: 0.9rem;
     font-weight: 400;
 
@@ -233,6 +233,7 @@
     cursor: pointer;
     text-align: center;
     padding: 5%;
+    margin-top: 5%;
 }
 
 .addSection a:hover {
