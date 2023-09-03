@@ -8,38 +8,46 @@
     <link rel="stylesheet" href="/styles/show_owner_style.css">
 </head>
 <body>
-    <img src="/imagenes/showOwner/blackCat.png" alt="Black cat">
-    <div class="content">
-        <h1>Información dueño</h1>
-    
-        <div class="element">
-            <p th:text="'Cédula: ' + ${owner.idCard}"></p>
+    <nav>
+        <div id="logo-container">
+            <a href="http://localhost:8090/pag/show">
+                <img id="logo" src="/imagenes/showPet/logo.png">
+            </a>
         </div>
-        
-        <div class="element">
-            <p th:text="'Nombre: ' + ${owner.firstName}"></p>
+        <div id="user">
+            <h2>Nombre de usuario</h2>
+            <img id="user-img" src="/imagenes/users/FotoUser.png">
         </div>
-    
-        <div class="element">
-            <p th:text="'Apellido 1: ' + ${owner.firstLastName}"></p>
-        </div>
-        
-        <div class="element">
-            <p th:text="'Apellido 2: ' + ${owner.secondLastName}"></p>
-        </div>
-    
-        <div class="element">
-            <p th:text="'Celular: ' + ${owner.phone}"></p>
-        </div>
-    
-        <div class="element">
-            <p th:text="'Correo: ' + ${owner.email}"></p>
-        </div>
+    </nav>
 
-        <a th:href="@{/owner/pets/{id}(id=${owner.id})}">Mis mascotas</a>
+    <main>
+        <section id="owner">
+            <div>
+                <img id="owner-img" src="/imagenes/users/FotoOwner.png">
+            </div>
+            <div id="owner-info">
+                <div id="owner-data-container">
+                    <div id="owner-name">
+                        <h1><span th:text="${owner.idCard}"></span></h1>
+                    </div>
+                    <div id="owner-data">
+                        <div>
+                            <p><strong>Nombre: </strong><span th:text="${owner.firstName}"></span></p>
+                            <p><strong>Apellido2: </strong><span th:text="${owner.secondLastName}"></span></p>
+                            <p><strong>Celular: </strong><span th:text="${owner.phone}"></span></p>
+                        </div>
+                        <div class>
+                            <p><strong>Apellido1: </strong><span th:text="${owner.firstLastName}"></span></p>
+                            <p><strong>Correo: </strong><span th:text="${owner.email}"></span></p>
+                        </div>
+                    </div>
+                </div>
 
-    </div>
-    
-    
+
+            </div>
+
+        </section>
+    </main>
+
 </body>
 </html>
