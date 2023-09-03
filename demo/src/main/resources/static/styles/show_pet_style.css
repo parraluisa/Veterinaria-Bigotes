@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
+
 html, body{
     height: 100%;
     margin: 0;
@@ -80,8 +82,8 @@ main {
     top: 50%;
     /* Vertically center the image */
     transform: translateY(-50%);
-    left: 0;
-    width: 25%;
+    left: 10%;
+    width: 23%;
     aspect-ratio: 1/1;
     border-radius: 50%;
     display: flex;
@@ -110,8 +112,8 @@ main {
 }
 
 #pet-info {
-    width: 70%;
-    height: 100%;
+    width: 55%;
+    height: 125%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -135,9 +137,13 @@ main {
 }
 
 #pet-name h1{
-    font-size: 5rem;
-    color: white;
+    font-size: 2.5rem;
     text-align: left;
+    color: #FFF;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
 }
 
 #pet-name img{
@@ -159,10 +165,9 @@ main {
 
 #history {
     width: 100%;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-bottom: 5%;
-    height: 50%;
+    padding-left: 3%;
+    padding-right: 3%;
+    height: 35%;
     box-sizing: border-box;
 }
 
@@ -181,8 +186,11 @@ main {
 
 #history-title h1 {
     font-size: 2rem;
-    font-weight: bold;
     color: #1C697D;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
 }
 
 #history-title img {

@@ -144,7 +144,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("../imagenes/catWallpaper.png");
+    background-image: url("../imagenes/background/catWallpaper.png");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;

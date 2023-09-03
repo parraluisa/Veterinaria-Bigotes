@@ -15,7 +15,7 @@ body {
     align-items: center;
     background-color: transparent;
     position: relative;
-    background-image: url("/imagenes/FondoHuellitas.png");
+    background-image: url("/imagenes/background/FondoHuellitas.png");
     background-size: cover;
     background-position: center;
 }
