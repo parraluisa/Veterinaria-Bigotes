@@ -36,6 +36,11 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log('La URL de la imagen no es válida');
             return;
         }
+        if (isNaN(idOwnerPet)) {
+            alert('Por favor ingrese solo números en el campo de identificación');
+            console.log('Por favor ingrese solo números en el campo de identificación');
+            return;
+        }
 
         formPet.submit();
     });

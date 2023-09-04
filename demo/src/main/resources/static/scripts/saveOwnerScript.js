@@ -19,6 +19,10 @@ formOwner.addEventListener('submit', (e) => {
         alert('Por favor ingrese todos los datos');
         return;
     }
+    if(isNaN(idOwner) || isNaN(phoneOwner)){
+        alert('Por favor ingrese solo números en el campo de identificación y teléfono');
+        return;
+    }
 
     formOwner.submit();
 });
