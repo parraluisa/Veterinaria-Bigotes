@@ -1,5 +1,8 @@
-# ![image](https://github.com/parraluisa/Veterinaria-Bigotes/assets/79608753/7cfd719a-c63b-4626-ac42-bb8fc9f87e33)
-Veterinaria-Bigotes
+# Veterinaria-Bigotes
+![image](https://github.com/parraluisa/Veterinaria-Bigotes/assets/79608753/bcad2a54-24ab-4832-8a33-f77ebf4180f9)
+
+¡Nosotros somos Bigotes!
+
 ¡Bienvenido a Veterinaria Bigotes! Este repositorio contiene el código fuente de nuestra página web diseñada especialmente para los amantes de los gatos y sus queridos felinos. En "Bigotes" no solo entendemos a los gatos, ¡sino que los amamos!
 
 ## Acerca del Proyecto
