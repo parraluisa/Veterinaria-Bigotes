@@ -601,10 +601,12 @@ public class DbController implements ApplicationRunner {
                 petRepository.save(new Pet("Marshmallow", "Bengalí", new Date(118, 5, 19), 3881.17,
                                 "Insuficiencia renal", "https://images.pexels.com/photos/1275461/pexels-photo-1275461.jpeg?auto=compress&cs=tinysrgb&w=600"));
 
-                Owner asociar = ownerRepository.findById(1L).get();
-                for (Pet pet : petRepository.findAll()) {
-                        pet.setOwner(asociar);
-                        petRepository.save(pet);
+
+                for (long i = 1L; i<100L; i++){
+                    Owner owner = ownerRepository.findById(i).get();
+                    Pet pet = petRepository.findById(i).get();
+                    pet.setOwner(owner);
+                    petRepository.save(pet);
                 }
         }
 }
