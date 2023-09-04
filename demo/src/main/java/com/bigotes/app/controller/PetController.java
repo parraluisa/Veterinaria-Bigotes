@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 
 @Controller
@@ -43,12 +44,22 @@ public class PetController {
     }
 
     @PostMapping("/save")
-    public String savePet(@ModelAttribute("pet") Pet pet, @RequestParam("ownerId") Long ownerId) {
+    public String savePet(
+            @ModelAttribute("pet") Pet pet,
+            @RequestParam("ownerId") Long ownerId,
+            RedirectAttributes redirectAttributes) {
+
         Owner owner = ownerService.findByIdCard(ownerId);
-        pet.setOwner(owner);
-        petService.save(pet);
-        return "redirect:/pet/all";
+        if (owner == null) {
+            redirectAttributes.addAttribute("error", "idNotFound");
+            return "redirect:/pet/add"; // Redirect to the add page with the error
+        } else {
+            pet.setOwner(owner);
+            petService.save(pet);
+            return "redirect:/pet/all";
+        }
     }
+
 
     @GetMapping("/add")
     public String insertPet(Model model) {
