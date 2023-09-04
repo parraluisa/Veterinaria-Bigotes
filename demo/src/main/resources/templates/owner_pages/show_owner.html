@@ -23,21 +23,22 @@
     <main>
         <section id="owner">
             <div>
-                <img id="owner-img" src="/imagenes/users/FotoOwner.png">
+                <img id="owner-img" src="/imagenes/users/owner.png">
             </div>
             <div id="owner-info">
                 <div id="owner-data-container">
                     <div id="owner-name">
-                        <h1><span th:text="${owner.idCard}"></span></h1>
+                        <h1>Datos Dueño</h1>
                     </div>
                     <div id="owner-data">
                         <div>
-                            <p><strong>Nombre: </strong><span th:text="${owner.firstName}"></span></p>
-                            <p><strong>Apellido2: </strong><span th:text="${owner.secondLastName}"></span></p>
+                            <p><strong>Cédula: </strong><span th:text="${owner.idCard}"></span></p>
+                            <p><strong>Apellido1: </strong><span th:text="${owner.firstLastName}"></span></p>
                             <p><strong>Celular: </strong><span th:text="${owner.phone}"></span></p>
                         </div>
                         <div class>
-                            <p><strong>Apellido1: </strong><span th:text="${owner.firstLastName}"></span></p>
+                            <p><strong>Nombre: </strong><span th:text="${owner.firstName}"></span></p>
+                            <p><strong>Apellido2: </strong><span th:text="${owner.secondLastName}"></span></p>
                             <p><strong>Correo: </strong><span th:text="${owner.email}"></span></p>
                         </div>
                     </div>
@@ -47,7 +48,10 @@
             </div>
 
         </section>
+            
     </main>
-
+    <div class="ver-macotas">
+        <a href="http://localhost:8090/pag/show">Ver mascotas</a>
+    </div>
 </body>
 </html>
