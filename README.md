@@ -1,5 +1,5 @@
 # Veterinaria-Bigotes
-![image](https://github.com/parraluisa/Veterinaria-Bigotes/assets/79608753/bcad2a54-24ab-4832-8a33-f77ebf4180f9)
+![image](https://github.com/parraluisa/Veterinaria-Bigotes/assets/79608753/6a215478-1efd-4add-8849-8fd94e02d5a6)
 
 ¡Nosotros somos Bigotes!
 
