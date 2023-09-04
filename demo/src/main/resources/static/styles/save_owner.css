@@ -61,21 +61,41 @@ body {
     border-radius: 1rem;
 }
 
+.form-content>form label {
+    color: #949393;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 1%;
+}
+
 .form-content>form>.form-group {
 
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: left;
     justify-content: center;
     background-color: transparent;
+    margin-left: 10%;
 
 }
 
-.form-content>form>.form-group>.container {
+.form-content>form>.form-group>.container  {
     width: 80%;
     height: 2rem;
     border: 0.1rem solid #D9D9D9;
     border-radius: 0.5rem;
     background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.form-content>form>.form-group>.container i {
+margin-left: 4%;
+margin-top: 4%;
 
 }
 
@@ -86,16 +106,16 @@ body {
     border-left: 0.1rem solid #D9D9D9;
     border-radius: 0 0.5rem 0.5rem 0;
     font-size: 0.8rem;
-    color: #949393;
+    color: black;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    margin-left: 15%;
+    margin-left: 5%;
     padding-left: 5%;
 }
 
 ::placeholder {
     opacity: 1;
-    color: black;
+
 }
 
 .form-content>form>.form-group:nth-child(1) {
@@ -152,7 +172,7 @@ body {
 
 .form-container input {
     padding: 0;
-    color: #949393;
+    color: black;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 1rem;
