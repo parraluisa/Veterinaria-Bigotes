@@ -82,8 +82,8 @@ main {
     top: 60%;
     /* Vertically center the image */
     transform: translateY(-50%);
-    left: 5%;
-    width: 40%;
+    left: 2.5%;
+    width: 42.5%;
     aspect-ratio: 1/1;
     border-radius: 50%;
     display: flex;

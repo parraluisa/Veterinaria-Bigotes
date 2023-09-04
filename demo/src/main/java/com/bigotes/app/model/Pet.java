@@ -2,6 +2,7 @@ package com.bigotes.app.model;
 
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -30,6 +31,7 @@ public class Pet {
 
     private String disease;
     @Nonnull
+    @Size(min = 10,max = 500)
     private String imgUrl;
 
     @ManyToOne

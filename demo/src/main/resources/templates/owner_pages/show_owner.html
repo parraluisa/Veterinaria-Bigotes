@@ -51,7 +51,7 @@
             
     </main>
     <div class="ver-macotas">
-        <a href="http://localhost:8090/pag/show">Ver mascotas</a>
+        <a th:href="@{/owner/pets/{id}(id=${owner.id})}">Ver mascotas</a>
     </div>
 </body>
 </html>
