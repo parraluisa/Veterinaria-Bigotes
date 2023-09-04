@@ -1,7 +1,6 @@
 const loginVet = document.querySelector(".loginVet")
 const loginOwner = document.querySelector(".loginOwner")
 const formActive = document.querySelector(".container-forms")
-const switchs = document.querySelector(".switch")
 
 function tab1(){
     formActive.style.marginLeft = "0";
@@ -32,7 +31,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const error = urlParams.get('error');
 
 if (error === 'idNotFound') {
-    alert('ID not found. Please try again.');
+    alert('La cédula no fue encontrada.');
 }
 
 // Handling form submission

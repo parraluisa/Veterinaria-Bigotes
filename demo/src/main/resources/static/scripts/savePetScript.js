@@ -45,3 +45,11 @@ document.addEventListener('DOMContentLoaded', function () {
         formPet.submit();
     });
 });
+
+
+const urlParams = new URLSearchParams(window.location.search);
+const error = urlParams.get('error');
+
+if (error === 'idNotFound') {
+    alert('La cédula no fue encontrada.');
+}
