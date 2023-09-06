@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/pag")
 public class LandingPageController {
 
+    // http://localhost:8090/pag/show
     @GetMapping("/show")
     public String show(){
         return "landing_page";

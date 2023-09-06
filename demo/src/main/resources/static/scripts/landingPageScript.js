@@ -125,4 +125,3 @@ displayCurrentReview();
 
 // Set up an interval to display reviews every 20 seconds
 const interval = setInterval(displayCurrentReview, 20000);
-

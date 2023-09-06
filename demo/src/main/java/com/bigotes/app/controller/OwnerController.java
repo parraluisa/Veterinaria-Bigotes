@@ -95,7 +95,7 @@ public class OwnerController {
         return "owner_pages/owner_pets";
     }
 
-
+    // http://localhost:8090/owner/pet/find/1
     @GetMapping("/pet/find/{id}")
     public String showOwnerPet(Model model, @PathVariable("id") Long id){
         Pet pet = petService.findById(id);

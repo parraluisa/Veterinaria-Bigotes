@@ -697,6 +697,15 @@ button:hover {
     }
 }
 
-
-
-
+.progress-1 {
+    width:100%;
+    height:2%;
+    border-radius: 20px;
+    background:
+     linear-gradient(#33383b 0 0) 0/0% no-repeat
+     white;
+    animation:p1 20s infinite linear;
+  }
+  @keyframes p1 {
+      100% {background-size:110%}
+  }
