@@ -173,23 +173,21 @@ nav {
     /* Asegura que el cuadro esté sobre el fondo */
     overflow: visible;
 }
-
+/*
 .aboutUs .description .icon {
     position: absolute;
     top: 0;
     left: calc(45% - 2.8125rem);
-    /* 45px convertidos a rem */
+
     width: 20%;
-    /* Mantenido el valor de width en porcentaje */
     height: auto;
     padding: 1rem;
-    /* Mantenido en rem */
     border-radius: 50%;
     transform: translateY(-50%);
     z-index: 2;
     background: rgba(255, 255, 255, 0.671);
     border-radius: 1rem;
-}
+}*/
 
 .aboutUs p {
     color: #000;
