@@ -33,7 +33,9 @@
                 <div id="pet-data-container">
                     <div id="pet-name">
                         <h1><span th:text="${pet.name}"></span></h1>
-                        <img src="/imagenes/showPet/edit1.svg">
+                        <a th:href="@{/pet/upd/{id}(id=${pet.id})}">
+                            <img src="/imagenes/showPet/edit1.svg">
+                        </a>
                     </div>
                     <div id="pet-data">
                         <div>
@@ -41,8 +43,8 @@
                             <p><strong>Raza: </strong><span th:text="${pet.breed}"></span></p>
                         </div>
                         <div class>
-                            <p><strong>Edad: </strong><span th:text="${pet.calculateAge()}"></span></p>
-                            <p><strong>Peso: </strong><span th:text="${pet.weight}"></span></p>
+                            <p><strong>Edad: </strong><span th:text="${pet.calculateAge()} + ' años'"></span></p>
+                            <p><strong>Peso: </strong><span th:text="${pet.weight} + ' gr.'"></span></p>
                         </div>
                     </div>
                 </div>

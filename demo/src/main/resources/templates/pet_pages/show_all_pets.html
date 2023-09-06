@@ -68,8 +68,8 @@
                             <span th:text="${pet.name}"></span>
                         </td>
                         <td th:text="${pet.breed}"></td>
-                        <td th:text="${pet.calculateAge()}"></td>
-                        <td th:text="${pet.weight}"></td>
+                        <td th:text="${pet.calculateAge()} + ' años'"></td>
+                        <td th:text="${pet.weight} + ' gr.'"></td>
                         <td th:text="${pet.disease}"></td>
                         <td id="more">
                             <a th:href="@{/pet/del/{id}(id=${pet.id})}">

@@ -38,8 +38,8 @@
                             <p><strong>Raza: </strong><span th:text="${pet.breed}"></span></p>
                         </div>
                         <div class>
-                            <p><strong>Edad: </strong><span th:text="${pet.calculateAge()}"></span></p>
-                            <p><strong>Peso: </strong><span th:text="${pet.weight}"></span></p>
+                            <p><strong>Edad: </strong><span th:text="${pet.calculateAge()} + ' años'"></span></p>
+                            <p><strong>Peso: </strong><span th:text="${pet.weight + ' gr.'}"></span></p>
                         </div>
                     </div>
                 </div>
