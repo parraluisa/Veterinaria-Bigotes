@@ -95,7 +95,7 @@ public class OwnerController {
         return "owner_pages/owner_pets";
     }
 
-
+    // http://localhost:8090/owner/pet/find/1
     @GetMapping("/pet/find/{id}")
     public String showOwnerPet(Model model, @PathVariable("id") Long id){
         Pet pet = petService.findById(id);
@@ -105,5 +105,12 @@ public class OwnerController {
             throw new NotFoundException();
         }
         return "owner_pages/owner_pet";
+    }
+
+    @GetMapping("/find/pets/{id}")
+    public String showAllPetsByOwner(Model model, @PathVariable("id") Long id){
+        //Obtenr todas las mascotas del dueño y luego mostrarlas en la vista
+        model.addAttribute("pets", petService.findByOwnerId(id));
+        return "pet_pages/show_all_pets";
     }
 }
