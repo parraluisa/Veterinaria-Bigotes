@@ -23,7 +23,7 @@
     margin-left: 10%;
     margin-right: 7%;
     margin-top: 5%;
-    margin-bottom: 15%;
+    margin-bottom: 30%;
     font-size: 0.9rem;
     font-weight: 400;
 
@@ -60,8 +60,7 @@
 }
 
 /* Estilos para los labels personalizados (simulando los checkboxes) */
-.sidebar label[for="filterNamePet"],
-.sidebar label[for="filterNameOwner"] {
+.sidebar label[for="filterNamePet"] {
     position: relative;
     padding-left: 15%;
     cursor: pointer;
@@ -71,8 +70,7 @@
 }
 
 /* Estilos para el icono de minicuadrado */
-.sidebar label[for="filterNamePet"]::before,
-.sidebar label[for="filterNameOwner"]::before {
+.sidebar label[for="filterNamePet"]::before{
     content: "";
     position: absolute;
     left: 0;
@@ -87,8 +85,7 @@
 }
 
 /* Estilos para el minicuadrado cuando el checkbox esté seleccionado */
-.sidebar input[type="checkbox"]:checked + label[for="filterNamePet"]::before,
-.sidebar input[type="checkbox"]:checked + label[for="filterNameOwner"]::before {
+.sidebar input[type="checkbox"]:checked + label[for="filterNamePet"]::before {
     background-color: #1C697D;
     border-color: #FFFFFF;
 }
@@ -251,7 +248,7 @@
 .sidebar p {
     text-align: center;
     color: #FFFFFF;
-    margin-top: 65%;
+    margin-top: 85%;
     color: #FFF;
     font-family: 'Raleway', sans-serif;
     font-size: 1.3rem;
