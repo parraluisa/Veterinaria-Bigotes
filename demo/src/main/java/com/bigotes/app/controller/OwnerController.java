@@ -106,4 +106,11 @@ public class OwnerController {
         }
         return "owner_pages/owner_pet";
     }
+    //localhost:8090/owner/find/pets/1
+    @GetMapping("/find/pets/{id}")
+    public String showAllPetsByOwner(Model model, @PathVariable("id") Long id){
+        //Obtenr todas las mascotas del dueño y luego mostrarlas en la vista
+        model.addAttribute("pets", petService.findByOwnerId(id));
+        return "pet_pages/show_all_pets";
+    }
 }

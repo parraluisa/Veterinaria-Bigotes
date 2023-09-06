@@ -349,7 +349,7 @@ public class DbController implements ApplicationRunner {
 
 
                 petRepository
-                                .save(new Pet("Bonifacio", "Persa", new Date(), 4.0, "Lupus",
+                                .save(new Pet("Bonifacio", "Persa", new Date(), 100.00, "Lupus",
                                                 "https://images.pexels.com/photos/1404819/pexels-photo-1404819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
 
                 // Crear mascota 1
