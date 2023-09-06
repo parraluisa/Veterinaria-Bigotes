@@ -24,7 +24,7 @@ public class PetController {
 
 
     
-
+    // http://localhost:8090/pet/all
     @GetMapping("/all")
     public String showAllPets(Model model){
         model.addAttribute("pets", petService.findAll());
@@ -42,7 +42,7 @@ public class PetController {
         }
         return "pet_pages/show_pet";
     }
-
+    // http://localhost:8090/pet/save
     @PostMapping("/save")
     public String savePet(
             @ModelAttribute("pet") Pet pet,
@@ -60,7 +60,7 @@ public class PetController {
         }
     }
 
-
+    // http://localhost:8090/pet/add
     @GetMapping("/add")
     public String insertPet(Model model) {
         Pet pet = new Pet();
@@ -68,7 +68,7 @@ public class PetController {
         model.addAttribute("ownerId", 0L);
         return "pet_pages/save_pet";
     }
-
+    // http://localhost:8090/pet/upd/1
     @GetMapping("/upd/{id}")
     public String updatePet(Model model, @PathVariable("id") Long id) {
         Pet pet = petService.findById(id);
@@ -79,7 +79,7 @@ public class PetController {
         }
         return "pet_pages/save_pet";
     }
-
+    // http://localhost:8090/pet/del/1
     @GetMapping("/del/{id}")
     public String deletePet(@PathVariable("id") Long id) {
         Pet pet = petService.findById(id);

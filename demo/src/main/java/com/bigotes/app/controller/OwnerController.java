@@ -18,7 +18,7 @@ public class OwnerController {
     OwnerService ownerService;
     @Autowired
     PetService petService;
-
+    // http://localhost:8090/owner/all
     @GetMapping("/all")
     public String showAllOwners(Model model) {
         model.addAttribute("owners", ownerService.findAll());
@@ -36,20 +36,20 @@ public class OwnerController {
         }
         return "owner_pages/show_owner";
     }
-
+    // http://localhost:8090/owner/save
     @PostMapping("/save")
     public String saveOwner(@ModelAttribute("owner") Owner owner) {
         ownerService.save(owner);
         return "redirect:/owner/all";
     }
-
+    // http://localhost:8090/owner/add
     @GetMapping("/add")
     public String insertOwner(Model model) {
         Owner owner = new Owner();
         model.addAttribute("owner", owner);
         return "owner_pages/save_owner";
     }
-
+    // http://localhost:8090/owner/upd/1
     @GetMapping("/upd/{id}")
     public String updateOwner(Model model, @PathVariable("id") Long id) {
         Owner owner = ownerService.findById(id);
@@ -60,7 +60,7 @@ public class OwnerController {
         }
         return "owner_pages/save_owner";
     }
-
+    // http://localhost:8090/owner/del/1
     @GetMapping("/del/{id}")
     public String deleteOwner(@PathVariable("id") Long id) {
         Owner owner = ownerService.findById(id);
@@ -71,14 +71,14 @@ public class OwnerController {
         }
         return "redirect:/owner/all";
     }
-
+    // http://localhost:8090/owner/login
     @GetMapping("/login")
     public String showLogin(Model model) {
         Integer idCard = 0;
         model.addAttribute("idCard", idCard);
         return "login_page";
     }
-
+    // http://localhost:8090/owner/login
     @PostMapping("/login")
     public String login(@RequestParam("idCard") Long idCard) {
         Owner owner = ownerService.findByIdCard(idCard);
@@ -88,7 +88,7 @@ public class OwnerController {
             return "redirect:/owner/login?error=idNotFound";
         }
     }
-
+    // http://localhost:8090/owner/pets/1
     @GetMapping("/pets/{id}")
     public String showOwnerPets(Model model, @PathVariable("id") Long id){
         model.addAttribute("pets", petService.findByOwnerId(id));
