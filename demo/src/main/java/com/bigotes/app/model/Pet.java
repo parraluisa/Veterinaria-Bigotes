@@ -8,8 +8,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 import java.time.Period;
-import java.time.ZoneId;
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
@@ -25,33 +25,41 @@ public class Pet {
     private String breed;
     @Nonnull
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date birthday;
+    private LocalDate birthdate;
     @Nonnull
     private Double weight;
 
     private String disease;
+
     @Nonnull
     @Size(min = 10,max = 500)
     private String imgUrl;
+
+    @Nonnull
+    private String status;
 
     @ManyToOne
     @JoinColumn(name = "owner_id")
     private Owner owner;
 
+    @OneToMany
+    private List<Treatment> treatments = new ArrayList<>();
+
     public Pet(
             @Nonnull String name,
             @Nonnull String breed,
-            @Nonnull Date birthday,
+            @Nonnull LocalDate birthdate,
             @Nonnull Double weight,
             String disease,
             @Nonnull String imgUrl)
     {
         this.name = name;
         this.breed = breed;
-        this.birthday = birthday;
+        this.birthdate = birthdate;
         this.weight = weight;
         this.disease = disease;
         this.imgUrl = imgUrl;
+        this.status = "En tratamiento";
     }
 
     public Pet() {
@@ -59,9 +67,8 @@ public class Pet {
     }
 
     public int calculateAge() {
-        LocalDate birthDate = birthday.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
         LocalDate currentDate = LocalDate.now();
-        Period period = Period.between(birthDate, currentDate);
+        Period period = Period.between(this.birthdate, currentDate);
         return period.getYears();
     }
 }
