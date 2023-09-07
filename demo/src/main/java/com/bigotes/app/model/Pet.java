@@ -42,7 +42,7 @@ public class Pet {
     @JoinColumn(name = "owner_id")
     private Owner owner;
 
-    @OneToMany
+    @OneToMany(mappedBy = "pet")
     private List<Treatment> treatments = new ArrayList<>();
 
     public Pet(
