@@ -6,3 +6,5 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+/mydatabase.mv.db
+/mydatabase.trace.db
