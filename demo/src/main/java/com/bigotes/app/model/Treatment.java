@@ -29,6 +29,8 @@ public class Treatment {
     @JoinColumn(name = "veterinarian_id")
     private Veterinarian veterinarian;
 
+    private String description;
+
     public Treatment() {
 
     }
