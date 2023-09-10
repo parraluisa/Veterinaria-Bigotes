@@ -35,7 +35,7 @@ public class Veterinarian {
     @Nonnull
     private String imgUrl;
 
-    @OneToMany
+    @OneToMany(mappedBy = "veterinarian")
     private List<Treatment> treatments = new ArrayList<>();
 
     public Veterinarian(){

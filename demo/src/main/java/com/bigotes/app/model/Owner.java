@@ -31,7 +31,7 @@ public class Owner {
     @Column(unique = true)
     private String email;
 
-    @OneToMany
+    @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Pet> pets = new ArrayList<>();
 
     public Owner(){

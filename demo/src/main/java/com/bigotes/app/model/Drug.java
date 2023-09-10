@@ -22,7 +22,7 @@ public class Drug {
     @Nonnull
     private Double price;
 
-    @OneToMany
+    @OneToMany(mappedBy = "drug")
     private List<Treatment> treatments = new ArrayList<>();
 
     public Drug(){
