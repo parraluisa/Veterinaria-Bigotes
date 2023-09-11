@@ -39,7 +39,7 @@
                     </div>
                     <div id="pet-data">
                         <div>
-                            <p><strong>Dueño: </strong> Fabio Buitrago</p>
+                            <p><strong>Dueño: </strong><span th:text="${pet.owner.firstName}+' '+${pet.owner.firstLastName}+' '+${pet.owner.secondLastName}"></p>
                             <p><strong>Raza: </strong><span th:text="${pet.breed}"></span></p>
                         </div>
                         <div class>
