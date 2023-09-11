@@ -11,6 +11,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Controller;
 
 import java.time.LocalDate;
+import java.util.Random;
 
 @Controller
 @Transactional
@@ -661,13 +662,14 @@ public class DbController implements ApplicationRunner {
                 for (long i = 1L; i<101L; i++){
                     Owner owner = ownerRepository.findById(i).get();
                     Pet pet = petRepository.findById(i).get();
-                    System.out.println(i);
                     pet.setOwner(owner);
                     petRepository.save(pet);
                 }
 
+                Random random = new Random(42);
+
                 for (long i = 101L; i<126L; i++){
-                    long idPropietarioAleatorio = (long) (Math.random() * 100) + 1;
+                    long idPropietarioAleatorio = (long) (random.nextDouble() * 100) + 1;
                     Owner owner = ownerRepository.findById(idPropietarioAleatorio).get();
                     Pet pet = petRepository.findById(i).get();
                     pet.setOwner(owner);
