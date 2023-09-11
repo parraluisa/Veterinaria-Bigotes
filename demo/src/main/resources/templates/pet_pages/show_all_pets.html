@@ -77,7 +77,7 @@
                             <a th:href="@{/pet/del/{id}(id=${pet.id})}">
                                 <img src="/imagenes/vet/deleteIcon.png"> </a>
                             <a th:href="@{/pet/upd/{id}(id=${pet.id})}"> <img src="/imagenes/vet/editIcon.png"> </a>
-                            <a th:href="@{/pet/find/{index}(index=${_target.index}+1)}"> ... </a>
+                            <a th:href="@{/pet/find/{id}(id=${pet.id})}"> ... </a>
                         </td>
                     </tr>
                 </tbody>
