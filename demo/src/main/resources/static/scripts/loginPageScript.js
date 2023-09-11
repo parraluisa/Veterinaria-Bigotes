@@ -26,6 +26,39 @@ function tab2(){
     ownerImage.style.opacity = "0.7";
 }
 
+
+// Handling form submission
+const formOwner = document.getElementById('formOwner');
+const idCardOwner = document.getElementById('IdCardOwner');
+
+formOwner.addEventListener('submit', (e) => {
+    const idOwner = idCardOwner.value;
+
+    if (idOwner === '') {
+        e.preventDefault(); // Prevent the form from submitting
+        alert('Por favor ingrese su cédula');
+    }
+});
+
+const formVet = document.getElementById('formVet');
+const idCardVet = document.getElementById('idCardVet');
+const passwordVet = document.getElementById('passwordVet');
+
+formVet.addEventListener('submit', (e) => {
+    const idVet = idCardVet.value;
+    const password = passwordVet.value;
+
+    if (idVet === '') {
+        e.preventDefault(); // Prevent the form from submitting
+        alert('Por favor ingrese su cédula');
+    }
+    if (password === '') {
+        e.preventDefault(); // Prevent the form from submitting
+        alert('Por favor ingrese su contraseña');
+    }
+});
+
+
 // JavaScript code to show the error pop-up and handle form submission
 const urlParams = new URLSearchParams(window.location.search);
 const error = urlParams.get('error');
@@ -34,15 +67,6 @@ if (error === 'idNotFound') {
     alert('La cédula no fue encontrada.');
 }
 
-// Handling form submission
-const formOwner = document.getElementById('formOwner');
-const idCard = document.getElementById('idCard');
-
-formOwner.addEventListener('submit', (e) => {
-    const idOwner = idCard.value;
-
-    if (idOwner === '') {
-        e.preventDefault(); // Prevent the form from submitting
-        alert('Por favor ingrese su cédula');
-    }
-});
+if (error === 'loginVetFailed') {
+    alert('La cédula o la contraseña es incorrecta.');
+}

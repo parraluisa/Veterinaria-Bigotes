@@ -24,29 +24,31 @@
                 <img src="/imagenes/login/catSymbol.svg" alt="Cat symbol">
                 <div class="container-forms">
 
-                    <form id="formOwner" class="form-active" th:action="@{/login/vetandowner}" th:method="post">
+                    <form id="formOwner" class="form-active" th:action="@{/login/owner}" th:method="post">
         
                         <div class="page">
-                            <label for="idCard">Dueño</label>
+                            <label for="idCardOwner">Dueño</label>
                             <p>Por favor ingresa la cédula para acceder a la plataforma</p>
                             <div class="element">
-                                <input name="idCard" id ="idCard" type="number" placeholder="Cédula">
+                                <input id ="idCardOwner" name="idCardOwner" type="number" placeholder="Cédula">
                             </div>
                             <button  type="submit" class="button">Sign in</button>
                         </div>
                     </form>
 
-                    <form id="formVet" class="form-active">
+                    <form id="formVet" class="form-active" th:action="@{/login/vet}" th:method="post">
                         <div class="page">
                             <label>Veterinario</label>
                             <p>Por favor ingresa la cédula y contraseña para acceder a la plataforma</p>
                             <div class="element">
-                                <input type="text" placeholder="Cédula">
+                                <label for="idCardVet"></label>
+                                <input type="number" name = "idCardVet" id = "idCardVet" placeholder="Cédula">
                             </div>
                             <div class="element">
-                                <input type="text" placeholder="Contraseña">
+                                <label for="passwordVet"></label>
+                                <input type="text" id = "passwordVet" name="passwordVet" placeholder="Contraseña">
                             </div>
-                            <button class="button">Sign in</button>
+                            <button type="submit" class="button">Sign in</button>
                         </div>
                     </form> 
 
