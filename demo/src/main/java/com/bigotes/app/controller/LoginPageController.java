@@ -1,15 +1,17 @@
 package com.bigotes.app.controller;
 
+import com.bigotes.app.model.Owner;
+import com.bigotes.app.model.Veterinarian;
+import com.bigotes.app.service.OwnerService;
+import com.bigotes.app.service.VeterinarianService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.bigotes.app.model.Owner;
-import com.bigotes.app.service.OwnerService;
+import java.util.Objects;
 
 @Controller
 @RequestMapping("/login")
@@ -18,20 +20,36 @@ public class LoginPageController {
     @Autowired
     OwnerService ownerService;
 
-    @GetMapping("/vetandowner")
-    public String showLogin(Model model) {
-        Integer idCard = 0;
-        model.addAttribute("idCard", idCard);
+    @Autowired
+    VeterinarianService veterinarianService;
+
+    @GetMapping("/show")
+    public String showLogin() {
         return "login_page";
     }
 
-    @PostMapping("/vetandowner")
-    public String login(@RequestParam("idCard") Long idCard) {
-        Owner owner = ownerService.findByIdCard(idCard);
+    @PostMapping("/owner")
+    public String loginOwner(@RequestParam("idCardOwner") Long idCardOwner) {
+        Owner owner = ownerService.findByIdCard(idCardOwner);
         if (owner != null) {
             return "redirect:/owner/pets/" + owner.getId();
         } else {
-            return "redirect:/owner/login?error=idNotFound";
+            return "redirect:/login/show?error=idNotFound";
         }
     }
+
+    @PostMapping("/vet")
+    public String loginVet(
+            @RequestParam("idCardVet") Long idCardVet,
+            @RequestParam("passwordVet") String passwordVet
+    ) {
+        Veterinarian vet = veterinarianService.findByIdCard(idCardVet);
+
+        if (vet != null && Objects.equals(vet.getPassword(), passwordVet)) {
+            return "redirect:/pet/all";
+        }
+
+        return "redirect:/login/show?error=loginVetFailed";
+    }
+
 }
