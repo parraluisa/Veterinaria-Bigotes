@@ -68,6 +68,16 @@ public class PetController {
         model.addAttribute("ownerId", 0L);
         return "pet_pages/save_pet";
     }
+    @GetMapping("/add/{ownerId}")
+    public String insertPet(Model model, @PathVariable("ownerId") Long ownerId) {
+        Pet pet = new Pet();
+        Owner owner = new Owner();
+        owner.setIdCard(ownerId);
+        pet.setOwner(owner);
+        model.addAttribute("pet", pet);
+        return "pet_pages/save_pet";
+    }
+    
     // http://localhost:8090/pet/upd/1
     @GetMapping("/upd/{id}")
     public String updatePet(Model model, @PathVariable("id") Long id) {
