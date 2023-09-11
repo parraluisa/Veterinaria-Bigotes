@@ -72,10 +72,8 @@ public class PetController {
     @GetMapping("/add/{ownerId}")
     public String insertPet(Model model, @PathVariable("ownerId") Long ownerId) {
         Pet pet = new Pet();
-        Owner owner = new Owner();
-        owner.setIdCard(ownerId);
-        pet.setOwner(owner);
         model.addAttribute("pet", pet);
+        model.addAttribute("ownerId", ownerId);
         return "pet_pages/save_pet";
     }
     
