@@ -83,6 +83,7 @@ public class PetController {
         Pet pet = petService.findById(id);
         if (pet != null) {
             model.addAttribute("pet", pet);
+            model.addAttribute("ownerId", pet.getOwner().getIdCard());
         } else {
             throw new NotFoundException();
         }
