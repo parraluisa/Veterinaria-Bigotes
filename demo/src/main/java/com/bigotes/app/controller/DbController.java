@@ -346,11 +346,6 @@ public class DbController implements ApplicationRunner {
                                 new Owner(646094641L, "Ana", "Ortega", "Paredes", "5902212", "AnOrPa@example.com"));
 
 
-
-
-                petRepository.save(new Pet("Bonifacio", "Persa", LocalDate.now(), 100.00, "Lupus",
-                                                "https://images.pexels.com/photos/1404819/pexels-photo-1404819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
-
                 // Crear mascota 1
                 petRepository.save(new Pet("Pompita", "British Shorthair", LocalDate.of(2015, 2, 12), 824.65,
                                 "Hipotiroidismo", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.kbfqBAI5WHjiefXdgj-tQQHaE5%26pid%3DApi&f=1&ipt=6869c5c81c50f76e2738364716558ebce3723a4dd094d0d9179cd54b1525d0dc&ipo=images"));
@@ -599,13 +594,85 @@ public class DbController implements ApplicationRunner {
                 // Crear mascota 100
                 petRepository.save(new Pet("Marshmallow", "Bengalí", LocalDate.of(2018, 5, 19), 3881.17,
                                 "Insuficiencia renal", "https://images.pexels.com/photos/1275461/pexels-photo-1275461.jpeg?auto=compress&cs=tinysrgb&w=600"));
+                // Crear mascota 101
+                petRepository.save(new Pet("Luna", "Bobtail Japonés", LocalDate.of(2022, 3, 20), 4000.00,
+                                "Problemas dentales", "https://images.pexels.com/photos/33492/cat-red-cute-mackerel.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 102
+                petRepository.save(new Pet("Simba", "Noruego de Bosque", LocalDate.of(2021, 1, 11), 2325.24,
+                                "Hipertiroidismo", "https://images.pexels.com/photos/582070/pexels-photo-582070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 103
+                petRepository.save(new Pet("Bigotes", "Sphynx", LocalDate.of(2022, 4, 3), 2389.73, "Gingivitis", "https://images.pexels.com/photos/179237/pexels-photo-179237.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 104
+                petRepository.save(new Pet("Maw", "Siamés", LocalDate.of(20212, 1, 10), 2000.26, "Pancreatitis", "https://images.pexels.com/photos/160722/cat-tiger-getiegert-feel-at-home-160722.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 105
+                petRepository.save(new Pet("Simba", "Rex Selkirk", LocalDate.of(2015, 9, 21), 2504.69, "Insuficiencia renal",
+                                "https://images.pexels.com/photos/51439/pexels-photo-51439.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 106
+                petRepository.save(
+                                new Pet("Luna", "Bobtail Japonés", LocalDate.of(2021, 10, 3), 4137.16, "Megacolon", "https://images.pexels.com/photos/2646483/pexels-photo-2646483.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 107
+                petRepository.save(new Pet("Sassy", "Manx", LocalDate.of(2023, 1, 18), 2500.00, "Megacolon", "https://images.pexels.com/photos/667228/pexels-photo-667228.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 108
+                petRepository.save(new Pet("Romeo", "Abisinio", LocalDate.of(2021, 4, 6), 2800.29, "Pancreatitis", "https://images.pexels.com/photos/179222/pexels-photo-179222.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 109
+                petRepository.save(new Pet("Mimi", "Siberiano", LocalDate.of(2021, 10, 28), 2189.08, "Gingivitis", "https://images.pexels.com/photos/1107807/pexels-photo-1107807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 110
+                petRepository.save(new Pet("Tommy", "Manx", LocalDate.of(2018, 3, 16), 1029.00, "Insuficiencia renal", "https://images.pexels.com/photos/160839/cat-animal-love-pet-160839.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 111
+                petRepository.save(new Pet("Lili", "Siberiano", LocalDate.of(2021, 1, 21), 3900.29, "Conjuntivitis", "https://images.pexels.com/photos/3780890/pexels-photo-3780890.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 112
+                petRepository.save(new Pet("Lucy", "Rex Selkirk", LocalDate.of(2022, 11, 10), 4246.58, "Resfriado", "https://images.pexels.com/photos/3581062/pexels-photo-3581062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 113
+                petRepository.save(new Pet("Leo", "Siberiano", LocalDate.of(2023, 6, 22), 3400.06, "Obesidad", "https://images.pexels.com/photos/3652805/pexels-photo-3652805.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 114
+                petRepository.save(new Pet("Ziggy", "Manx", LocalDate.of(2017, 10, 25), 4000.25, "Gingivitis", "https://images.pexels.com/photos/16577560/pexels-photo-16577560/free-photo-of-difuso.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 115
+                petRepository.save(new Pet("Max", "Abisinio", LocalDate.of(2018, 7, 25), 2010.07, "Megacolon", "https://images.pexels.com/photos/14440674/pexels-photo-14440674.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 116
+                petRepository.save(new Pet("Bella", "Sphynx", LocalDate.of(2015, 9, 21), 2500.43, "Rabia", "https://images.pexels.com/photos/16577568/pexels-photo-16577568/free-photo-of-animal-mascota-mono-joven.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 117
+                petRepository.save(new Pet("Oreo", "Devon Rex", LocalDate.of(2023, 1, 7), 293.56,
+                                "Problemas respiratorios", "https://images.pexels.com/photos/7633208/pexels-photo-7633208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 118
+                petRepository.save(
+                                new Pet("Maw", "Siberiano", LocalDate.of(2021, 3, 2), 5000.47, "Tumores mamarios", "https://images.pexels.com/photos/12692139/pexels-photo-12692139.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 119
+                petRepository.save(new Pet("Ella", "Burmés", LocalDate.of(2022, 8, 21), 3239.58, "Resfriado", "https://images.pexels.com/photos/13293093/pexels-photo-13293093.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 120
+                petRepository.save(new Pet("Oliver", "Bobtail Japonés", LocalDate.of(2018, 10, 9), 4420.70,
+                                "Enfermedad hepática", "https://images.pexels.com/photos/16577552/pexels-photo-16577552/free-photo-of-animal-mascota-mono-pelo.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 121
+                petRepository.save(new Pet("Max", "Bobtail Japonés", LocalDate.of(2019, 4, 6), 1200.58, "Rabia", "https://images.pexels.com/photos/16482823/pexels-photo-16482823/free-photo-of-animal-mascota-cabeza-gato.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 122
+                petRepository.save(new Pet("Fresa", "Maine Coon", LocalDate.of(2020, 1, 24), 3200.28,
+                                "Parásitos intestinales", "https://images.pexels.com/photos/6441460/pexels-photo-6441460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 123
+                petRepository.save(new Pet("Whisky", "Abisinio", LocalDate.of(2021, 9, 3), 700.42, "Alergias", "https://images.pexels.com/photos/10863556/pexels-photo-10863556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 124
+                petRepository.save(new Pet("Tequila", "Abisinio", LocalDate.of(2021, 1, 4), 4000.43, "Diabetes", "https://images.pexels.com/photos/12573568/pexels-photo-12573568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 125
+                petRepository.save(new Pet("Cleopatra", "British Shorthair", LocalDate.of(2022, 5, 5), 2000.38, "Megacolon",
+                                "https://images.pexels.com/photos/13225461/pexels-photo-13225461.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+                // Crear mascota 126
+                petRepository.save(new Pet("Bonifacio", "Persa", LocalDate.now(), 100.00, "Lupus",
+                                                "https://images.pexels.com/photos/1404819/pexels-photo-1404819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
 
 
-                for (long i = 1L; i<100L; i++){
+                for (long i = 1L; i<101L; i++){
                     Owner owner = ownerRepository.findById(i).get();
+                    Pet pet = petRepository.findById(i).get();
+                    System.out.println(i);
+                    pet.setOwner(owner);
+                    petRepository.save(pet);
+                }
+
+                for (long i = 101L; i<126L; i++){
+                    long idPropietarioAleatorio = (long) (Math.random() * 100) + 1;
+                    Owner owner = ownerRepository.findById(idPropietarioAleatorio).get();
                     Pet pet = petRepository.findById(i).get();
                     pet.setOwner(owner);
                     petRepository.save(pet);
                 }
+
         }
 }

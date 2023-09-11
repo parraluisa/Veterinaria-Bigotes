@@ -95,10 +95,11 @@ public class OwnerController {
         return "owner_pages/owner_pets";
     }
 
-    // http://localhost:8090/owner/pet/find/1
+    // http://localhost:8090/owner/pet/find/{idPet}
     @GetMapping("/pet/find/{id}")
     public String showOwnerPet(Model model, @PathVariable("id") Long id){
         Pet pet = petService.findById(id);
+        System.out.println(id);
         if (pet != null) {
             model.addAttribute("pet", pet);
         } else {
@@ -106,7 +107,7 @@ public class OwnerController {
         }
         return "owner_pages/owner_pet";
     }
-    //localhost:8090/owner/find/pets/1
+    //localhost:8090/owner/find/pets/{idOwner}
     @GetMapping("/find/pets/{id}")
     public String showAllPetsByOwner(Model model, @PathVariable("id") Long id){
         //Obtenr todas las mascotas del dueño y luego mostrarlas en la vista
