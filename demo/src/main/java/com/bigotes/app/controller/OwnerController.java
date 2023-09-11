@@ -71,23 +71,6 @@ public class OwnerController {
         }
         return "redirect:/owner/all";
     }
-    // http://localhost:8090/owner/login
-    @GetMapping("/login")
-    public String showLogin(Model model) {
-        Integer idCard = 0;
-        model.addAttribute("idCard", idCard);
-        return "login_page";
-    }
-    // http://localhost:8090/owner/login
-    @PostMapping("/login")
-    public String login(@RequestParam("idCard") Long idCard) {
-        Owner owner = ownerService.findByIdCard(idCard);
-        if (owner != null) {
-            return "redirect:/owner/pets/" + owner.getId();
-        } else {
-            return "redirect:/owner/login?error=idNotFound";
-        }
-    }
     // http://localhost:8090/owner/pets/1
     @GetMapping("/pets/{id}")
     public String showOwnerPets(Model model, @PathVariable("id") Long id){
