@@ -73,22 +73,22 @@ const reviews = [
     {
         name: "Fabio Buitrago",
         catName: "Maw",
-        race: "Gato persa",
-        imageSrc: "/images/reviewCats/catA.jpeg",
+        race: "Gato naranja",
+        imageSrc: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.kbfqBAI5WHjiefXdgj-tQQHaE5%26pid%3DApi&f=1&ipt=6869c5c81c50f76e2738364716558ebce3723a4dd094d0d9179cd54b1525d0dc&ipo=images",
         review: "Desde el primer instante, quedó claro que el personal de la clínica tiene un profundo amor y respeto por los animales. Fui recibido con una sonrisa amable y mi mascota fue saludada con caricias y mimos.Este enfoque empático realmente marcó la diferencia para mí, ya que mi mascota a menudo se siente nerviosa en entornos médicos."
     },
     {
         name: "Luisa Parra",
         catName: "Ronny",
-        race: "Gato himalayo",
-        imageSrc: "/images/reviewCats/catB.jpeg",
+        race: "Gato blanco",
+        imageSrc: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.Dg-lJLyICJTPKLDcKOuYtgHaEo%26pid%3DApi&f=1&ipt=74cb2a44995bd708e41b783acc38bbe08949fdf0f140e082347bd5ab5efa6dd6&ipo=images",
         review: "No puedo estar más satisfecho con la atención que recibimos en esta clínica veterinaria. Desde el momento en que entramos, quedó claro que los animales son verdaderamente valorados aquí. La amabilidad del personal y el afecto que mostraron hacia mi mascota me llenaron de confianza de inmediato."
     },
     {
         name: "Andrés García",
         catName: "Peter",
-        race: "Gato azul ruso",
-        imageSrc: "/images/reviewCats/catC.jpeg",
+        race: "Gato blanco",
+        imageSrc: "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=600",
         review: "No puedo expresar lo agradecido que estoy por haber encontrado esta increíble clínica veterinaria. Desde el primer instante que crucé la puerta, quedó claro que este lugar es un refugio para nuestras adoradas mascotas. El equipo muestra un nivel de amor y respeto que va más allá de lo profesional."
 
     }
