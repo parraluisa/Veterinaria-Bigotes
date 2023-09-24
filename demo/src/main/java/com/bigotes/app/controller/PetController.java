@@ -31,7 +31,7 @@ public class PetController {
         return "pet_pages/show_all_pets";
     }
 
-    // http://localhost:8090/pet/find/1
+    // http://localhost:8090/pet/find/{petId}
     @GetMapping("/find/{id}")
     public String showPet(Model model, @PathVariable("id") Long id) {
         Pet pet = petService.findById(id);
@@ -68,28 +68,28 @@ public class PetController {
         model.addAttribute("ownerId", 0L);
         return "pet_pages/save_pet";
     }
+    // http://localhost:8090/pet/add/{ownerId}
     @GetMapping("/add/{ownerId}")
     public String insertPet(Model model, @PathVariable("ownerId") Long ownerId) {
         Pet pet = new Pet();
-        Owner owner = new Owner();
-        owner.setIdCard(ownerId);
-        pet.setOwner(owner);
         model.addAttribute("pet", pet);
+        model.addAttribute("ownerId", ownerId);
         return "pet_pages/save_pet";
     }
     
-    // http://localhost:8090/pet/upd/1
+    // http://localhost:8090/pet/upd/{petId}
     @GetMapping("/upd/{id}")
     public String updatePet(Model model, @PathVariable("id") Long id) {
         Pet pet = petService.findById(id);
         if (pet != null) {
             model.addAttribute("pet", pet);
+            model.addAttribute("ownerId", pet.getOwner().getIdCard());
         } else {
             throw new NotFoundException();
         }
         return "pet_pages/save_pet";
     }
-    // http://localhost:8090/pet/del/1
+    // http://localhost:8090/pet/del/{petId}
     @GetMapping("/del/{id}")
     public String deletePet(@PathVariable("id") Long id) {
         Pet pet = petService.findById(id);

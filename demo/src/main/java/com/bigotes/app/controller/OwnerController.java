@@ -25,7 +25,7 @@ public class OwnerController {
         return "owner_pages/show_all_owners";
     }
 
-    // http://localhost:8090/owner/find/1
+    // http://localhost:8090/owner/find/{ownerId}
     @GetMapping("/find/{id}")
     public String showOwner(Model model, @PathVariable("id") Long id) {
         Owner owner = ownerService.findById(id);
@@ -49,7 +49,7 @@ public class OwnerController {
         model.addAttribute("owner", owner);
         return "owner_pages/save_owner";
     }
-    // http://localhost:8090/owner/upd/1
+    // http://localhost:8090/owner/upd/{ownerId}
     @GetMapping("/upd/{id}")
     public String updateOwner(Model model, @PathVariable("id") Long id) {
         Owner owner = ownerService.findById(id);
@@ -60,7 +60,7 @@ public class OwnerController {
         }
         return "owner_pages/save_owner";
     }
-    // http://localhost:8090/owner/del/1
+    // http://localhost:8090/owner/del/{ownerId}
     @GetMapping("/del/{id}")
     public String deleteOwner(@PathVariable("id") Long id) {
         Owner owner = ownerService.findById(id);
@@ -71,14 +71,14 @@ public class OwnerController {
         }
         return "redirect:/owner/all";
     }
-    // http://localhost:8090/owner/pets/1
+    // http://localhost:8090/owner/pets/{ownerId}
     @GetMapping("/pets/{id}")
     public String showOwnerPets(Model model, @PathVariable("id") Long id){
         model.addAttribute("pets", petService.findByOwnerId(id));
         return "owner_pages/owner_pets";
     }
 
-    // http://localhost:8090/owner/pet/find/{idPet}
+    // http://localhost:8090/owner/pet/find/{petId}
     @GetMapping("/pet/find/{id}")
     public String showOwnerPet(Model model, @PathVariable("id") Long id){
         Pet pet = petService.findById(id);
@@ -90,7 +90,7 @@ public class OwnerController {
         }
         return "owner_pages/owner_pet";
     }
-    //localhost:8090/owner/find/pets/{idOwner}
+    //localhost:8090/owner/find/pets/{ownerId}
     @GetMapping("/find/pets/{id}")
     public String showAllPetsByOwner(Model model, @PathVariable("id") Long id){
         //Obtenr todas las mascotas del dueño y luego mostrarlas en la vista
