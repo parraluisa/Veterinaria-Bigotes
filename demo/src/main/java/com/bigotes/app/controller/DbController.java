@@ -30,210 +30,56 @@ public class DbController implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) {
 
-        // Create owner 1
-        ownerRepository.save(new Owner(123456789L, "John", "Doe", "Smith", "5551234", "john.doe@example.com"));
+        createOwners();
+        createPets();
+        relatePetsToOwners();
+        createVets();
 
-        // Create owner 2
-        ownerRepository.save(new Owner(234567890L, "Jane", "Smith", "Doe", "5555678", "jane.smith@example.com"));
-        // Create owner 3
-        ownerRepository.save(new Owner(345678901L, "Juan", "Perez", "Perez", "5551784", "jupe@gmail.com"));
-        // Create owner 4
-        ownerRepository.save(new Owner(456789012L, "Paula", "Niño", "Lopez", "5559837", "pau@gmail.com"));
-        // Create owner 5
-        ownerRepository.save(new Owner(567890123L, "Pedro", "Quintero", "Relcon", "5552784", "pequint@example.com"));
-        // Create owner 6
-        ownerRepository.save(new Owner(678901234L, "Pablo", "Andro", "Hulca", "5551344", "hulca@exaple.com"));
-        // Create owner 7
-        ownerRepository.save(new Owner(789012345L, "Nathalie", "Hurtado", "Rojas", "7872432", "nathur@example.com"));
-        // Create owner 8
-        ownerRepository.save(new Owner(890123456L, "Nashly", "Valto", "Torres", "4323555", "nash@example.com"));
-        // Create owner 9
-        ownerRepository.save(new Owner(901234567L, "Janeth", "Cantero", "Gil", "9855432", "cantja@example.com"));
-        // Create owner 10
-        ownerRepository.save(new Owner(987654321L, "Enrrique", "Maldonado", "Polo", "9873748", "enrri@example.com "));
-        // Create owner 11
-        ownerRepository.save(new Owner(876543210L, "Eduardo", "Cruz", "Bolivar", "8752333", "eduardo@example.com"));
-        // Create owner 12
-        ownerRepository.save(new Owner(765432109L, "María", "Morales", "Rivera", "3225800", "mam@gmail.com"));
-        // Create owner 13
-        ownerRepository.save(new Owner(654321098L, "Miguel", "Uribe", "Velez", "3238876", "migue@example.com"));
-        // Create owner 14
-        ownerRepository.save(new Owner(543210987L, "Raul", "Nivia", "Velez", "3238888", "rau@example.com"));
-        // Create owner 15
-        ownerRepository.save(new Owner(432109876L, "Nelson", "Jimenez", "Alteri", "3230374", "neljia@example.com"));
-        // Create owner 16
-        ownerRepository.save(new Owner(210987654L, "Jimena", "Alvarez", "Estrada", "3237483", "jimeal@example.com"));
-        // Create owner 17
-        // create owner 17
-        ownerRepository.save(new Owner(339527439L, "Alberto", "Nuñez", "Navarro", "6464316", "AlNuNa@example.com"));
-        // create owner 18
-        ownerRepository.save(new Owner(389629107L, "Alejandra", "Alvarez", "Chaparro", "7634480", "AlAlCh@example.com"));
-        // create owner 19
-        ownerRepository.save(new Owner(625390588L, "Paula", "Ortega", "Parra", "3228670", "PaOrPa@example.com"));
-        // create owner 20
-        ownerRepository.save(new Owner(854299681L, "Luis", "Silva", "Bustos", "7841868", "LuSiBu@example.com"));
-        // create owner 21
-        ownerRepository.save(new Owner(996211128L, "Alex", "Sanchez", "Galvis", "3005175", "AlSaGa@example.com"));
-        // create owner 22
-        ownerRepository.save(new Owner(813299857L, "Sebastian", "Alvarez", "Parada", "5106842", "SeAlPa@example.com"));
-        // create owner 23
-        ownerRepository.save(new Owner(542045102L, "Sara", "Castro", "Peña", "4724792", "SaCaPe@example.com"));
-        // create owner 24
-        ownerRepository.save(new Owner(378517623L, "Sara", "Linares", "Fuentes", "9073534", "SaLiFu@example.com"));
-        // create owner 25
-        ownerRepository.save(new Owner(420390569L, "Circe", "Castillo", "Salas", "1639592", "CiCaSa@example.com"));
-        // create owner 26
-        ownerRepository.save(new Owner(936618990L, "Andres", "Castillo", "Restrepo", "1243110", "AnCaRe@example.com"));
-        // create owner 27
-        ownerRepository.save(new Owner(455807491L, "Lety", "Rojas", "Chaparro", "4018208", "LeRoCh@example.com"));
-        // create owner 28
-        ownerRepository.save(new Owner(321227151L, "Alex", "Romero", "Zuñiga", "1299908", "AlRoZu@example.com"));
-        // create owner 29
-        ownerRepository.save(new Owner(892201172L, "Sara", "Parada", "Salas", "7293452", "SaPaSa@example.com"));
-        // create owner 30
-        ownerRepository.save(new Owner(560136473L, "Alejandro", "Gonzalez", "Ahumada", "6444285", "AlGoAh@example.com"));
-        // create owner 31
-        ownerRepository.save(new Owner(804999127L, "Nashly", "Silva", "Castillo", "4248438", "NaSiCa@example.com"));
-        // create owner 32
-        ownerRepository.save(new Owner(510972620L, "Jane", "Molina", "Lara", "7466902", "JaMoLa@example.com"));
-        // create owner 33
-        ownerRepository.save(new Owner(475470342L, "Enrrique", "Linares", "Castrillon", "7522873", "EnLiCa@example.com"));
-        // create owner 34
-        ownerRepository.save(new Owner(580071667L, "Juan", "Castro", "Zuñiga", "2646743", "JuCaZu@example.com"));
-        // create owner 35
-        ownerRepository.save(new Owner(257138356L, "Sofia", "Vasquez", "Restrepo", "8728577", "SoVaRe@example.com"));
-        // create owner 36
-        ownerRepository.save(new Owner(966440715L, "Nashly", "Castro", "Peña", "7943177", "NaCaPe@example.com"));
-        // create owner 37
-        ownerRepository.save(new Owner(124226767L, "Alberto", "Gómez", "Campos", "3457259", "AlGóCa@example.com"));
-        // create owner 38
-        ownerRepository.save(new Owner(698247603L, "Alejandro", "Alvarez", "Mendez", "4162734", "AlAlMe@example.com"));
-        // create owner 39
-        ownerRepository.save(new Owner(378490151L, "Alejandro", "Lopez", "Campos", "1636449", "AlLoCa@example.com"));
-        // create owner 40
-        ownerRepository.save(new Owner(821559054L, "María", "Romero", "Ahumada", "4374921", "MaRoAh@example.com"));
-        // create owner 41
-        ownerRepository.save(new Owner(640537211L, "Sebastian", "Morales", "Restrepo", "7952017", "SeMoRe@example.com"));
-        // create owner 42
-        ownerRepository.save(new Owner(938522664L, "Fernanda", "Silva", "Paredes", "9301132", "FeSiPa@example.com"));
-        // create owner 43
-        ownerRepository.save(new Owner(258352672L, "Erick", "Fernandez", "Chaparro", "3983051", "ErFeCh@example.com"));
-        // create owner 44
-        ownerRepository.save(new Owner(146073939L, "Oswaldo", "Linares", "Montoya", "4691450", "OsLiMo@example.com"));
-        // create owner 45
-        ownerRepository.save(new Owner(883159347L, "Alberto", "Buitrago", "Guerrero", "9776421", "AlBuGu@example.com"));
-        // create owner 46
-        ownerRepository.save(new Owner(661240045L, "Camilo", "Aguilar", "Cortes", "4661696", "CaAgCo@example.com"));
-        // create owner 47
-        ownerRepository.save(new Owner(517987000L, "Nathalie", "Silva", "Campos", "6793730", "NaSiCam@example.com"));
-        // create owner 48
-        ownerRepository.save(new Owner(572035520L, "Janeth", "Cabrera", "Miranda", "3305345", "JaCaMi@example.com"));
-        // create owner 49
-        ownerRepository.save(new Owner(167717438L, "Paula", "Hernandez", "Cortez", "1098594", "PaHeCo@example.com"));
-        // create owner 50
-        ownerRepository.save(new Owner(511947917L, "Eduardo", "Castillo", "Cortez", "2316386", "EdCaCo@example.com"));
-        // create owner 51
-        ownerRepository.save(new Owner(846422107L, "Sara", "Rodriguez", "Valencia", "9981032", "SaRoVa@example.com"));
-        // create owner 52
-        ownerRepository.save(new Owner(210241221L, "Sara", "Castro", "Lara", "2584197", "SaCaLa@example.com"));
-        // create owner 53
-        ownerRepository.save(new Owner(110619556L, "Sebastian", "Fernandez", "Mendoza", "2278777", "SeFeMe@example.com"));
-        // create owner 54
-        ownerRepository.save(new Owner(634672894L, "Camilo", "Rojas", "Chavez", "7865377", "CaRoCh@example.com"));
-        // create owner 55
-        ownerRepository.save(new Owner(975570482L, "Kevin", "Perez", "Torres", "8259213", "KePeTo@example.com"));
-        // create owner 56
-        ownerRepository.save(new Owner(547961919L, "Nathalie", "Castillo", "Aguilar", "3935301", "NaCaAg@example.com"));
-        // create owner 57
-        ownerRepository.save(new Owner(829169492L, "Oswaldo", "Hernandez", "Pinto", "4819985", "OsHePi@example.com"));
-        // create owner 58
-        ownerRepository.save(new Owner(549243502L, "Nathalie", "Ramirez", "Campos", "9388464", "NaRaCa@example.com"));
-        // create owner 59
-        ownerRepository.save(new Owner(196416649L, "Alejandra", "Silva", "Valencia", "9822918", "AlSiVa@example.com"));
-        // create owner 60
-        ownerRepository.save(new Owner(567352636L, "Sebastian", "Gomez", "Restrepo", "4602777", "SeGoRe@example.com"));
-        // create owner 61
-        ownerRepository.save(new Owner(798173831L, "Pablo", "Rodriguez", "Parada", "7579155", "PaRoPa@example.com"));
-        // create owner 62
-        ownerRepository.save(new Owner(655985260L, "John", "Romero", "Peña", "7391355", "JoRoPe@example.com"));
-        // create owner 63
-        ownerRepository.save(new Owner(455935310L, "Luis", "Linares", "Chavez", "9025652", "LuLiCh@example.com"));
-        // create owner 64
-        ownerRepository.save(new Owner(657949991L, "Alberto", "Ruiz", "Ahumada", "7569365", "AlRuAh@example.com"));
-        // create owner 65
-        ownerRepository.save(new Owner(984312956L, "Oswaldo", "Ramirez", "Lara", "3372955", "OsRaLa@example.com"));
-        // create owner 66
-        ownerRepository.save(new Owner(539264339L, "Sandra", "Rojas", "Sepulveda", "7499509", "SaRoSe@example.com"));
-        // create owner 67
-        ownerRepository.save(new Owner(677979915L, "Circe", "Linares", "Torres", "5744770", "CiLiTo@example.com"));
-        // create owner 68
-        ownerRepository.save(new Owner(622637951L, "Oswaldo", "Rodriguez", "Chaparro", "6573517", "OsRoCh@example.com"));
-        // create owner 69
-        ownerRepository.save(new Owner(136989434L, "Pedro", "Vargas", "Chavez", "9301463", "PeVaCh@example.com"));
-        // create owner 70
-        ownerRepository.save(new Owner(890223436L, "Nathalie", "Castro", "Paredes", "6412083", "NaCaPa@example.com"));
-        // create owner 71
-        ownerRepository.save(new Owner(149819435L, "Lety", "Parada", "Valencia", "9386544", "LePaVa@example.com"));
-        // create owner 72
-        ownerRepository.save(new Owner(283639477L, "Luis", "Torres", "Aguilar", "6408054", "LuToAg@example.com"));
-        // create owner 73
-        ownerRepository.save(new Owner(198897671L, "María", "Ramirez", "Sepulveda", "9689679", "MaRaSe@example.com"));
-        // create owner 74
-        ownerRepository.save(new Owner(316420753L, "Pedro", "Castillo", "Cortes", "3008839", "PeCaCo@example.com"));
-        // create owner 75
-        ownerRepository.save(new Owner(407918405L, "Javier", "Aguilar", "Lara", "8883505", "JaAgLa@example.com"));
-        // create owner 76
-        ownerRepository.save(new Owner(587267274L, "Andres", "Perez", "Chavez", "4644344", "AnPeCh@example.com"));
-        // create owner 77
-        ownerRepository.save(new Owner(441949057L, "Alberto", "Linares", "Paredes", "4267491", "AlLiPa@example.com"));
-        // create owner 78
-        ownerRepository.save(new Owner(310161583L, "Nashly", "Lopez", "Guerrero", "2603706", "NaLoGu@example.com"));
-        // create owner 79
-        ownerRepository.save(new Owner(605919683L, "Eduardo", "Gomez", "Restrepo", "6495981", "EdGoRe@example.com"));
-        // create owner 80
-        ownerRepository.save(new Owner(463325005L, "Fernanda", "Castillo", "Guerrero", "7491092", "FeCaGu@example.com"));
-        // create owner 81
-        ownerRepository.save(new Owner(269631169L, "Valentina", "Gomez", "Guerrero", "7542338", "VaGoGu@example.com"));
-        // create owner 82
-        ownerRepository.save(new Owner(859507885L, "Fernanda", "Jimenez", "Mendez", "4834142", "FeJiMe@example.com"));
-        // create owner 83
-        ownerRepository.save(new Owner(821776320L, "Paula", "Fernandez", "Navarro", "4576609", "PaFeNa@example.com"));
-        // create owner 84
-        ownerRepository.save(new Owner(265561323L, "Javier", "Martinez", "Parada", "4846325", "JaMaPa@example.com"));
-        // create owner 85
-        ownerRepository.save(new Owner(261740316L, "Jane", "Castillo", "Castillo", "6524985", "JaCaCa@example.com"));
-        // create owner 86
-        ownerRepository.save(new Owner(736308868L, "Lety", "Lopez", "Vergara", "1892702", "LeLoVe@example.com"));
-        // create owner 87
-        ownerRepository.save(new Owner(633532182L, "John", "Buitrago", "Poblete", "3931417", "JoBuPo@example.com"));
-        // create owner 88
-        ownerRepository.save(new Owner(505348574L, "Ana", "Guevara", "Bustos", "4461792", "AnGuBu@example.com"));
-        // create owner 89
-        ownerRepository.save(new Owner(519433567L, "Lina", "Cabrera", "Poblete", "9758363", "LiCaPo@example.com"));
-        // create owner 90
-        ownerRepository.save(new Owner(171713906L, "Ana", "Castillo", "Cruz", "5738941", "AnCaCr@example.com"));
-        // create owner 91
-        ownerRepository.save(new Owner(803775996L, "Alejandra", "Gonzalez", "Araya", "4202395", "AlGoAr@example.com"));
-        // create owner 92
-        ownerRepository.save(new Owner(322812909L, "Luis", "Ramirez", "Mendoza", "1993433", "LuRaMe@example.com"));
-        // create owner 93
-        ownerRepository.save(new Owner(999815923L, "Eduardo", "Garcia", "Rivas", "3187199", "EdGaRi@example.com"));
-        // create owner 94
-        ownerRepository.save(new Owner(883499951L, "Valentina", "Nuñez", "Pardo", "9829251", "VaNuPa@example.com"));
-        // create owner 95
-        ownerRepository.save(new Owner(322472122L, "Andres", "Sanchez", "Parra", "1147552", "AnSaPa@example.com"));
-        // create owner 96
-        ownerRepository.save(new Owner(119668984L, "Juliana", "Silva", "Miranda", "4185874", "JuSiMi@example.com"));
-        // create owner 97
-        ownerRepository.save(new Owner(225991741L, "Oswaldo", "Castro", "Fuentes", "3826947", "OsCaFu@example.com"));
-        // create owner 98
-        ownerRepository.save(new Owner(705030352L, "Pablo", "Alvarez", "Salas", "3762996", "PaAlSa@example.com"));
-        // create owner 99
-        ownerRepository.save(new Owner(235716052L, "Valentina", "Castillo", "Araya", "1514406", "VaCaAr@example.com"));
-        // create owner 100
-        ownerRepository.save(new Owner(646094641L, "Ana", "Ortega", "Paredes", "5902212", "AnOrPa@example.com"));
+    }
 
+    private void relatePetsToOwners() {
+        for (long i = 1L; i < 101L; i++) {
+            Owner owner = ownerRepository.findById(i).get();
+            Pet pet = petRepository.findById(i).get();
+            pet.setOwner(owner);
+            petRepository.save(pet);
+        }
 
+        Random random = new Random(42);
+
+        for (long i = 101L; i <= 150L; i++) {
+            long idPropietarioAleatorio = (long) (random.nextDouble() * 100) + 1;
+            Owner owner = ownerRepository.findById(idPropietarioAleatorio).get();
+            Pet pet = petRepository.findById(i).get();
+            pet.setOwner(owner);
+            petRepository.save(pet);
+        }
+    }
+
+    private void createVets() {
+        // Crear veterinario 1
+        veterinarianRepository.save(new Veterinarian(1000612796L ,"Andrés", "Garcia", "Montoya", "1234", "Cirujano", "https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
+        // Crear veterinario 2
+        veterinarianRepository.save(new Veterinarian(1000612797L ,"Maria", "Lopez", "Rodriguez", "5678", "Dermatologo", "https://images.pexels.com/photos/5407206/pexels-photo-5407206.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
+        // Crear veterinario 3
+        veterinarianRepository.save(new Veterinarian(1000612798L ,"Carlos", "Martinez", "Perez", "4321", "Cardiologo", "https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
+        // Crear veterinario 4
+        veterinarianRepository.save(new Veterinarian(1000612799L ,"Isabel", "Gonzalez", "Silva", "9876", "Oncologo", "https://images.pexels.com/photos/6749778/pexels-photo-6749778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
+        // Crear veterinario 5
+        veterinarianRepository.save(new Veterinarian(1000612800L ,"Diego", "Rodriguez", "Lopez", "2468", "Neurologo", "https://images.pexels.com/photos/5867730/pexels-photo-5867730.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
+        // Crear veterinario 6
+        veterinarianRepository.save(new Veterinarian(1000612801L ,"Ana", "Perez", "Fernandez", "1357", "Radiologo", "https://images.pexels.com/photos/5452201/pexels-photo-5452201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
+        // Crear veterinario 7
+        veterinarianRepository.save(new Veterinarian(1000612802L ,"Javier", "Sanchez", "Ramirez", "8765", "Radiologo", "https://images.pexels.com/photos/5452291/pexels-photo-5452291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
+        // Crear veterinario 8
+        veterinarianRepository.save(new Veterinarian(1000612803L ,"Sofia", "Hernandez", "Gomez", "3691", "Dentista", "https://images.pexels.com/photos/12495583/pexels-photo-12495583.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
+        // Crear veterinario 9
+        veterinarianRepository.save(new Veterinarian(1000612804L ,"Luis", "Torres", "Diaz", "7412", "Cirujano", "https://images.pexels.com/photos/3279197/pexels-photo-3279197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
+        // Crear veterinario 10
+        veterinarianRepository.save(new Veterinarian(1000612805L ,"Elena", "Fernandez", "Molina", "5824", "Dentista", "https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
+    }
+
+    private void createPets() {
         // Crear mascota 1
         petRepository.save(new Pet("Pompita", "British Shorthair", LocalDate.of(2015, 2, 12), 824.65, "Hipotiroidismo", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.kbfqBAI5WHjiefXdgj-tQQHaE5%26pid%3DApi&f=1&ipt=6869c5c81c50f76e2738364716558ebce3723a4dd094d0d9179cd54b1525d0dc&ipo=images"));
         // Crear mascota 2
@@ -245,13 +91,9 @@ public class DbController implements ApplicationRunner {
         // Crear mascota 5
         petRepository.save(new Pet("Mila", "Siberiano", LocalDate.of(2021, 3, 19), 2694.84, "Otitis", "https://images.pexels.com/photos/866496/pexels-photo-866496.jpeg?auto=compress&cs=tinysrgb&w=600"));
         // Crear mascota 6
-
         petRepository.save(new Pet("Leo", "Rex Selkirk", LocalDate.of(2015, 7, 4), 4553.99, "Insuficiencia renal", "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=600"));
-
         // Crear mascota 7
-
         petRepository.save(new Pet("Pompita", "Persa", LocalDate.of(2016, 6, 8), 1782.87, "Problemas cardíacos", "https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&w=600"));
-
         // Crear mascota 8
         petRepository.save(new Pet("Puma", "Manx", LocalDate.of(2015, 9, 9), 1530.87, "Insuficiencia renal", "https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&w=600"));
         // Crear mascota 9
@@ -492,95 +334,255 @@ public class DbController implements ApplicationRunner {
         petRepository.save(new Pet("Bonifacio", "Persa", LocalDate.now(), 100.00, "Lupus", "https://images.pexels.com/photos/1404819/pexels-photo-1404819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
         // Crear mascota 127
         petRepository.save(new Pet("Mia", "Siamese", LocalDate.of(2022, 5, 5), 255.00, "Alergias", "https://images.pexels.com/photos/2361952/pexels-photo-2361952.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
-
         // Crear mascota 128
         petRepository.save(new Pet("Simba", "Maine Coon", LocalDate.of(2022, 3, 15), 1200.55, "Ninguna", "https://images.pexels.com/photos/1521306/pexels-photo-1521306.jpeg?auto=compress&cs=tinysrgb&w=400"));
-
         // Crear mascota 129
         petRepository.save(new Pet("Luna", "Persa", LocalDate.of(2022, 8, 20), 900.75, "Ninguna", "https://images.pexels.com/photos/236606/pexels-photo-236606.jpeg?auto=compress&cs=tinysrgb&w=400"));
-
         // Crear mascota 130
         petRepository.save(new Pet("Rocky", "Sphynx", LocalDate.of(2022, 4, 10), 1600.30, "Asma", "https://images.pexels.com/photos/991831/pexels-photo-991831.jpeg?auto=compress&cs=tinysrgb&w=400"));
-
         // Crear mascota 131
         petRepository.save(new Pet("Oreo", "Siamese", LocalDate.of(2021, 11, 5), 750.25, "Ninguna", "https://images.pexels.com/photos/736532/pexels-photo-736532.jpeg?auto=compress&cs=tinysrgb&w=400"));
-
         // Crear mascota 132
         petRepository.save(new Pet("Coco", "Scottish Fold", LocalDate.of(2022, 6, 8), 1100.80, "Ninguna", "https://images.pexels.com/photos/208773/pexels-photo-208773.jpeg?auto=compress&cs=tinysrgb&w=400"));
-
         // Crear mascota 133
         petRepository.save(new Pet("Toby", "Ragdoll", LocalDate.of(2022, 1, 25), 950.45, "Ninguna", "https://images.pexels.com/photos/2071881/pexels-photo-2071881.jpeg?auto=compress&cs=tinysrgb&w=400"));
-
         // Crear mascota 134
         petRepository.save(new Pet("Bella", "Siberian", LocalDate.of(2022, 7, 14), 1300.60, "Ninguna", "https://images.pexels.com/photos/1056252/pexels-photo-1056252.jpeg?auto=compress&cs=tinysrgb&w=400"));
-
         // Crear mascota 135
         petRepository.save(new Pet("Leo", "Maine Coon", LocalDate.of(2022, 2, 9), 1150.35, "Ninguna", "https://images.pexels.com/photos/177809/pexels-photo-177809.jpeg?auto=compress&cs=tinysrgb&w=400"));
-
         // Crear mascota 136
         petRepository.save(new Pet("Milo", "Bengal", LocalDate.of(2022, 9, 3), 950.75, "Ninguna", "https://images.pexels.com/photos/979003/pexels-photo-979003.jpeg?auto=compress&cs=tinysrgb&w=400"));
-
         // Crear mascota 137
         petRepository.save(new Pet("Max", "Russian Blue", LocalDate.of(2022, 10, 20), 900.50, "Ninguna", "https://images.pexels.com/photos/1770918/pexels-photo-1770918.jpeg?auto=compress&cs=tinysrgb&w=400"));
-
         // Crear mascota 138
         petRepository.save(new Pet("Oliver", "Sphynx", LocalDate.of(2022, 11, 15), 1600.40, "Ninguna", "https://www.pexels.com/photo/adult-brown-tabby-cat-747795/"));
-
         // Crear mascota 139
         petRepository.save(new Pet("Lucy", "Persa", LocalDate.of(2022, 12, 10), 850.70, "Ninguna", "https://images.pexels.com/photos/1120049/pexels-photo-1120049.jpeg?auto=compress&cs=tinysrgb&w=400"));
-
         // Crear mascota 140
         petRepository.save(new Pet("Charlie", "Siamese", LocalDate.of(2021, 8, 5), 700.55, "Ninguna", "https://images.pexels.com/photos/236660/pexels-photo-236660.jpeg?auto=compress&cs=tinysrgb&w=400"));
-
         // Crear mascota 141
         petRepository.save(new Pet("Lola", "Ragdoll", LocalDate.of(2022, 5, 18), 975.65, "Ninguna", "https://images.pexels.com/photos/982299/pexels-photo-982299.jpeg?auto=compress&cs=tinysrgb&w=400"));
-
         // Crear mascota 142
         petRepository.save(new Pet("Chloe", "Scottish Fold", LocalDate.of(2022, 3, 22), 1050.90, "Ninguna", "https://images.pexels.com/photos/2286016/pexels-photo-2286016.jpeg?auto=compress&cs=tinysrgb&w=400"));
-
         // Crear mascota 143
         petRepository.save(new Pet("Shadow", "British Shorthair", LocalDate.of(2021, 12, 30), 800.80, "Ninguna", "https://images.pexels.com/photos/1440403/pexels-photo-1440403.jpeg?auto=compress&cs=tinysrgb&w=400"));
-
         // Crear mascota 144
         petRepository.save(new Pet("Lily", "Siberian", LocalDate.of(2022, 6, 7), 1200.70, "Ninguna", "https://images.pexels.com/photos/977933/pexels-photo-977933.jpeg?auto=compress&cs=tinysrgb&w=400"));
-
         // Crear mascota 145
         petRepository.save(new Pet("Zoe", "Maine Coon", LocalDate.of(2022, 7, 2), 1250.40, "Ninguna", "https://images.pexels.com/photos/121920/pexels-photo-121920.jpeg?auto=compress&cs=tinysrgb&w=400"));
-
         // Crear mascota 146
         petRepository.save(new Pet("Tiger", "Bengal", LocalDate.of(2022, 4, 12), 950.60, "Ninguna", "https://images.pexels.com/photos/1818608/pexels-photo-1818608.jpeg?auto=compress&cs=tinysrgb&w=400"));
-
         // Crear mascota 147
         petRepository.save(new Pet("Misty", "Russian Blue", LocalDate.of(2022, 9, 25), 875.75, "Ninguna", "https://images.pexels.com/photos/2064110/pexels-photo-2064110.jpeg?auto=compress&cs=tinysrgb&w=400"));
-
         // Crear mascota 148
         petRepository.save(new Pet("Mocha", "Sphynx", LocalDate.of(2022, 11, 8), 1600.55, "Ninguna", "https://images.pexels.com/photos/416195/pexels-photo-416195.jpeg?auto=compress&cs=tinysrgb&w=400"));
-
         // Crear mascota 149
         petRepository.save(new Pet("Cleo", "Siamese", LocalDate.of(2022, 10, 15), 720.45, "Ninguna", "https://images.pexels.com/photos/751050/pexels-photo-751050.jpeg?auto=compress&cs=tinysrgb&w=400"));
-
         // Crear mascota 150
         petRepository.save(new Pet("Smokey", "Persa", LocalDate.of(2022, 12, 5), 950.80, "Ninguna", "https://images.pexels.com/photos/599492/pexels-photo-599492.jpeg?auto=compress&cs=tinysrgb&w=400"));
 
+    }
 
-        for (long i = 1L; i < 101L; i++) {
-            Owner owner = ownerRepository.findById(i).get();
-            Pet pet = petRepository.findById(i).get();
-            pet.setOwner(owner);
-            petRepository.save(pet);
-        }
-
-        Random random = new Random(42);
-
-        for (long i = 101L; i <= 150L; i++) {
-            long idPropietarioAleatorio = (long) (random.nextDouble() * 100) + 1;
-            Owner owner = ownerRepository.findById(idPropietarioAleatorio).get();
-            Pet pet = petRepository.findById(i).get();
-            pet.setOwner(owner);
-            petRepository.save(pet);
-        }
-
-        // Crear veterinario 1
-        veterinarianRepository.save(new Veterinarian(1000612796L ,"Andrés", "Garcia", "Montoya", "1234", "Cirujano", "https://images.pexels.com/photos/5733422/pexels-photo-5733422.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
+    private void createOwners() {
+        // Create owner 1
+        ownerRepository.save(new Owner(123456789L, "John", "Doe", "Smith", "5551234", "john.doe@example.com"));
+        // Create owner 2
+        ownerRepository.save(new Owner(234567890L, "Jane", "Smith", "Doe", "5555678", "jane.smith@example.com"));
+        // Create owner 3
+        ownerRepository.save(new Owner(345678901L, "Juan", "Perez", "Perez", "5551784", "jupe@gmail.com"));
+        // Create owner 4
+        ownerRepository.save(new Owner(456789012L, "Paula", "Niño", "Lopez", "5559837", "pau@gmail.com"));
+        // Create owner 5
+        ownerRepository.save(new Owner(567890123L, "Pedro", "Quintero", "Relcon", "5552784", "pequint@example.com"));
+        // Create owner 6
+        ownerRepository.save(new Owner(678901234L, "Pablo", "Andro", "Hulca", "5551344", "hulca@exaple.com"));
+        // Create owner 7
+        ownerRepository.save(new Owner(789012345L, "Nathalie", "Hurtado", "Rojas", "7872432", "nathur@example.com"));
+        // Create owner 8
+        ownerRepository.save(new Owner(890123456L, "Nashly", "Valto", "Torres", "4323555", "nash@example.com"));
+        // Create owner 9
+        ownerRepository.save(new Owner(901234567L, "Janeth", "Cantero", "Gil", "9855432", "cantja@example.com"));
+        // Create owner 10
+        ownerRepository.save(new Owner(987654321L, "Enrrique", "Maldonado", "Polo", "9873748", "enrri@example.com "));
+        // Create owner 11
+        ownerRepository.save(new Owner(876543210L, "Eduardo", "Cruz", "Bolivar", "8752333", "eduardo@example.com"));
+        // Create owner 12
+        ownerRepository.save(new Owner(765432109L, "María", "Morales", "Rivera", "3225800", "mam@gmail.com"));
+        // Create owner 13
+        ownerRepository.save(new Owner(654321098L, "Miguel", "Uribe", "Velez", "3238876", "migue@example.com"));
+        // Create owner 14
+        ownerRepository.save(new Owner(543210987L, "Raul", "Nivia", "Velez", "3238888", "rau@example.com"));
+        // Create owner 15
+        ownerRepository.save(new Owner(432109876L, "Nelson", "Jimenez", "Alteri", "3230374", "neljia@example.com"));
+        // Create owner 16
+        ownerRepository.save(new Owner(210987654L, "Jimena", "Alvarez", "Estrada", "3237483", "jimeal@example.com"));
+        // Create owner 17
+        ownerRepository.save(new Owner(339527439L, "Alberto", "Nuñez", "Navarro", "6464316", "AlNuNa@example.com"));
+        // create owner 18
+        ownerRepository.save(new Owner(389629107L, "Alejandra", "Alvarez", "Chaparro", "7634480", "AlAlCh@example.com"));
+        // create owner 19
+        ownerRepository.save(new Owner(625390588L, "Paula", "Ortega", "Parra", "3228670", "PaOrPa@example.com"));
+        // create owner 20
+        ownerRepository.save(new Owner(854299681L, "Luis", "Silva", "Bustos", "7841868", "LuSiBu@example.com"));
+        // create owner 21
+        ownerRepository.save(new Owner(996211128L, "Alex", "Sanchez", "Galvis", "3005175", "AlSaGa@example.com"));
+        // create owner 22
+        ownerRepository.save(new Owner(813299857L, "Sebastian", "Alvarez", "Parada", "5106842", "SeAlPa@example.com"));
+        // create owner 23
+        ownerRepository.save(new Owner(542045102L, "Sara", "Castro", "Peña", "4724792", "SaCaPe@example.com"));
+        // create owner 24
+        ownerRepository.save(new Owner(378517623L, "Sara", "Linares", "Fuentes", "9073534", "SaLiFu@example.com"));
+        // create owner 25
+        ownerRepository.save(new Owner(420390569L, "Circe", "Castillo", "Salas", "1639592", "CiCaSa@example.com"));
+        // create owner 26
+        ownerRepository.save(new Owner(936618990L, "Andres", "Castillo", "Restrepo", "1243110", "AnCaRe@example.com"));
+        // create owner 27
+        ownerRepository.save(new Owner(455807491L, "Lety", "Rojas", "Chaparro", "4018208", "LeRoCh@example.com"));
+        // create owner 28
+        ownerRepository.save(new Owner(321227151L, "Alex", "Romero", "Zuñiga", "1299908", "AlRoZu@example.com"));
+        // create owner 29
+        ownerRepository.save(new Owner(892201172L, "Sara", "Parada", "Salas", "7293452", "SaPaSa@example.com"));
+        // create owner 30
+        ownerRepository.save(new Owner(560136473L, "Alejandro", "Gonzalez", "Ahumada", "6444285", "AlGoAh@example.com"));
+        // create owner 31
+        ownerRepository.save(new Owner(804999127L, "Nashly", "Silva", "Castillo", "4248438", "NaSiCa@example.com"));
+        // create owner 32
+        ownerRepository.save(new Owner(510972620L, "Jane", "Molina", "Lara", "7466902", "JaMoLa@example.com"));
+        // create owner 33
+        ownerRepository.save(new Owner(475470342L, "Enrrique", "Linares", "Castrillon", "7522873", "EnLiCa@example.com"));
+        // create owner 34
+        ownerRepository.save(new Owner(580071667L, "Juan", "Castro", "Zuñiga", "2646743", "JuCaZu@example.com"));
+        // create owner 35
+        ownerRepository.save(new Owner(257138356L, "Sofia", "Vasquez", "Restrepo", "8728577", "SoVaRe@example.com"));
+        // create owner 36
+        ownerRepository.save(new Owner(966440715L, "Nashly", "Castro", "Peña", "7943177", "NaCaPe@example.com"));
+        // create owner 37
+        ownerRepository.save(new Owner(124226767L, "Alberto", "Gómez", "Campos", "3457259", "AlGóCa@example.com"));
+        // create owner 38
+        ownerRepository.save(new Owner(698247603L, "Alejandro", "Alvarez", "Mendez", "4162734", "AlAlMe@example.com"));
+        // create owner 39
+        ownerRepository.save(new Owner(378490151L, "Alejandro", "Lopez", "Campos", "1636449", "AlLoCa@example.com"));
+        // create owner 40
+        ownerRepository.save(new Owner(821559054L, "María", "Romero", "Ahumada", "4374921", "MaRoAh@example.com"));
+        // create owner 41
+        ownerRepository.save(new Owner(640537211L, "Sebastian", "Morales", "Restrepo", "7952017", "SeMoRe@example.com"));
+        // create owner 42
+        ownerRepository.save(new Owner(938522664L, "Fernanda", "Silva", "Paredes", "9301132", "FeSiPa@example.com"));
+        // create owner 43
+        ownerRepository.save(new Owner(258352672L, "Erick", "Fernandez", "Chaparro", "3983051", "ErFeCh@example.com"));
+        // create owner 44
+        ownerRepository.save(new Owner(146073939L, "Oswaldo", "Linares", "Montoya", "4691450", "OsLiMo@example.com"));
+        // create owner 45
+        ownerRepository.save(new Owner(883159347L, "Alberto", "Buitrago", "Guerrero", "9776421", "AlBuGu@example.com"));
+        // create owner 46
+        ownerRepository.save(new Owner(661240045L, "Camilo", "Aguilar", "Cortes", "4661696", "CaAgCo@example.com"));
+        // create owner 47
+        ownerRepository.save(new Owner(517987000L, "Nathalie", "Silva", "Campos", "6793730", "NaSiCam@example.com"));
+        // create owner 48
+        ownerRepository.save(new Owner(572035520L, "Janeth", "Cabrera", "Miranda", "3305345", "JaCaMi@example.com"));
+        // create owner 49
+        ownerRepository.save(new Owner(167717438L, "Paula", "Hernandez", "Cortez", "1098594", "PaHeCo@example.com"));
+        // create owner 50
+        ownerRepository.save(new Owner(511947917L, "Eduardo", "Castillo", "Cortez", "2316386", "EdCaCo@example.com"));
+        // create owner 51
+        ownerRepository.save(new Owner(846422107L, "Sara", "Rodriguez", "Valencia", "9981032", "SaRoVa@example.com"));
+        // create owner 52
+        ownerRepository.save(new Owner(210241221L, "Sara", "Castro", "Lara", "2584197", "SaCaLa@example.com"));
+        // create owner 53
+        ownerRepository.save(new Owner(110619556L, "Sebastian", "Fernandez", "Mendoza", "2278777", "SeFeMe@example.com"));
+        // create owner 54
+        ownerRepository.save(new Owner(634672894L, "Camilo", "Rojas", "Chavez", "7865377", "CaRoCh@example.com"));
+        // create owner 55
+        ownerRepository.save(new Owner(975570482L, "Kevin", "Perez", "Torres", "8259213", "KePeTo@example.com"));
+        // create owner 56
+        ownerRepository.save(new Owner(547961919L, "Nathalie", "Castillo", "Aguilar", "3935301", "NaCaAg@example.com"));
+        // create owner 57
+        ownerRepository.save(new Owner(829169492L, "Oswaldo", "Hernandez", "Pinto", "4819985", "OsHePi@example.com"));
+        // create owner 58
+        ownerRepository.save(new Owner(549243502L, "Nathalie", "Ramirez", "Campos", "9388464", "NaRaCa@example.com"));
+        // create owner 59
+        ownerRepository.save(new Owner(196416649L, "Alejandra", "Silva", "Valencia", "9822918", "AlSiVa@example.com"));
+        // create owner 60
+        ownerRepository.save(new Owner(567352636L, "Sebastian", "Gomez", "Restrepo", "4602777", "SeGoRe@example.com"));
+        // create owner 61
+        ownerRepository.save(new Owner(798173831L, "Pablo", "Rodriguez", "Parada", "7579155", "PaRoPa@example.com"));
+        // create owner 62
+        ownerRepository.save(new Owner(655985260L, "John", "Romero", "Peña", "7391355", "JoRoPe@example.com"));
+        // create owner 63
+        ownerRepository.save(new Owner(455935310L, "Luis", "Linares", "Chavez", "9025652", "LuLiCh@example.com"));
+        // create owner 64
+        ownerRepository.save(new Owner(657949991L, "Alberto", "Ruiz", "Ahumada", "7569365", "AlRuAh@example.com"));
+        // create owner 65
+        ownerRepository.save(new Owner(984312956L, "Oswaldo", "Ramirez", "Lara", "3372955", "OsRaLa@example.com"));
+        // create owner 66
+        ownerRepository.save(new Owner(539264339L, "Sandra", "Rojas", "Sepulveda", "7499509", "SaRoSe@example.com"));
+        // create owner 67
+        ownerRepository.save(new Owner(677979915L, "Circe", "Linares", "Torres", "5744770", "CiLiTo@example.com"));
+        // create owner 68
+        ownerRepository.save(new Owner(622637951L, "Oswaldo", "Rodriguez", "Chaparro", "6573517", "OsRoCh@example.com"));
+        // create owner 69
+        ownerRepository.save(new Owner(136989434L, "Pedro", "Vargas", "Chavez", "9301463", "PeVaCh@example.com"));
+        // create owner 70
+        ownerRepository.save(new Owner(890223436L, "Nathalie", "Castro", "Paredes", "6412083", "NaCaPa@example.com"));
+        // create owner 71
+        ownerRepository.save(new Owner(149819435L, "Lety", "Parada", "Valencia", "9386544", "LePaVa@example.com"));
+        // create owner 72
+        ownerRepository.save(new Owner(283639477L, "Luis", "Torres", "Aguilar", "6408054", "LuToAg@example.com"));
+        // create owner 73
+        ownerRepository.save(new Owner(198897671L, "María", "Ramirez", "Sepulveda", "9689679", "MaRaSe@example.com"));
+        // create owner 74
+        ownerRepository.save(new Owner(316420753L, "Pedro", "Castillo", "Cortes", "3008839", "PeCaCo@example.com"));
+        // create owner 75
+        ownerRepository.save(new Owner(407918405L, "Javier", "Aguilar", "Lara", "8883505", "JaAgLa@example.com"));
+        // create owner 76
+        ownerRepository.save(new Owner(587267274L, "Andres", "Perez", "Chavez", "4644344", "AnPeCh@example.com"));
+        // create owner 77
+        ownerRepository.save(new Owner(441949057L, "Alberto", "Linares", "Paredes", "4267491", "AlLiPa@example.com"));
+        // create owner 78
+        ownerRepository.save(new Owner(310161583L, "Nashly", "Lopez", "Guerrero", "2603706", "NaLoGu@example.com"));
+        // create owner 79
+        ownerRepository.save(new Owner(605919683L, "Eduardo", "Gomez", "Restrepo", "6495981", "EdGoRe@example.com"));
+        // create owner 80
+        ownerRepository.save(new Owner(463325005L, "Fernanda", "Castillo", "Guerrero", "7491092", "FeCaGu@example.com"));
+        // create owner 81
+        ownerRepository.save(new Owner(269631169L, "Valentina", "Gomez", "Guerrero", "7542338", "VaGoGu@example.com"));
+        // create owner 82
+        ownerRepository.save(new Owner(859507885L, "Fernanda", "Jimenez", "Mendez", "4834142", "FeJiMe@example.com"));
+        // create owner 83
+        ownerRepository.save(new Owner(821776320L, "Paula", "Fernandez", "Navarro", "4576609", "PaFeNa@example.com"));
+        // create owner 84
+        ownerRepository.save(new Owner(265561323L, "Javier", "Martinez", "Parada", "4846325", "JaMaPa@example.com"));
+        // create owner 85
+        ownerRepository.save(new Owner(261740316L, "Jane", "Castillo", "Castillo", "6524985", "JaCaCa@example.com"));
+        // create owner 86
+        ownerRepository.save(new Owner(736308868L, "Lety", "Lopez", "Vergara", "1892702", "LeLoVe@example.com"));
+        // create owner 87
+        ownerRepository.save(new Owner(633532182L, "John", "Buitrago", "Poblete", "3931417", "JoBuPo@example.com"));
+        // create owner 88
+        ownerRepository.save(new Owner(505348574L, "Ana", "Guevara", "Bustos", "4461792", "AnGuBu@example.com"));
+        // create owner 89
+        ownerRepository.save(new Owner(519433567L, "Lina", "Cabrera", "Poblete", "9758363", "LiCaPo@example.com"));
+        // create owner 90
+        ownerRepository.save(new Owner(171713906L, "Ana", "Castillo", "Cruz", "5738941", "AnCaCr@example.com"));
+        // create owner 91
+        ownerRepository.save(new Owner(803775996L, "Alejandra", "Gonzalez", "Araya", "4202395", "AlGoAr@example.com"));
+        // create owner 92
+        ownerRepository.save(new Owner(322812909L, "Luis", "Ramirez", "Mendoza", "1993433", "LuRaMe@example.com"));
+        // create owner 93
+        ownerRepository.save(new Owner(999815923L, "Eduardo", "Garcia", "Rivas", "3187199", "EdGaRi@example.com"));
+        // create owner 94
+        ownerRepository.save(new Owner(883499951L, "Valentina", "Nuñez", "Pardo", "9829251", "VaNuPa@example.com"));
+        // create owner 95
+        ownerRepository.save(new Owner(322472122L, "Andres", "Sanchez", "Parra", "1147552", "AnSaPa@example.com"));
+        // create owner 96
+        ownerRepository.save(new Owner(119668984L, "Juliana", "Silva", "Miranda", "4185874", "JuSiMi@example.com"));
+        // create owner 97
+        ownerRepository.save(new Owner(225991741L, "Oswaldo", "Castro", "Fuentes", "3826947", "OsCaFu@example.com"));
+        // create owner 98
+        ownerRepository.save(new Owner(705030352L, "Pablo", "Alvarez", "Salas", "3762996", "PaAlSa@example.com"));
+        // create owner 99
+        ownerRepository.save(new Owner(235716052L, "Valentina", "Castillo", "Araya", "1514406", "VaCaAr@example.com"));
+        // create owner 100
+        ownerRepository.save(new Owner(646094641L, "Ana", "Ortega", "Paredes", "5902212", "AnOrPa@example.com"));
     }
 }
