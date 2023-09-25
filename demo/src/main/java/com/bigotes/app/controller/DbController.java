@@ -77,6 +77,27 @@ public class DbController implements ApplicationRunner {
         veterinarianRepository.save(new Veterinarian(1000612804L ,"Luis", "Torres", "Diaz", "7412", "Cirujano", "https://images.pexels.com/photos/3279197/pexels-photo-3279197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
         // Crear veterinario 10
         veterinarianRepository.save(new Veterinarian(1000612805L ,"Elena", "Fernandez", "Molina", "5824", "Dentista", "https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
+        // Crear veterinario 11
+        veterinarianRepository.save(new Veterinarian(1000612806L, "Juan", "Perez", "Lopez", "1234", "Cirujano", "https://images.pexels.com/photos/8460157/pexels-photo-8460157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+        // Crear veterinario 12
+        veterinarianRepository.save(new Veterinarian(1000612807L, "Laura", "Garcia", "Martinez", "5678", "Dermatologo", "https://media.istockphoto.com/id/1227504152/es/foto/mujer-médico-llena-la-historia-clínica-y-escribe-receta-en-la-tableta.jpg?s=1024x1024&w=is&k=20&c=6znLs6DS5cgkYzUaeAy_2CnCLp962hklg9ts0Urzupg="));
+        // Crear veterinario 13
+        veterinarianRepository.save(new Veterinarian(1000612808L, "Pedro", "Lopez", "Rodriguez", "4321", "Cardiologo", "https://images.pexels.com/photos/12660379/pexels-photo-12660379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+        // Crear veterinario 14
+        veterinarianRepository.save(new Veterinarian(1000612809L, "Carmen", "Martinez", "Gonzalez", "9876", "Oncologo", "https://media.istockphoto.com/id/1249199278/es/foto/foto-de-perfil-de-atractiva-familia-doc-señora-pacientes-consulta-amigable-sonrisa-confiable.jpg?s=1024x1024&w=is&k=20&c=9_B0DyArRLvaVHcOy7w9AovzJI32wqLE7xs8sx80QIg="));
+        // Crear veterinario 15
+        veterinarianRepository.save(new Veterinarian(1000612810L, "Fernando", "Gonzalez", "Silva", "2468", "Neurologo", "https://images.pexels.com/photos/6303591/pexels-photo-6303591.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"));
+        // Crear veterinario 16
+        veterinarianRepository.save(new Veterinarian(1000612811L, "Ana", "Rodriguez", "Fernandez", "1357", "Radiologo", "https://media.istockphoto.com/id/1256122635/es/foto/retrato-de-primer-plano-de-bonito-atractivo-alegre-rubia-chica-doc-usando-gadget-conexión.jpg?s=1024x1024&w=is&k=20&c=3F3nAJiLOoDYJRjRk_HvWUfTenVICDtcHDZKRCpbLD4="));
+        // Crear veterinario 17
+        veterinarianRepository.save(new Veterinarian(1000612812L, "Miguel", "Perez", "Gomez", "8765", "Radiologo", "https://media.istockphoto.com/id/1269486200/es/foto/apuesto-joven-médico-en-el-pasillo-del-hospital-mirando-a-la-cámara-sonriendo.jpg?s=1024x1024&w=is&k=20&c=_135u4a6GZGSC0Wo504yAsROExyhXRT_DrNwmXZvcsk="));
+        // Crear veterinario 18
+        veterinarianRepository.save(new Veterinarian(1000612813L, "Sara", "Sanchez", "Ramirez", "3691", "Dentista", "https://media.istockphoto.com/id/1222193164/es/foto/concepto-de-consulta-médica-mujer-doctora-en-gafas-con-portátil.jpg?s=1024x1024&w=is&k=20&c=ZQVc8cuOu59NgKdWrWfVFk37TbNAiODV_5u1MFx8jp4="));
+        // Crear veterinario 19
+        veterinarianRepository.save(new Veterinarian(1000612814L, "Carlos", "Torres", "Diaz", "7412", "Cirujano", "https://media.istockphoto.com/id/1593890881/es/foto/retrato-de-un-joven-médico-indio-parado-en-una-clínica-en-el-consultorio-del-hospital-con-una.jpg?s=1024x1024&w=is&k=20&c=rzTesU4kjlMg4LshoxI5MFfoZ8vVNmZ_AdcvMSQpiXk="));
+        // Crear veterinario 20
+        veterinarianRepository.save(new Veterinarian(1000612815L, "Lorena", "Fernandez", "Molina", "5824", "Dentista", "https://media.istockphoto.com/id/1436148451/es/foto/doctora-sonriente-con-tableta-digital-de-pie-sobre-fondo-gris-aislado.jpg?s=1024x1024&w=is&k=20&c=uTl86-Boiidyq0C_3hAzXrnBM1_lH5TsklT0Tp4ONMs="));
+
     }
 
     private void createPets() {
