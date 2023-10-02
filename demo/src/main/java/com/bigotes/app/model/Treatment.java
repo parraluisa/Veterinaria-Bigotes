@@ -28,7 +28,8 @@ public class Treatment {
     @ManyToOne
     @JoinColumn(name = "veterinarian_id")
     private Veterinarian veterinarian;
-
+    
+    @Nonnull
     private String description;
 
     public Treatment() {
