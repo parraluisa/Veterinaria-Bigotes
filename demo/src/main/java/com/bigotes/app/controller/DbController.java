@@ -676,24 +676,24 @@ public class DbController implements ApplicationRunner {
     }
     private void createTreatments(){
         // Create and save treatment 1
-        treatmentRepository.save(new Treatment(LocalDate.of(2023, 9, 20)));
+        treatmentRepository.save(new Treatment(LocalDate.of(2023, 9, 20),  "Se le dió al felino el primer comprimido de FELIMAZOLE, revisión dentro de 12 horas."));
         // Create and save treatment 2
-        treatmentRepository.save(new Treatment(LocalDate.of(2020, 3, 15)));
+        treatmentRepository.save(new Treatment(LocalDate.of(2020, 3, 15), "Se administró FurVitality al gato para mejorar su pelaje y vitalidad. Se realizará un seguimiento en 24 horas.") );
         // Create and save treatment 3
-        treatmentRepository.save(new Treatment(LocalDate.of(2021, 5, 10)));
+        treatmentRepository.save(new Treatment(LocalDate.of(2021, 5, 10), "Se aplicó PawPain Away al gato para aliviar el dolor en las patas. Revisión dentro de 12 horas para evaluar el alivio del dolor."));
         // Create and save treatment 4
-        treatmentRepository.save(new Treatment(LocalDate.of(2022, 7, 25)));
+        treatmentRepository.save(new Treatment(LocalDate.of(2022, 7, 25), "Se suministró WhiskerWellness al gato para mejorar su bienestar general y salud. Próxima revisión en 24 horas."));
         // Create and save treatment 5
-        treatmentRepository.save(new Treatment(LocalDate.of(2022, 9, 1)));
+        treatmentRepository.save(new Treatment(LocalDate.of(2022, 9, 1), "Se administró Purrfect Health para mantener la salud óptima del gato. Se evaluarán los resultados en 24 horas."));
         // Create and save treatment 6
-        treatmentRepository.save(new Treatment(LocalDate.of(2021, 11, 8)));
+        treatmentRepository.save(new Treatment(LocalDate.of(2021, 11, 8), "Se dio MeowMend al gato para ayudar en la recuperación de heridas o lesiones. Próxima revisión en 12 horas."));
         // Create and save treatment 7
-        treatmentRepository.save(new Treatment(LocalDate.of(2020, 2, 12)));
+        treatmentRepository.save(new Treatment(LocalDate.of(2020, 2, 12), "Se administró PawPrint Pain Relief para aliviar el dolor del gato. Revisión dentro de 12 horas para evaluar la eficacia."));
         // Create and save treatment 8
-        treatmentRepository.save(new Treatment(LocalDate.of(2019, 4, 6)));
+        treatmentRepository.save(new Treatment(LocalDate.of(2019, 4, 6), "Se administró FishOil Feline para promover la salud cardiovascular y del pelaje en el gato. Se evaluará su progreso en 24 horas."));
         // Create and save treatment 9
-        treatmentRepository.save(new Treatment(LocalDate.of(2020, 6, 19)));
+        treatmentRepository.save(new Treatment(LocalDate.of(2020, 6, 19), "Se administraron KittyCalm Drops al gato para reducir la ansiedad y el estrés. Próxima revisión en 12 horas."));
         // Create and save treatment 10
-        treatmentRepository.save(new Treatment(LocalDate.of(2023, 8, 27)));
+        treatmentRepository.save(new Treatment(LocalDate.of(2023, 8, 27), "Se aplicó WhiskerWonder Elixir al gato para mejorar su bienestar general y vitalidad. Revisión en 24 horas para evaluar su efectividad."));
     }
 }
