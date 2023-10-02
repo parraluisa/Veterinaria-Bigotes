@@ -1,10 +1,14 @@
 package com.bigotes.app.controller;
 
+import com.bigotes.app.model.Drug;
 import com.bigotes.app.model.Owner;
 import com.bigotes.app.model.Pet;
+import com.bigotes.app.model.Treatment;
 import com.bigotes.app.model.Veterinarian;
+import com.bigotes.app.repository.DrugRepository;
 import com.bigotes.app.repository.OwnerRepository;
 import com.bigotes.app.repository.PetRepository;
+import com.bigotes.app.repository.TreatmentRepository;
 import com.bigotes.app.repository.VeterinarianRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +31,12 @@ public class DbController implements ApplicationRunner {
     @Autowired
     VeterinarianRepository veterinarianRepository;
 
+    @Autowired
+    DrugRepository drugRepository;
+
+    @Autowired
+    TreatmentRepository treatmentRepository;
+
     @Override
     public void run(ApplicationArguments args) {
 
@@ -34,6 +44,9 @@ public class DbController implements ApplicationRunner {
         createPets();
         relatePetsToOwners();
         createVets();
+        createDrugs();
+        createTreatments();
+        relateTreatments();
 
     }
 
@@ -53,6 +66,19 @@ public class DbController implements ApplicationRunner {
             Pet pet = petRepository.findById(i).get();
             pet.setOwner(owner);
             petRepository.save(pet);
+        }
+    }
+
+    private void relateTreatments(){
+        for (long i = 1L; i < 11L; i++) {
+            Pet pet = petRepository.findById(i).get();
+            Drug drug = drugRepository.findById(i).get();
+            Veterinarian vet = veterinarianRepository.findById(i).get();
+            Treatment treatment = treatmentRepository.findById(i).get();
+            treatment.setPet(pet);
+            treatment.setVeterinarian(vet);
+            treatment.setDrug(drug);
+            treatmentRepository.save(treatment);
         }
     }
 
@@ -102,7 +128,7 @@ public class DbController implements ApplicationRunner {
 
     private void createPets() {
         // Crear mascota 1
-        petRepository.save(new Pet("Pompita", "British Shorthair", LocalDate.of(2015, 2, 12), 824.65, "Hipotiroidismo", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.kbfqBAI5WHjiefXdgj-tQQHaE5%26pid%3DApi&f=1&ipt=6869c5c81c50f76e2738364716558ebce3723a4dd094d0d9179cd54b1525d0dc&ipo=images"));
+        petRepository.save(new Pet("Pompita", "British Shorthair", LocalDate.of(2015, 2, 12), 824.65, "Hipotiroidismo", "https://catinaflat.blog/wp-content/uploads/2022/03/british-shorthair-1.jpg"));
         // Crear mascota 2
         petRepository.save(new Pet("Fifi", "Abisinio", LocalDate.of(2023, 7, 24), 200.00, "Tumores mamarios", "https://images.pexels.com/photos/866496/pexels-photo-866496.jpeg?auto=compress&cs=tinysrgb&w=600"));
         // Crear mascota 3
@@ -406,7 +432,7 @@ public class DbController implements ApplicationRunner {
 
     private void createOwners() {
         // Create owner 1
-        ownerRepository.save(new Owner(123456789L, "John", "Doe", "Smith", "5551234", "john.doe@example.com"));
+        ownerRepository.save(new Owner(1001298925L, "Esteban", "Gómez", "Buitrago", "3116721345", "esteban.buitrago@gmail.com"));
         // Create owner 2
         ownerRepository.save(new Owner(234567890L, "Jane", "Smith", "Doe", "5555678", "jane.smith@example.com"));
         // Create owner 3
@@ -605,5 +631,69 @@ public class DbController implements ApplicationRunner {
         ownerRepository.save(new Owner(235716052L, "Valentina", "Castillo", "Araya", "1514406", "VaCaAr@example.com"));
         // create owner 100
         ownerRepository.save(new Owner(646094641L, "Ana", "Ortega", "Paredes", "5902212", "AnOrPa@example.com"));
+    }
+    private void createDrugs(){
+        // Create and save drug 1
+        drugRepository.save(new Drug("Felimazole", 150000.0));
+        // Create and save drug 2
+        drugRepository.save(new Drug("FurVitality", 120000.0));
+        // Create and save drug 3
+        drugRepository.save(new Drug("PawPain Away", 190000.0));
+        // Create and save drug 4
+        drugRepository.save(new Drug("WhiskerWellness", 100000.0));
+        // Create and save drug 5
+        drugRepository.save(new Drug("Purrfect Health", 140000.0));
+        // Create and save drug 6
+        drugRepository.save(new Drug("CanineCare Capsules", 220000.0));
+        // Create and save drug 7
+        drugRepository.save(new Drug("MeowMend", 180000.0));
+        // Create and save drug 8
+        drugRepository.save(new Drug("PawPrint Pain Relief", 160000.0));
+        // Create and save drug 9
+        drugRepository.save(new Drug("FishOil Feline", 130000.0));
+        // Create and save drug 10
+        drugRepository.save(new Drug("DoggyDigest", 240000.0));
+        // Create and save drug 11
+        drugRepository.save(new Drug("KittyCalm Drops", 90000.0));
+        // Create and save drug 12
+        drugRepository.save(new Drug("BoneBuilder Bites", 210000.0));
+        // Create and save drug 13
+        drugRepository.save(new Drug("PetPeppy Probiotics", 170000.0));
+        // Create and save drug 14
+        drugRepository.save(new Drug("WhiskerWonder Elixir", 110000.0));
+        // Create and save drug 15
+        drugRepository.save(new Drug("FidoFiber Chews", 200000.0));
+        // Create and save drug 16
+        drugRepository.save(new Drug("PawSoothe Salve", 140000.0));
+        // Create and save drug 17
+        drugRepository.save(new Drug("FeatheredFriend Focus", 80000.0));
+        // Create and save drug 18
+        drugRepository.save(new Drug("PuppyPlaque Prevent", 190000.0));
+        // Create and save drug 19
+        drugRepository.save(new Drug("K-9 Joint Support", 230000.0));
+        // Create and save drug 20
+        drugRepository.save(new Drug("Hairball Helper", 120000.0));
+    }
+    private void createTreatments(){
+        // Create and save treatment 1
+        treatmentRepository.save(new Treatment(LocalDate.of(2023, 9, 20)));
+        // Create and save treatment 2
+        treatmentRepository.save(new Treatment(LocalDate.of(2020, 3, 15)));
+        // Create and save treatment 3
+        treatmentRepository.save(new Treatment(LocalDate.of(2021, 5, 10)));
+        // Create and save treatment 4
+        treatmentRepository.save(new Treatment(LocalDate.of(2022, 7, 25)));
+        // Create and save treatment 5
+        treatmentRepository.save(new Treatment(LocalDate.of(2022, 9, 1)));
+        // Create and save treatment 6
+        treatmentRepository.save(new Treatment(LocalDate.of(2021, 11, 8)));
+        // Create and save treatment 7
+        treatmentRepository.save(new Treatment(LocalDate.of(2020, 2, 12)));
+        // Create and save treatment 8
+        treatmentRepository.save(new Treatment(LocalDate.of(2019, 4, 6)));
+        // Create and save treatment 9
+        treatmentRepository.save(new Treatment(LocalDate.of(2020, 6, 19)));
+        // Create and save treatment 10
+        treatmentRepository.save(new Treatment(LocalDate.of(2023, 8, 27)));
     }
 }
