@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -20,7 +21,7 @@ public class OwnerService implements CrudService<Owner, Long> {
     }
 
     @Override
-    public Collection<Owner> findAll() {
+    public List<Owner> findAll() {
         return Optional.of(repository.findAll()).get();
     }
 

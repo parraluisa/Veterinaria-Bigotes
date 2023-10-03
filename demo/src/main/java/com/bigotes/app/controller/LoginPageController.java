@@ -23,11 +23,6 @@ public class LoginPageController {
     @Autowired
     VeterinarianService veterinarianService;
 
-    @GetMapping("/show")
-    public String showLogin() {
-        return "login_page";
-    }
-
     @PostMapping("/owner")
     public String loginOwner(@RequestParam("idCardOwner") Long idCardOwner) {
         Owner owner = ownerService.findByIdCard(idCardOwner);
