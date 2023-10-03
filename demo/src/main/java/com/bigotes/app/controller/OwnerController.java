@@ -10,6 +10,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
+import java.util.List;
+
 @Controller
 @RequestMapping("/owner")
 public class OwnerController {
@@ -18,11 +21,11 @@ public class OwnerController {
     OwnerService ownerService;
     @Autowired
     PetService petService;
+
     // http://localhost:8090/owner/all
     @GetMapping("/all")
-    public String showAllOwners(Model model) {
-        model.addAttribute("owners", ownerService.findAll());
-        return "owner_pages/show_all_owners";
+    public Collection<Owner> showAllOwners() {
+        return ownerService.findAll();
     }
 
     // http://localhost:8090/owner/find/1
@@ -43,34 +46,23 @@ public class OwnerController {
         return "redirect:/owner/all";
     }
     // http://localhost:8090/owner/add
-    @GetMapping("/add")
-    public String insertOwner(Model model) {
-        Owner owner = new Owner();
-        model.addAttribute("owner", owner);
-        return "owner_pages/save_owner";
+    @PostMapping("/add")
+    public void insertOwner(@RequestBody Owner owner) {
+        ownerService.save(owner);
     }
+
     // http://localhost:8090/owner/upd/1
-    @GetMapping("/upd/{id}")
-    public String updateOwner(Model model, @PathVariable("id") Long id) {
-        Owner owner = ownerService.findById(id);
-        if (owner != null) {
-            model.addAttribute("owner", owner);
-        } else {
-            throw new NotFoundException();
-        }
-        return "owner_pages/save_owner";
+    @PutMapping("/upd/{id}")
+    public void updateOwner(@RequestBody Owner owner, @PathVariable("id") Long id) {
+        ownerService.save(owner);
     }
+
     // http://localhost:8090/owner/del/1
-    @GetMapping("/del/{id}")
-    public String deleteOwner(@PathVariable("id") Long id) {
-        Owner owner = ownerService.findById(id);
-        if (owner != null) {
-            ownerService.deleteById(id);
-        } else {
-            throw new NotFoundException();
-        }
-        return "redirect:/owner/all";
+    @DeleteMapping("/del/{id}")
+    public void deleteOwner(@PathVariable("id") Long id) {
+        ownerService.deleteById(id);
     }
+
     // http://localhost:8090/owner/login
     @GetMapping("/login")
     public String showLogin(Model model) {

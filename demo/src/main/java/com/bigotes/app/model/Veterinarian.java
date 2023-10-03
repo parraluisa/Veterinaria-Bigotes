@@ -1,5 +1,6 @@
 package com.bigotes.app.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -35,6 +36,7 @@ public class Veterinarian {
     @Nonnull
     private String imgUrl;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "veterinarian")
     private List<Treatment> treatments = new ArrayList<>();
 
