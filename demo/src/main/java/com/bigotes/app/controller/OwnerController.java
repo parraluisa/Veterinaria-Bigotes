@@ -10,6 +10,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
+import java.util.List;
+
 @Controller
 @RequestMapping("/owner")
 public class OwnerController {
@@ -18,14 +21,14 @@ public class OwnerController {
     OwnerService ownerService;
     @Autowired
     PetService petService;
+
     // http://localhost:8090/owner/all
     @GetMapping("/all")
-    public String showAllOwners(Model model) {
-        model.addAttribute("owners", ownerService.findAll());
-        return "owner_pages/show_all_owners";
+    public Collection<Owner> showAllOwners() {
+        return ownerService.findAll();
     }
 
-    // http://localhost:8090/owner/find/{ownerId}
+    // http://localhost:8090/owner/find/1
     @GetMapping("/find/{id}")
     public String showOwner(Model model, @PathVariable("id") Long id) {
         Owner owner = ownerService.findById(id);
@@ -43,46 +46,51 @@ public class OwnerController {
         return "redirect:/owner/all";
     }
     // http://localhost:8090/owner/add
-    @GetMapping("/add")
-    public String insertOwner(Model model) {
-        Owner owner = new Owner();
-        model.addAttribute("owner", owner);
-        return "owner_pages/save_owner";
+    @PostMapping("/add")
+    public void insertOwner(@RequestBody Owner owner) {
+        ownerService.save(owner);
     }
-    // http://localhost:8090/owner/upd/{ownerId}
-    @GetMapping("/upd/{id}")
-    public String updateOwner(Model model, @PathVariable("id") Long id) {
-        Owner owner = ownerService.findById(id);
+
+    // http://localhost:8090/owner/upd/1
+    @PutMapping("/upd/{id}")
+    public void updateOwner(@RequestBody Owner owner, @PathVariable("id") Long id) {
+        ownerService.save(owner);
+    }
+
+    // http://localhost:8090/owner/del/1
+    @DeleteMapping("/del/{id}")
+    public void deleteOwner(@PathVariable("id") Long id) {
+        ownerService.deleteById(id);
+    }
+
+    // http://localhost:8090/owner/login
+    @GetMapping("/login")
+    public String showLogin(Model model) {
+        Integer idCard = 0;
+        model.addAttribute("idCard", idCard);
+        return "login_page";
+    }
+    // http://localhost:8090/owner/login
+    @PostMapping("/login")
+    public String login(@RequestParam("idCard") Long idCard) {
+        Owner owner = ownerService.findByIdCard(idCard);
         if (owner != null) {
-            model.addAttribute("owner", owner);
+            return "redirect:/owner/pets/" + owner.getId();
         } else {
-            throw new NotFoundException();
+            return "redirect:/owner/login?error=idNotFound";
         }
-        return "owner_pages/save_owner";
     }
-    // http://localhost:8090/owner/del/{ownerId}
-    @GetMapping("/del/{id}")
-    public String deleteOwner(@PathVariable("id") Long id) {
-        Owner owner = ownerService.findById(id);
-        if (owner != null) {
-            ownerService.deleteById(id);
-        } else {
-            throw new NotFoundException();
-        }
-        return "redirect:/owner/all";
-    }
-    // http://localhost:8090/owner/pets/{ownerId}
+    // http://localhost:8090/owner/pets/1
     @GetMapping("/pets/{id}")
     public String showOwnerPets(Model model, @PathVariable("id") Long id){
         model.addAttribute("pets", petService.findByOwnerId(id));
         return "owner_pages/owner_pets";
     }
 
-    // http://localhost:8090/owner/pet/find/{petId}
+    // http://localhost:8090/owner/pet/find/1
     @GetMapping("/pet/find/{id}")
     public String showOwnerPet(Model model, @PathVariable("id") Long id){
         Pet pet = petService.findById(id);
-        System.out.println(id);
         if (pet != null) {
             model.addAttribute("pet", pet);
         } else {
@@ -90,7 +98,7 @@ public class OwnerController {
         }
         return "owner_pages/owner_pet";
     }
-    //localhost:8090/owner/find/pets/{ownerId}
+    //localhost:8090/owner/find/pets/1
     @GetMapping("/find/pets/{id}")
     public String showAllPetsByOwner(Model model, @PathVariable("id") Long id){
         //Obtenr todas las mascotas del dueño y luego mostrarlas en la vista
