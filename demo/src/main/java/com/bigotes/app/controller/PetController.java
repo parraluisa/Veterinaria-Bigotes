@@ -1,38 +1,31 @@
 package com.bigotes.app.controller;
 
-import com.bigotes.app.exception.NotFoundException;
-import com.bigotes.app.model.Owner;
 import com.bigotes.app.model.Pet;
-import com.bigotes.app.service.OwnerService;
 import com.bigotes.app.service.PetService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 
 
 @RestController
 @RequestMapping("/pet")
+@CrossOrigin(origins = "http://localhost:4200")
 public class PetController {
 
     @Autowired
     private PetService petService;
-
-    @Autowired
-    private OwnerService ownerService;
     
     // http://localhost:8090/pet
     @GetMapping()
-    public List<Pet> showAllPets(Model model){
+    public List<Pet> showAllPets(){
         return petService.findAll();
     }
 
     // http://localhost:8090/pet/{petId}
     @GetMapping("/{id}")
-    public Pet showPet(Model model, @PathVariable("id") Long id) {
+    public Pet showPet(@PathVariable("id") Long id) {
         return petService.findById(id);
     }
 
