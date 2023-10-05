@@ -11,11 +11,21 @@ import com.bigotes.app.repository.PetRepository;
 import com.bigotes.app.repository.TreatmentRepository;
 import com.bigotes.app.repository.VeterinarianRepository;
 import jakarta.transaction.Transactional;
+
+import org.apache.poi.ss.*;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Controller;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.time.LocalDate;
 import java.util.Random;
 
@@ -633,46 +643,33 @@ public class DbController implements ApplicationRunner {
         ownerRepository.save(new Owner(646094641L, "Ana", "Ortega", "Paredes", "5902212", "AnOrPa@example.com"));
     }
     private void createDrugs(){
-        // Create and save drug 1
-        drugRepository.save(new Drug("Felimazole", 150000.0));
-        // Create and save drug 2
-        drugRepository.save(new Drug("Famciclovir", 120000.0));
-        // Create and save drug 3
-        drugRepository.save(new Drug("PawPain Away", 190000.0));
-        // Create and save drug 4
-        drugRepository.save(new Drug("WhiskerWellness", 100000.0));
-        // Create and save drug 5
-        drugRepository.save(new Drug("Purrfect Health", 140000.0));
-        // Create and save drug 6
-        drugRepository.save(new Drug("CanineCare Capsules", 220000.0));
-        // Create and save drug 7
-        drugRepository.save(new Drug("MeowMend", 180000.0));
-        // Create and save drug 8
-        drugRepository.save(new Drug("PawPrint Pain Relief", 160000.0));
-        // Create and save drug 9
-        drugRepository.save(new Drug("FishOil Feline", 130000.0));
-        // Create and save drug 10
-        drugRepository.save(new Drug("DoggyDigest", 240000.0));
-        // Create and save drug 11
-        drugRepository.save(new Drug("KittyCalm Drops", 90000.0));
-        // Create and save drug 12
-        drugRepository.save(new Drug("BoneBuilder Bites", 210000.0));
-        // Create and save drug 13
-        drugRepository.save(new Drug("PetPeppy Probiotics", 170000.0));
-        // Create and save drug 14
-        drugRepository.save(new Drug("WhiskerWonder Elixir", 110000.0));
-        // Create and save drug 15
-        drugRepository.save(new Drug("FidoFiber Chews", 200000.0));
-        // Create and save drug 16
-        drugRepository.save(new Drug("PawSoothe Salve", 140000.0));
-        // Create and save drug 17
-        drugRepository.save(new Drug("FeatheredFriend Focus", 80000.0));
-        // Create and save drug 18
-        drugRepository.save(new Drug("PuppyPlaque Prevent", 190000.0));
-        // Create and save drug 19
-        drugRepository.save(new Drug("K-9 Joint Support", 230000.0));
-        // Create and save drug 20
-        drugRepository.save(new Drug("Hairball Helper", 120000.0));
+        try {
+            InputStream file = getClass().getClassLoader().getResourceAsStream("MEDICAMENTOS_VETERINARIA.xlsx");
+           // FileInputStream file = new FileInputStream(new File("/resources/MEDICAMENTOS_VETERINARIA.xlsx"));
+            Workbook workbook = new XSSFWorkbook(file);
+            Sheet sheet = workbook.getSheet("MEDICAMENTOS BD FINAL");
+            for(int rowIndex =1; rowIndex <= sheet.getLastRowNum(); rowIndex++){
+                Row row = sheet.getRow(rowIndex);
+                if(row != null){
+                    Drug drug = new Drug();
+                    drug.setName(row.getCell(0).getStringCellValue());
+                    drug.setSellPrice((float) row.getCell(1).getNumericCellValue());
+                    drug.setBuyPrice((float) row.getCell(2).getNumericCellValue());
+                    drug.setItemsAvailable((int) row.getCell(3).getNumericCellValue());
+                    drug.setItemsSell((int) row.getCell(4).getNumericCellValue());
+                    drugRepository.save(drug);
+                }
+            }
+
+            if(workbook != null){
+                workbook.close();
+            }
+            file.close();
+        } catch (IOException e) {
+            // TODO: handle exception
+            e.printStackTrace();
+        }
+
     }
     private void createTreatments(){
         // Create and save treatment 1

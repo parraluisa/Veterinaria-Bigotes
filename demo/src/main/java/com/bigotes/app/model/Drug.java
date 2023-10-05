@@ -7,6 +7,8 @@ import lombok.Data;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.micrometer.common.lang.NonNull;
+
 @Data
 @Entity
 public class Drug {
@@ -20,7 +22,16 @@ public class Drug {
     private String name;
 
     @Nonnull
-    private Double price;
+    private float buyPrice;
+
+    @NonNull
+    private float sellPrice;
+
+    @NonNull
+    private int itemsAvailable;
+
+    @NonNull
+    private int itemsSell;
 
     @OneToMany(mappedBy = "drug")
     private List<Treatment> treatments = new ArrayList<>();
@@ -31,9 +42,15 @@ public class Drug {
 
     public Drug(
             @Nonnull String name,
-            @Nonnull Double price
+            @Nonnull float buyPrice,
+            @Nonnull float sellPrice,
+            @Nonnull int itemsAvailable,
+            @Nonnull int itemsSell
     ) {
         this.name = name;
-        this.price = price;
+        this.buyPrice = buyPrice;
+        this.sellPrice = sellPrice;
+        this.itemsAvailable = itemsAvailable;
+        this.itemsSell = itemsSell;
     }
 }
