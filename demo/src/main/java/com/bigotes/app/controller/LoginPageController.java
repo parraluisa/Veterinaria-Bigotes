@@ -20,8 +20,8 @@ public class LoginPageController {
     @Autowired
     VeterinarianService veterinarianService;
 
-    @PostMapping("/owner")
-    public Owner loginOwner(@RequestParam("idCardOwner") Long idCardOwner) {
+    @GetMapping("/owner/{idCardOwner}")
+    public Owner loginOwner(@PathVariable("idCardOwner") Long idCardOwner) {
         return ownerService.findByIdCard(idCardOwner);
     }
 
