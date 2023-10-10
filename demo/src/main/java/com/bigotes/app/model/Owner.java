@@ -54,4 +54,7 @@ public class Owner {
         this.phone = phone;
         this.email = email;
     }
+    public Owner orElse(Object object) {
+        return null;
+    }
 }

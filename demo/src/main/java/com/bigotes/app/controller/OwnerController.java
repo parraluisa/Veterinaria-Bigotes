@@ -30,6 +30,13 @@ public class OwnerController {
         return ownerService.findById(id);
     }
 
+    // http://localhost:8090/owner/pet/{petId}
+    @GetMapping("/pet/{petId}")
+    public Owner getOwnerByPetId(@PathVariable("petId") Long petId) {
+        // Lógica para obtener el propietario por ID de mascota
+        return ownerService.findOwnerByPetId(petId);
+    }
+
     // http://localhost:8090/owner
     @PostMapping()
     public void insertOwner(@RequestBody Owner owner) {
