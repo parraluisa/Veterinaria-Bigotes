@@ -1,5 +1,6 @@
 package com.bigotes.app.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
@@ -38,10 +39,12 @@ public class Pet {
     @Nonnull
     private String status;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "owner_id")
     private Owner owner;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "pet")
     private List<Treatment> treatments = new ArrayList<>();
 

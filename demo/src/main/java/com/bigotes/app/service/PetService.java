@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.List;
 
 @Service
 public class PetService implements CrudService<Pet, Long> {
@@ -19,7 +20,7 @@ public class PetService implements CrudService<Pet, Long> {
     }
 
     @Override
-    public Collection<Pet> findAll() {
+    public List<Pet> findAll() {
         return repository.findAll();
     }
 
@@ -33,7 +34,7 @@ public class PetService implements CrudService<Pet, Long> {
         repository.save(pet);
     }
 
-    public Collection<Pet> findByOwnerId(Long ownerId) {
+    public List<Pet> findByOwnerId(Long ownerId) {
         return repository.findByOwnerId(ownerId);
     }
 }
