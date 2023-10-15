@@ -12,7 +12,6 @@ import com.bigotes.app.repository.TreatmentRepository;
 import com.bigotes.app.repository.VeterinarianRepository;
 import jakarta.transaction.Transactional;
 
-import org.apache.poi.ss.*;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -22,8 +21,6 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Controller;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.time.LocalDate;
