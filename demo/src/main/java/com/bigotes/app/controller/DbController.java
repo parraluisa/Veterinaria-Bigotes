@@ -434,7 +434,7 @@ public class DbController implements ApplicationRunner {
         // Create owner 1
         ownerRepository.save(new Owner(1001298925L, "Esteban", "Gómez", "Buitrago", "3116721345", "esteban.buitrago@gmail.com"));
         // Create owner 2
-        ownerRepository.save(new Owner(234567890L, "Jane", "Smith", "Doe", "5555678", "jane.smith@example.com"));
+        ownerRepository.save(new Owner(1234567890L, "Jane", "Smith", "Doe", "5555678", "jane.smith@example.com"));
         // Create owner 3
         ownerRepository.save(new Owner(345678901L, "Juan", "Perez", "Perez", "5551784", "jupe@gmail.com"));
         // Create owner 4

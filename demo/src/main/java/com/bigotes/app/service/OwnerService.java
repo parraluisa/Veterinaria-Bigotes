@@ -5,7 +5,6 @@ import com.bigotes.app.repository.OwnerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -30,7 +29,6 @@ public class OwnerService implements CrudService<Owner, Long> {
         repository.deleteById(id);
     }
 
-
     @Override
     public void save(Owner Owner) {
         repository.save(Owner);
@@ -43,5 +41,8 @@ public class OwnerService implements CrudService<Owner, Long> {
     public Owner findOwnerByPetId(Long id) {
         return repository.findOwnerByPets_Id(id);
     }
-    
+
+    public boolean existsByIdCard(Long idCard) {
+        return repository.existsByIdCard(idCard);
+    }
 }
