@@ -45,4 +45,12 @@ public class OwnerService implements CrudService<Owner, Long> {
     public boolean existsByIdCard(Long idCard) {
         return repository.existsByIdCard(idCard);
     }
+
+    public boolean existsByEmail(String email) {
+        return repository.existsByEmail(email);
+    }
+
+    public boolean existsByPhone(String phone) {
+        return repository.existsByPhone(phone);
+    }
 }
