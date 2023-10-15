@@ -55,9 +55,21 @@ public class OwnerController {
         ownerService.deleteById(id);
     }
 
-    // http://localhost:8090/owner/exists/{idCard}
-    @GetMapping("/exists/{idCard}")
-    public boolean ownerExists(@PathVariable("idCard") Long idCard) {
+    // http://localhost:8090/owner/exists/idCard/{idCard}
+    @GetMapping("/exists/idCard/{idCard}")
+    public boolean ownerExistsByIdCard(@PathVariable("idCard") Long idCard) {
         return ownerService.existsByIdCard(idCard);
+    }
+
+    // http://localhost:8090/owner/exists/email/{email}
+    @GetMapping("/exists/email/{email}")
+    public boolean ownerExistsByEmail(@PathVariable("email") String email) {
+        return ownerService.existsByEmail(email);
+    }
+
+    // http://localhost:8090/owner/exists/phone/{phone}
+    @GetMapping("/exists/phone/{phone}")
+    public boolean ownerExistsByPhone(@PathVariable("phone") String phone) {
+        return ownerService.existsByPhone(phone);
     }
 }

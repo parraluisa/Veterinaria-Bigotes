@@ -9,4 +9,6 @@ public interface OwnerRepository extends JpaRepository<Owner, Long> {
     Owner findByIdCard(Long idCard);
     Owner findOwnerByPets_Id(Long petId);
     boolean existsByIdCard(Long idCard);
+    boolean existsByEmail(String email);
+    boolean existsByPhone(String phone);
 }
