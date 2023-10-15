@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.bigotes.app.model.Drug;
 import com.bigotes.app.repository.DrugRepository;
 
+@Service
 public class DrugService implements CrudService<Drug, Long> {
 
     @Autowired
