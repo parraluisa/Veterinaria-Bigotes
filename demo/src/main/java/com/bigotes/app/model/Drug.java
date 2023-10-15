@@ -38,4 +38,6 @@ public class Drug {
         this.name = name;
         this.price = price;
     }
+
+    
 }

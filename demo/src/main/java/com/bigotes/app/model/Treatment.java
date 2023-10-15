@@ -40,8 +40,10 @@ public class Treatment {
     }
 
     public Treatment(
-            @Nonnull LocalDate date
+            @Nonnull LocalDate date,
+            @Nonnull String descriptioString
     ) {
         this.date = date;
+        this.description = descriptioString;
     }
 }

@@ -11,11 +11,21 @@ import com.bigotes.app.repository.PetRepository;
 import com.bigotes.app.repository.TreatmentRepository;
 import com.bigotes.app.repository.VeterinarianRepository;
 import jakarta.transaction.Transactional;
+
+import org.apache.poi.ss.*;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Controller;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.time.LocalDate;
 import java.util.Random;
 
@@ -130,7 +140,7 @@ public class DbController implements ApplicationRunner {
         // Crear mascota 1
         petRepository.save(new Pet("Pompita", "British Shorthair", LocalDate.of(2015, 2, 12), 824.65, "Hipotiroidismo", "https://catinaflat.blog/wp-content/uploads/2022/03/british-shorthair-1.jpg"));
         // Crear mascota 2
-        petRepository.save(new Pet("Fifi", "Abisinio", LocalDate.of(2023, 7, 24), 200.00, "Tumores mamarios", "https://images.pexels.com/photos/866496/pexels-photo-866496.jpeg?auto=compress&cs=tinysrgb&w=600"));
+        petRepository.save(new Pet("Fifi", "Abisinio", LocalDate.of(2023, 7, 24), 200.00, "rinotraqueítis felina", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.vBdcyqdY0z6igk5tfrflTQHaHa%26pid%3DApi&f=1&ipt=9a4ae16ea2d8f1a780e82c8a1ccbdbd022e6cfd3d22a02b712097477650fd6ac&ipo=images"));
         // Crear mascota 3
         petRepository.save(new Pet("Mimosa", "Maine Coon", LocalDate.of(2020, 4, 15), 4065.82, "Conjuntivitis", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.Dg-lJLyICJTPKLDcKOuYtgHaEo%26pid%3DApi&f=1&ipt=74cb2a44995bd708e41b783acc38bbe08949fdf0f140e082347bd5ab5efa6dd6&ipo=images"));
         // Crear mascota 4
@@ -633,67 +643,54 @@ public class DbController implements ApplicationRunner {
         ownerRepository.save(new Owner(646094641L, "Ana", "Ortega", "Paredes", "5902212", "AnOrPa@example.com"));
     }
     private void createDrugs(){
-        // Create and save drug 1
-        drugRepository.save(new Drug("Felimazole", 150000.0));
-        // Create and save drug 2
-        drugRepository.save(new Drug("FurVitality", 120000.0));
-        // Create and save drug 3
-        drugRepository.save(new Drug("PawPain Away", 190000.0));
-        // Create and save drug 4
-        drugRepository.save(new Drug("WhiskerWellness", 100000.0));
-        // Create and save drug 5
-        drugRepository.save(new Drug("Purrfect Health", 140000.0));
-        // Create and save drug 6
-        drugRepository.save(new Drug("CanineCare Capsules", 220000.0));
-        // Create and save drug 7
-        drugRepository.save(new Drug("MeowMend", 180000.0));
-        // Create and save drug 8
-        drugRepository.save(new Drug("PawPrint Pain Relief", 160000.0));
-        // Create and save drug 9
-        drugRepository.save(new Drug("FishOil Feline", 130000.0));
-        // Create and save drug 10
-        drugRepository.save(new Drug("DoggyDigest", 240000.0));
-        // Create and save drug 11
-        drugRepository.save(new Drug("KittyCalm Drops", 90000.0));
-        // Create and save drug 12
-        drugRepository.save(new Drug("BoneBuilder Bites", 210000.0));
-        // Create and save drug 13
-        drugRepository.save(new Drug("PetPeppy Probiotics", 170000.0));
-        // Create and save drug 14
-        drugRepository.save(new Drug("WhiskerWonder Elixir", 110000.0));
-        // Create and save drug 15
-        drugRepository.save(new Drug("FidoFiber Chews", 200000.0));
-        // Create and save drug 16
-        drugRepository.save(new Drug("PawSoothe Salve", 140000.0));
-        // Create and save drug 17
-        drugRepository.save(new Drug("FeatheredFriend Focus", 80000.0));
-        // Create and save drug 18
-        drugRepository.save(new Drug("PuppyPlaque Prevent", 190000.0));
-        // Create and save drug 19
-        drugRepository.save(new Drug("K-9 Joint Support", 230000.0));
-        // Create and save drug 20
-        drugRepository.save(new Drug("Hairball Helper", 120000.0));
+        try {
+            InputStream file = getClass().getClassLoader().getResourceAsStream("MEDICAMENTOS_VETERINARIA.xlsx");
+           // FileInputStream file = new FileInputStream(new File("/resources/MEDICAMENTOS_VETERINARIA.xlsx"));
+            Workbook workbook = new XSSFWorkbook(file);
+            Sheet sheet = workbook.getSheet("MEDICAMENTOS BD FINAL");
+            for(int rowIndex =1; rowIndex <= sheet.getLastRowNum(); rowIndex++){
+                Row row = sheet.getRow(rowIndex);
+                if(row != null){
+                    Drug drug = new Drug();
+                    drug.setName(row.getCell(0).getStringCellValue());
+                    drug.setSellPrice((float) row.getCell(1).getNumericCellValue());
+                    drug.setBuyPrice((float) row.getCell(2).getNumericCellValue());
+                    drug.setItemsAvailable((int) row.getCell(3).getNumericCellValue());
+                    drug.setItemsSell((int) row.getCell(4).getNumericCellValue());
+                    drugRepository.save(drug);
+                }
+            }
+
+            if(workbook != null){
+                workbook.close();
+            }
+            file.close();
+        } catch (IOException e) {
+            // TODO: handle exception
+            e.printStackTrace();
+        }
+
     }
     private void createTreatments(){
         // Create and save treatment 1
-        treatmentRepository.save(new Treatment(LocalDate.of(2023, 9, 20)));
+        treatmentRepository.save(new Treatment(LocalDate.of(2023, 9, 20),  "Se le dió al felino el primer comprimido de FELIMAZOLE, revisión dentro de 12 horas."));
         // Create and save treatment 2
-        treatmentRepository.save(new Treatment(LocalDate.of(2020, 3, 15)));
+        treatmentRepository.save(new Treatment(LocalDate.of(2023, 9, 28), "Se administró Famciclovir para tratar la rinotraqueítis felina. Se realizará un seguimiento en 24 horas.") );
         // Create and save treatment 3
-        treatmentRepository.save(new Treatment(LocalDate.of(2021, 5, 10)));
+        treatmentRepository.save(new Treatment(LocalDate.of(2021, 5, 10), "Se aplicó PawPain Away al gato para aliviar el dolor en las patas. Revisión dentro de 12 horas para evaluar el alivio del dolor."));
         // Create and save treatment 4
-        treatmentRepository.save(new Treatment(LocalDate.of(2022, 7, 25)));
+        treatmentRepository.save(new Treatment(LocalDate.of(2022, 7, 25), "Se suministró WhiskerWellness al gato para mejorar su bienestar general y salud. Próxima revisión en 24 horas."));
         // Create and save treatment 5
-        treatmentRepository.save(new Treatment(LocalDate.of(2022, 9, 1)));
+        treatmentRepository.save(new Treatment(LocalDate.of(2022, 9, 1), "Se administró Purrfect Health para mantener la salud óptima del gato. Se evaluarán los resultados en 24 horas."));
         // Create and save treatment 6
-        treatmentRepository.save(new Treatment(LocalDate.of(2021, 11, 8)));
+        treatmentRepository.save(new Treatment(LocalDate.of(2021, 11, 8), "Se dio MeowMend al gato para ayudar en la recuperación de heridas o lesiones. Próxima revisión en 12 horas."));
         // Create and save treatment 7
-        treatmentRepository.save(new Treatment(LocalDate.of(2020, 2, 12)));
+        treatmentRepository.save(new Treatment(LocalDate.of(2020, 2, 12), "Se administró PawPrint Pain Relief para aliviar el dolor del gato. Revisión dentro de 12 horas para evaluar la eficacia."));
         // Create and save treatment 8
-        treatmentRepository.save(new Treatment(LocalDate.of(2019, 4, 6)));
+        treatmentRepository.save(new Treatment(LocalDate.of(2019, 4, 6), "Se administró FishOil Feline para promover la salud cardiovascular y del pelaje en el gato. Se evaluará su progreso en 24 horas."));
         // Create and save treatment 9
-        treatmentRepository.save(new Treatment(LocalDate.of(2020, 6, 19)));
+        treatmentRepository.save(new Treatment(LocalDate.of(2020, 6, 19), "Se administraron KittyCalm Drops al gato para reducir la ansiedad y el estrés. Próxima revisión en 12 horas."));
         // Create and save treatment 10
-        treatmentRepository.save(new Treatment(LocalDate.of(2023, 8, 27)));
+        treatmentRepository.save(new Treatment(LocalDate.of(2023, 8, 27), "Se aplicó WhiskerWonder Elixir al gato para mejorar su bienestar general y vitalidad. Revisión en 24 horas para evaluar su efectividad."));
     }
 }
