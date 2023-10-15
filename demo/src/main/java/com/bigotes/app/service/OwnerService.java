@@ -29,7 +29,6 @@ public class OwnerService implements CrudService<Owner, Long> {
         repository.deleteById(id);
     }
 
-
     @Override
     public void save(Owner Owner) {
         repository.save(Owner);
@@ -42,5 +41,8 @@ public class OwnerService implements CrudService<Owner, Long> {
     public Owner findOwnerByPetId(Long id) {
         return repository.findOwnerByPets_Id(id);
     }
-    
+
+    public boolean existsByIdCard(Long idCard) {
+        return repository.existsByIdCard(idCard);
+    }
 }

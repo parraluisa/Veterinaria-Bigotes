@@ -37,4 +37,8 @@ public class VeterinarianService implements CrudService<Veterinarian, Long>{
     public Veterinarian findByIdCard(Long idCard) {
         return repository.findByIdCard(idCard);
     }
+
+    public boolean existsByIdCard(Long idCard) {
+        return repository.existsByIdCard(idCard);
+    }
 }

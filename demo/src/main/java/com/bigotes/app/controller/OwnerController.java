@@ -54,4 +54,10 @@ public class OwnerController {
     public void deleteOwner(@PathVariable("id") Long id) {
         ownerService.deleteById(id);
     }
+
+    // http://localhost:8090/owner/exists/{idCard}
+    @GetMapping("/exists/{idCard}")
+    public boolean ownerExists(@PathVariable("idCard") Long idCard) {
+        return ownerService.existsByIdCard(idCard);
+    }
 }

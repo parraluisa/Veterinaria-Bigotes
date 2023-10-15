@@ -1,20 +1,11 @@
 package com.bigotes.app.controller;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
 import com.bigotes.app.model.Veterinarian;
 import com.bigotes.app.service.VeterinarianService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/vet")
@@ -52,5 +43,11 @@ public class VetController {
     @DeleteMapping("/{id}")
     public void deletePet(@PathVariable("id") Long id) {
         veterinarianService.deleteById(id);
+    }
+
+    // http://localhost:8090/vet/exists/{vetId}
+    @GetMapping("/exists/{idCard}")
+    public boolean vetExists(@PathVariable("idCard") Long idCard) {
+        return veterinarianService.existsByIdCard(idCard);
     }
 }
