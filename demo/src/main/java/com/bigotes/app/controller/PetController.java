@@ -3,7 +3,6 @@ package com.bigotes.app.controller;
 import com.bigotes.app.model.Pet;
 import com.bigotes.app.service.PetService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

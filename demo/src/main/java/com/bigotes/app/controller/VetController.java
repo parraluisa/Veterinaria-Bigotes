@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bigotes.app.model.Pet;
 import com.bigotes.app.model.Veterinarian;
 import com.bigotes.app.service.VeterinarianService;
 
