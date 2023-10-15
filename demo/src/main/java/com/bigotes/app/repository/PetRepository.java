@@ -4,9 +4,9 @@ import com.bigotes.app.model.Pet;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Collection;
+import java.util.List;
 
 @Repository
 public interface PetRepository extends JpaRepository<Pet, Long> {
-    Collection<Pet> findByOwnerId(Long ownerId);
+    List<Pet> findByOwnerId(Long ownerId);
 }

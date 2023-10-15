@@ -1,5 +1,6 @@
 package com.bigotes.app.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -31,6 +32,7 @@ public class Owner {
     @Column(unique = true)
     private String email;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Pet> pets = new ArrayList<>();
 
@@ -51,5 +53,8 @@ public class Owner {
         this.secondLastName = secondLastName;
         this.phone = phone;
         this.email = email;
+    }
+    public Owner orElse(Object object) {
+        return null;
     }
 }

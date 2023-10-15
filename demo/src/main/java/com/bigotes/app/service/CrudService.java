@@ -1,10 +1,10 @@
 package com.bigotes.app.service;
 
-import java.util.Collection;
+import java.util.List;
 
 public interface CrudService<T, ID> {
     T findById(ID id);
-    Collection<T> findAll();
+    List<T> findAll();
     void deleteById(ID id);
     void save(T t);
 }
