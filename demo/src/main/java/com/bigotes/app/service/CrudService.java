@@ -1,6 +1,5 @@
 package com.bigotes.app.service;
 
-import java.util.Collection;
 import java.util.List;
 
 public interface CrudService<T, ID> {

@@ -39,9 +39,8 @@ public class Treatment {
 
     }
 
-    public Treatment(
-            @Nonnull LocalDate date
-    ) {
+    public Treatment( @Nonnull LocalDate date, @Nonnull String description) {
         this.date = date;
+        this.description = description;
     }
 }
