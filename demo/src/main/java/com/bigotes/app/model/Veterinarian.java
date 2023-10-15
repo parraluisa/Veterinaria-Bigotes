@@ -3,6 +3,7 @@ package com.bigotes.app.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 import java.util.ArrayList;
@@ -34,6 +35,7 @@ public class Veterinarian {
     private String speciality;
 
     @Nonnull
+    @Size(min = 10,max = 500)
     private String imgUrl;
 
     @JsonIgnore
