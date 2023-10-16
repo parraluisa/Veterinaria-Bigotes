@@ -72,4 +72,10 @@ public class OwnerController {
     public boolean ownerExistsByPhone(@PathVariable("phone") String phone) {
         return ownerService.existsByPhone(phone);
     }
+
+    // http://localhost:8090/owner/idCard/{idCard}
+    @GetMapping("/idCard/{idCard}")
+    public Owner getOwnerByIdCard(@PathVariable("idCard") Long idCard) {
+        return ownerService.findByIdCard(idCard);
+    }
 }
