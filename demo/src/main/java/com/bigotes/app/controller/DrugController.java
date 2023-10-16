@@ -79,5 +79,13 @@ public class DrugController {
         return drugService.calculateTotalProfits();
     }
 
+    // Dashboard No. 08
+    // Ganancias totales de la veterinaria
+    // http://localhost:8090/drug/top
+    @GetMapping("/top")
+    public List<Drug> findTop3BestSellingDrugs(){
+        return drugService.findTop3BestSellingDrugs();
+    }
+
 
 }

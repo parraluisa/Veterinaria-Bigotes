@@ -1,6 +1,5 @@
 package com.bigotes.app.service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -46,22 +45,4 @@ public class TreatmentService implements CrudService<Treatment, Long> {
     public Long countTotalTreatmentForCurrentMonth(){
         return repository.countTotalTreatmentForCurrentMonth();
     }
-
-    // Dashboard No. 09
-    // Top 3 tratamientos con más unidades vendidas
-    public List<Treatment> findTop3TreatmentsByUnitsSold() {
-    List<Treatment> top3Treatments = new ArrayList<>();
-
-    List<Object[]> top3TreatmentObjects = repository.findTop3TreatmentsByUnitsSold();
-    
-    if (top3TreatmentObjects != null) {
-        for (Object[] result : top3TreatmentObjects) {
-            Treatment treatment = (Treatment) result[0];
-            top3Treatments.add(treatment);
-        }
-    }
-    
-    return top3Treatments;
-    }
-    
 }

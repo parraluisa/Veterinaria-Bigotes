@@ -31,4 +31,12 @@ public interface DrugRepository extends JpaRepository<Drug, Long> {
     // Ganancias totales de la veterinaria
     @Query("SELECT SUM((d.sellPrice * d.itemsSell) - (d.buyPrice * d.itemsAvailable)) FROM Drug d")
     Float calculateTotalProfits();
+
+    // Dashboard No. 09
+    // Top 3 medicamentos con más unidades vendidas
+    @Query("SELECT d, SUM(d.itemsSell) AS totalUnitsSold " +
+    "FROM Drug d " +
+    "GROUP BY d " +
+    "ORDER BY totalUnitsSold DESC")
+    List<Object[]> findTop3BestSellingDrugs();
 }

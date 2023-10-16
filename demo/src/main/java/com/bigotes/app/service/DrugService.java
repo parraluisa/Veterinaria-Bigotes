@@ -1,5 +1,6 @@
 package com.bigotes.app.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -52,5 +53,24 @@ public class DrugService implements CrudService<Drug, Long> {
     // Ganancias totales de la veterinaria
     public Float calculateTotalProfits(){
         return repository.calculateTotalProfits();
-    } 
+    }
+
+    // Dashboard No. 09
+    // Top 3 medicamentos con más unidades vendidas
+    public List<Drug> findTop3BestSellingDrugs() {
+        List<Object[]> results = repository.findTop3BestSellingDrugs();
+
+        if (results.size() >= 3) {
+            results = results.subList(0, 3);
+        }
+
+        List<Drug> top3Drugs = new ArrayList<>();
+
+        for (Object[] result : results) {
+            Drug drug = (Drug) result[0];
+            top3Drugs.add(drug);
+        }
+
+        return top3Drugs;
+    }
 }
