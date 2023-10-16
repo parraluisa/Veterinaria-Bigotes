@@ -53,4 +53,19 @@ public class PetController {
     public List<Pet> showOwnerPet(@PathVariable("id") Long id){
         return petService.findByOwnerId(id);
     }
+
+    // Dashboard No. 05
+    // Cantidad de mascotas totales en la veterinaria
+    @GetMapping("/count/total")
+    public Long countTotalPets(){
+        return petService.countTotalPets();
+    }
+
+    // Dashboard No. 06
+    // Cantidad de mascotas activas (en tratamiento) en la veterinaria
+    @GetMapping("/count/ontreatment")
+    public Long countActivePets(){
+        return petService.countActivePets();
+    }
+
 }

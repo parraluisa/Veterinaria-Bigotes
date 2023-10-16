@@ -36,4 +36,16 @@ public class PetService implements CrudService<Pet, Long> {
     public List<Pet> findByOwnerId(Long ownerId) {
         return repository.findByOwnerId(ownerId);
     }
+
+    // Dashboard No. 05
+    // Cantidad de mascotas totales en la veterinaria
+    public Long countTotalPets(){
+        return repository.countTotalPets();
+    }
+
+    // Dashboard No. 06
+    // Cantidad de mascotas activas (en tratamiento) en la veterinaria
+    public Long countActivePets(){
+        return repository.countActivePets();
+    }
 }
