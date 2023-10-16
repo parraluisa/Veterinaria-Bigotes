@@ -25,10 +25,10 @@ public class LoginPageController {
         return ownerService.findByIdCard(idCardOwner);
     }
 
-    @PostMapping("/vet")
+    @GetMapping("/vet/{idCardVet}/{passwordVet}")
     public Veterinarian loginVet(
-            @RequestParam("idCardVet") Long idCardVet,
-            @RequestParam("passwordVet") String passwordVet
+            @PathVariable("idCardVet") Long idCardVet,
+            @PathVariable("passwordVet") String passwordVet
     ) {
         Veterinarian vet = veterinarianService.findByIdCard(idCardVet);
         if (vet != null && Objects.equals(vet.getPassword(), passwordVet)) {
@@ -36,4 +36,5 @@ public class LoginPageController {
         }
         return null;
     }
+
 }
