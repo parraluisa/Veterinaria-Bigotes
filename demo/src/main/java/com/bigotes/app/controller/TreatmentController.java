@@ -60,6 +60,7 @@ public class TreatmentController {
         treatmentService.deleteById(id);
     }
 
+    // Dashboard No. 01
     // http://localhost:8090/treatment/count
     @GetMapping("/count")
     public Long countTotalTreatmentForCurrentMonth() {

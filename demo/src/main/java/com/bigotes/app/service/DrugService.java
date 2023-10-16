@@ -34,4 +34,8 @@ public class DrugService implements CrudService<Drug, Long> {
     public void save(Drug drug) {
         repository.save(drug);
     }
+
+    public List<Object[]> countTreatmentsByDrugTypeLastMonth(){
+        return repository.countTreatmentsByDrugTypeLastMonth();
+    }
 }

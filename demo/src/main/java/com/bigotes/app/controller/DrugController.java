@@ -54,5 +54,11 @@ public class DrugController {
         drugService.deleteById(id);
     }
 
+    // Dashboard No. 02
+    @GetMapping("/treatmentbymonth")
+    public List<Object[]> countTreatmentsByDrugTypeLastMonth() {
+        return drugService.countTreatmentsByDrugTypeLastMonth();
+    }
+
 
 }
