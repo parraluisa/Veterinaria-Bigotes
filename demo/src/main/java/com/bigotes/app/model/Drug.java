@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.micrometer.common.lang.NonNull;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Data
 @Entity
@@ -32,7 +33,7 @@ public class Drug {
 
     @NonNull
     private int itemsSell;
-
+    @JsonIgnore
     @OneToMany(mappedBy = "drug")
     private List<Treatment> treatments = new ArrayList<>();
 
