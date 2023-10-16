@@ -18,4 +18,10 @@ public interface DrugRepository extends JpaRepository<Drug, Long> {
            "AND FUNCTION('MONTH', t.date) = FUNCTION('MONTH', CURRENT_DATE) " +
            "GROUP BY d.name")
     List<Object[]> countTreatmentsByDrugTypeLastMonth();
+
+    @Query("SELECT SUM(d.sellPrice * d.itemsSell) FROM Drug d")
+    Float calculateTotalSales();
+
+    @Query("SELECT SUM((d.sellPrice * d.itemsSell) - (d.buyPrice * d.itemsAvailable)) FROM Drug d")
+    Float calculateTotalProfits();
 }

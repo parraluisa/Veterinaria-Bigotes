@@ -60,5 +60,17 @@ public class DrugController {
         return drugService.countTreatmentsByDrugTypeLastMonth();
     }
 
+    // Dashboard No. 08
+    @GetMapping("/totalsales")
+    public Float calculateTotalSales() {
+        return drugService.calculateTotalSales();
+    }
+
+    // Dashboard No. 09
+    @GetMapping("/totalprofits")
+    public Float calculateTotalProfits(){
+        return drugService.calculateTotalProfits();
+    }
+
 
 }

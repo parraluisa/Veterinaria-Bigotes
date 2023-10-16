@@ -35,7 +35,18 @@ public class DrugService implements CrudService<Drug, Long> {
         repository.save(drug);
     }
 
+    // Dashboard No. 02
     public List<Object[]> countTreatmentsByDrugTypeLastMonth(){
         return repository.countTreatmentsByDrugTypeLastMonth();
     }
+
+    // Dashboard No. 08
+    public Float calculateTotalSales(){
+        return repository.calculateTotalSales();
+    } 
+
+    // Dashboard No. 09
+    public Float calculateTotalProfits(){
+        return repository.calculateTotalProfits();
+    } 
 }
