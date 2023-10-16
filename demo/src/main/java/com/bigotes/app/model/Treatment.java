@@ -20,17 +20,16 @@ public class Treatment {
 
     private String description;
 
-    @JsonIgnore
+
     @ManyToOne
     @JoinColumn(name = "pet_id")
     private Pet pet;
 
-    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "drug_id")
     private Drug drug;
 
-    @JsonIgnore
+    
     @ManyToOne
     @JoinColumn(name = "veterinarian_id")
     private Veterinarian veterinarian;
