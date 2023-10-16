@@ -59,5 +59,13 @@ public class TreatmentController {
     public void deleteTreatment(@PathVariable("id") Long id) {
         treatmentService.deleteById(id);
     }
+
+    // Dashboard No. 01
+    // Cantidad total de tratamiento administrados en el último mes
+    // http://localhost:8090/treatment/count
+    @GetMapping("/count")
+    public Long countTotalTreatmentForCurrentMonth() {
+        return treatmentService.countTotalTreatmentForCurrentMonth();
+    }
     
 }

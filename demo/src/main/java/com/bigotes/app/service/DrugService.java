@@ -34,4 +34,23 @@ public class DrugService implements CrudService<Drug, Long> {
     public void save(Drug drug) {
         repository.save(drug);
     }
+
+    // Dashboard No. 02
+    // Cantidad de tratamientos por tipo de medicamento administrado 
+    // en el último mes (tabla medicamento - cantidad)
+    public List<Object[]> countTreatmentsByDrugTypeLastMonth(){
+        return repository.countTreatmentsByDrugTypeLastMonth();
+    }
+
+    // Dashboard No. 07
+    // Ventas totales de la veterinaria
+    public Float calculateTotalSales(){
+        return repository.calculateTotalSales();
+    } 
+
+    // Dashboard No. 08
+    // Ganancias totales de la veterinaria
+    public Float calculateTotalProfits(){
+        return repository.calculateTotalProfits();
+    } 
 }

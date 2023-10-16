@@ -38,6 +38,9 @@ public class Veterinarian {
     @Size(min = 10,max = 500)
     private String imgUrl;
 
+    @Nonnull
+    private String status;
+
     @JsonIgnore
     @OneToMany(mappedBy = "veterinarian")
     private List<Treatment> treatments = new ArrayList<>();
@@ -62,5 +65,6 @@ public class Veterinarian {
         this.password = password;
         this.speciality = speciality;
         this.imgUrl = imgUrl;
+        this.status = "Activo";
     }
 }

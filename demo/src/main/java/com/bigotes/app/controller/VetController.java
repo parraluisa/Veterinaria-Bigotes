@@ -24,7 +24,7 @@ public class VetController {
     // http://localhost:8090/vet/{vetId}
     @GetMapping("/{id}")
     public Veterinarian showPet(@PathVariable("id") Long id) {
-        return veterinarianService.findById(id);
+        return veterinarianService.findByIdCard(id);
     }
 
     // http://localhost:8090/vet
@@ -49,5 +49,21 @@ public class VetController {
     @GetMapping("/exists/{idCard}")
     public boolean vetExists(@PathVariable("idCard") Long idCard) {
         return veterinarianService.existsByIdCard(idCard);
+    }
+
+    // Dashboard No. 03
+    // Cantidad de veterinarios activos en la plataforma
+    // http://localhost:8090/vet/count/active
+    @GetMapping("/count/active")
+    public Long countActiveVeterinarians(){
+        return veterinarianService.countActiveVeterinarians();
+    }
+
+    // Dashboard No. 04
+    //Cantidad de veterinarios inactivos en la plataforma
+    // http://localhost:8090/vet/count/inactive
+    @GetMapping("/count/inactive")
+    public Long countInactiveVeterinarians(){
+        return veterinarianService.countInactiveVeterinarians();
     }
 }

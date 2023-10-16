@@ -30,7 +30,6 @@ public class TreatmentService implements CrudService<Treatment, Long> {
         return Optional.of(repository.findByPetId(petId)).get();
     }
 
-
     @Override
     public void deleteById(Long id) {
         repository.deleteById(id);
@@ -39,5 +38,11 @@ public class TreatmentService implements CrudService<Treatment, Long> {
     @Override
     public void save(Treatment Treatment) {
         repository.save(Treatment);
+    }
+
+    // Dashboard No. 01
+    // Cantidad total de tratamiento administrados en el último mes
+    public Long countTotalTreatmentForCurrentMonth(){
+        return repository.countTotalTreatmentForCurrentMonth();
     }
 }

@@ -80,6 +80,11 @@ public class DbController implements ApplicationRunner {
         for (long i = 1L; i < 11L; i++) {
             Pet pet = petRepository.findById(i).get();
             Drug drug = drugRepository.findById(i).get();
+
+            drug.setItemsSell(drug.getItemsSell() + 1);
+            drug.setItemsAvailable(drug.getItemsAvailable() - 1);
+            drugRepository.save(drug);
+
             Veterinarian vet = veterinarianRepository.findById(i).get();
             Treatment treatment = treatmentRepository.findById(i).get();
             treatment.setPet(pet);
@@ -670,17 +675,17 @@ public class DbController implements ApplicationRunner {
     }
     private void createTreatments(){
         // Create and save treatment 1
-        treatmentRepository.save(new Treatment(LocalDate.of(2023, 9, 20),  "Se le dió al felino el primer comprimido de FELIMAZOLE, revisión dentro de 12 horas."));
+        treatmentRepository.save(new Treatment(LocalDate.of(2023, 10, 2),  "Se le dió al felino el primer comprimido de FELIMAZOLE, revisión dentro de 12 horas."));
         // Create and save treatment 2
-        treatmentRepository.save(new Treatment(LocalDate.of(2023, 9, 28), "Se administró Famciclovir para tratar la rinotraqueítis felina. Se realizará un seguimiento en 24 horas.") );
+        treatmentRepository.save(new Treatment(LocalDate.of(2023, 10, 1), "Se administró Famciclovir para tratar la rinotraqueítis felina. Se realizará un seguimiento en 24 horas.") );
         // Create and save treatment 3
-        treatmentRepository.save(new Treatment(LocalDate.of(2021, 5, 10), "Se aplicó PawPain Away al gato para aliviar el dolor en las patas. Revisión dentro de 12 horas para evaluar el alivio del dolor."));
+        treatmentRepository.save(new Treatment(LocalDate.of(2023, 10, 2), "Se aplicó PawPain Away al gato para aliviar el dolor en las patas. Revisión dentro de 12 horas para evaluar el alivio del dolor."));
         // Create and save treatment 4
-        treatmentRepository.save(new Treatment(LocalDate.of(2022, 7, 25), "Se suministró WhiskerWellness al gato para mejorar su bienestar general y salud. Próxima revisión en 24 horas."));
+        treatmentRepository.save(new Treatment(LocalDate.of(2023, 10, 2), "Se suministró WhiskerWellness al gato para mejorar su bienestar general y salud. Próxima revisión en 24 horas."));
         // Create and save treatment 5
-        treatmentRepository.save(new Treatment(LocalDate.of(2022, 9, 1), "Se administró Purrfect Health para mantener la salud óptima del gato. Se evaluarán los resultados en 24 horas."));
+        treatmentRepository.save(new Treatment(LocalDate.of(2023, 10, 1), "Se administró Purrfect Health para mantener la salud óptima del gato. Se evaluarán los resultados en 24 horas."));
         // Create and save treatment 6
-        treatmentRepository.save(new Treatment(LocalDate.of(2021, 11, 8), "Se dio MeowMend al gato para ayudar en la recuperación de heridas o lesiones. Próxima revisión en 12 horas."));
+        treatmentRepository.save(new Treatment(LocalDate.of(2023, 11, 8), "Se dio MeowMend al gato para ayudar en la recuperación de heridas o lesiones. Próxima revisión en 12 horas."));
         // Create and save treatment 7
         treatmentRepository.save(new Treatment(LocalDate.of(2020, 2, 12), "Se administró PawPrint Pain Relief para aliviar el dolor del gato. Revisión dentro de 12 horas para evaluar la eficacia."));
         // Create and save treatment 8
