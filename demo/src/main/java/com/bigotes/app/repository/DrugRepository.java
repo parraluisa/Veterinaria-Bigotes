@@ -11,6 +11,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface DrugRepository extends JpaRepository<Drug, Long> {
 
+    // Dashboard No. 02
+    // Cantidad de tratamientos por tipo de medicamento administrado 
+    // en el último mes (tabla medicamento - cantidad)
     @Query("SELECT d.name, COUNT(t) " +
            "FROM Drug d " +
            "LEFT JOIN d.treatments t " +
@@ -19,9 +22,13 @@ public interface DrugRepository extends JpaRepository<Drug, Long> {
            "GROUP BY d.name")
     List<Object[]> countTreatmentsByDrugTypeLastMonth();
 
+    // Dashboard No. 07
+    // Ventas totales de la veterinaria
     @Query("SELECT SUM(d.sellPrice * d.itemsSell) FROM Drug d")
     Float calculateTotalSales();
 
+    // Dashboard No. 08
+    // Ganancias totales de la veterinaria
     @Query("SELECT SUM((d.sellPrice * d.itemsSell) - (d.buyPrice * d.itemsAvailable)) FROM Drug d")
     Float calculateTotalProfits();
 }

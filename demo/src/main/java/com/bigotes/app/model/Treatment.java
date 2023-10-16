@@ -1,6 +1,5 @@
 package com.bigotes.app.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.*;
 import lombok.Data;
