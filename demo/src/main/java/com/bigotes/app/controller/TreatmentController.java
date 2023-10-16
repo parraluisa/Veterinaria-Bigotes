@@ -67,5 +67,13 @@ public class TreatmentController {
     public Long countTotalTreatmentForCurrentMonth() {
         return treatmentService.countTotalTreatmentForCurrentMonth();
     }
+
+    // Dashboard No. 09
+    // Top 3 tratamientos con más unidades vendidas
+    // http://localhost:8090/treatment/top
+    @GetMapping("/top")
+    public List<Treatment> findTop3TreatmentsByUnitsSold() {
+        return findTop3TreatmentsByUnitsSold();
+    }
     
 }
