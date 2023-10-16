@@ -59,5 +59,11 @@ public class TreatmentController {
     public void deleteTreatment(@PathVariable("id") Long id) {
         treatmentService.deleteById(id);
     }
+
+    // http://localhost:8090/treatment/count
+    @GetMapping("/count")
+    public Long countTotalTreatmentForCurrentMonth() {
+        return treatmentService.countTotalTreatmentForCurrentMonth();
+    }
     
 }

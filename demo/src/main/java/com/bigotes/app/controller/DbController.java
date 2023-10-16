@@ -670,7 +670,7 @@ public class DbController implements ApplicationRunner {
     }
     private void createTreatments(){
         // Create and save treatment 1
-        treatmentRepository.save(new Treatment(LocalDate.of(2023, 9, 20),  "Se le dió al felino el primer comprimido de FELIMAZOLE, revisión dentro de 12 horas."));
+        treatmentRepository.save(new Treatment(LocalDate.of(2023, 10, 2),  "Se le dió al felino el primer comprimido de FELIMAZOLE, revisión dentro de 12 horas."));
         // Create and save treatment 2
         treatmentRepository.save(new Treatment(LocalDate.of(2023, 9, 28), "Se administró Famciclovir para tratar la rinotraqueítis felina. Se realizará un seguimiento en 24 horas.") );
         // Create and save treatment 3
