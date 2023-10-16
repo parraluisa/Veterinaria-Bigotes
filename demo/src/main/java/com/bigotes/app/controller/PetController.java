@@ -37,6 +37,7 @@ public class PetController {
     // http://localhost:8090/pet
     @PutMapping()
     public void updatePet(@RequestBody Pet pet) {
+        System.out.println(pet);
         petService.save(pet);
     }
 

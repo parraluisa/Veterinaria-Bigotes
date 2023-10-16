@@ -39,7 +39,7 @@ public class Pet {
     @Nonnull
     private String status;
 
-    @JsonIgnore
+
     @ManyToOne
     @JoinColumn(name = "owner_id")
     private Owner owner;

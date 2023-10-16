@@ -26,6 +26,11 @@ public class TreatmentService implements CrudService<Treatment, Long> {
         return Optional.of(repository.findAll()).get();
     }
 
+    public List<Treatment> findByPetId(Long petId) {
+        return Optional.of(repository.findByPetId(petId)).get();
+    }
+
+
     @Override
     public void deleteById(Long id) {
         repository.deleteById(id);

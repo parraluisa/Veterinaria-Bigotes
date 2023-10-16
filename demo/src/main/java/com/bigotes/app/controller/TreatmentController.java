@@ -24,33 +24,39 @@ public class TreatmentController {
     @Autowired
     TreatmentService treatmentService;
 
-    // http://localhost:8090/drug
+    // http://localhost:8090/treatment
     @GetMapping()
-    public List<Treatment> showAllDrugs() {
+    public List<Treatment> showAllTreatments() {
         return treatmentService.findAll();
     }
 
-    // http://localhost:8090/drug/{id}
+    // http://localhost:8090/treatment/{id}
     @GetMapping("/{id}")
-    public Treatment showDrug(@PathVariable("id") Long id) {
+    public Treatment showTreatment(@PathVariable("id") Long id) {
         return treatmentService.findById(id);
     }
 
-    // http://localhost:8090/drug
+    // http://localhost:8090/treatment/pet/{id}
+    @GetMapping("/pet/{id}")
+    public List<Treatment> showTreatmentbyPet(@PathVariable("id") Long id) {
+        return treatmentService.findByPetId(id);
+    }
+
+    // http://localhost:8090/treatment
     @PostMapping()
-    public void insertDrug(@RequestBody Treatment treatment) {
+    public void insertTreatment(@RequestBody Treatment treatment) {
         treatmentService.save(treatment);
     }
 
-    // http://localhost:8090/drug
+    // http://localhost:8090/treatment
     @PutMapping()
-    public void updateDrug(@RequestBody Treatment treatment) {
+    public void updateTreatment(@RequestBody Treatment treatment) {
         treatmentService.save(treatment);
     }
 
-    // http://localhost:8090/drug/{id}
+    // http://localhost:8090/treatment/{id}
     @DeleteMapping("/{id}")
-    public void deleteDrug(@PathVariable("id") Long id) {
+    public void deleteTreatment(@PathVariable("id") Long id) {
         treatmentService.deleteById(id);
     }
     
