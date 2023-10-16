@@ -56,6 +56,7 @@ public class PetController {
 
     // Dashboard No. 05
     // Cantidad de mascotas totales en la veterinaria
+    // http://localhost:8090/pet/count/total
     @GetMapping("/count/total")
     public Long countTotalPets(){
         return petService.countTotalPets();
@@ -63,6 +64,7 @@ public class PetController {
 
     // Dashboard No. 06
     // Cantidad de mascotas activas (en tratamiento) en la veterinaria
+    // http://localhost:8090/pet/count/ontreatment
     @GetMapping("/count/ontreatment")
     public Long countActivePets(){
         return petService.countActivePets();

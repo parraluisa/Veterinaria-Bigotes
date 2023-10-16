@@ -73,7 +73,7 @@ public class TreatmentController {
     // http://localhost:8090/treatment/top
     @GetMapping("/top")
     public List<Treatment> findTop3TreatmentsByUnitsSold() {
-        return findTop3TreatmentsByUnitsSold();
+        return treatmentService.findTop3TreatmentsByUnitsSold();
     }
     
 }

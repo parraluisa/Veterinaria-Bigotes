@@ -60,7 +60,7 @@ public class VetController {
     }
 
     // Dashboard No. 04
-    //Cantidad de veterinarios inactivos en la plataforma
+    // Cantidad de veterinarios inactivos en la plataforma
     // http://localhost:8090/vet/count/inactive
     @GetMapping("/count/inactive")
     public Long countInactiveVeterinarians(){

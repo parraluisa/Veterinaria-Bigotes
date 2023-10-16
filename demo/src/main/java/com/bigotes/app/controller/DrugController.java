@@ -57,6 +57,7 @@ public class DrugController {
     // Dashboard No. 02
     // Cantidad de tratamientos por tipo de medicamento administrado 
     // en el último mes (tabla medicamento - cantidad)
+    // http://localhost:8090/drug/treatmentbymonth
     @GetMapping("/treatmentbymonth")
     public List<Object[]> countTreatmentsByDrugTypeLastMonth() {
         return drugService.countTreatmentsByDrugTypeLastMonth();
@@ -64,6 +65,7 @@ public class DrugController {
 
     // Dashboard No. 07
     // Ventas totales de la veterinaria
+    // http://localhost:8090/drug/totalsales
     @GetMapping("/totalsales")
     public Float calculateTotalSales() {
         return drugService.calculateTotalSales();
@@ -71,6 +73,7 @@ public class DrugController {
 
     // Dashboard No. 08
     // Ganancias totales de la veterinaria
+    // http://localhost:8090/drug/totalprofits
     @GetMapping("/totalprofits")
     public Float calculateTotalProfits(){
         return drugService.calculateTotalProfits();
