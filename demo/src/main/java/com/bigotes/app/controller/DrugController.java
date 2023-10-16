@@ -55,6 +55,8 @@ public class DrugController {
     }
 
     // Dashboard No. 02
+    // Cantidad de tratamientos por tipo de medicamento administrado 
+    // en el último mes (tabla medicamento - cantidad)
     @GetMapping("/treatmentbymonth")
     public List<Object[]> countTreatmentsByDrugTypeLastMonth() {
         return drugService.countTreatmentsByDrugTypeLastMonth();

@@ -40,7 +40,8 @@ public class TreatmentService implements CrudService<Treatment, Long> {
         repository.save(Treatment);
     }
 
-    // Dasboard
+    // Dashboard No. 01
+    // Cantidad total de tratamiento administrados en el último mes
     public Long countTotalTreatmentForCurrentMonth(){
         return repository.countTotalTreatmentForCurrentMonth();
     }

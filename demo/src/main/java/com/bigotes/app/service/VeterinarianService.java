@@ -41,4 +41,16 @@ public class VeterinarianService implements CrudService<Veterinarian, Long>{
     public boolean existsByIdCard(Long idCard) {
         return repository.existsByIdCard(idCard);
     }
+
+    // Dashboard No. 03
+    // Cantidad de veterinarios activos en la plataforma
+    public Long countActiveVeterinarians(){
+        return repository.countActiveVeterinarians();
+    }
+
+    // Dashboard No. 04
+    //Cantidad de veterinarios inactivos en la plataforma
+    public Long countInactiveVeterinarians(){
+        return repository.countInactiveVeterinarians();
+    }
 }

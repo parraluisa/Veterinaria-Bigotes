@@ -12,11 +12,11 @@ public interface VeterinarianRepository extends JpaRepository<Veterinarian, Long
 
     // Dashboard No. 03
     // Cantidad de veterinarios activos en la plataforma
-    @Query("SELECT COUNT(v) FROM Veterinarian v WHERE v.status = 'activo'")
+    @Query("SELECT COUNT(v) FROM Veterinarian v WHERE v.status = 'Activo'")
     Long countActiveVeterinarians();
 
     // Dashboard No. 04
     //Cantidad de veterinarios inactivos en la plataforma
-    @Query("SELECT COUNT(v) FROM Veterinarian v WHERE v.status = 'inactivo'")
+    @Query("SELECT COUNT(v) FROM Veterinarian v WHERE v.status = 'Inactivo'")
     Long countInactiveVeterinarians();
 }

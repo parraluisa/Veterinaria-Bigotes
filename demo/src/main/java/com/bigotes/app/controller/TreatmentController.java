@@ -61,6 +61,7 @@ public class TreatmentController {
     }
 
     // Dashboard No. 01
+    // Cantidad total de tratamiento administrados en el último mes
     // http://localhost:8090/treatment/count
     @GetMapping("/count")
     public Long countTotalTreatmentForCurrentMonth() {

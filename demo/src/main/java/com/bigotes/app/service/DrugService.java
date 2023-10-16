@@ -36,6 +36,8 @@ public class DrugService implements CrudService<Drug, Long> {
     }
 
     // Dashboard No. 02
+    // Cantidad de tratamientos por tipo de medicamento administrado 
+    // en el último mes (tabla medicamento - cantidad)
     public List<Object[]> countTreatmentsByDrugTypeLastMonth(){
         return repository.countTreatmentsByDrugTypeLastMonth();
     }
