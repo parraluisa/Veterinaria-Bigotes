@@ -62,7 +62,10 @@ public class Pet {
         this.weight = weight;
         this.disease = disease;
         this.imgUrl = imgUrl;
-        this.status = "En tratamiento";
+        if (disease.equals("Ninguna"))
+            this.status = "Alta médica";
+        else
+            this.status = "En tratamiento";
     }
 
     public Pet() {
