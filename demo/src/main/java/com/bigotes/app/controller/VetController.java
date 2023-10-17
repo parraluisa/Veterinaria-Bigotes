@@ -23,7 +23,12 @@ public class VetController {
 
     // http://localhost:8090/vet/{vetId}
     @GetMapping("/{id}")
-    public Veterinarian showPet(@PathVariable("id") Long id) {
+    public Veterinarian showVet(@PathVariable("id") Long id) {
+        return veterinarianService.findById(id);
+    }
+    // http://localhost:8090/vet/idcard/{vetId}
+    @GetMapping("/idcard/{id}")
+    public Veterinarian showVetByIdCard(@PathVariable("id") Long id) {
         return veterinarianService.findByIdCard(id);
     }
 
