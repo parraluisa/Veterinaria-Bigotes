@@ -11,6 +11,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface DrugRepository extends JpaRepository<Drug, Long> {
 
+    @Query("SELECT d FROM Drug d WHERE d.itemsAvailable > 0")
+    List<Drug> findDrugsAvailabale();
+
     // Dashboard No. 02
     // Cantidad de tratamientos por tipo de medicamento administrado 
     // en el último mes (tabla medicamento - cantidad)
