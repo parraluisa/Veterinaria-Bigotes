@@ -25,6 +25,7 @@ public class DrugController {
     DrugService drugService;
 
     // http://localhost:8090/drug
+    
     @GetMapping()
     public List<Drug> showAllDrugs() {
         return drugService.findAll();
@@ -52,6 +53,12 @@ public class DrugController {
     @DeleteMapping("/{id}")
     public void deleteDrug(@PathVariable("id") Long id) {
         drugService.deleteById(id);
+    }
+
+    // http://localhost:8090/drug/available
+    @GetMapping("/available")
+    public List<Drug> findDrugsAvailabale() {
+        return drugService.findDrugsAvailabale();
     }
 
     // Dashboard No. 02

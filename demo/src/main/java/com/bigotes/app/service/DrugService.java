@@ -36,6 +36,10 @@ public class DrugService implements CrudService<Drug, Long> {
         repository.save(drug);
     }
 
+    public List<Drug> findDrugsAvailabale() {
+        return repository.findDrugsAvailabale();
+    }
+
     // Dashboard No. 02
     // Cantidad de tratamientos por tipo de medicamento administrado 
     // en el último mes (tabla medicamento - cantidad)
