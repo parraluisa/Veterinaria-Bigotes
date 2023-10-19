@@ -151,6 +151,7 @@ public class DrugRepositoryTest {
         //Act
         Drug drug = drugRepository.findById(index)
                 .orElse(null);
+        assert drug != null;
         drug.setName("MODIFIED");
         Drug updatedDrug = drugRepository.save(drug);
         //Assert
