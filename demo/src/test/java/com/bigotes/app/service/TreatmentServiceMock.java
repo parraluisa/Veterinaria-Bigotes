@@ -144,17 +144,4 @@ public class TreatmentServiceMock {
         verify(treatmentRepository).deleteById(treatmentId);
     }
 
-    @Test
-    public void TreatmentService_deleteById_InvalidId() {
-        // Arrange
-        Long invalidTreatmentId = 999L;
-        
-        // Act
-        treatmentService.deleteById(invalidTreatmentId);
-
-        // Assert
-        // Verify that the deleteById method of the treatmentRepository was not called for an invalid ID
-        Assertions.assertThat(studentRepository.findById(index)).isEmpty();
-    }
-
 }
