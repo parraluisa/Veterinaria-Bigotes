@@ -1,5 +1,6 @@
 package com.bigotes.app.service;
 
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.time.LocalDate;
@@ -55,6 +56,7 @@ public class TreatmentServiceMock {
 
     @Test
     public void TreatmentService_findById_TreatmentFound() {
+
         // Arrange
         Long treatmentId = 1L;
         Treatment treatment = new Treatment();
@@ -69,6 +71,7 @@ public class TreatmentServiceMock {
 
     @Test
     public void TreatmentService_findAll_TreatmentList() {
+
         // Arrange
         List<Treatment> treatmentList = List.of(new Treatment(), new Treatment());
         when(treatmentRepository.findAll()).thenReturn(treatmentList);
@@ -84,6 +87,7 @@ public class TreatmentServiceMock {
 
     @Test
     public void TreatmentService_save_ValidTreatment() {
+
         // Arrange
         Treatment treatment = new Treatment();
         Drug drug = new Drug();
@@ -101,6 +105,7 @@ public class TreatmentServiceMock {
 
     @Test
     public void TreatmentService_save_InvalidTreatment() {
+
         // Arrange
         Treatment treatment = new Treatment();
         Drug drug = new Drug();
@@ -113,4 +118,43 @@ public class TreatmentServiceMock {
         // Assert
         Assertions.assertThat(savedTreatment).isNull();
     }
+
+    @Test
+    public void TreatmentService_countTotalTreatmentForCurrentMonth() {
+        // Arrange
+        Long expectedCount = 10L;
+        when(treatmentRepository.countTotalTreatmentForCurrentMonth()).thenReturn(expectedCount);
+
+        // Act
+        Long count = treatmentService.countTotalTreatmentForCurrentMonth();
+
+        // Assert
+        Assertions.assertThat(count).isEqualTo(expectedCount);
+    }
+
+    @Test
+    public void TreatmentService_deleteById_ValidId() {
+        // Arrange
+        Long treatmentId = 1L;
+        
+        // Act
+        treatmentService.deleteById(treatmentId);
+
+        // Assert
+        verify(treatmentRepository).deleteById(treatmentId);
+    }
+
+    @Test
+    public void TreatmentService_deleteById_InvalidId() {
+        // Arrange
+        Long invalidTreatmentId = 999L;
+        
+        // Act
+        treatmentService.deleteById(invalidTreatmentId);
+
+        // Assert
+        // Verify that the deleteById method of the treatmentRepository was not called for an invalid ID
+        Assertions.assertThat(studentRepository.findById(index)).isEmpty();
+    }
+
 }
