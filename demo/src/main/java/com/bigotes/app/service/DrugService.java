@@ -32,8 +32,8 @@ public class DrugService implements CrudService<Drug, Long> {
     }
 
     @Override
-    public void save(Drug drug) {
-        repository.save(drug);
+    public Drug save(Drug drug) {
+        return repository.save(drug);
     }
 
     public List<Drug> findDrugsAvailabale() {

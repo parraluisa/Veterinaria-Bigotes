@@ -30,8 +30,8 @@ public class VeterinarianService implements CrudService<Veterinarian, Long>{
     }
 
     @Override
-    public void save(Veterinarian Veterinarian) {
-        repository.save(Veterinarian);
+    public Veterinarian save(Veterinarian Veterinarian) {
+        return repository.save(Veterinarian);
     }
 
     public Veterinarian findByIdCard(Long idCard) {

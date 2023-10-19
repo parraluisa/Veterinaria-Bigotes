@@ -29,8 +29,8 @@ public class PetService implements CrudService<Pet, Long> {
     }
 
     @Override
-    public void save(Pet pet) {
-        repository.save(pet);
+    public Pet save(Pet pet) {
+        return repository.save(pet);
     }
 
     public List<Pet> findByOwnerId(Long ownerId) {

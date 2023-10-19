@@ -30,8 +30,8 @@ public class OwnerService implements CrudService<Owner, Long> {
     }
 
     @Override
-    public void save(Owner Owner) {
-        repository.save(Owner);
+    public Owner save(Owner Owner) {
+        return repository.save(Owner);
     }
 
     public Owner findByIdCard(Long idCard) {
