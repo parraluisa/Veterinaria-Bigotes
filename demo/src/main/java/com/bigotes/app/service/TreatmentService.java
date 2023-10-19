@@ -37,10 +37,12 @@ public class TreatmentService implements CrudService<Treatment, Long> {
 
     @Override
     public Treatment save(Treatment treatment) {
-        if (treatment.getDrug().getItemsAvailable()==0){
+        if (treatment.getDrug().getItemsAvailable()<=0){
             return null;
         }
-        return repository.save(treatment);
+        else{
+            return repository.save(treatment);
+        }
     }
 
     // Dashboard No. 01

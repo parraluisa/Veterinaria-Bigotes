@@ -12,6 +12,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.test.context.ActiveProfiles;
 
@@ -47,7 +48,6 @@ public class TreatmentServiceMock {
         // INIT ASOCIADO
         Pet p = new Pet("Pompita", "British Shorthair", LocalDate.of(2015, 2, 12), 824.65, "Hipotiroidismo", "https://catinaflat.blog/wp-content/uploads/2022/03/british-shorthair-1.jpg");
         Veterinarian v = new Veterinarian(1000612796L ,"Andrés", "Garcia", "Montoya", "1234", "Cirujano", "https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-        Drug d = new Drug("Medicamento", 0, 0, 0, 0);
 
         petRepository.save(p);
         veterinarianRepository.save(v);
@@ -57,7 +57,7 @@ public class TreatmentServiceMock {
     public void TreatmentService_findById_TreatmentFound() {
         // Arrange
         Long treatmentId = 1L;
-        Treatment treatment = new Treatment(); // Create a Treatment object for testing
+        Treatment treatment = new Treatment();
         when(treatmentRepository.findById(treatmentId)).thenReturn(Optional.of(treatment));
 
         // Act
@@ -83,13 +83,29 @@ public class TreatmentServiceMock {
 
 
     @Test
+    public void TreatmentService_save_ValidTreatment() {
+        // Arrange
+        Treatment treatment = new Treatment();
+        Drug drug = new Drug();
+        drug.setItemsAvailable(1);
+        treatment.setDrug(drug);
+
+        when(treatmentRepository.save(Mockito.any(Treatment.class))).thenReturn(new Treatment());
+
+        // Act
+        Treatment savedTreatment = treatmentService.save(treatment);
+
+        // Assert
+        Assertions.assertThat(savedTreatment).isNotNull();
+    }
+
+    @Test
     public void TreatmentService_save_InvalidTreatment() {
         // Arrange
         Treatment treatment = new Treatment();
         Drug drug = new Drug();
         drug.setItemsAvailable(0);
-        treatment.setDrug(drug);
-        
+        treatment.setDrug(drug);        
 
         // Act
         Treatment savedTreatment = treatmentService.save(treatment);
