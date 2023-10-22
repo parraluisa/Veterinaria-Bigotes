@@ -44,8 +44,8 @@ public class TreatmentController {
 
     // http://localhost:8090/treatment
     @PostMapping()
-    public void insertTreatment(@RequestBody Treatment treatment) {
-        treatmentService.save(treatment);
+    public Treatment insertTreatment(@RequestBody Treatment treatment) {
+        return treatmentService.save(treatment);
     }
 
     // http://localhost:8090/treatment
