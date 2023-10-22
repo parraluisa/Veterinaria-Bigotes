@@ -166,28 +166,40 @@ public class DrugRepositoryTest {
     public void DrugRepositoryFindDrugsAvailable() {
         //Arrange
         //Act
+        List<Drug> drugs = drugRepository.findDrugsAvailabale();
         //Assert
+        Assertions.assertThat(drugs).isNotNull();
+        Assertions.assertThat(drugs.size()).isEqualTo(3);
     }
 
     @Test
     public void DrugRepositoryCountTreatmentsByDrugTypeLastMonth() {
         //Arrange
         //Act
+        List<Object[]> drugs = drugRepository.countTreatmentsByDrugTypeLastMonth();
         //Assert
+        Assertions.assertThat(drugs).isNotNull();
+        Assertions.assertThat(drugs.size()).isEqualTo(3);
     }
 
     @Test
     public void DrugRepositoryCalculateTotalSales() {
         //Arrange
         //Act
+        Float totalSales = drugRepository.calculateTotalSales();
         //Assert
+        Assertions.assertThat(totalSales).isNotNull();
+        Assertions.assertThat(totalSales).isEqualTo(15000);
     }
 
     @Test
     public void DrugRepositoryFindTop3BestSellingDrugs() {
         //Arrange
         //Act
+        List<Object[]> drugs = drugRepository.findTop3BestSellingDrugs();
         //Assert
+        Assertions.assertThat(drugs).isNotNull();
+        Assertions.assertThat(drugs.size()).isEqualTo(3);
     }
 
 }
