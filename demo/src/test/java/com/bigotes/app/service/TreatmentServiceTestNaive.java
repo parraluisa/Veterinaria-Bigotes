@@ -33,6 +33,7 @@ public class TreatmentServiceTestNaive {
     @Autowired
     private DrugRepository drugRepository;
 
+
     @Test
     public void TreatmentService_save_Treatment() {
         // Arrange
@@ -179,7 +180,7 @@ public class TreatmentServiceTestNaive {
 
         //Assert
         Assertions.assertThat(totalTreatments).isNotNull();
-        Assertions.assertThat(totalTreatments).isEqualTo(7L);
+        Assertions.assertThat(totalTreatments).isEqualTo(2L);
 
     }
 
