@@ -4,9 +4,13 @@ import java.time.LocalDate;
 
 import org.assertj.core.api.Assertions;
 import java.util.List;
+
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.context.ActiveProfiles;
 
 import com.bigotes.app.model.Drug;
 import com.bigotes.app.model.Pet;
@@ -16,6 +20,8 @@ import com.bigotes.app.repository.PetRepository;
 
 //Ejecutar una instancia de la aplicación
 @SpringBootTest
+@DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
+@ActiveProfiles("test")
 public class TreatmentServiceTestNaive {
 
     @Autowired
@@ -118,7 +124,7 @@ public class TreatmentServiceTestNaive {
         List<Treatment> treatments = treatmentService.findAll();
         //Assert
         Assertions.assertThat(treatments).isNotNull();
-        Assertions.assertThat(treatments.size()).isEqualTo(12);
+        Assertions.assertThat(treatments.size()).isEqualTo(2);
     }
 
     @Test

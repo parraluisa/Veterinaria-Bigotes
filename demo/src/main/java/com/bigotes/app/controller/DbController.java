@@ -19,6 +19,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Controller;
 
 import java.io.IOException;
@@ -28,6 +29,7 @@ import java.util.Random;
 
 @Controller
 @Transactional
+@Profile("default")
 public class DbController implements ApplicationRunner {
     @Autowired
     OwnerRepository ownerRepository;
