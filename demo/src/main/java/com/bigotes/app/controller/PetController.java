@@ -3,10 +3,11 @@ package com.bigotes.app.controller;
 import com.bigotes.app.model.Pet;
 import com.bigotes.app.service.PetService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
 
 @RestController
 @RequestMapping("/pet")
@@ -15,59 +16,74 @@ public class PetController {
 
     @Autowired
     private PetService petService;
-    
-    // http://localhost:8090/pet
+
+    // Obtener todas las mascotas
     @GetMapping()
-    public List<Pet> showAllPets(){
-        return petService.findAll();
+    public ResponseEntity<List<Pet>> showAllPets() {
+        List<Pet> pets = petService.findAll();
+        return new ResponseEntity<>(pets, HttpStatus.OK);
     }
 
-    // http://localhost:8090/pet/{petId}
+    // Obtener una mascota por su ID
     @GetMapping("/{id}")
-    public Pet showPet(@PathVariable("id") Long id) {
-        return petService.findById(id);
+    public ResponseEntity<Pet> showPet(@PathVariable("id") Long id) {
+        Pet pet = petService.findById(id);
+        if (pet != null) {
+            return new ResponseEntity<>(pet, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
-    // http://localhost:8090/pet
+    // Insertar una nueva mascota
     @PostMapping()
-    public void insertPet(@RequestBody Pet pet) {
+    public ResponseEntity<Void> insertPet(@RequestBody Pet pet) {
         petService.save(pet);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
-    
-    // http://localhost:8090/pet
+
+    // Actualizar una mascota
     @PutMapping()
-    public void updatePet(@RequestBody Pet pet) {
-        System.out.println(pet);
-        petService.save(pet);
+    public ResponseEntity<Void> updatePet(@RequestBody Pet pet) {
+        if (petService.findById(pet.getId()) != null) {
+            petService.save(pet);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
-    // http://localhost:8090/pet/{petId}
+    // Eliminar una mascota por su ID
     @DeleteMapping("/{id}")
-    public void deletePet(@PathVariable("id") Long id) {
-        petService.deleteById(id);
+    public ResponseEntity<Void> deletePet(@PathVariable("id") Long id) {
+        if (petService.findById(id) != null) {
+            petService.deleteById(id);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
-    //Cambiar a pets
-    // http://localhost:8090/pet/owner/{id}
+    // Obtener las mascotas de un propietario por su ID
     @GetMapping("/owner/{id}")
-    public List<Pet> showOwnerPet(@PathVariable("id") Long id){
-        return petService.findByOwnerId(id);
+    public ResponseEntity<List<Pet>> showOwnerPet(@PathVariable("id") Long id) {
+        List<Pet> pets = petService.findByOwnerId(id);
+        return new ResponseEntity<>(pets, HttpStatus.OK);
     }
 
     // Dashboard No. 05
-    // Cantidad de mascotas totales en la veterinaria
-    // http://localhost:8090/pet/count/total
+    // Cantidad total de mascotas en la veterinaria
     @GetMapping("/count/total")
-    public Long countTotalPets(){
-        return petService.countTotalPets();
+    public ResponseEntity<Long> countTotalPets() {
+        Long count = petService.countTotalPets();
+        return new ResponseEntity<>(count, HttpStatus.OK);
     }
 
     // Dashboard No. 06
     // Cantidad de mascotas activas (en tratamiento) en la veterinaria
-    // http://localhost:8090/pet/count/ontreatment
     @GetMapping("/count/ontreatment")
-    public Long countActivePets(){
-        return petService.countActivePets();
+    public ResponseEntity<Long> countActivePets() {
+        Long count = petService.countActivePets();
+        return new ResponseEntity<>(count, HttpStatus.OK);
     }
-
 }

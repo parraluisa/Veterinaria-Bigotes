@@ -20,4 +20,12 @@ public interface PetRepository extends JpaRepository<Pet, Long> {
     // Cantidad de mascotas activas (en tratamiento) en la veterinaria
     @Query("SELECT COUNT(p) FROM Pet p WHERE p.status = 'En tratamiento'")
     Long countActivePets();
+
+    //Todas las mascotas que tengas status en tratamiento
+    @Query("SELECT p FROM Pet p WHERE p.status = 'En tratamiento'")
+    List<Pet> findPetsInTreatment();
+
+    //Todas las mascotas que tengas status de alta
+    @Query("SELECT p FROM Pet p WHERE p.status = 'Alta'")
+    List<Pet> findPetsDischarged();
 }

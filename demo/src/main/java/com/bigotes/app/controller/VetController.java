@@ -3,6 +3,8 @@ package com.bigotes.app.controller;
 import com.bigotes.app.model.Veterinarian;
 import com.bigotes.app.service.VeterinarianService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,60 +17,84 @@ public class VetController {
     @Autowired
     private VeterinarianService veterinarianService;
 
-    // http://localhost:8090/vet
+    // Obtener todos los veterinarios
     @GetMapping()
-    public List<Veterinarian> showAllVets(){
-        return veterinarianService.findAll();
+    public ResponseEntity<List<Veterinarian>> showAllVets() {
+        List<Veterinarian> vets = veterinarianService.findAll();
+        return new ResponseEntity<>(vets, HttpStatus.OK);
     }
 
-    // http://localhost:8090/vet/{vetId}
+    // Obtener un veterinario por su ID
     @GetMapping("/{id}")
-    public Veterinarian showVet(@PathVariable("id") Long id) {
-        return veterinarianService.findById(id);
+    public ResponseEntity<Veterinarian> showVet(@PathVariable("id") Long id) {
+        Veterinarian vet = veterinarianService.findById(id);
+        if (vet != null) {
+            return new ResponseEntity<>(vet, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
-    // http://localhost:8090/vet/idcard/{vetId}
+
+    // Obtener un veterinario por su número de identificación (ID Card)
     @GetMapping("/idcard/{id}")
-    public Veterinarian showVetByIdCard(@PathVariable("id") Long id) {
-        return veterinarianService.findByIdCard(id);
+    public ResponseEntity<Veterinarian> showVetByIdCard(@PathVariable("id") Long id) {
+        Veterinarian vet = veterinarianService.findByIdCard(id);
+        if (vet != null) {
+            return new ResponseEntity<>(vet, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
-    // http://localhost:8090/vet
+    // Insertar un nuevo veterinario
     @PostMapping()
-    public void insertVet(@RequestBody Veterinarian vet) {
+    public ResponseEntity<Void> insertVet(@RequestBody Veterinarian vet) {
         veterinarianService.save(vet);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    // http://localhost:8090/pet
+    // Actualizar un veterinario
     @PutMapping()
-    public void updatePet(@RequestBody Veterinarian vet) {
-        veterinarianService.save(vet);
+    public ResponseEntity<Void> updateVet(@RequestBody Veterinarian vet) {
+        if (veterinarianService.findById(vet.getId()) != null) {
+            veterinarianService.save(vet);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
-    // http://localhost:8090/pet/{petId}
+    // Eliminar un veterinario por su ID
     @DeleteMapping("/{id}")
-    public void deletePet(@PathVariable("id") Long id) {
-        veterinarianService.deleteById(id);
+    public ResponseEntity<Void> deleteVet(@PathVariable("id") Long id) {
+        if (veterinarianService.findById(id) != null) {
+            veterinarianService.deleteById(id);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
-    // http://localhost:8090/vet/exists/{vetId}
+    // Verificar si un veterinario existe por número de identificación (ID Card)
     @GetMapping("/exists/{idCard}")
-    public boolean vetExists(@PathVariable("idCard") Long idCard) {
-        return veterinarianService.existsByIdCard(idCard);
+    public ResponseEntity<Boolean> vetExists(@PathVariable("idCard") Long idCard) {
+        boolean exists = veterinarianService.existsByIdCard(idCard);
+        return new ResponseEntity<>(exists, HttpStatus.OK);
     }
 
     // Dashboard No. 03
     // Cantidad de veterinarios activos en la plataforma
-    // http://localhost:8090/vet/count/active
     @GetMapping("/count/active")
-    public Long countActiveVeterinarians(){
-        return veterinarianService.countActiveVeterinarians();
+    public ResponseEntity<Long> countActiveVeterinarians() {
+        Long count = veterinarianService.countActiveVeterinarians();
+        return new ResponseEntity<>(count, HttpStatus.OK);
     }
 
     // Dashboard No. 04
     // Cantidad de veterinarios inactivos en la plataforma
-    // http://localhost:8090/vet/count/inactive
     @GetMapping("/count/inactive")
-    public Long countInactiveVeterinarians(){
-        return veterinarianService.countInactiveVeterinarians();
+    public ResponseEntity<Long> countInactiveVeterinarians() {
+        Long count = veterinarianService.countInactiveVeterinarians();
+        return new ResponseEntity<>(count, HttpStatus.OK);
     }
 }
