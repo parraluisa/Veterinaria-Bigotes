@@ -1,20 +1,13 @@
 package com.bigotes.app.controller;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
 import com.bigotes.app.model.Drug;
 import com.bigotes.app.service.DrugService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/drug")
@@ -27,38 +20,50 @@ public class DrugController {
     // http://localhost:8090/drug
     
     @GetMapping()
-    public List<Drug> showAllDrugs() {
-        return drugService.findAll();
+    public ResponseEntity<List<Drug>> showAllDrugs() {
+        List<Drug> drugs =  drugService.findAll();
+        return new ResponseEntity<List<Drug>>(drugs, HttpStatus.OK);
     }
 
     // http://localhost:8090/drug/{id}
     @GetMapping("/{id}")
-    public Drug showDrug(@PathVariable("id") Long id) {
-        return drugService.findById(id);
+    public ResponseEntity<Drug> showDrug(@PathVariable("id") Long id) {
+        Drug drug = drugService.findById(id);
+        if (drug == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<Drug>(drug, HttpStatus.OK);
     }
 
     // http://localhost:8090/drug
     @PostMapping()
-    public void insertDrug(@RequestBody Drug drug) {
-        drugService.save(drug);
+    public ResponseEntity<Drug> insertDrug(@RequestBody Drug drug) {
+        Drug newDrug = drugService.save(drug);
+        if (newDrug == null) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+        return new ResponseEntity<Drug>(newDrug, HttpStatus.CREATED);
     }
 
     // http://localhost:8090/drug
     @PutMapping()
-    public void updateDrug(@RequestBody Drug drug) {
-        drugService.save(drug);
+    public ResponseEntity<Drug> updateDrug(@RequestBody Drug drug) {
+        Drug newDrug = drugService.save(drug);
+        return new ResponseEntity<Drug>(newDrug, HttpStatus.OK);
     }
 
     // http://localhost:8090/drug/{id}
     @DeleteMapping("/{id}")
-    public void deleteDrug(@PathVariable("id") Long id) {
+    public ResponseEntity<String> deleteDrug(@PathVariable("id") Long id) {
         drugService.deleteById(id);
+        return new ResponseEntity<String>("Drug deleted", HttpStatus.OK);
     }
 
     // http://localhost:8090/drug/available
     @GetMapping("/available")
-    public List<Drug> findDrugsAvailabale() {
-        return drugService.findDrugsAvailabale();
+    public ResponseEntity<List<Drug>> findDrugsAvailable() {
+        List<Drug> drugs = drugService.findDrugsAvailabale();
+        return new ResponseEntity<List<Drug>>(drugs, HttpStatus.OK);
     }
 
     // Dashboard No. 02
@@ -66,32 +71,36 @@ public class DrugController {
     // en el último mes (tabla medicamento - cantidad)
     // http://localhost:8090/drug/treatmentbymonth
     @GetMapping("/treatmentbymonth")
-    public List<Object[]> countTreatmentsByDrugTypeLastMonth() {
-        return drugService.countTreatmentsByDrugTypeLastMonth();
+    public ResponseEntity<List<Object[]>> countTreatmentsByDrugTypeLastMonth() {
+        List<Object[]> drugs = drugService.countTreatmentsByDrugTypeLastMonth();
+        return new ResponseEntity<List<Object[]>>(drugs, HttpStatus.OK);
     }
 
     // Dashboard No. 07
     // Ventas totales de la veterinaria
     // http://localhost:8090/drug/totalsales
     @GetMapping("/totalsales")
-    public Float calculateTotalSales() {
-        return drugService.calculateTotalSales();
+    public ResponseEntity<Float> calculateTotalSales() {
+        Float totalSales = drugService.calculateTotalSales();
+        return new ResponseEntity<Float>(totalSales, HttpStatus.OK);
     }
 
     // Dashboard No. 08
     // Ganancias totales de la veterinaria
     // http://localhost:8090/drug/totalprofits
     @GetMapping("/totalprofits")
-    public Float calculateTotalProfits(){
-        return drugService.calculateTotalProfits();
+    public ResponseEntity<Float> calculateTotalProfits(){
+        Float totalProfits = drugService.calculateTotalProfits();
+        return new ResponseEntity<Float>(totalProfits, HttpStatus.OK);
     }
 
     // Dashboard No. 08
     // Ganancias totales de la veterinaria
     // http://localhost:8090/drug/top
     @GetMapping("/top")
-    public List<Drug> findTop3BestSellingDrugs(){
-        return drugService.findTop3BestSellingDrugs();
+    public ResponseEntity<List<Drug>> findTop3BestSellingDrugs(){
+        List<Drug> drugs = drugService.findTop3BestSellingDrugs();
+        return new ResponseEntity<List<Drug>>(drugs, HttpStatus.OK);
     }
 
 
