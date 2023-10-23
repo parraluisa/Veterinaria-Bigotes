@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-
 @RestController
 @RequestMapping("/pet")
 @CrossOrigin(origins = "http://localhost:4200")
@@ -15,10 +14,10 @@ public class PetController {
 
     @Autowired
     private PetService petService;
-    
+
     // http://localhost:8090/pet
     @GetMapping()
-    public List<Pet> showAllPets(){
+    public List<Pet> showAllPets() {
         return petService.findAll();
     }
 
@@ -33,7 +32,7 @@ public class PetController {
     public void insertPet(@RequestBody Pet pet) {
         petService.save(pet);
     }
-    
+
     // http://localhost:8090/pet
     @PutMapping()
     public void updatePet(@RequestBody Pet pet) {
@@ -47,10 +46,10 @@ public class PetController {
         petService.deleteById(id);
     }
 
-    //Cambiar a pets
+    // Cambiar a pets
     // http://localhost:8090/pet/owner/{id}
     @GetMapping("/owner/{id}")
-    public List<Pet> showOwnerPet(@PathVariable("id") Long id){
+    public List<Pet> showOwnerPet(@PathVariable("id") Long id) {
         return petService.findByOwnerId(id);
     }
 
@@ -58,7 +57,7 @@ public class PetController {
     // Cantidad de mascotas totales en la veterinaria
     // http://localhost:8090/pet/count/total
     @GetMapping("/count/total")
-    public Long countTotalPets(){
+    public Long countTotalPets() {
         return petService.countTotalPets();
     }
 
@@ -66,8 +65,20 @@ public class PetController {
     // Cantidad de mascotas activas (en tratamiento) en la veterinaria
     // http://localhost:8090/pet/count/ontreatment
     @GetMapping("/count/ontreatment")
-    public Long countActivePets(){
+    public Long countActivePets() {
         return petService.countActivePets();
+    }
+
+    // http://localhost:8090/pet/all/ontreatment
+    @GetMapping("/all/ontreatment")
+    public List<Pet> showAllPetsInTreatment() {
+        return petService.findPetsInTreatment();
+    }
+
+    // http://localhost:8090/pet/all/discharge
+    @GetMapping("/all/discharge")
+    public List<Pet> showAllPetsDischarged() {
+        return petService.findPetsDischarged();
     }
 
 }
