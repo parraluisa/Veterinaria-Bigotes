@@ -32,12 +32,13 @@ public class Pet {
 
     private String disease;
 
+
     @Nonnull
     @Size(min = 10,max = 500)
     private String imgUrl;
 
     @Nonnull
-    private String status;
+    private String status = "En tratamiento";
 
 
     @ManyToOne
@@ -62,10 +63,6 @@ public class Pet {
         this.weight = weight;
         this.disease = disease;
         this.imgUrl = imgUrl;
-        if (disease.equals("Ninguna"))
-            this.status = "Alta médica";
-        else
-            this.status = "En tratamiento";
     }
 
     public Pet() {

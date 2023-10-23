@@ -48,4 +48,13 @@ public class PetService implements CrudService<Pet, Long> {
     public Long countActivePets(){
         return repository.countActivePets();
     }
+
+    public List<Pet> findPetsInTreatment(){
+        return repository.findPetsInTreatment();
+    }
+
+    public List<Pet> findPetsDischarged(){
+        return repository.findPetsDischarged();
+    }
+    
 }
