@@ -1,20 +1,13 @@
 package com.bigotes.app.controller;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
 import com.bigotes.app.model.Treatment;
 import com.bigotes.app.service.TreatmentService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/treatment")
@@ -24,48 +17,65 @@ public class TreatmentController {
     @Autowired
     TreatmentService treatmentService;
 
-    // http://localhost:8090/treatment
+    // Obtener todos los tratamientos
     @GetMapping()
-    public List<Treatment> showAllTreatments() {
-        return treatmentService.findAll();
+    public ResponseEntity<List<Treatment>> showAllTreatments() {
+        List<Treatment> treatments = treatmentService.findAll();
+        return new ResponseEntity<>(treatments, HttpStatus.OK);
     }
 
-    // http://localhost:8090/treatment/{id}
+    // Obtener un tratamiento por su ID
     @GetMapping("/{id}")
-    public Treatment showTreatment(@PathVariable("id") Long id) {
-        return treatmentService.findById(id);
+    public ResponseEntity<Treatment> showTreatment(@PathVariable("id") Long id) {
+        Treatment treatment = treatmentService.findById(id);
+        if (treatment != null) {
+            return new ResponseEntity<>(treatment, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
-    // http://localhost:8090/treatment/pet/{id}
+    // Obtener tratamientos para una mascota por su ID
     @GetMapping("/pet/{id}")
-    public List<Treatment> showTreatmentbyPet(@PathVariable("id") Long id) {
-        return treatmentService.findByPetId(id);
+    public ResponseEntity<List<Treatment>> showTreatmentbyPet(@PathVariable("id") Long id) {
+        List<Treatment> treatments = treatmentService.findByPetId(id);
+        return new ResponseEntity<>(treatments, HttpStatus.OK);
     }
 
-    // http://localhost:8090/treatment
+    // Insertar un nuevo tratamiento
     @PostMapping()
-    public Treatment insertTreatment(@RequestBody Treatment treatment) {
-        return treatmentService.save(treatment);
+    public ResponseEntity<Treatment> insertTreatment(@RequestBody Treatment treatment) {
+        Treatment savedTreatment = treatmentService.save(treatment);
+        return new ResponseEntity<>(savedTreatment, HttpStatus.CREATED);
     }
 
-    // http://localhost:8090/treatment
+    // Actualizar un tratamiento
     @PutMapping()
-    public void updateTreatment(@RequestBody Treatment treatment) {
-        treatmentService.save(treatment);
+    public ResponseEntity<Void> updateTreatment(@RequestBody Treatment treatment) {
+        if (treatmentService.findById(treatment.getId()) != null) {
+            treatmentService.save(treatment);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
-    // http://localhost:8090/treatment/{id}
+    // Eliminar un tratamiento por su ID
     @DeleteMapping("/{id}")
-    public void deleteTreatment(@PathVariable("id") Long id) {
-        treatmentService.deleteById(id);
+    public ResponseEntity<Void> deleteTreatment(@PathVariable("id") Long id) {
+        if (treatmentService.findById(id) != null) {
+            treatmentService.deleteById(id);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
     // Dashboard No. 01
-    // Cantidad total de tratamiento administrados en el último mes
-    // http://localhost:8090/treatment/count
+    // Cantidad total de tratamientos administrados en el último mes
     @GetMapping("/count")
-    public Long countTotalTreatmentForCurrentMonth() {
-        return treatmentService.countTotalTreatmentForCurrentMonth();
+    public ResponseEntity<Long> countTotalTreatmentForCurrentMonth() {
+        Long count = treatmentService.countTotalTreatmentForCurrentMonth();
+        return new ResponseEntity<>(count, HttpStatus.OK);
     }
-    
 }

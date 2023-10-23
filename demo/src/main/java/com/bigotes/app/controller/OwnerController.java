@@ -4,6 +4,8 @@ import com.bigotes.app.model.Owner;
 import com.bigotes.app.service.OwnerService;
 import com.bigotes.app.service.PetService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,64 +20,93 @@ public class OwnerController {
     @Autowired
     PetService petService;
 
-    // http://localhost:8090/owner
+    // Obtener todos los propietarios
     @GetMapping()
-    public List<Owner> showAllOwners() {
-        return ownerService.findAll();
+    public ResponseEntity<List<Owner>> showAllOwners() {
+        List<Owner> owners = ownerService.findAll();
+        return new ResponseEntity<>(owners, HttpStatus.OK);
     }
 
-    // http://localhost:8090/owner/{id}
+    // Obtener un propietario por su ID
     @GetMapping("/{id}")
-    public Owner showOwner(@PathVariable("id") Long id) {
-        return ownerService.findById(id);
+    public ResponseEntity<Owner> showOwner(@PathVariable("id") Long id) {
+        Owner owner = ownerService.findById(id);
+        if (owner != null) {
+            return new ResponseEntity<>(owner, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
-    // http://localhost:8090/owner/pet/{petId}
+    // Obtener el propietario por el ID de su mascota
     @GetMapping("/pet/{petId}")
-    public Owner getOwnerByPetId(@PathVariable("petId") Long petId) {
-        // Lógica para obtener el propietario por ID de mascota
-        return ownerService.findOwnerByPetId(petId);
+    public ResponseEntity<Owner> getOwnerByPetId(@PathVariable("petId") Long petId) {
+        Owner owner = ownerService.findOwnerByPetId(petId);
+        if (owner != null) {
+            return new ResponseEntity<>(owner, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
-    // http://localhost:8090/owner
+    // Insertar un nuevo propietario
     @PostMapping()
-    public void insertOwner(@RequestBody Owner owner) {
+    public ResponseEntity<Void> insertOwner(@RequestBody Owner owner) {
         ownerService.save(owner);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    // http://localhost:8090/owner
+    // Actualizar un propietario
     @PutMapping()
-    public void updateOwner(@RequestBody Owner owner) {
-        ownerService.save(owner);
+    public ResponseEntity<Void> updateOwner(@RequestBody Owner owner) {
+        if (ownerService.findById(owner.getId()) != null) {
+            ownerService.save(owner);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
-    // http://localhost:8090/owner/{id}
+    // Eliminar un propietario por su ID
     @DeleteMapping("/{id}")
-    public void deleteOwner(@PathVariable("id") Long id) {
-        ownerService.deleteById(id);
+    public ResponseEntity<Void> deleteOwner(@PathVariable("id") Long id) {
+        if (ownerService.findById(id) != null) {
+            ownerService.deleteById(id);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
-    // http://localhost:8090/owner/exists/idCard/{idCard}
+    // Verificar si un propietario existe por número de identificación (ID Card)
     @GetMapping("/exists/idCard/{idCard}")
-    public boolean ownerExistsByIdCard(@PathVariable("idCard") Long idCard) {
-        return ownerService.existsByIdCard(idCard);
+    public ResponseEntity<Boolean> ownerExistsByIdCard(@PathVariable("idCard") Long idCard) {
+        boolean exists = ownerService.existsByIdCard(idCard);
+        return new ResponseEntity<>(exists, HttpStatus.OK);
     }
 
-    // http://localhost:8090/owner/exists/email/{email}
+    // Verificar si un propietario existe por dirección de correo electrónico
     @GetMapping("/exists/email/{email}")
-    public boolean ownerExistsByEmail(@PathVariable("email") String email) {
-        return ownerService.existsByEmail(email);
+    public ResponseEntity<Boolean> ownerExistsByEmail(@PathVariable("email") String email) {
+        boolean exists = ownerService.existsByEmail(email);
+        return new ResponseEntity<>(exists, HttpStatus.OK);
     }
 
-    // http://localhost:8090/owner/exists/phone/{phone}
+    // Verificar si un propietario existe por número de teléfono
     @GetMapping("/exists/phone/{phone}")
-    public boolean ownerExistsByPhone(@PathVariable("phone") String phone) {
-        return ownerService.existsByPhone(phone);
+    public ResponseEntity<Boolean> ownerExistsByPhone(@PathVariable("phone") String phone) {
+        boolean exists = ownerService.existsByPhone(phone);
+        return new ResponseEntity<>(exists, HttpStatus.OK);
     }
 
-    // http://localhost:8090/owner/idCard/{idCard}
+    // Obtener un propietario por su número de identificación (ID Card)
     @GetMapping("/idCard/{idCard}")
-    public Owner getOwnerByIdCard(@PathVariable("idCard") Long idCard) {
-        return ownerService.findByIdCard(idCard);
+    public ResponseEntity<Owner> getOwnerByIdCard(@PathVariable("idCard") Long idCard) {
+        Owner owner = ownerService.findByIdCard(idCard);
+        if (owner != null) {
+            return new ResponseEntity<>(owner, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 }
