@@ -53,4 +53,14 @@ public class VeterinarianService implements CrudService<Veterinarian, Long>{
     public Long countInactiveVeterinarians(){
         return repository.countInactiveVeterinarians();
     }
+
+    //Todos los veterinarios que esten activos
+    public List<Veterinarian> findAllActiveVeterinarian(){
+        return repository.findAllActiveVeterinarian();
+    }
+
+    //Todos los veterinarios que esten inactivos
+    public List<Veterinarian> findAllInactiveVeterinarian(){
+        return repository.findAllInactiveVeterinarian();
+    }
 }

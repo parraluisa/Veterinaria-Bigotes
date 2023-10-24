@@ -86,4 +86,18 @@ public class PetController {
         Long count = petService.countActivePets();
         return new ResponseEntity<>(count, HttpStatus.OK);
     }
+
+    // http://localhost:8090/pet/all/ontreatment
+    @GetMapping("/all/ontreatment")
+    public ResponseEntity<List<Pet>> showAllPetsInTreatment() {
+        List<Pet> pets = petService.findPetsInTreatment();
+        return new ResponseEntity<>(pets, HttpStatus.OK);
+    }
+
+    // http://localhost:8090/pet/all/discharge
+    @GetMapping("/all/discharge")
+    public ResponseEntity<List<Pet>> showAllPetsDischarged() {
+        List<Pet> pets = petService.findPetsDischarged();
+        return new ResponseEntity<>(pets, HttpStatus.OK);
+    }
 }

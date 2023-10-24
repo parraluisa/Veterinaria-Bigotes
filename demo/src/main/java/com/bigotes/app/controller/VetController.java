@@ -97,4 +97,20 @@ public class VetController {
         Long count = veterinarianService.countInactiveVeterinarians();
         return new ResponseEntity<>(count, HttpStatus.OK);
     }
+
+    // Todos los veterinarios que esten activos
+    //localhost:8080/vet/active
+    @GetMapping("/active")
+    public ResponseEntity<List<Veterinarian>> findAllActiveVeterinarian() {
+        List<Veterinarian> vets = veterinarianService.findAllActiveVeterinarian();
+        return new ResponseEntity<>(vets, HttpStatus.OK);
+    }
+
+    // Todos los veterinarios que esten inactivos
+    //localhost:8080/vet/inactive
+    @GetMapping("/inactive")
+    public ResponseEntity<List<Veterinarian>> findAllInactiveVeterinarian() {
+        List<Veterinarian> vets = veterinarianService.findAllInactiveVeterinarian();
+        return new ResponseEntity<>(vets, HttpStatus.OK);
+    }
 }

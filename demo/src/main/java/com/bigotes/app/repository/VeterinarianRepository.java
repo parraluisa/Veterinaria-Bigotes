@@ -1,5 +1,7 @@
 package com.bigotes.app.repository;
 
+import java.util.List;
+
 import com.bigotes.app.model.Veterinarian;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -19,4 +21,12 @@ public interface VeterinarianRepository extends JpaRepository<Veterinarian, Long
     //Cantidad de veterinarios inactivos en la plataforma
     @Query("SELECT COUNT(v) FROM Veterinarian v WHERE v.status = 'Inactivo'")
     Long countInactiveVeterinarians();
+
+    //Todos los veterinarios que esten activos
+    @Query("SELECT v FROM Veterinarian v WHERE v.status = 'Activo'")
+    List<Veterinarian> findAllActiveVeterinarian();
+
+    //Todos los veterinarios que esten inactivos
+    @Query("SELECT v FROM Veterinarian v WHERE v.status = 'Inactivo'")
+    List<Veterinarian> findAllInactiveVeterinarian();
 }
