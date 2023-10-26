@@ -6,9 +6,13 @@ import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.DirtiesContext;
@@ -38,7 +42,7 @@ public class RegisterVet_UseCaseTest {
         //chromeOptions.addArguments("--headless");
 
         this.driver = new ChromeDriver(chromeOptions);
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     // Descripción: Llega un usuario nuevo a la veterinaria con su mascota. El
@@ -59,10 +63,90 @@ public class RegisterVet_UseCaseTest {
 
         // El veterinario que está disponible en ese momento intenta ingresar con su usuario
         // y contraseña al sistema.
+        driver.get(BASE_URL + "/login/show");
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.className("loginVet")));
+        WebElement btnVet = driver.findElement(By.className("loginVet"));
+        btnVet.click();
 
         // Este se equivoca la primera vez,
+        WebElement inputIDCardVet = driver.findElement(By.id("idCardVet"));
+        WebElement inputPasswordVet = driver.findElement(By.id("passwordVet"));
+
+        // -> Se coloca un usuario correcto con contraseña incorrecta
+        inputIDCardVet.sendKeys("1000612796");
+        inputPasswordVet.sendKeys("Incorrecto");
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btnVetSubmit")));
+        WebElement btnSubmit = driver.findElement(By.id("btnVetSubmit"));
+        btnSubmit.click();
+
+        // -> Control de alerta
+        // Espera a que aparezca la alerta.
+        wait.until(ExpectedConditions.alertIsPresent());
+
+        // Cambia el control al objeto Alert.
+        Alert alert = driver.switchTo().alert();
+
+        // Acepta la alerta haciendo clic en el botón "Aceptar".
+        alert.accept();
 
         // sin embargo, al segundo intento logra ingresar sin ningún problema.
+        inputIDCardVet.clear();
+        inputPasswordVet.clear();
+        inputIDCardVet.sendKeys("1000612796");
+        inputPasswordVet.sendKeys("1234");
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btnVetSubmit")));
+        btnSubmit.click();
+
+        // Va a la sección de registro de clientes
+
+        // Ir a dashboard clientes
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.className("petImage")));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btnAllOwner")));
+        WebElement btnAllOwner = driver.findElement(By.id("btnAllOwner"));
+        btnAllOwner.click();
+        
+        // Oprimir en botón: agregar cliente
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.className("ownerId")));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btnsaveOwner")));
+        WebElement btnSaveOwner = driver.findElement(By.id("btnsaveOwner"));
+        btnSaveOwner.click();
+
+        // pide los datos y da en el botón de “registrar”
+        WebElement inputIDCardOwner = driver.findElement(By.id("idCard"));
+        WebElement inputNameOwner = driver.findElement(By.id("firstName"));
+        WebElement inputFLNOwner = driver.findElement(By.id("firstLastName"));
+        WebElement inputSLNOwner = driver.findElement(By.id("secondLastName"));
+        WebElement inputPhoneOwner = driver.findElement(By.id("phone"));
+        WebElement inputEmailOwner = driver.findElement(By.id("email"));
+
+        inputIDCardOwner.sendKeys("1001298924");
+        inputNameOwner.sendKeys("Fabio");
+        inputFLNOwner.sendKeys("Luis");
+        inputSLNOwner.sendKeys("Buitrago");
+
+        // -> Teléfono incorrecto
+        inputPhoneOwner.sendKeys("TeléfonoIncorrecto");
+        inputEmailOwner.sendKeys("fabiobuitra@gmail.com");
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btnSaveOwnerForm")));
+        WebElement btnSaveOwnerForm = driver.findElement(By.id("btnSaveOwnerForm"));
+        btnSaveOwnerForm.click();
+
+        // Nuevamente el veterinario se equivoca en uno de los campos, corrige e intenta nuevamente.
+
+        // -> Control de alerta
+        // Espera a que aparezca la alerta.
+        wait.until(ExpectedConditions.alertIsPresent());
+
+        // Cambia el control al objeto Alert.
+        alert = driver.switchTo().alert();
+
+        // Acepta la alerta haciendo clic en el botón "Aceptar".
+        alert.accept();
+        
 
     }
 }
