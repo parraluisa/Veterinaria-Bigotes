@@ -1,7 +1,6 @@
 package com.bigotes.app.e2e;
 
 import java.time.Duration;
-import java.util.List;
 
 
 import org.junit.jupiter.api.BeforeEach;
@@ -197,14 +196,12 @@ public class RegisterVet_UseCaseTest {
         inputIDCardOwnerLogin.sendKeys("1001298924");
 
         // Este ingresa y ve que los datos de la mascota son correctos. Se acaba la prueba.
-        
+
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btnOwnerSubmit")));
         WebElement btnSubmitOwner = driver.findElement(By.id("btnOwnerSubmit"));
         btnSubmitOwner.click();
 
         wait.until(ExpectedConditions.presenceOfElementLocated(By.className("petImage")));
-
-
 
     }
 }
