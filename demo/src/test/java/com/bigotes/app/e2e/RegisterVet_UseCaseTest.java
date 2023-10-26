@@ -146,7 +146,63 @@ public class RegisterVet_UseCaseTest {
 
         // Acepta la alerta haciendo clic en el botón "Aceptar".
         alert.accept();
+
+        inputPhoneOwner.clear();
+        inputPhoneOwner.sendKeys("3124606315");
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btnSaveOwnerForm")));
+        btnSaveOwnerForm.click();
+
+        // Posteriormente va a la sección de mascotas
+
+        // -> Ir a DashBoard de mascotas
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.className("ownerId")));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btnAllPets")));
+        WebElement btnAllPets = driver.findElement(By.id("btnAllPets"));
+        btnAllPets.click();
         
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.className("petImage")));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btnAddPet")));
+        WebElement btnAddPet = driver.findElement(By.id("btnAddPet"));
+        btnAddPet.click();
+
+        // y registra la mascota asociándola al dueño. Esta vez todo sale bien a la primera.
+        WebElement inputIDCardOwnerPet = driver.findElement(By.id("ownerId"));
+        WebElement inputNamePet= driver.findElement(By.id("name"));
+        WebElement inputBreedPet = driver.findElement(By.id("breed"));
+        WebElement inputBirthdayPet = driver.findElement(By.id("birthday"));
+        WebElement inputWeightPet = driver.findElement(By.id("weight"));
+        WebElement inputDiseasePet = driver.findElement(By.id("disease"));
+        WebElement inputImgUrlPet = driver.findElement(By.id("imgUrl"));
+
+        inputIDCardOwnerPet.sendKeys("1001298924");
+        inputNamePet.sendKeys("Maw");
+        inputBreedPet.sendKeys("Gato naranja");
+        inputBirthdayPet.sendKeys("23/07/2020");
+        inputWeightPet.sendKeys("500");
+        inputDiseasePet.sendKeys("Tos leve");
+        inputImgUrlPet.sendKeys("https://catvills.com/wp-content/uploads/2020/07/orange-and-white-cat-names-a.jpg");
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btnAddPetForm")));
+        WebElement btnAddPetForm = driver.findElement(By.id("btnAddPetForm"));
+        btnAddPetForm.click();
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.className("petImage")));
+
+        // El veterinario pide al dueño que ingrese con su cedula a través del portal de clientes
+
+        driver.get(BASE_URL + "/login/show");
+
+        WebElement inputIDCardOwnerLogin = driver.findElement(By.id("idCardOwner"));
+        inputIDCardOwnerLogin.sendKeys("1001298924");
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btnOwnerSubmit")));
+        WebElement btnSubmitOwner = driver.findElement(By.id("btnOwnerSubmit"));
+        btnSubmitOwner.click();
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.className("petImage")));
+
+
 
     }
 }
