@@ -196,6 +196,8 @@ public class RegisterVet_UseCaseTest {
         WebElement inputIDCardOwnerLogin = driver.findElement(By.id("idCardOwner"));
         inputIDCardOwnerLogin.sendKeys("1001298924");
 
+        // Este ingresa y ve que los datos de la mascota son correctos. Se acaba la prueba.
+        
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btnOwnerSubmit")));
         WebElement btnSubmitOwner = driver.findElement(By.id("btnOwnerSubmit"));
         btnSubmitOwner.click();
