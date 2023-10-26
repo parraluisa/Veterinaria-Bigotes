@@ -1,6 +1,5 @@
 package com.bigotes.app.repository;
 
-import org.aspectj.lang.annotation.Before;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
