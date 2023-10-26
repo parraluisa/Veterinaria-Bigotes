@@ -46,7 +46,7 @@ public class Pet {
     private Owner owner;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "pet")
+    @OneToMany(mappedBy = "pet", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Treatment> treatments = new ArrayList<>();
 
     public Pet(
