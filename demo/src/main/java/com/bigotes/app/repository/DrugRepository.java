@@ -1,12 +1,11 @@
 package com.bigotes.app.repository;
 
 import com.bigotes.app.model.Drug;
-
-import java.util.List;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Repository
 public interface DrugRepository extends JpaRepository<Drug, Long> {
@@ -32,7 +31,7 @@ public interface DrugRepository extends JpaRepository<Drug, Long> {
 
     // Dashboard No. 08
     // Ganancias totales de la veterinaria
-    @Query("SELECT SUM((d.sellPrice * d.itemsSell) - (d.buyPrice * d.itemsAvailable)) FROM Drug d")
+    @Query("SELECT SUM(((d.sellPrice - d.buyPrice) * d.itemsSell)) FROM Drug d")
     Float calculateTotalProfits();
 
     // Dashboard No. 09
@@ -40,6 +39,6 @@ public interface DrugRepository extends JpaRepository<Drug, Long> {
     @Query("SELECT d, SUM(d.itemsSell) AS totalUnitsSold " +
     "FROM Drug d " +
     "GROUP BY d " +
-    "ORDER BY totalUnitsSold DESC")
+    "ORDER BY totalUnitsSold DESC LIMIT 3")
     List<Object[]> findTop3BestSellingDrugs();
 }

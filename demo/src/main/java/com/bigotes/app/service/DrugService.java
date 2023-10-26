@@ -1,14 +1,13 @@
 package com.bigotes.app.service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-
+import com.bigotes.app.model.Drug;
+import com.bigotes.app.repository.DrugRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.bigotes.app.model.Drug;
-import com.bigotes.app.repository.DrugRepository;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class DrugService implements CrudService<Drug, Long> {
@@ -63,18 +62,12 @@ public class DrugService implements CrudService<Drug, Long> {
     // Top 3 medicamentos con más unidades vendidas
     public List<Drug> findTop3BestSellingDrugs() {
         List<Object[]> results = repository.findTop3BestSellingDrugs();
-
-        if (results.size() >= 3) {
-            results = results.subList(0, 3);
-        }
-
         List<Drug> top3Drugs = new ArrayList<>();
 
         for (Object[] result : results) {
             Drug drug = (Drug) result[0];
             top3Drugs.add(drug);
         }
-
         return top3Drugs;
     }
 }
