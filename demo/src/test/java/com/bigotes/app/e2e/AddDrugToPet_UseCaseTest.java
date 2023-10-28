@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.DirtiesContext;
@@ -59,7 +60,7 @@ public class AddDrugToPet_UseCaseTest {
      */
 
     @Test
-    public void drugUseCase(){
+    public void drugUseCase() {
         driver.get(BASE_URL);
 
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btn-login")));
@@ -91,6 +92,20 @@ public class AddDrugToPet_UseCaseTest {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.className("pet-detail")));
         ArrayList<WebElement> btnPetDetail = (ArrayList<WebElement>) driver.findElements(By.className("pet-detail"));
         btnPetDetail.get(0).click();
+
+        WebElement selectElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("selected-drug")));
+        Select dropdown = new Select(selectElement);
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("field-description")));
+        WebElement fieldDescription = driver.findElement(By.id("field-description"));
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btn-add-treatment")));
+        WebElement btnAddTreatment = driver.findElement(By.id("btn-add-treatment"));
+        dropdown.selectByVisibleText("BOFLOX");
+        fieldDescription.sendKeys("Se suministró BOFLOX al gato para tratar la rinotraqueítis felina. Se realizará un seguimiento en 24 horas.");
+        btnAddTreatment.click();
+
+
     }
 
 }
