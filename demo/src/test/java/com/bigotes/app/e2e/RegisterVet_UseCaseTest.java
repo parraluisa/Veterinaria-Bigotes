@@ -1,6 +1,8 @@
 package com.bigotes.app.e2e;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import java.time.Duration;
+
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Alert;
@@ -15,7 +17,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
 
-import java.time.Duration;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @ActiveProfiles("test")
@@ -28,8 +30,8 @@ public class RegisterVet_UseCaseTest {
     private WebDriverWait wait;
 
     @BeforeEach
-    public void init() {
-
+    public void init(){
+        
         WebDriverManager.chromedriver().setup();
 
         ChromeOptions chromeOptions = new ChromeOptions();
@@ -55,12 +57,16 @@ public class RegisterVet_UseCaseTest {
     // prueba.
 
     @Test
-    public void vet_Use_Case() {
+    public void vet_Use_Case(){
+
         // Llega un usuario nuevo a la veterinaria con su mascota.
+        driver.get(BASE_URL + "/home");
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("goLogin")));
+        WebElement btnLogin = driver.findElement(By.id("goLogin"));
+        btnLogin.click();
 
         // El veterinario que está disponible en ese momento intenta ingresar con su usuario
         // y contraseña al sistema.
-        driver.get(BASE_URL + "/login/show");
 
         wait.until(ExpectedConditions.presenceOfElementLocated(By.className("loginVet")));
         WebElement btnVet = driver.findElement(By.className("loginVet"));
@@ -104,7 +110,7 @@ public class RegisterVet_UseCaseTest {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btnAllOwner")));
         WebElement btnAllOwner = driver.findElement(By.id("btnAllOwner"));
         btnAllOwner.click();
-
+        
         // Oprimir en botón: agregar cliente
         wait.until(ExpectedConditions.presenceOfElementLocated(By.className("ownerId")));
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btnsaveOwner")));
@@ -157,7 +163,7 @@ public class RegisterVet_UseCaseTest {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btnAllPets")));
         WebElement btnAllPets = driver.findElement(By.id("btnAllPets"));
         btnAllPets.click();
-
+        
         wait.until(ExpectedConditions.presenceOfElementLocated(By.className("petImage")));
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btnAddPet")));
         WebElement btnAddPet = driver.findElement(By.id("btnAddPet"));
@@ -165,7 +171,7 @@ public class RegisterVet_UseCaseTest {
 
         // y registra la mascota asociándola al dueño. Esta vez todo sale bien a la primera.
         WebElement inputIDCardOwnerPet = driver.findElement(By.id("ownerId"));
-        WebElement inputNamePet = driver.findElement(By.id("name"));
+        WebElement inputNamePet= driver.findElement(By.id("name"));
         WebElement inputBreedPet = driver.findElement(By.id("breed"));
         WebElement inputBirthdayPet = driver.findElement(By.id("birthday"));
         WebElement inputWeightPet = driver.findElement(By.id("weight"));
@@ -193,10 +199,13 @@ public class RegisterVet_UseCaseTest {
         WebElement inputIDCardOwnerLogin = driver.findElement(By.id("idCardOwner"));
         inputIDCardOwnerLogin.sendKeys("1001298924");
 
+        // Este ingresa y ve que los datos de la mascota son correctos. Se acaba la prueba.
+
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btnOwnerSubmit")));
         WebElement btnSubmitOwner = driver.findElement(By.id("btnOwnerSubmit"));
         btnSubmitOwner.click();
 
         wait.until(ExpectedConditions.presenceOfElementLocated(By.className("petImage")));
+
     }
 }
