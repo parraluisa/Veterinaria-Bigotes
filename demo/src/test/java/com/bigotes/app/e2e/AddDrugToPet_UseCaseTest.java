@@ -49,7 +49,7 @@ public class AddDrugToPet_UseCaseTest {
 
     @AfterEach
     void tearDown(){
-        driver.quit();
+        //driver.quit();
     }
 
     /*
@@ -76,12 +76,19 @@ public class AddDrugToPet_UseCaseTest {
         int initialTotalProfit = Integer.parseInt(totalProfit.getText().replaceAll("\\$|,|\\.", ""));
 
         vetNavigation();
+        searchPet();
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.className("td-treatment-disease")));
         List<WebElement> initialTreatmentList = driver.findElements(By.className("td-treatment-disease"));
         int initialTreatmentListSize = initialTreatmentList.size();
+
 
         //Act
         addTreatment();
         wait.until(lambda -> driver.findElements(By.className("td-treatment-disease")).size() == initialTreatmentListSize + 1);
+        driver.navigate().back();
+        searchPet();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.className("td-treatment-disease")));
         List<WebElement> finalTreatmentList = driver.findElements(By.className("td-treatment-disease"));
 
         adminNavigation();
@@ -141,7 +148,9 @@ public class AddDrugToPet_UseCaseTest {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btnVetSubmit")));
         WebElement btnSubmit = driver.findElement(By.id("btnVetSubmit"));
         btnSubmit.click();
+    }
 
+    private void searchPet(){
         // Se ingresa a la sección de mascotas
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("searchPet")));
         WebElement inputSearchPet = driver.findElement(By.id("searchPet"));
@@ -161,14 +170,14 @@ public class AddDrugToPet_UseCaseTest {
         // Se ingresa a la sección de tratamientos
         WebElement selectElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("selected-drug")));
         Select dropdown = new Select(selectElement);
+        dropdown.selectByVisibleText("BOFLOX");
 
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("field-description")));
         WebElement fieldDescription = driver.findElement(By.id("field-description"));
+        fieldDescription.sendKeys("Se suministró BOFLOX al gato para tratar la rinotraqueítis felina. Se realizará un seguimiento en 24 horas.");
 
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btn-add-treatment")));
         WebElement btnAddTreatment = driver.findElement(By.id("btn-add-treatment"));
-        dropdown.selectByVisibleText("BOFLOX");
-        fieldDescription.sendKeys("Se suministró BOFLOX al gato para tratar la rinotraqueítis felina. Se realizará un seguimiento en 24 horas.");
         btnAddTreatment.click();
     }
 
