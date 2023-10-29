@@ -1,7 +1,9 @@
 package com.bigotes.app.controller;
 
+import com.bigotes.app.model.Administrator;
 import com.bigotes.app.model.Owner;
 import com.bigotes.app.model.Veterinarian;
+import com.bigotes.app.service.AdministratorService;
 import com.bigotes.app.service.OwnerService;
 import com.bigotes.app.service.VeterinarianService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +22,9 @@ public class LoginPageController {
     @Autowired
     VeterinarianService veterinarianService;
 
+    @Autowired
+    AdministratorService administratorService;
+
     @GetMapping("/owner/{idCardOwner}")
     public Owner loginOwner(@PathVariable("idCardOwner") Long idCardOwner) {
         return ownerService.findByIdCard(idCardOwner);
@@ -35,6 +40,15 @@ public class LoginPageController {
             return vet;
         }
         return null;
+    }
+
+    @GetMapping("/admin/{idCardAdmin}/{passwordAdmin}")
+    public Boolean loginAdmin(
+            @PathVariable("idCardAdmin") Long idCardAdmin,
+            @PathVariable("passwordAdmin") String passwordAdmin
+    ) {
+        Administrator admin = administratorService.findByIcCard(idCardAdmin);
+        return admin != null && Objects.equals(admin.getPassword(), passwordAdmin);
     }
 
 }

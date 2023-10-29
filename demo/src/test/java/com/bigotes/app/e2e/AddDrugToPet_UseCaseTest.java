@@ -2,6 +2,7 @@ package com.bigotes.app.e2e;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -18,13 +19,15 @@ import org.springframework.test.context.ActiveProfiles;
 
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.List;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @ActiveProfiles("test")
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
 public class AddDrugToPet_UseCaseTest {
 
-    private final String BASE_URL = "http://localhost:4200";
+    private final String BASE_URL = "http://localhost:4200/home";
+    private final String ADMIN_URL = "http://localhost:4200/admin/login";
 
     private WebDriver driver;
     private WebDriverWait wait;
@@ -46,7 +49,7 @@ public class AddDrugToPet_UseCaseTest {
 
     @AfterEach
     void tearDown(){
-        //driver.quit();
+        driver.quit();
     }
 
     /*
@@ -61,12 +64,69 @@ public class AddDrugToPet_UseCaseTest {
 
     @Test
     public void drugUseCase() {
-        driver.get(BASE_URL);
 
+        //Arrange
+        adminNavigation();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("total-sales")));
+        WebElement totalSales = driver.findElement(By.id("total-sales"));
+        int initialTotalSales = Integer.parseInt(totalSales.getText().replaceAll("\\$|,|\\.", ""));
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("total-profit")));
+        WebElement totalProfit = driver.findElement(By.id("total-profit"));
+        int initialTotalProfit = Integer.parseInt(totalProfit.getText().replaceAll("\\$|,|\\.", ""));
+
+        vetNavigation();
+        List<WebElement> initialTreatmentList = driver.findElements(By.className("td-treatment-disease"));
+        int initialTreatmentListSize = initialTreatmentList.size();
+
+        //Act
+        addTreatment();
+        wait.until(lambda -> driver.findElements(By.className("td-treatment-disease")).size() == initialTreatmentListSize + 1);
+        List<WebElement> finalTreatmentList = driver.findElements(By.className("td-treatment-disease"));
+
+        adminNavigation();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("total-sales")));
+        WebElement totalSales2 = driver.findElement(By.id("total-sales"));
+        int finalTotalSales = Integer.parseInt(totalSales2.getText().replaceAll("\\$|,|\\.", ""));
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("total-profit")));
+        WebElement totalProfit2 = driver.findElement(By.id("total-profit"));
+        int finalTotalProfit = Integer.parseInt(totalProfit2.getText().replaceAll("\\$|,|\\.", ""));
+
+        //Assert
+        Assertions.assertTrue(finalTotalSales > initialTotalSales);
+        Assertions.assertTrue(finalTotalProfit > initialTotalProfit);
+        Assertions.assertEquals(initialTreatmentListSize + 1, finalTreatmentList.size());
+
+
+
+    }
+
+    private void adminNavigation(){
+        driver.get(ADMIN_URL);
+
+        // Se ingresa al login de administrador
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("idCardAdmin")));
+        WebElement inputIDCardAdmin = driver.findElement(By.id("idCardAdmin"));
+        inputIDCardAdmin.sendKeys("1000612796");
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("passwordAdmin")));
+        WebElement inputPasswordAdmin = driver.findElement(By.id("passwordAdmin"));
+        inputPasswordAdmin.sendKeys("1234");
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btn-admin-submit")));
+        WebElement btnAdminLogin = driver.findElement(By.id("btn-admin-submit"));
+        btnAdminLogin.click();
+    }
+
+    private void vetNavigation(){
+        // Se ingresa al landing page
+        driver.get(BASE_URL);
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btn-login")));
         WebElement btnLogin = driver.findElement(By.id("btn-login"));
         btnLogin.click();
 
+        // Se ingresa al login de veterinario
         wait.until(ExpectedConditions.presenceOfElementLocated(By.className("loginVet")));
         WebElement btnVet = driver.findElement(By.className("loginVet"));
         btnVet.click();
@@ -81,10 +141,12 @@ public class AddDrugToPet_UseCaseTest {
         WebElement btnSubmit = driver.findElement(By.id("btnVetSubmit"));
         btnSubmit.click();
 
+        // Se ingresa a la sección de mascotas
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("searchPet")));
         WebElement inputSearchPet = driver.findElement(By.id("searchPet"));
         inputSearchPet.sendKeys("Pompita");
 
+        // Se selecciona la mascota
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("checkbox")));
         WebElement btnFilterNamePet = driver.findElement(By.id("checkbox"));
         btnFilterNamePet.click();
@@ -92,7 +154,10 @@ public class AddDrugToPet_UseCaseTest {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.className("pet-detail")));
         ArrayList<WebElement> btnPetDetail = (ArrayList<WebElement>) driver.findElements(By.className("pet-detail"));
         btnPetDetail.get(0).click();
+    }
 
+    private void addTreatment(){
+        // Se ingresa a la sección de tratamientos
         WebElement selectElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("selected-drug")));
         Select dropdown = new Select(selectElement);
 
@@ -104,8 +169,6 @@ public class AddDrugToPet_UseCaseTest {
         dropdown.selectByVisibleText("BOFLOX");
         fieldDescription.sendKeys("Se suministró BOFLOX al gato para tratar la rinotraqueítis felina. Se realizará un seguimiento en 24 horas.");
         btnAddTreatment.click();
-
-
     }
 
 }

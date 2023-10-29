@@ -1,17 +1,8 @@
 package com.bigotes.app.controller;
 
-import com.bigotes.app.model.Drug;
-import com.bigotes.app.model.Owner;
-import com.bigotes.app.model.Pet;
-import com.bigotes.app.model.Treatment;
-import com.bigotes.app.model.Veterinarian;
-import com.bigotes.app.repository.DrugRepository;
-import com.bigotes.app.repository.OwnerRepository;
-import com.bigotes.app.repository.PetRepository;
-import com.bigotes.app.repository.TreatmentRepository;
-import com.bigotes.app.repository.VeterinarianRepository;
+import com.bigotes.app.model.*;
+import com.bigotes.app.repository.*;
 import jakarta.transaction.Transactional;
-
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -46,6 +37,9 @@ public class DbController implements ApplicationRunner {
     @Autowired
     TreatmentRepository treatmentRepository;
 
+    @Autowired
+    AdministratorRepository administratorRepository;
+
     @Override
     public void run(ApplicationArguments args) {
 
@@ -56,7 +50,12 @@ public class DbController implements ApplicationRunner {
         createDrugs();
         createTreatments();
         relateTreatments();
+        createAdmin();
 
+    }
+
+    private void createAdmin() {
+        administratorRepository.save(new Administrator(1000612796L, "1234"));
     }
 
     private void relatePetsToOwners() {

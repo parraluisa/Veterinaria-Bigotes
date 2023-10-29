@@ -37,17 +37,20 @@ public class PetController {
 
     // Insertar una nueva mascota
     @PostMapping()
-    public ResponseEntity<Void> insertPet(@RequestBody Pet pet) {
-        petService.save(pet);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+    public ResponseEntity<Pet> insertPet(@RequestBody Pet pet) {
+        Pet petCreated = petService.save(pet);
+        if (petCreated == null) {
+            return new ResponseEntity<>(HttpStatus.CONFLICT);
+        }
+        return new ResponseEntity<>(petCreated, HttpStatus.CREATED);
     }
 
     // Actualizar una mascota
     @PutMapping()
-    public ResponseEntity<Void> updatePet(@RequestBody Pet pet) {
+    public ResponseEntity<Pet> updatePet(@RequestBody Pet pet) {
         if (petService.findById(pet.getId()) != null) {
-            petService.save(pet);
-            return new ResponseEntity<>(HttpStatus.OK);
+            Pet petUpdated = petService.save(pet);
+            return new ResponseEntity<>(petUpdated, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
