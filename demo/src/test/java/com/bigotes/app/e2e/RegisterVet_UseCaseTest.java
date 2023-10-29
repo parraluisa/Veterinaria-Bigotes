@@ -3,6 +3,7 @@ package com.bigotes.app.e2e;
 import java.time.Duration;
 import java.util.List;
 
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Alert;
@@ -115,7 +116,8 @@ public class RegisterVet_UseCaseTest {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.className("ownerId")));
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btnsaveOwner")));
 
-        List<WebElement> listaIncial = driver.findElements(By.className("liStudentName"));
+        // -> LISTA INICIAL: Owner
+        List<WebElement> listaIncialOwner = driver.findElements(By.className("ownerId"));
 
         WebElement btnSaveOwner = driver.findElement(By.id("btnsaveOwner"));
         btnSaveOwner.click();
@@ -164,11 +166,21 @@ public class RegisterVet_UseCaseTest {
         // -> Ir a DashBoard de mascotas
         wait.until(ExpectedConditions.presenceOfElementLocated(By.className("ownerId")));
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btnAllPets")));
+
+        // -> LISTA FINAL: Owner
+        List<WebElement> listaFinalOwner = driver.findElements(By.className("ownerId"));
+
+        // VERIFICACIÓN: Agregado correcto de Owner
+        Assertions.assertThat(listaFinalOwner.size()).isEqualTo(listaIncialOwner.size() + 1);
+
         WebElement btnAllPets = driver.findElement(By.id("btnAllPets"));
         btnAllPets.click();
         
         wait.until(ExpectedConditions.presenceOfElementLocated(By.className("petImage")));
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btnAddPet")));
+
+        List<WebElement> listaInicialPet = driver.findElements(By.className("petImage"));
+
         WebElement btnAddPet = driver.findElement(By.id("btnAddPet"));
         btnAddPet.click();
 
