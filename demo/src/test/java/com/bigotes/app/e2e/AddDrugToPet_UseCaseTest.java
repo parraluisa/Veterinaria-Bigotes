@@ -84,12 +84,22 @@ public class AddDrugToPet_UseCaseTest {
 
 
         //Act
-        addTreatment();
+        String expectedDrug = "BOFLOX";
+        String expectedDescription = "Se suministró BOFLOX al gato para tratar la rinotraqueítis felina. Se realizará un seguimiento en 24 horas.";
+        addTreatment(expectedDrug, expectedDescription);
         wait.until(lambda -> driver.findElements(By.className("td-treatment-disease")).size() == initialTreatmentListSize + 1);
         driver.navigate().back();
         searchPet();
         wait.until(ExpectedConditions.presenceOfElementLocated(By.className("td-treatment-disease")));
         List<WebElement> finalTreatmentList = driver.findElements(By.className("td-treatment-disease"));
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.className("td-treatment-drug")));
+        List<WebElement> finalDrugList = driver.findElements(By.className("td-treatment-drug"));
+        String lastInsertedDrug = finalDrugList.get(finalDrugList.size() - 1).getText();
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.className("td-treatment-description")));
+        List<WebElement> finalDescriptionList = driver.findElements(By.className("td-treatment-description"));
+        String lastInsertedDescription = finalDescriptionList.get(finalDescriptionList.size() - 1).getText();
 
         adminNavigation();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("total-sales")));
@@ -101,7 +111,11 @@ public class AddDrugToPet_UseCaseTest {
         int finalTotalProfit = Integer.parseInt(totalProfit2.getText().replaceAll("\\$|,|\\.", ""));
 
         //Assert
+        // Verificar que el tratamiento se haya guardado correctamente
+
         Assertions.assertEquals(initialTreatmentListSize + 1, finalTreatmentList.size());
+        Assertions.assertEquals(expectedDrug, lastInsertedDrug);
+        Assertions.assertEquals(expectedDescription, lastInsertedDescription);
         Assertions.assertTrue(finalTotalSales > initialTotalSales);
         Assertions.assertTrue(finalTotalProfit > initialTotalProfit);
         
@@ -166,15 +180,15 @@ public class AddDrugToPet_UseCaseTest {
         btnPetDetail.get(0).click();
     }
 
-    private void addTreatment(){
+    private void addTreatment(String expectedDrug, String expectedDescription){
         // Se ingresa a la sección de tratamientos
         WebElement selectElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("selected-drug")));
         Select dropdown = new Select(selectElement);
-        dropdown.selectByVisibleText("BOFLOX");
+        dropdown.selectByVisibleText(expectedDrug);
 
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("field-description")));
         WebElement fieldDescription = driver.findElement(By.id("field-description"));
-        fieldDescription.sendKeys("Se suministró BOFLOX al gato para tratar la rinotraqueítis felina. Se realizará un seguimiento en 24 horas.");
+        fieldDescription.sendKeys(expectedDescription);
 
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btn-add-treatment")));
         WebElement btnAddTreatment = driver.findElement(By.id("btn-add-treatment"));
