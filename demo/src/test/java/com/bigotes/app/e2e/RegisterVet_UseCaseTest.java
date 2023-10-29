@@ -1,7 +1,7 @@
 package com.bigotes.app.e2e;
 
 import java.time.Duration;
-
+import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -114,6 +114,9 @@ public class RegisterVet_UseCaseTest {
         // Oprimir en botón: agregar cliente
         wait.until(ExpectedConditions.presenceOfElementLocated(By.className("ownerId")));
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btnsaveOwner")));
+
+        List<WebElement> listaIncial = driver.findElements(By.className("liStudentName"));
+
         WebElement btnSaveOwner = driver.findElement(By.id("btnsaveOwner"));
         btnSaveOwner.click();
 
