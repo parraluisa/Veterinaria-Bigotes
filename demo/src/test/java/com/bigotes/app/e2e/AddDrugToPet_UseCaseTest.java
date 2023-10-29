@@ -67,11 +67,11 @@ public class AddDrugToPet_UseCaseTest {
 
         //Arrange
         adminNavigation();
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("total-sales")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("total-sales")));
         WebElement totalSales = driver.findElement(By.id("total-sales"));
         int initialTotalSales = Integer.parseInt(totalSales.getText().replaceAll("\\$|,|\\.", ""));
 
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("total-profit")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("total-profit")));
         WebElement totalProfit = driver.findElement(By.id("total-profit"));
         int initialTotalProfit = Integer.parseInt(totalProfit.getText().replaceAll("\\$|,|\\.", ""));
 
@@ -85,18 +85,19 @@ public class AddDrugToPet_UseCaseTest {
         List<WebElement> finalTreatmentList = driver.findElements(By.className("td-treatment-disease"));
 
         adminNavigation();
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("total-sales")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("total-sales")));
         WebElement totalSales2 = driver.findElement(By.id("total-sales"));
         int finalTotalSales = Integer.parseInt(totalSales2.getText().replaceAll("\\$|,|\\.", ""));
 
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("total-profit")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("total-profit")));
         WebElement totalProfit2 = driver.findElement(By.id("total-profit"));
         int finalTotalProfit = Integer.parseInt(totalProfit2.getText().replaceAll("\\$|,|\\.", ""));
 
         //Assert
+        Assertions.assertEquals(initialTreatmentListSize + 1, finalTreatmentList.size());
         Assertions.assertTrue(finalTotalSales > initialTotalSales);
         Assertions.assertTrue(finalTotalProfit > initialTotalProfit);
-        Assertions.assertEquals(initialTreatmentListSize + 1, finalTreatmentList.size());
+        
 
 
 
