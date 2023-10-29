@@ -61,8 +61,8 @@ public class RegisterVet_UseCaseTest {
 
         // Llega un usuario nuevo a la veterinaria con su mascota.
         driver.get(BASE_URL + "/home");
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("goLogin")));
-        WebElement btnLogin = driver.findElement(By.id("goLogin"));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("btn-login")));
+        WebElement btnLogin = driver.findElement(By.id("btn-login"));
         btnLogin.click();
 
         // El veterinario que está disponible en ese momento intenta ingresar con su usuario
