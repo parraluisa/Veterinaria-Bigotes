@@ -1,5 +1,7 @@
 package com.bigotes.app.controller;
 
+import com.bigotes.app.DTOs.PetDTO;
+import com.bigotes.app.DTOs.PetMapper;
 import com.bigotes.app.model.Pet;
 import com.bigotes.app.service.PetService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,17 +21,22 @@ public class PetController {
 
     // Obtener todas las mascotas
     @GetMapping()
-    public ResponseEntity<List<Pet>> showAllPets() {
+    public ResponseEntity<List<PetDTO>> showAllPets() {
         List<Pet> pets = petService.findAll();
-        return new ResponseEntity<>(pets, HttpStatus.OK);
+        List<PetDTO> petsDTO = PetMapper.INSTANCE.convertList(pets);
+        if (pets.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(petsDTO, HttpStatus.OK);
     }
 
     // Obtener una mascota por su ID
     @GetMapping("/{id}")
-    public ResponseEntity<Pet> showPet(@PathVariable("id") Long id) {
+    public ResponseEntity<PetDTO> showPet(@PathVariable("id") Long id) {
         Pet pet = petService.findById(id);
-        if (pet != null) {
-            return new ResponseEntity<>(pet, HttpStatus.OK);
+        PetDTO petDTO = PetMapper.INSTANCE.convert(pet);
+        if (petDTO != null) {
+            return new ResponseEntity<>(petDTO, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
@@ -37,20 +44,22 @@ public class PetController {
 
     // Insertar una nueva mascota
     @PostMapping()
-    public ResponseEntity<Pet> insertPet(@RequestBody Pet pet) {
+    public ResponseEntity<PetDTO> insertPet(@RequestBody Pet pet) {
         Pet petCreated = petService.save(pet);
-        if (petCreated == null) {
+        PetDTO petDTO = PetMapper.INSTANCE.convert(petCreated);
+        if (petDTO == null) {
             return new ResponseEntity<>(HttpStatus.CONFLICT);
         }
-        return new ResponseEntity<>(petCreated, HttpStatus.CREATED);
+        return new ResponseEntity<>(petDTO, HttpStatus.CREATED);
     }
 
     // Actualizar una mascota
     @PutMapping()
-    public ResponseEntity<Pet> updatePet(@RequestBody Pet pet) {
+    public ResponseEntity<PetDTO> updatePet(@RequestBody Pet pet) {
         if (petService.findById(pet.getId()) != null) {
             Pet petUpdated = petService.save(pet);
-            return new ResponseEntity<>(petUpdated, HttpStatus.OK);
+            PetDTO petDTO = PetMapper.INSTANCE.convert(petUpdated);
+            return new ResponseEntity<>(petDTO, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
@@ -69,9 +78,13 @@ public class PetController {
 
     // Obtener las mascotas de un propietario por su ID
     @GetMapping("/owner/{id}")
-    public ResponseEntity<List<Pet>> showOwnerPet(@PathVariable("id") Long id) {
+    public ResponseEntity<List<PetDTO>> showOwnerPet(@PathVariable("id") Long id) {
         List<Pet> pets = petService.findByOwnerId(id);
-        return new ResponseEntity<>(pets, HttpStatus.OK);
+        List<PetDTO> petsDTO = PetMapper.INSTANCE.convertList(pets);
+        if (petsDTO.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(petsDTO, HttpStatus.OK);
     }
 
     // Dashboard No. 05
@@ -92,15 +105,23 @@ public class PetController {
 
     // http://localhost:8090/pet/all/ontreatment
     @GetMapping("/all/ontreatment")
-    public ResponseEntity<List<Pet>> showAllPetsInTreatment() {
+    public ResponseEntity<List<PetDTO>> showAllPetsInTreatment() {
         List<Pet> pets = petService.findPetsInTreatment();
-        return new ResponseEntity<>(pets, HttpStatus.OK);
+        List<PetDTO> petsDTO = PetMapper.INSTANCE.convertList(pets);
+        if (petsDTO.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(petsDTO, HttpStatus.OK);
     }
 
     // http://localhost:8090/pet/all/discharge
     @GetMapping("/all/discharge")
-    public ResponseEntity<List<Pet>> showAllPetsDischarged() {
+    public ResponseEntity<List<PetDTO>> showAllPetsDischarged() {
         List<Pet> pets = petService.findPetsDischarged();
-        return new ResponseEntity<>(pets, HttpStatus.OK);
+        List<PetDTO> petsDTO = PetMapper.INSTANCE.convertList(pets);
+        if (petsDTO.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(petsDTO, HttpStatus.OK);
     }
 }
