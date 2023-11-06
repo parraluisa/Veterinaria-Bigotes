@@ -1,5 +1,7 @@
 package com.bigotes.app.controller;
 
+import com.bigotes.app.DTOs.VeterinarianDTO;
+import com.bigotes.app.DTOs.VeterinarianMapper;
 import com.bigotes.app.model.Veterinarian;
 import com.bigotes.app.service.VeterinarianService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,17 +21,19 @@ public class VetController {
 
     // Obtener todos los veterinarios
     @GetMapping()
-    public ResponseEntity<List<Veterinarian>> showAllVets() {
+    public ResponseEntity<List<VeterinarianDTO>> showAllVets() {
         List<Veterinarian> vets = veterinarianService.findAll();
-        return new ResponseEntity<>(vets, HttpStatus.OK);
+        List<VeterinarianDTO> vetsDTO = VeterinarianMapper.INSTANCE.convertList(vets);
+        return new ResponseEntity<>(vetsDTO, HttpStatus.OK);
     }
 
     // Obtener un veterinario por su ID
     @GetMapping("/{id}")
-    public ResponseEntity<Veterinarian> showVet(@PathVariable("id") Long id) {
+    public ResponseEntity<VeterinarianDTO> showVet(@PathVariable("id") Long id) {
         Veterinarian vet = veterinarianService.findById(id);
-        if (vet != null) {
-            return new ResponseEntity<>(vet, HttpStatus.OK);
+        VeterinarianDTO vetDTO = VeterinarianMapper.INSTANCE.convert(vet);
+        if (vetDTO != null) {
+            return new ResponseEntity<>(vetDTO, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
@@ -37,10 +41,11 @@ public class VetController {
 
     // Obtener un veterinario por su número de identificación (ID Card)
     @GetMapping("/idcard/{id}")
-    public ResponseEntity<Veterinarian> showVetByIdCard(@PathVariable("id") Long id) {
+    public ResponseEntity<VeterinarianDTO> showVetByIdCard(@PathVariable("id") Long id) {
         Veterinarian vet = veterinarianService.findByIdCard(id);
-        if (vet != null) {
-            return new ResponseEntity<>(vet, HttpStatus.OK);
+        VeterinarianDTO vetDTO = VeterinarianMapper.INSTANCE.convert(vet);
+        if (vetDTO != null) {
+            return new ResponseEntity<>(vetDTO, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
@@ -101,16 +106,22 @@ public class VetController {
     // Todos los veterinarios que esten activos
     //localhost:8080/vet/active
     @GetMapping("/active")
-    public ResponseEntity<List<Veterinarian>> findAllActiveVeterinarian() {
+    public ResponseEntity<List<VeterinarianDTO>> findAllActiveVeterinarian() {
         List<Veterinarian> vets = veterinarianService.findAllActiveVeterinarian();
-        return new ResponseEntity<>(vets, HttpStatus.OK);
+        List<VeterinarianDTO> vetsDTO = VeterinarianMapper.INSTANCE.convertList(vets);
+        if(vetsDTO.isEmpty()) 
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(vetsDTO, HttpStatus.OK);
     }
 
     // Todos los veterinarios que esten inactivos
     //localhost:8080/vet/inactive
     @GetMapping("/inactive")
-    public ResponseEntity<List<Veterinarian>> findAllInactiveVeterinarian() {
+    public ResponseEntity<List<VeterinarianDTO>> findAllInactiveVeterinarian() {
         List<Veterinarian> vets = veterinarianService.findAllInactiveVeterinarian();
-        return new ResponseEntity<>(vets, HttpStatus.OK);
+        List<VeterinarianDTO> vetsDTO = VeterinarianMapper.INSTANCE.convertList(vets);
+        if(vetsDTO.isEmpty()) 
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(vetsDTO, HttpStatus.OK);
     }
 }
