@@ -11,11 +11,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Profile;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Random;
 
 @Controller
@@ -40,9 +42,19 @@ public class DbController implements ApplicationRunner {
     @Autowired
     AdministratorRepository administratorRepository;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    @Autowired
+    private RoleRepository roleRepository;
+
+    @Autowired
+    private UserRepository userRepository;
+
     @Override
     public void run(ApplicationArguments args) {
-
+        
+        createRoles();
         createOwners();
         createPets();
         relatePetsToOwners();
@@ -54,8 +66,14 @@ public class DbController implements ApplicationRunner {
 
     }
 
+    private void createRoles(){
+        roleRepository.save(new Role("OWNER"));
+        roleRepository.save(new Role("VET"));
+        roleRepository.save(new Role("ADMIN"));
+    }
+
     private void createAdmin() {
-        administratorRepository.save(new Administrator(1000612796L, "1234"));
+        saveUserAdmin(new Administrator(1000612796L, "1234"));
     }
 
     private void relatePetsToOwners() {
@@ -97,15 +115,15 @@ public class DbController implements ApplicationRunner {
 
     private void createVets() {
         // Crear veterinario 1
-        veterinarianRepository.save(new Veterinarian(1000612796L ,"Andrés", "Garcia", "Montoya", "1234", "Cirujano", "https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
+        saveUserVet(new Veterinarian(1000612796L ,"Andrés", "Garcia", "Montoya", "1234", "Cirujano", "https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
         // Crear veterinario 2
-        veterinarianRepository.save(new Veterinarian(1000612797L ,"Maria", "Lopez", "Rodriguez", "5678", "Dermatologo", "https://images.pexels.com/photos/5407206/pexels-photo-5407206.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
+        saveUserVet(new Veterinarian(1000612797L ,"Maria", "Lopez", "Rodriguez", "5678", "Dermatologo", "https://images.pexels.com/photos/5407206/pexels-photo-5407206.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
         // Crear veterinario 3
-        veterinarianRepository.save(new Veterinarian(1000612798L ,"Carlos", "Martinez", "Perez", "4321", "Cardiologo", "https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
+        saveUserVet(new Veterinarian(1000612798L ,"Carlos", "Martinez", "Perez", "4321", "Cardiologo", "https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
         // Crear veterinario 4
-        veterinarianRepository.save(new Veterinarian(1000612799L ,"Isabel", "Gonzalez", "Silva", "9876", "Oncologo", "https://images.pexels.com/photos/6749778/pexels-photo-6749778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
+        saveUserVet(new Veterinarian(1000612799L ,"Isabel", "Gonzalez", "Silva", "9876", "Oncologo", "https://images.pexels.com/photos/6749778/pexels-photo-6749778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
         // Crear veterinario 5
-        veterinarianRepository.save(new Veterinarian(1000612800L ,"Diego", "Rodriguez", "Lopez", "2468", "Neurologo", "https://images.pexels.com/photos/5867730/pexels-photo-5867730.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
+        saveUserVet(new Veterinarian(1000612800L ,"Diego", "Rodriguez", "Lopez", "2468", "Neurologo", "https://images.pexels.com/photos/5867730/pexels-photo-5867730.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
         // Crear veterinario 6
         veterinarianRepository.save(new Veterinarian(1000612801L ,"Ana", "Perez", "Fernandez", "1357", "Radiologo", "https://images.pexels.com/photos/5452201/pexels-photo-5452201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
         // Crear veterinario 7
@@ -445,15 +463,15 @@ public class DbController implements ApplicationRunner {
 
     private void createOwners() {
         // Create owner 1
-        ownerRepository.save(new Owner(1001298925L, "Esteban", "Gómez", "Buitrago", "3116721345", "esteban.buitrago@gmail.com"));
+        saveUserOwner(new Owner(1001298925L, "Esteban", "Gómez", "Buitrago", "3116721345", "esteban.buitrago@gmail.com"));
         // Create owner 2
-        ownerRepository.save(new Owner(1234567890L, "Jane", "Smith", "Doe", "5555678", "jane.smith@example.com"));
+        saveUserOwner(new Owner(1234567890L, "Jane", "Smith", "Doe", "5555678", "jane.smith@example.com"));
         // Create owner 3
-        ownerRepository.save(new Owner(345678901L, "Juan", "Perez", "Perez", "5551784", "jupe@gmail.com"));
+        saveUserOwner(new Owner(345678901L, "Juan", "Perez", "Perez", "5551784", "jupe@gmail.com"));
         // Create owner 4
-        ownerRepository.save(new Owner(456789012L, "Paula", "Niño", "Lopez", "5559837", "pau@gmail.com"));
+        saveUserOwner(new Owner(456789012L, "Paula", "Niño", "Lopez", "5559837", "pau@gmail.com"));
         // Create owner 5
-        ownerRepository.save(new Owner(567890123L, "Pedro", "Quintero", "Relcon", "5552784", "pequint@example.com"));
+        saveUserOwner(new Owner(567890123L, "Pedro", "Quintero", "Relcon", "5552784", "pequint@example.com"));
         // Create owner 6
         ownerRepository.save(new Owner(678901234L, "Pablo", "Andro", "Hulca", "5551344", "hulca@exaple.com"));
         // Create owner 7
@@ -695,5 +713,34 @@ public class DbController implements ApplicationRunner {
         treatmentRepository.save(new Treatment(LocalDate.of(2020, 6, 19), "Se administraron KittyCalm Drops al gato para reducir la ansiedad y el estrés. Próxima revisión en 12 horas."));
         // Create and save treatment 10
         treatmentRepository.save(new Treatment(LocalDate.of(2023, 8, 27), "Se aplicó WhiskerWonder Elixir al gato para mejorar su bienestar general y vitalidad. Revisión en 24 horas para evaluar su efectividad."));
+    }
+
+    private void saveUserOwner(Owner owner){
+        UserEntity user = new UserEntity();
+        user.setUsername(owner.getIdCard());
+        user.setPassword(passwordEncoder.encode("123"));
+        Role roles = roleRepository.findByName("OWNER").get();
+        user.setRoles(List.of(roles));
+        userRepository.save(user);
+        ownerRepository.save(owner);
+    }
+
+    private void saveUserVet(Veterinarian vet){
+        UserEntity user = new UserEntity();
+        user.setUsername(vet.getIdCard());
+        user.setPassword(passwordEncoder.encode(vet.getPassword()));
+        Role roles = roleRepository.findByName("VET").get();
+        user.setRoles(List.of(roles));
+        userRepository.save(user);
+        veterinarianRepository.save(vet);
+    }
+    private void saveUserAdmin(Administrator admin){
+        UserEntity user = new UserEntity();
+        user.setUsername(admin.getIdCard());
+        user.setPassword(passwordEncoder.encode(admin.getPassword()));
+        Role roles = roleRepository.findByName("ADMIN").get();
+        user.setRoles(List.of(roles));
+        userRepository.save(user);
+        administratorRepository.save(admin);
     }
 }
