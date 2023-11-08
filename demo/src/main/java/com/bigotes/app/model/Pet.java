@@ -4,20 +4,17 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
-import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
 @Entity
-@Builder
-@AllArgsConstructor
+@Data
+@NoArgsConstructor
 public class Pet {
 
     @Id
@@ -67,15 +64,5 @@ public class Pet {
         this.weight = weight;
         this.disease = disease;
         this.imgUrl = imgUrl;
-    }
-
-    public Pet() {
-
-    }
-
-    public int calculateAge() {
-        LocalDate currentDate = LocalDate.now();
-        Period period = Period.between(this.birthdate, currentDate);
-        return period.getYears();
     }
 }

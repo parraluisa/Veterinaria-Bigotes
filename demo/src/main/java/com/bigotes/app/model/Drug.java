@@ -1,17 +1,18 @@
 package com.bigotes.app.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import io.micrometer.common.lang.NonNull;
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import io.micrometer.common.lang.NonNull;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
-@Data
 @Entity
+@Data
+@NoArgsConstructor
 public class Drug {
 
     @Id
@@ -36,10 +37,6 @@ public class Drug {
     @JsonIgnore
     @OneToMany(mappedBy = "drug")
     private List<Treatment> treatments = new ArrayList<>();
-
-    public Drug(){
-
-    }
 
     public Drug(
             @Nonnull String name,

@@ -3,9 +3,11 @@ package com.bigotes.app.model;
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
+@NoArgsConstructor
 public class Administrator {
 
     @Id
@@ -18,8 +20,6 @@ public class Administrator {
 
     @Nonnull
     private String password;
-
-    Administrator(){}
 
     public Administrator(@Nonnull Long idCard, @Nonnull String password) {
         this.idCard = idCard;

@@ -3,11 +3,13 @@ package com.bigotes.app.model;
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
-@Data
 @Entity
+@Data
+@NoArgsConstructor
 public class Treatment {
 
     @Id
@@ -32,10 +34,6 @@ public class Treatment {
     @ManyToOne
     @JoinColumn(name = "veterinarian_id")
     private Veterinarian veterinarian;
-
-    public Treatment() {
-
-    }
 
     public Treatment( @Nonnull LocalDate date, @Nonnull String description) {
         this.date = date;

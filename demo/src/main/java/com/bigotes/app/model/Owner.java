@@ -4,12 +4,14 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
 @Entity
+@Data
+@NoArgsConstructor
 public class Owner {
 
     @Id
@@ -36,9 +38,6 @@ public class Owner {
     @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Pet> pets = new ArrayList<>();
 
-    public Owner(){
-
-    }
     public Owner(
             @Nonnull Long idCard,
             @Nonnull String firstName,
