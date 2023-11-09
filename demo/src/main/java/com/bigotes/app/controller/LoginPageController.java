@@ -2,7 +2,7 @@ package com.bigotes.app.controller;
 
 import com.bigotes.app.model.Administrator;
 import com.bigotes.app.model.Owner;
-import com.bigotes.app.model.Veterinarian;
+import com.bigotes.app.model.UserEntity;
 import com.bigotes.app.security.JWTGenerator;
 import com.bigotes.app.service.AdministratorService;
 import com.bigotes.app.service.OwnerService;
@@ -63,13 +63,12 @@ public class LoginPageController {
      */
 
     @PostMapping("/login/vet")
-    public ResponseEntity loginVet(@RequestBody Veterinarian vet) {
+    public ResponseEntity loginVet(@RequestBody UserEntity vet) {
         Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(vet.getIdCard(), vet.getPassword()));
+                new UsernamePasswordAuthenticationToken(vet.getUsername(), vet.getPassword()));
 
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String token = jwtGenerator.generateToken(authentication);
-
         return new ResponseEntity<>(token, HttpStatus.OK);
     }
 

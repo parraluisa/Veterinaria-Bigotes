@@ -13,6 +13,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.servlet.util.matcher.MvcRequestMatcher;
+import org.springframework.web.servlet.handler.HandlerMappingIntrospector;
 
 @Configuration
 @EnableWebSecurity
@@ -20,8 +22,14 @@ public class SecurityConfig {
 
     @Autowired
     private JwtAuthEntryPoint jwtAuthEntryPoint;
+
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+    MvcRequestMatcher.Builder mvc(HandlerMappingIntrospector introspector) {
+        return new MvcRequestMatcher.Builder(introspector);
+    }
+
+    @Bean
+    public SecurityFilterChain appSecurity(HttpSecurity http, MvcRequestMatcher.Builder mvc) throws Exception {
 
         /*
          * Se recomienda desactivar CSRF cuando se la comunicación se están manejando
@@ -38,15 +46,10 @@ public class SecurityConfig {
                 .sessionManagement(customizer -> customizer.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
 
 
-                .authorizeHttpRequests(requests -> requests
+                .authorizeHttpRequests((requests) -> requests
                         /* H2 */
-                        .requestMatchers("/h2/**").permitAll()
-                        .requestMatchers("/login/**").permitAll()
-                        .requestMatchers("/vet/**").hasAuthority("ADMIN")
-                        .requestMatchers("/owner/**").hasAnyAuthority("VET", "ADMIN")
-                        .requestMatchers("/pet/**").permitAll()
-                        .requestMatchers("/treatment/**").permitAll()
-                        .requestMatchers("/drug/**").permitAll()
+                        .requestMatchers(mvc.pattern("/h2/**")).permitAll()
+
 
                         .anyRequest().permitAll()
                 )
