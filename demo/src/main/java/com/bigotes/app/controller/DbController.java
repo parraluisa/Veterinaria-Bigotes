@@ -116,10 +116,10 @@ public class DbController implements ApplicationRunner {
     private void createVets() {
         Veterinarian vet;
         // Crear veterinario 1
-        vet = Veterinarian.builder().idCard(1000612796L).firstName("Andrés").firstLastName("Garcia").secondLastName("Montoya").password("1234").speciality("Cirujano").imgUrl("https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1").status("Activo").build();
+        vet = Veterinarian.builder().idCard(1000612795L).firstName("Andrés").firstLastName("Garcia").secondLastName("Montoya").password("1234").speciality("Cirujano").imgUrl("https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1").status("Activo").build();
         saveUserVet(vet);
         // Crear veterinario 2
-        veterinarianRepository.save(Veterinarian.builder().idCard(1000612797L).firstLastName("Lopez").secondLastName("Rodriguez").password("5678").speciality("Dermatologo").imgUrl("https://images.pexels.com/photos/5407206/pexels-photo-5407206.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1").status("Activo").build());
+        veterinarianRepository.save(Veterinarian.builder().idCard(1000612797L).firstName("Luis").firstLastName("Lopez").secondLastName("Rodriguez").password("5678").speciality("Dermatologo").imgUrl("https://images.pexels.com/photos/5407206/pexels-photo-5407206.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1").status("Activo").build());
         // Crear veterinario 3
         veterinarianRepository.save(Veterinarian.builder().idCard(1000612798L).firstName("Carlos").firstLastName("Martinez").secondLastName("Perez").password("4321").speciality("Cardiologo").imgUrl("https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1").status("Activo").build());
         // Crear veterinario 4
