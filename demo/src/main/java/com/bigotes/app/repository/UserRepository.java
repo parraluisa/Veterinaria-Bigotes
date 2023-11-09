@@ -1,10 +1,9 @@
 package com.bigotes.app.repository;
 
-import java.util.Optional;
-
+import com.bigotes.app.model.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.bigotes.app.model.UserEntity;
+import java.util.Optional;
 
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
     Optional<UserEntity> findByUsername(Long username);

@@ -2,7 +2,10 @@ package com.bigotes.app.controller;
 
 import com.bigotes.app.DTOs.VeterinarianDTO;
 import com.bigotes.app.DTOs.VeterinarianMapper;
+import com.bigotes.app.model.UserEntity;
 import com.bigotes.app.model.Veterinarian;
+import com.bigotes.app.security.CustomUserDetailService;
+import com.bigotes.app.service.UserService;
 import com.bigotes.app.service.VeterinarianService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,6 +21,12 @@ public class VetController {
 
     @Autowired
     private VeterinarianService veterinarianService;
+
+    @Autowired
+    private UserService userService;
+
+    @Autowired
+    private CustomUserDetailService customUserDetailService;
 
     // Obtener todos los veterinarios
     @GetMapping()
@@ -41,7 +50,7 @@ public class VetController {
 
     // Obtener un veterinario por su número de identificación (ID Card)
     @GetMapping("/idcard/{id}")
-    public ResponseEntity<VeterinarianDTO> showVetByIdCard(@PathVariable("id") Long id) {
+    public ResponseEntity showVetByIdCard(@PathVariable("id") Long id) {
         Veterinarian vet = veterinarianService.findByIdCard(id);
         VeterinarianDTO vetDTO = VeterinarianMapper.INSTANCE.convert(vet);
         if (vetDTO != null) {
@@ -54,6 +63,13 @@ public class VetController {
     // Insertar un nuevo veterinario
     @PostMapping()
     public ResponseEntity<Void> insertVet(@RequestBody Veterinarian vet) {
+
+        if (userService.existsByUsername(vet.getIdCard())) {
+            return new ResponseEntity<>(HttpStatus.CONFLICT);
+        }
+
+        UserEntity userEntity = customUserDetailService.saveVeterinarian(vet);
+        vet.setUserEntity(userEntity);
         veterinarianService.save(vet);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
