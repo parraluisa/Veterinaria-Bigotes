@@ -14,6 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
@@ -62,15 +63,20 @@ public class LoginPageController {
 
      */
 
-    @PostMapping("/login/vet")
-    public ResponseEntity loginVet(@RequestBody UserEntity vet) {
-        Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(vet.getUsername(), vet.getPassword()));
+    @PostMapping("/vet")
+    public ResponseEntity<String> loginVet(@RequestBody UserEntity vet) {
+        try {
+            Authentication authentication = authenticationManager.authenticate(
+                    new UsernamePasswordAuthenticationToken(vet.getUsername(), vet.getPassword()));
 
-        SecurityContextHolder.getContext().setAuthentication(authentication);
-        String token = jwtGenerator.generateToken(authentication);
-        return new ResponseEntity<>(token, HttpStatus.OK);
+            SecurityContextHolder.getContext().setAuthentication(authentication);
+            String token = jwtGenerator.generateToken(authentication);
+            return new ResponseEntity<>(token, HttpStatus.OK);
+        } catch (AuthenticationException e) {
+            return new ResponseEntity<>("Authentication failed", HttpStatus.UNAUTHORIZED);
+        }
     }
+
 
 
     @GetMapping("/admin/{idCardAdmin}/{passwordAdmin}")

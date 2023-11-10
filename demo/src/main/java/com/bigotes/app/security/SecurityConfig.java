@@ -73,11 +73,28 @@ public class SecurityConfig {
                         .requestMatchers(
                             AntPathRequestMatcher
                                 .antMatcher("/h2/**")).permitAll()
-                        //.requestMatchers("/login/**").permitAll()
-                        //.requestMatchers("/**").permitAll()
                         .requestMatchers(
                             AntPathRequestMatcher
                                 .antMatcher("/login/**")).permitAll()
+                        .requestMatchers(
+                                AntPathRequestMatcher
+                                        .antMatcher("/pet/**")).hasAnyRole("ADMIN", "VETERINARIAN", "OWNER")
+                        .requestMatchers(
+                                AntPathRequestMatcher
+                                        .antMatcher("/vet/**")).hasRole("ADMIN")
+                        .requestMatchers(
+                                AntPathRequestMatcher
+                                        .antMatcher("/admin/**")).hasRole("ADMIN")
+                        .requestMatchers(
+                                AntPathRequestMatcher
+                                        .antMatcher("/drug/**")).hasAnyRole("ADMIN", "VETERINARIAN")
+                        .requestMatchers(
+                                AntPathRequestMatcher
+                                        .antMatcher("/treatment/**")).hasAnyRole("ADMIN", "VETERINARIAN")
+                        .requestMatchers(
+                                AntPathRequestMatcher
+                                        .antMatcher("/owner/**")).hasAnyRole("ADMIN", "VETERINARIAN", "OWNER")
+
                         .anyRequest().permitAll()
                 )
                 .exceptionHandling( exception -> exception.authenticationEntryPoint(jwtAuthEntryPoint));
