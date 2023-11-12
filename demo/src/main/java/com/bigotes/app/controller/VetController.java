@@ -50,7 +50,7 @@ public class VetController {
 
     // Obtener un veterinario por su número de identificación (ID Card)
     @GetMapping("/idcard/{id}")
-    public ResponseEntity showVetByIdCard(@PathVariable("id") Long id) {
+    public ResponseEntity<?> showVetByIdCard(@PathVariable("id") Long id) {
         Veterinarian vet = veterinarianService.findByIdCard(id);
         VeterinarianDTO vetDTO = VeterinarianMapper.INSTANCE.convert(vet);
         if (vetDTO != null) {

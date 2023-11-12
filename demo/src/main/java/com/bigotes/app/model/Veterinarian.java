@@ -51,8 +51,9 @@ public class Veterinarian {
     private String status;
 
     @JsonIgnore
+    @Builder.Default
     @OneToMany(mappedBy = "veterinarian")
-    private List<Treatment> treatments = new ArrayList<>();
+    private final List<Treatment> treatments = new ArrayList<>();
 
     public Veterinarian(
             @Nonnull Long idCard,
@@ -71,5 +72,6 @@ public class Veterinarian {
         this.speciality = speciality;
         this.imgUrl = imgUrl;
         this.status = "Activo";
+        this.treatments = new ArrayList<>();
     }
 }

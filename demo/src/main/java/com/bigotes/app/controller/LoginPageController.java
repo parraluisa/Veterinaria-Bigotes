@@ -1,13 +1,7 @@
 package com.bigotes.app.controller;
 
-import com.bigotes.app.model.Administrator;
-import com.bigotes.app.model.Owner;
-import com.bigotes.app.model.UserEntity;
-import com.bigotes.app.security.JWTGenerator;
-import com.bigotes.app.service.AdministratorService;
-import com.bigotes.app.service.OwnerService;
-import com.bigotes.app.service.UserService;
-import com.bigotes.app.service.VeterinarianService;
+import java.util.Objects;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,9 +10,21 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Objects;
+import com.bigotes.app.model.Administrator;
+import com.bigotes.app.model.Owner;
+import com.bigotes.app.model.UserEntity;
+import com.bigotes.app.security.JWTGenerator;
+import com.bigotes.app.service.AdministratorService;
+import com.bigotes.app.service.OwnerService;
+import com.bigotes.app.service.VeterinarianService;
 
 @RestController
 @RequestMapping("/login")
@@ -33,9 +39,6 @@ public class LoginPageController {
 
     @Autowired
     private AdministratorService administratorService;
-
-    @Autowired
-    private UserService userService;
 
     @Autowired
     private AuthenticationManager authenticationManager;
@@ -87,5 +90,4 @@ public class LoginPageController {
         Administrator admin = administratorService.findByIcCard(idCardAdmin);
         return admin != null && Objects.equals(admin.getPassword(), passwordAdmin);
     }
-
 }

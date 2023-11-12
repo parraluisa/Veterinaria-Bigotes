@@ -34,42 +34,33 @@ public class SecurityConfig {
     /*
     @Bean
     public SecurityFilterChain appSecurity(HttpSecurity http, MvcRequestMatcher.Builder mvc) throws Exception {
-
-        http
-
-                .csrf(AbstractHttpConfigurer::disable)
-
-                .headers(headers -> headers.frameOptions(frame -> frame.disable()))
-                .sessionManagement(customizer -> customizer.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-
-                .authorizeHttpRequests((requests) -> requests
-   
-                        //.requestMatchers(mvc.pattern("/h2/**")).permitAll()
-                        //.requestMatchers("/login/**").permitAll()
-
-                        .anyRequest().permitAll())
-                .exceptionHandling(exception -> exception.authenticationEntryPoint(jwtAuthEntryPoint));
-
-        http.addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
-        return http.build();
+    
+    http
+    
+            .csrf(AbstractHttpConfigurer::disable)
+    
+            .headers(headers -> headers.frameOptions(frame -> frame.disable()))
+            .sessionManagement(customizer -> customizer.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+    
+            .authorizeHttpRequests((requests) -> requests
+    
+                    //.requestMatchers(mvc.pattern("/h2/**")).permitAll()
+                    //.requestMatchers("/login/**").permitAll()
+    
+                    .anyRequest().permitAll())
+            .exceptionHandling(exception -> exception.authenticationEntryPoint(jwtAuthEntryPoint));
+    
+    http.addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
+    return http.build();
     }*/
     
-     @Bean
+    @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-
-        /*
-         * Se recomienda desactivar CSRF cuando se la comunicación se están manejando
-         * páginas web
-         * donde la comunicación entre la página y el servidor es mediante peticiones
-         * HTTP
-         */
         http
                 .csrf(AbstractHttpConfigurer::disable)
-                /* H2 */
                 .headers(headers -> headers.frameOptions(frame -> frame.disable()))
                 .sessionManagement(customizer -> customizer.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(requests -> requests
-                        /* H2 */
                         .requestMatchers(
                             AntPathRequestMatcher
                                 .antMatcher("/h2/**")).permitAll()
