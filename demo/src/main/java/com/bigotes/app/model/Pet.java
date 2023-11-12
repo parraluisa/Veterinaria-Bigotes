@@ -50,7 +50,7 @@ public class Pet {
     private Owner owner;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "pet", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "pet", cascade = CascadeType.REMOVE)
     private List<Treatment> treatments = new ArrayList<>();
 
     public Pet(

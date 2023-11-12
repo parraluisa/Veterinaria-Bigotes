@@ -33,7 +33,7 @@ public class Owner {
     private String email;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "owner", cascade = CascadeType.REMOVE)
     private List<Pet> pets = new ArrayList<>();
 
     public Owner(){
