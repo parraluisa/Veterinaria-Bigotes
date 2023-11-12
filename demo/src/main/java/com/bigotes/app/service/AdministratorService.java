@@ -10,7 +10,7 @@ public class AdministratorService {
     @Autowired
     private AdministratorRepository repository;
 
-    public Administrator findByIcCard(Long idCard){
+    public Administrator findByIdCard(Long idCard){
         return repository.findByIdCard(idCard);
     }
 }

@@ -36,4 +36,8 @@ public class UserService implements CrudService<UserEntity, Long> {
     public boolean existsByUsername(Long idCard) {
         return userRepository.existsByUsername(idCard);
     }
+
+    public UserEntity findByUsername(Long username) {
+        return userRepository.findByUsername(username).orElse(null);
+    }
 }
