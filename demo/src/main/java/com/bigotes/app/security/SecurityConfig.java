@@ -22,75 +22,48 @@ public class SecurityConfig {
     @Autowired
     private JwtAuthEntryPoint jwtAuthEntryPoint;
 
-    /*
-     *  @Bean
-    MvcRequestMatcher.Builder mvc(HandlerMappingIntrospector introspector) {
-        return new MvcRequestMatcher.Builder(introspector);
-    }
-     * 
-     */
-
-
-    /*
-    @Bean
-    public SecurityFilterChain appSecurity(HttpSecurity http, MvcRequestMatcher.Builder mvc) throws Exception {
-    
-    http
-    
-            .csrf(AbstractHttpConfigurer::disable)
-    
-            .headers(headers -> headers.frameOptions(frame -> frame.disable()))
-            .sessionManagement(customizer -> customizer.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-    
-            .authorizeHttpRequests((requests) -> requests
-    
-                    //.requestMatchers(mvc.pattern("/h2/**")).permitAll()
-                    //.requestMatchers("/login/**").permitAll()
-    
-                    .anyRequest().permitAll())
-            .exceptionHandling(exception -> exception.authenticationEntryPoint(jwtAuthEntryPoint));
-    
-    http.addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
-    return http.build();
-    }*/
-    
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .headers(headers -> headers.frameOptions(frame -> frame.disable()))
-                .sessionManagement(customizer -> customizer.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .sessionManagement(customizer -> customizer
+                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(requests -> requests
                         .requestMatchers(
-                            AntPathRequestMatcher
-                                .antMatcher("/h2/**")).permitAll()
-                        .requestMatchers(
-                            AntPathRequestMatcher
-                                .antMatcher("/login/**")).permitAll()
+                                AntPathRequestMatcher
+                                        .antMatcher("/h2/**"))
+                        .permitAll()
                         .requestMatchers(
                                 AntPathRequestMatcher
-                                        .antMatcher("/pet/**")).hasAnyRole("ADMIN", "VETERINARIAN", "OWNER")
+                                        .antMatcher("/login/**"))
+                        .permitAll()
                         .requestMatchers(
                                 AntPathRequestMatcher
-                                        .antMatcher("/vet/**")).hasRole("ADMIN")
+                                        .antMatcher("/pet/**"))
+                        .hasAnyRole("ADMIN", "VET", "OWNER")
                         .requestMatchers(
                                 AntPathRequestMatcher
-                                        .antMatcher("/admin/**")).hasRole("ADMIN")
+                                        .antMatcher("/vet/**"))
+                        .hasRole("ADMIN")
                         .requestMatchers(
                                 AntPathRequestMatcher
-                                        .antMatcher("/drug/**")).hasAnyRole("ADMIN", "VETERINARIAN")
+                                        .antMatcher("/admin/**"))
+                        .hasRole("ADMIN")
                         .requestMatchers(
                                 AntPathRequestMatcher
-                                        .antMatcher("/treatment/**")).hasAnyRole("ADMIN", "VETERINARIAN")
+                                        .antMatcher("/drug/**"))
+                        .hasAnyRole("ADMIN", "VET")
                         .requestMatchers(
                                 AntPathRequestMatcher
-                                        .antMatcher("/owner/**")).hasAnyRole("ADMIN", "VETERINARIAN", "OWNER")
+                                        .antMatcher("/treatment/**"))
+                        .hasAnyRole("ADMIN", "VET")
 
-                        .anyRequest().permitAll()
-                )
-                .exceptionHandling( exception -> exception.authenticationEntryPoint(jwtAuthEntryPoint));
+                        .anyRequest().permitAll())
+                .exceptionHandling(exception -> exception.authenticationEntryPoint(jwtAuthEntryPoint));
 
-                http.addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
+        http.addFilterBefore(jwtAuthenticationFilter(),
+                UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
 
@@ -101,7 +74,8 @@ public class SecurityConfig {
 
     /*
      * Permite autenticar a los usuarios con usuario y contrasena
-     * Al autenticar devuelve un onjeto Authentication que posteriormente se puede usar a traves de SecurityContextHolder
+     * Al autenticar devuelve un onjeto Authentication que posteriormente se puede
+     * usar a traves de SecurityContextHolder
      * para obtener el usuario autenticado
      */
     @Bean
@@ -114,5 +88,5 @@ public class SecurityConfig {
     public JWTAuthenticationFilter jwtAuthenticationFilter() {
         return new JWTAuthenticationFilter();
     }
- 
+
 }

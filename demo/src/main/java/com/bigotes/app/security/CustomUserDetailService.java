@@ -59,7 +59,7 @@ public class CustomUserDetailService implements UserDetailsService {
         user.setUsername(vet.getIdCard());
         user.setPassword(passwordEncoder.encode(vet.getPassword()));
 
-        Role roles = roleRepository.findByName("VETERINARIAN").get();
+        Role roles = roleRepository.findByName("VET").get();
         user.setRoles(List.of(roles));
         return user;
     }
