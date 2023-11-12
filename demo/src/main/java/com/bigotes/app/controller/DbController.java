@@ -73,7 +73,7 @@ public class DbController implements ApplicationRunner {
     }
 
     private void createAdmin() {
-        saveUserAdmin(new Administrator(1000612796L, "1234"));
+        saveUserAdmin(new Administrator(52333566L, "1234"));
     }
 
     private void relatePetsToOwners() {
