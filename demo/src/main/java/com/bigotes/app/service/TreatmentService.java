@@ -50,4 +50,8 @@ public class TreatmentService implements CrudService<Treatment, Long> {
     public Long countTotalTreatmentForCurrentMonth(){
         return repository.countTotalTreatmentForCurrentMonth();
     }
+
+    public List<Treatment> findVeterinarianId(Long veterinarianId){
+        return repository.findVeterinarianId(veterinarianId);
+    }
 }

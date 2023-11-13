@@ -16,4 +16,7 @@ public interface TreatmentRepository extends JpaRepository<Treatment, Long> {
     @Query("SELECT COUNT(t) FROM Treatment t WHERE YEAR(t.date) = YEAR(CURDATE()) AND MONTH(t.date) = MONTH(CURDATE())")
     Long countTotalTreatmentForCurrentMonth();
 
+    @Query("SELECT t FROM Treatment t WHERE t.veterinarian.id = ?1")
+    List<Treatment> findVeterinarianId(Long veterinarianId);
+
 }

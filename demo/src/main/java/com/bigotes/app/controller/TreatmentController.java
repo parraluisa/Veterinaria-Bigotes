@@ -78,4 +78,10 @@ public class TreatmentController {
         Long count = treatmentService.countTotalTreatmentForCurrentMonth();
         return new ResponseEntity<>(count, HttpStatus.OK);
     }
+
+    @GetMapping("/vet/{id}")
+    public ResponseEntity<List<Treatment>> findVeterinarianId(@PathVariable("id") Long id) {
+        List<Treatment> treatments = treatmentService.findVeterinarianId(id);
+        return new ResponseEntity<>(treatments, HttpStatus.OK);
+    }
 }
