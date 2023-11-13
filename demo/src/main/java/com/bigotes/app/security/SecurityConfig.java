@@ -49,7 +49,6 @@ public class SecurityConfig {
                                 AntPathRequestMatcher.antMatcher("/treatment/**")).hasAnyRole("ADMIN", "VET")
                         .requestMatchers(
                                 AntPathRequestMatcher.antMatcher("/owner/**")).hasAnyRole("ADMIN", "OWNER", "VET")
-
                          */
                         .anyRequest().permitAll()
                 )

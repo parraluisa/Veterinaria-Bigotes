@@ -18,6 +18,9 @@ public class Owner {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    private UserEntity userEntity;
+
     @Nonnull
     @Column(unique = true)
     private Long idCard;

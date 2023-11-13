@@ -54,7 +54,7 @@ public class CustomUserDetailService implements UserDetailsService {
         return roles.stream().map(role -> new SimpleGrantedAuthority(role.getName())).collect(Collectors.toList());
     }
 
-    public UserEntity saveVeterinarian(Veterinarian vet){
+    public UserEntity saveVet(Veterinarian vet){
         UserEntity user = new UserEntity();
         user.setUsername(vet.getIdCard());
         user.setPassword(passwordEncoder.encode(vet.getPassword()));

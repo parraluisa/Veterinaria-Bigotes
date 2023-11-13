@@ -1,6 +1,8 @@
 package com.bigotes.app.controller;
 
 import com.bigotes.app.model.Owner;
+import com.bigotes.app.model.UserEntity;
+import com.bigotes.app.security.CustomUserDetailService;
 import com.bigotes.app.service.OwnerService;
 import com.bigotes.app.service.PetService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,8 @@ public class OwnerController {
     OwnerService ownerService;
     @Autowired
     PetService petService;
+    @Autowired
+    CustomUserDetailService customUserDetailService;
 
     // Obtener todos los propietarios
     @GetMapping()
@@ -52,6 +56,8 @@ public class OwnerController {
     // Insertar un nuevo propietario
     @PostMapping()
     public ResponseEntity<Void> insertOwner(@RequestBody Owner owner) {
+        UserEntity user = customUserDetailService.saveOwner(owner);
+        owner.setUserEntity(user);
         ownerService.save(owner);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
@@ -60,6 +66,8 @@ public class OwnerController {
     @PutMapping()
     public ResponseEntity<Void> updateOwner(@RequestBody Owner owner) {
         if (ownerService.findById(owner.getId()) != null) {
+            UserEntity user = customUserDetailService.saveOwner(owner);
+            owner.setUserEntity(user);
             ownerService.save(owner);
             return new ResponseEntity<>(HttpStatus.OK);
         } else {

@@ -743,6 +743,7 @@ public class DbController implements ApplicationRunner {
         Role roles = roleRepository.findByName("OWNER").get();
         user.setRoles(List.of(roles));
         userRepository.save(user);
+        owner.setUserEntity(user);
         ownerRepository.save(owner);
     }
 
