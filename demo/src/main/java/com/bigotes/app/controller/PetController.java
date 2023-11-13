@@ -79,7 +79,7 @@ public class PetController {
     // Obtener las mascotas de un propietario por su ID
     @GetMapping("/owner/{id}")
     public ResponseEntity<List<PetDTO>> showOwnerPet(@PathVariable("id") Long id) {
-        List<Pet> pets = petService.findByOwnerId(id);
+        List<Pet> pets = petService.findByOwnerIdCard(id);
         List<PetDTO> petsDTO = PetMapper.INSTANCE.convertList(pets);
         if (petsDTO.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);

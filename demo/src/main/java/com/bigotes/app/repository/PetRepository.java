@@ -28,4 +28,6 @@ public interface PetRepository extends JpaRepository<Pet, Long> {
     //Todas las mascotas que tengas status de alta
     @Query("SELECT p FROM Pet p WHERE p.status = 'Alta'")
     List<Pet> findPetsDischarged();
+
+    List<Pet> findByOwnerIdCard(Long idCard);
 }

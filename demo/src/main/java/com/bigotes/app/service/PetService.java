@@ -56,5 +56,9 @@ public class PetService implements CrudService<Pet, Long> {
     public List<Pet> findPetsDischarged(){
         return repository.findPetsDischarged();
     }
+
+    public List<Pet> findByOwnerIdCard(Long idCard){
+        return repository.findByOwnerIdCard(idCard);
+    }
     
 }
