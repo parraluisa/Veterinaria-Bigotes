@@ -124,4 +124,15 @@ public class PetController {
         }
         return new ResponseEntity<>(petsDTO, HttpStatus.OK);
     }
+
+    //localhost:8090/pet/exists/{petName}/{petBreed}/{petWeight}/{petBirthDate}/{petDisease}
+    @GetMapping("/exists/{petName}/{petBreed}/{petWeight}/{petBirthDate}/{petDisease}")
+    public ResponseEntity<Boolean> existsByPet(@PathVariable("petName") String petName,
+                                               @PathVariable("petBreed") String petBreed,
+                                               @PathVariable("petWeight") String petWeight,
+                                               @PathVariable("petBirthDate") String petBirthDate,
+                                               @PathVariable("petDisease") String petDisease) {
+        Boolean exists = petService.existsByPet(petName, petBreed, petWeight, petBirthDate, petDisease);
+        return new ResponseEntity<>(exists, HttpStatus.OK);
+    }
 }

@@ -60,5 +60,12 @@ public class PetService implements CrudService<Pet, Long> {
     public List<Pet> findByOwnerIdCard(Long idCard){
         return repository.findByOwnerIdCard(idCard);
     }
+
+    //Verificar si existe una mascota con el mismo nombre, raza, fecha de nacimientos y enfermedad
+
+    public Boolean existsByPet(String petName, String petBreed, String petWeight, String petBirthDate,
+            String petDisease) {
+        return repository.existsByPet(petName, petBreed, petWeight, petBirthDate, petDisease);
+    }
     
 }

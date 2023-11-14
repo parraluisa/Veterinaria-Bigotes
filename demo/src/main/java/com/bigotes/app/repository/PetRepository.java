@@ -3,6 +3,7 @@ package com.bigotes.app.repository;
 import com.bigotes.app.model.Pet;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -30,4 +31,9 @@ public interface PetRepository extends JpaRepository<Pet, Long> {
     List<Pet> findPetsDischarged();
 
     List<Pet> findByOwnerIdCard(Long idCard);
+
+     //Verificar si existe una mascota con el mismo nombre, raza, peso, fecha de nacimientos y enfermedad
+    @Query("SELECT COUNT(p) > 0 FROM Pet p WHERE p.name = :name AND p.breed = :breed AND p.weight = :weight AND p.birthdate = :birthdate AND p.disease = :disease")
+    boolean existsByPet(@Param("name") String name, @Param("breed") String breed, @Param("weight") String weight, @Param("birthdate") String birthdate, @Param("disease") String disease);
+
 }
