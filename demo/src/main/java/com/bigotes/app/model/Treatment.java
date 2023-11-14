@@ -35,6 +35,8 @@ public class Treatment {
     @JoinColumn(name = "veterinarian_id")
     private Veterinarian veterinarian;
 
+    private String treatedDisease;
+
     public Treatment( @Nonnull LocalDate date, @Nonnull String description) {
         this.date = date;
         this.description = description;

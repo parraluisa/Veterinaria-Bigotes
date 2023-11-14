@@ -109,7 +109,9 @@ public class DbController implements ApplicationRunner {
             treatment.setPet(pet);
             treatment.setVeterinarian(vet);
             treatment.setDrug(drug);
+            treatment.setTreatedDisease(pet.getDisease());
             treatmentRepository.save(treatment);
+            
         }
     }
 
