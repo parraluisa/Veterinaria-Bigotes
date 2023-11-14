@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,6 +47,10 @@ public class Veterinarian {
 
     @Nonnull
     private String status;
+
+    @Nonnull
+    @Builder.Default
+    private LocalDate entryDate = LocalDate.now();
 
     @JsonIgnore
     @Builder.Default

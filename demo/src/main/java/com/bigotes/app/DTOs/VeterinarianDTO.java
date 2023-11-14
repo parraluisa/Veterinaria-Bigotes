@@ -1,5 +1,7 @@
 package com.bigotes.app.DTOs;
 
+import java.time.LocalDate;
+
 import lombok.Data;
 
 @Data
@@ -12,5 +14,5 @@ public class VeterinarianDTO {
     private String speciality;
     private String imgUrl;
     private String status;
-    
+    private LocalDate entryDate;
 }
