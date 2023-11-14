@@ -30,6 +30,9 @@ public class PetService implements CrudService<Pet, Long> {
 
     @Override
     public Pet save(Pet pet) {
+        if (pet.getId() == 0L){
+            pet.setId(null);
+        }
         return repository.save(pet);
     }
 

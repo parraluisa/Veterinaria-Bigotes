@@ -44,13 +44,9 @@ public class PetController {
 
     // Insertar una nueva mascota
     @PostMapping()
-    public ResponseEntity<PetDTO> insertPet(@RequestBody Pet pet) {
-        Pet petCreated = petService.save(pet);
-        PetDTO petDTO = PetMapper.INSTANCE.convert(petCreated);
-        if (petDTO == null) {
-            return new ResponseEntity<>(HttpStatus.CONFLICT);
-        }
-        return new ResponseEntity<>(petDTO, HttpStatus.CREATED);
+    public ResponseEntity<?> insertPet(@RequestBody Pet pet) {
+        petService.save(pet);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     // Actualizar una mascota

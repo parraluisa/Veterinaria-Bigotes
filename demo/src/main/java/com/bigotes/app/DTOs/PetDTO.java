@@ -17,5 +17,4 @@ public class PetDTO {
     private String imgUrl;
     private String status;
     private Owner owner;
-    
 }
