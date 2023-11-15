@@ -154,4 +154,14 @@ public class VetController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+
+    @GetMapping("/complete/{id}")
+    public ResponseEntity<?> completeVetInfo(@PathVariable("id") Long id){
+        Veterinarian vet = veterinarianService.findById(id);
+        if(vet != null){
+            return new ResponseEntity<>(vet, HttpStatus.OK);
+        }else{
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 }
