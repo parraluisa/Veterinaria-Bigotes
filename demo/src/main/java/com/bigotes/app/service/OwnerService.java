@@ -1,6 +1,7 @@
 package com.bigotes.app.service;
 
 import com.bigotes.app.model.Owner;
+import com.bigotes.app.model.Pet;
 import com.bigotes.app.repository.OwnerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,9 @@ public class OwnerService implements CrudService<Owner, Long> {
     @Autowired
     private OwnerRepository repository;
 
+    @Autowired
+    private PetService petService;
+
     @Override
     public Owner findById(Long id) {
         return repository.findById(id).orElse(null);
@@ -26,6 +30,9 @@ public class OwnerService implements CrudService<Owner, Long> {
 
     @Override
     public void deleteById(Long id) {
+        for (Pet pet : petService.findByOwnerId(id)) {
+            petService.deleteById(pet.getId());
+        }
         repository.deleteById(id);
     }
 
