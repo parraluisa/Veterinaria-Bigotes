@@ -142,4 +142,16 @@ public class VetController {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         return new ResponseEntity<>(vetsDTO, HttpStatus.OK);
     }
+
+    @GetMapping("/inactive/{id}")
+    public ResponseEntity<?> inactiveVet(@PathVariable("id") Long id) {
+        Veterinarian vet = veterinarianService.findById(id);
+        if (vet != null) {
+            vet.setStatus("Inactivo");
+            veterinarianService.save(vet);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 }

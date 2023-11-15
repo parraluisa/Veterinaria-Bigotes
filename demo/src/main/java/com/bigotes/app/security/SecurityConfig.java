@@ -47,7 +47,7 @@ public class SecurityConfig {
                         .requestMatchers(
                                 AntPathRequestMatcher.antMatcher("/owner/**")).hasAnyRole("ADMIN", "OWNER", "VET")
                          */
-                        .anyRequest().authenticated()
+                        .anyRequest().permitAll()
                 )
                 .exceptionHandling(exception -> exception.authenticationEntryPoint(jwtAuthEntryPoint));
 
