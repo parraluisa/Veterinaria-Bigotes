@@ -79,7 +79,6 @@ public class VetController {
     public ResponseEntity<Void> updateVet(@RequestBody Veterinarian vet) {
         if (veterinarianService.findById(vet.getId()) != null) {
             UserEntity user = customUserDetailService.saveVet(vet);
-            vet.setUserEntity(user);
             veterinarianService.save(vet);
             return new ResponseEntity<>(HttpStatus.OK);
         } else {

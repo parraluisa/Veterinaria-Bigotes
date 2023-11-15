@@ -3,6 +3,7 @@ package com.bigotes.app.security;
 import com.bigotes.app.model.*;
 import com.bigotes.app.repository.RoleRepository;
 import com.bigotes.app.repository.UserRepository;
+import com.bigotes.app.service.VeterinarianService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -25,6 +26,9 @@ public class CustomUserDetailService implements UserDetailsService {
 
     @Autowired
     RoleRepository roleRepository;
+
+    @Autowired
+    private VeterinarianService vetService;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -56,6 +60,13 @@ public class CustomUserDetailService implements UserDetailsService {
 
     public UserEntity saveVet(Veterinarian vet){
         UserEntity user = new UserEntity();
+        user.setUsername(vet.getIdCard());
+        user.setPassword(passwordEncoder.encode(vet.getPassword()));
+        return user;
+    }
+
+    public UserEntity updateVet(Veterinarian vet){
+        UserEntity user = vetService.findById(vet.getId()).getUserEntity();
         user.setUsername(vet.getIdCard());
         user.setPassword(passwordEncoder.encode(vet.getPassword()));
 
