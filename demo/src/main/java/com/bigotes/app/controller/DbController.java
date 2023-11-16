@@ -766,6 +766,7 @@ public class DbController implements ApplicationRunner {
         Role roles = roleRepository.findByName("ADMIN").get();
         user.setRoles(List.of(roles));
         userRepository.save(user);
+        admin.setUserEntity(user);
         administratorRepository.save(admin);
     }
 }
